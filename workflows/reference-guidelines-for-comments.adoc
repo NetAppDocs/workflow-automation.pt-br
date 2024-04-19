@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-comments.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, commnents, scripts, oncommand, workflow, automaion 
+summary: 'Você deve estar ciente das diretrizes para comentários do PowerShell e Perl em seus scripts para OnCommand Workflow Automation (WFA).' 
+---
+= Diretrizes para comentários
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve estar ciente das diretrizes para comentários do PowerShell e Perl em seus scripts para OnCommand Workflow Automation (WFA).
+
+
+
+== Comentários do PowerShell
+
+[cols="2*"]
+|===
+| Diretrizes | Exemplo 
+
+
+ a| 
+Use o caractere nº para um comentário de linha única.
+ a| 
+[listing]
+----
+# Single line comment
+$options=$option.trim();
+----
+
+
+ a| 
+Use o caractere nº para um comentário de fim de linha.
+ a| 
+[listing]
+----
+$options=$option.trim(); # End of line
+comment
+----
+
+
+ a| 
+Use os carateres no e no> para um comentário em bloco.
+ a| 
+[listing]
+----
+<#
+This is
+a
+block comment
+#>
+$options=$option.trim();
+----
+|===
+
+
+== Perl comentários
+
+[cols="2*"]
+|===
+| Diretrizes | Exemplo 
+
+
+ a| 
+Use o caractere nº para um comentário de linha única.
+ a| 
+[listing]
+----
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+----
+
+
+ a| 
+Use o caractere nº para o comentário de fim de linha.
+ a| 
+[listing]
+----
+my $MaxDirectorySizeBytes = $MaxDirect
+orySiZe * 1024 * 1024; # convert to Bytes
+----
+
+
+ a| 
+Use o caractere nº em cada linha com um número vazio no início e no fim para criar uma borda de comentário para comentários multilinhas.
+ a| 
+[listing]
+----
+#
+# This is a multi-line comment. Perl 5, unlike
+# Powershell, does not have direct support for
+# multi-line comments. Please use a '#'in every line
+# with an empty '#' at the beginning and end to create
+# a comment border
+#
+----
+
+
+ a| 
+Não inclua código comentado e morto nos comandos DO WFA. No entanto, para fins de teste, você pode usar o mecanismo DE Documentação Velha simples (POD) para comentar o código.
+ a| 
+[listing]
+----
+=begin comment
+	# Set deduplication
+	if(defined $Deduplication && $Deduplication eq "enabled")
+	{
+		$wfaUtil->sendLog("Enabling Deduplication");
+	}
+=end comment
+=cut
+----
+|===

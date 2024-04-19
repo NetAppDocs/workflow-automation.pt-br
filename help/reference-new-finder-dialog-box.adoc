@@ -1,0 +1,117 @@
+---
+permalink: help/reference-new-finder-dialog-box.html 
+sidebar: sidebar 
+keywords: new, finder, dialog box, enable, create 
+summary: A caixa de diálogo novo Finder permite criar novos localizadores. 
+---
+= Nova caixa de diálogo Finder
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo novo Finder permite criar novos localizadores.
+
+* Separador Propriedades
+* Filtros
+* Guia atributos retornados
+
+
+
+
+== Separador Propriedades
+
+A guia *Propriedades* permite especificar um nome para o localizador, selecionar o tipo de objeto dicionário WFA e inserir uma descrição para o localizador. A guia também exibe os parâmetros de entrada depois que um filtro é selecionado na guia *filtros*.
+
+* *Nome*
++
+Permite-lhe introduzir um nome para o localizador.
+
+* *Tipo*
++
+Permite selecionar o tipo de objeto na lista, como agregado, agrupamento e cluster. Os filtros para o objeto selecionado são exibidos na guia *filtros*.
+
+* *Versão da entidade*
++
+Permite-lhe introduzir o número da versão para o localizador em `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Descrição*
++
+Permite-lhe introduzir uma descrição para o localizador.
+
+* *Tabela de parâmetros de entrada*
++
+Apresenta os parâmetros de entrada para os filtros selecionados.
+
+
+
+
+
+== Separador filtros
+
+Permite selecionar os filtros necessários na lista de filtros disponíveis.
+
+* *Filtros disponíveis*
++
+Exibe a lista de filtros disponíveis para o objeto selecionado na guia *Propriedades*.
+
+* *Filtros selecionados*
++
+Apresenta a lista de filtros selecionados a partir dos filtros disponíveis.
+
+* *Botões de seleção*
++
+Move a entrada selecionada de uma caixa para outra.
+
+
+
+
+
+== Guia atributos retornados
+
+Permite que você veja detalhes sobre os filtros disponíveis, selecione os atributos necessários dos filtros disponíveis e especifique a ordem de classificação para os atributos.
+
+* *Disponível*
++
+Exibe os filtros disponíveis e os atributos dos filtros.
+
+* *Selecionado*
++
+Exibe os filtros selecionados e os atributos, os aliases e a ordem de classificação dos filtros selecionados.
+
+* *Botões de comando*
++
+** *Para cima*
++
+Move a entrada selecionada para cima uma linha na tabela selecionada.
+
+** *Para baixo*
++
+Move a entrada selecionada para baixo uma linha na tabela selecionada.
+
+** *Botões de seleção*
++
+Move a entrada selecionada de uma tabela para outra.
+
+
+
+
+
+
+
+== Botões de comando
+
+* *Teste*
++
+Permite-lhe testar o localizador que definiu.
+
+* *Guardar*
++
+Salva o localizador e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Não salva o localizador e fecha a caixa de diálogo.
+
+

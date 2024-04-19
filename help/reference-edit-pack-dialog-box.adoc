@@ -1,0 +1,112 @@
+---
+permalink: help/reference-edit-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, pack, dialog, enable 
+summary: A caixa de diálogo Editar Pacote permite editar o pacote. 
+---
+= Caixa de diálogo Edit Pack (Editar pacote)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Editar Pacote permite editar o pacote.
+
+* Separador Detalhes
+* Separador conteúdo do pacote
+
+
+
+
+== Separador Detalhes
+
+* *Nome*
++
+Permite-lhe introduzir um nome e guardar o pacote.
+
+* *Versão*
++
+Permite introduzir uma versão e guardar o pacote.
+
+* *Autor*
++
+Permite-lhe introduzir o nome do autor e guardar o pacote.
+
+* *Descrição*
++
+Permite-lhe introduzir uma descrição e guardar o pacote.
+
+
+
+
+
+== Separador conteúdo do pacote
+
+* *Fluxo de trabalho*
++
+A opção *Workflow* permite visualizar o *Name* e a *Entity Version* do fluxo de trabalho.
+
+* *Finders*
++
+A opção *Finders* permite visualizar o *Name* e a *Entity Version* do localizador.
+
+* *Filtros*
++
+A opção *Filters* permite visualizar o *Name* e a *Entity Version* do filtro.
+
+* *Comandos*
++
+A opção *comandos* permite visualizar o *Nome* e a *versão da entidade* do comando.
+
+* *Funções*
++
+A opção *Functions* permite visualizar o *Name* e a *Entity Version* da função.
+
+* *Modelos*
++
+A opção *Templates* permite visualizar o *Name* e a *Entity Version* do modelo.
+
+* *Dicionário*
++
+A opção *Dicionário* permite visualizar o *Nome* e a versão da entidade* do dicionário.
+
+* *Esquemas*
++
+A opção *schemes* permite visualizar o *Name* e a *Entity Version* do esquema.
+
+* *Consultas de cache*
++
+A opção *Cache queries* permite visualizar o *Name* e a *Entity Version* da consulta de cache.
+
+* * Tipos de fonte de dados SQL*
++
+A opção *tipos de fonte de dados SQL* permite visualizar o *Nome* e *versão da entidade* do tipo de fonte de dados SQL.
+
+* *Tipos de fonte de dados de script*
++
+A opção *Script Data Source Types* permite visualizar o *Name* e *Entity Version* do tipo de fonte de dados do script.
+
+* *Categorias*
++
+A opção *categorias* permite visualizar o *Nome* e a versão da entidade* da categoria.
+
+* *Tipos de sistema remoto*
++
+A opção *tipos de sistema remoto* permite visualizar o *Nome* e a *versão da entidade* do tipo de sistema remoto.
+
+
+
+
+
+== Botões de comando
+
+* *Guardar*
++
+Salva o pacote e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Fecha a caixa de diálogo sem salvar.
+
+

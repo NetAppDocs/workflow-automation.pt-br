@@ -1,0 +1,21 @@
+---
+permalink: help/task-disable-cache-acquisition-for-dictionary-entries.html 
+sidebar: sidebar 
+keywords: necessary, cache, dictionary, objects, oncommand, workflow, automation, disable, reduce, time, complete, data, source, acquisition 
+summary: 'Quando não for necessário armazenar em cache objetos de dicionário no OnCommand Workflow Automation (WFA), você pode desativar o cache desses objetos. Desativar o armazenamento em cache de objetos indesejados pode reduzir o tempo gasto pelo WFA para concluir aquisições de fontes de dados.' 
+---
+= Desativar a aquisição de cache para entradas de dicionário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando não for necessário armazenar em cache objetos de dicionário no OnCommand Workflow Automation (WFA), você pode desativar o cache desses objetos. Desativar o armazenamento em cache de objetos indesejados pode reduzir o tempo gasto pelo WFA para concluir aquisições de fontes de dados.
+
+.Passos
+. Clique em *Design da fonte de dados* > *Dicionário*.
+. Selecione a entrada do dicionário para a qual pretende desativar a aquisição de dados.
+. Clique image:../media/disable_acquisition_wfa_icon.gif["Desativar o ícone de aquisição"]na barra de ferramentas e, em seguida, clique em *Yes*.
+. Se você vir a mensagem de erro `_Cache acquisition for the dictionary entry cannot be disabled,_`, desative a aquisição de cache para as entradas do dicionário listadas na mensagem de erro e tente desativar novamente a aquisição de cache para o objeto de dicionário atual.
+

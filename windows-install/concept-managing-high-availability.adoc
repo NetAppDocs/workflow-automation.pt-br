@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-managing-high-availability.html 
+sidebar: sidebar 
+keywords: manage, high availability 
+summary: Você pode configurar uma configuração de alta disponibilidade para fornecer suporte constante para operações de rede. Se um dos componentes falhar, o componente espelhado na configuração assume a operação e fornece recursos de rede ininterruptos. Você também pode fazer backup do banco de dados WFA e das configurações suportadas para que você possa recuperar os dados em caso de desastre. 
+---
+= Gerenciamento da alta disponibilidade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar uma configuração de alta disponibilidade para fornecer suporte constante para operações de rede. Se um dos componentes falhar, o componente espelhado na configuração assume a operação e fornece recursos de rede ininterruptos. Você também pode fazer backup do banco de dados WFA e das configurações suportadas para que você possa recuperar os dados em caso de desastre.

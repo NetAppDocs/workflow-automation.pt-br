@@ -1,0 +1,171 @@
+---
+permalink: help/reference-monitoring-window.html 
+sidebar: sidebar 
+keywords: monitoring, window, display, details, result, planning, execution, phase, workflow, tab, read-only, content, areas, application, select, preview, option 
+summary: A janela Monitoramento exibe detalhes sobre os resultados da fase de Planejamento ou execução do fluxo de trabalho. Os separadores na janela apresentam conteúdo só de leitura. Você pode acessar essa janela de várias áreas do APLICATIVO WFA ao selecionar as opções Detalhes, Visualizar ou Executar. 
+---
+= Janela de monitorização
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela Monitoramento exibe detalhes sobre os resultados da fase de Planejamento ou execução do fluxo de trabalho. Os separadores na janela apresentam conteúdo só de leitura. Você pode acessar essa janela de várias áreas do APLICATIVO WFA ao selecionar as opções *Details*, *Preview* ou *Execute*.
+
+* Área de estado
+* Separador fluxo
+* Separador Detalhes
+* Separador Plano execução
+* Entradas do utilizador
+* Guia retornar parâmetros
+* Separador Histórico
+
+
+
+
+== Área de estado
+
+A área Status acima das guias exibe informações detalhadas sobre o resultado do processo de Planejamento ou execução.
+
+* *Estado do fluxo de trabalho*
++
+Na parte superior da janela, um cabeçalho codificado por cores exibe o resultado do processo de Planejamento ou execução:
+
++
+** Verde indica uma ação bem-sucedida - por exemplo, Planejamento concluído ou execução concluída.
+** Vermelho indica falha - por exemplo, Falha no Planejamento ou Falha na execução.
+
+
+* * Menos/mais informações ação*
++
+Este link de ação está disponível quando o processo de visualização ou execução falhar. Você pode alternar entre *less info* e *more info* usando o link de ação. Dependendo da ação, o link abre ou fecha a caixa de informações para mostrar mais ou menos informações sobre o resultado com falha.
+
+* *Status detalhado*
++
+Esta caixa está disponível quando o processo de visualização ou execução falhar. Ele exibe detalhes sobre o processo de Planejamento ou execução. Quando um processo falha, essa caixa é aberta por padrão e fornece detalhes da causa da falha.
+
+
+
+
+
+== Separador fluxo
+
+A guia fluxo fornece uma apresentação gráfica do fluxo de trabalho.
+
+Comandos e fluxos de trabalho filho são exibidos na linha superior com seus objetos e variáveis exibidos abaixo. O status dos detalhes do comando e fluxos de trabalho filho durante a visualização ou execução é exibido usando várias cores.
+
+A tabela a seguir mostra o seguinte:
+
+* O esquema de cores usado para exibir o status do comando ou execução do fluxo de trabalho
+* Os ícones utilizados na janela
+
+
+[cols="25h,~"]
+|===
+| Esquema de cores e ícone | Estado 
+
+
+ a| 
+image:../media/execution_successful.gif["caixa verde"]
+ a| 
+A execução é bem-sucedida
+
+
+
+ a| 
+image:../media/execution_failed.gif["caixa vermelha"]
+ a| 
+Falha na execução
+
+
+
+ a| 
+image:../media/execution_in_progress.gif["caixa azul"]
+ a| 
+A execução está em andamento
+
+
+
+ a| 
+image:../media/execution_skipped.gif["caixa cinzenta"]
+ a| 
+Execução ignorada
+
+
+
+ a| 
+image:../media/waiting_for_approval.gif["caixa azul"]
+ a| 
+Cabeçalho do fluxo de trabalho secundário
+
+
+
+ a| 
+image:../media/info_icon_execute_wfa.gif[""]
+ a| 
+Abre os registos
+
+
+
+ a| 
+image:../media/approval_point_icon.gif["Ícone do ponto de aprovação"]
+ a| 
+O fluxo de trabalho filho inclui um ponto de aprovação
+
+|===
+
+
+== Separador Detalhes
+
+A guia Detalhes fornece informações mais detalhadas sobre o fluxo de trabalho. As informações são fornecidas em formato de tabela, com os comandos na linha de cabeçalho e os objetos e variáveis associados listados abaixo. Esta guia fornece cada comando com todos os seus argumentos e parâmetros.
+
+Esta guia é útil para depurar uma pré-visualização ou execução do fluxo de trabalho com falha.
+
+
+
+== Separador Plano execução
+
+A guia Plano de execução fornece uma lista traduzida dos comandos de fluxo de trabalho e seus argumentos que estão sendo executados (scripts ou comandos).
+
+Você pode usar essa guia para depurar uma visualização ou execução com falha do fluxo de trabalho.
+
+
+
+== Guia entradas do usuário
+
+O separador User Inputs (entradas do utilizador) apresenta os valores introduzidos pelos utilizadores durante a pré-visualização ou execução do fluxo de trabalho.
+
+Você pode usar as setas de classificação (image:../media/wfa_sortarrow_down_icon.gif["Ícone de ordenação"] ou image:../media/wfa_sortarrow_up_icon.gif["Ícone de ordenação"]) no cabeçalho da coluna para classificar as entradas da coluna em ordem crescente ou decrescente.
+
+
+
+== Guia retornar parâmetros
+
+A guia Return Parameters (parâmetros de retorno) lista a saída do fluxo de trabalho, por nome do parâmetro e valor do parâmetro.
+
+Você pode acessar esses parâmetros de retorno usando serviços da Web.
+
+
+
+== Separador Histórico
+
+A guia Histórico lista as alterações nos status do fluxo de trabalho, quando ocorreu a alteração de status, quem iniciou a ação e a mensagem associada à alteração de status.
+
+
+
+== Botões de comando
+
+* *Download de Logs*
++
+Permite-lhe transferir um `zip` ficheiro de todos os ficheiros de registo, incluindo os registos de execução específicos.
+
+* *Visibilidade da coluna*
++
+Permite mostrar ou ocultar colunas na guia Detalhes.
+
+* *OK*
++
+Fecha a janela Monitoramento.
+
+

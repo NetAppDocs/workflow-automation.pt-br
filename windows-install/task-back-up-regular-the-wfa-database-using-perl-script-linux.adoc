@@ -1,0 +1,41 @@
+---
+permalink: windows-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, regular, wfa, database, cli 
+summary: 'Você pode executar um backup regular do banco de dados OnCommand Workflow Automation (WFA) usando a interface de linha de comando (CLI) DO WFA. Em um backup regular, somente o banco de dados WFA é feito backup.' 
+---
+= Fazer backup (regular) do banco de dados WFA usando a CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode executar um backup regular do banco de dados OnCommand Workflow Automation (WFA) usando a interface de linha de comando (CLI) DO WFA. Em um backup regular, somente o banco de dados WFA é feito backup.
+
+Você precisa ter credenciais de usuário de administrador, credenciais de arquiteto ou credenciais de usuário de backup.
+
+Em um ambiente de alta disponibilidade, você deve criar backups programados usando APIs REST. Não é possível criar backups usando a CLI quando O WFA estiver no modo failover.
+
+Para obter mais informações, consulte a documentação do REST.
+
+.Passos
+. No prompt do shell, navegue para o seguinte diretório no servidor WFA: `WFA_install_location\WFA\bin.`
++
+WFA_install_location é o diretório de instalação DO WFA.
+
+. Faça backup do banco de dados DO WFA:
++
+`.\wfa --backup --user=USER [--password=PASS] [--location=PATH]`
+
++
+** usuário é o nome de usuário do usuário de backup.
+** senha é a senha do usuário de backup.
++
+Se não tiver fornecido a palavra-passe, tem de introduzir a palavra-passe quando lhe for pedido.
+
+** caminho é o caminho completo do diretório para o arquivo de backup.
+
+
+. Verifique se o arquivo de backup foi criado no local especificado.
+

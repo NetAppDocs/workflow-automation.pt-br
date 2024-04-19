@@ -1,0 +1,181 @@
+---
+permalink: help/concept-how-entity-versioning-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, wfa, entity, command, version, manage, change 
+summary: 'As entidades OnCommand Workflow Automation (WFA), como comandos e fluxos de trabalho, são versionadas. Você pode usar os números de versão para gerenciar facilmente alterações nas entidades WFA.' 
+---
+= Como funciona o versionamento de entidade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As entidades OnCommand Workflow Automation (WFA), como comandos e fluxos de trabalho, são versionadas. Você pode usar os números de versão para gerenciar facilmente alterações nas entidades WFA.
+
+Cada entidade WFA inclui um número de versão no `major.minor.revision` formato - por exemplo, 1,1.20. Você pode incluir até três dígitos em cada parte do número da versão.
+
+Antes de modificar o número de versão de uma entidade WFA, você deve estar ciente das seguintes regras:
+
+* Os números de versão não podem ser alterados da versão atual para uma versão anterior.
+* Cada parte da versão deve ser um número de 0 a 999.
+* Novas entidades WFA são versionadas como 1,0.0, por padrão.
+* O número de versão de uma entidade é retido durante a clonagem ou usando *Salvar como* para salvar uma cópia da entidade.
+* Várias versões de uma entidade não podem existir em uma instalação DO WFA.
+
+
+Quando você atualiza a versão de uma entidade WFA, a versão de sua entidade pai imediata é atualizada automaticamente. Por exemplo, a atualização da versão do comando *Create volume* atualiza o fluxo de trabalho *Create a NFS volume*, porque o fluxo de trabalho *Create a NFS volume* é uma entidade principal imediata do comando *Create volume*. A atualização automática das versões é aplicada da seguinte forma:
+
+* Modificar a versão principal de uma entidade atualiza a versão menor de suas entidades pai imediatas.
+* Modificar a versão menor de uma entidade atualiza a versão de revisão de suas entidades pai imediatas.
+* Modificar a versão de revisão de uma entidade não atualiza nenhuma parte da versão de suas entidades pai imediatas.
+
+
+A tabela a seguir lista as entidades WFA e suas entidades-mãe imediatas:
+
+[cols="2*"]
+|===
+| Entidade | Entidade principal imediata 
+
+
+ a| 
+Consulta de cache
+ a| 
+* Tipo de fonte de dados
+
+
+
+
+ a| 
+Modelo
+ a| 
+* Fluxo de trabalho
+
+
+
+
+ a| 
+Função
+ a| 
+* Fluxo de trabalho
+* Modelo
+
+
+
+NOTE: Se uma função contiver carateres especiais ou mistos, a versão de suas entidades pai imediatas pode não ser atualizada.
+
+
+
+ a| 
+Dicionário
+ a| 
+* Modelo
+* Filtro
+* Consulta de cache
+* Comando
+* Tipos de fonte de dados que estão usando o método script
+
+
+
+
+ a| 
+Comando
+ a| 
+* Fluxo de trabalho
+
+
+
+
+ a| 
+Filtro
+ a| 
+* Localizador
+* Fluxo de trabalho
+
+
+
+
+ a| 
+Localizador
+ a| 
+* Fluxo de trabalho
+
+
+
+
+ a| 
+Tipo de fonte de dados
+ a| 
+Nenhum
+
+
+
+ a| 
+Fluxo de trabalho
+ a| 
+Nenhum
+
+|===
+Você pode procurar uma entidade no WFA usando as partes do número da versão ou o número da versão completa.
+
+Se você excluir uma entidade pai, as entidades filho serão mantidas e sua versão não será atualizada para a exclusão.
+
+
+
+== Como o controle de versão funciona ao importar entidades
+
+Se você importar entidades de versões anteriores ao Workflow Automation 2,2, as entidades serão versionadas como 1,0.0, por padrão. Se a entidade importada já estiver presente no servidor WFA, a entidade existente será substituída pela entidade importada.
+
+A seguir estão as possíveis mudanças nas entidades WFA durante uma importação:
+
+* Atualização de entidades
++
+As entidades são substituídas por uma versão posterior.
+
+* Reversão de entidades
++
+As entidades são substituídas por uma versão anterior.
+
++
+
+NOTE: Quando você executa uma reversão de uma entidade, a versão de suas entidades pai imediatas é atualizada.
+
+* Importação de novas entidades
+
+
+
+NOTE: Você não pode importar entidades seletivamente de um `.dar` arquivo.
+
+Se uma versão posterior de uma entidade for importada, a versão de suas entidades pai imediatas será atualizada.
+
+Se houver várias entidades filho para a entidade pai importada, somente o maior grau de alteração (maior, menor ou revisão) para as entidades filho será aplicado à entidade pai. Os exemplos a seguir explicam como esta regra funciona:
+
+* Para uma entidade principal importada, se houver uma entidade filha com uma alteração menor e outra entidade filha com uma alteração de revisão, a alteração menor será aplicada à entidade pai.
++
+A parte de revisão da versão do pai é incrementada.
+
+* Para uma entidade pai importada, se houver uma entidade filha com uma alteração maior e outra entidade filha com uma alteração menor, a alteração principal será aplicada à entidade pai.
++
+A parte menor da versão do pai é incrementada.
+
+
+
+
+
+== Exemplo de como as versões de entidades filho importadas afetam a versão pai
+
+Considere o seguinte fluxo de trabalho no WFA: ""criar volume e exportar usando NFS - Custom"" 1,0.0.
+
+Os comandos existentes incluídos no fluxo de trabalho são os seguintes:
+
+* "Criar política de exportação - personalizada" 1.0.0
+* "Criar volume - Personalizado" 1.0.0
+
+
+Os comandos incluídos no arquivo .dar, que deve ser importado, são os seguintes:
+
+* "Criar política de exportação - personalizada" 1.1.0
+* "Criar volume - Personalizado" 2.0.0
+
+
+Quando você importa esse arquivo .dar, a versão menor do fluxo de trabalho "criar volume e exportar usando NFS - Personalizado" é incrementada para 1,1.0.

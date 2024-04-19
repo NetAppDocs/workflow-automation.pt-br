@@ -1,0 +1,74 @@
+---
+permalink: workflows/concept-what-return-parameters-are.html 
+sidebar: sidebar 
+keywords: return, parameters, available, after, planning, phase, workflow, values, useful, debugging, workflow, work, debug 
+summary: Parâmetros de retorno são parâmetros que estão disponíveis após a fase de Planejamento de um fluxo de trabalho. Os valores retornados por esses parâmetros são úteis na depuração de um fluxo de trabalho. Você deve entender como os parâmetros de retorno funcionam e quais parâmetros podem ser usados como parâmetros de retorno para depurar fluxos de trabalho. 
+---
+= Como os parâmetros de retorno funcionam
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Parâmetros de retorno são parâmetros que estão disponíveis após a fase de Planejamento de um fluxo de trabalho. Os valores retornados por esses parâmetros são úteis na depuração de um fluxo de trabalho. Você deve entender como os parâmetros de retorno funcionam e quais parâmetros podem ser usados como parâmetros de retorno para depurar fluxos de trabalho.
+
+Você pode designar um conjunto de parâmetros, como atributos de variáveis, expressões e valores de entrada de usuário, em um fluxo de trabalho como parâmetros de retorno. Durante a execução do fluxo de trabalho, os valores dos parâmetros designados são preenchidos na fase de Planejamento e a execução do fluxo de trabalho é iniciada. Os valores desses parâmetros são então retornados da maneira como foram calculados nessa execução específica do fluxo de trabalho. Se você quiser depurar o fluxo de trabalho, você pode se referir aos valores que foram retornados pelos parâmetros.
+
+Você pode especificar os parâmetros de retorno necessários em um fluxo de trabalho quando quiser ver quais são os valores calculados ou selecionados para esses parâmetros. Por exemplo, ao usar a lógica de seleção de recursos para selecionar um agregado em um fluxo de trabalho, você pode especificar agregado como parâmetro de retorno para que você possa ver qual agregado foi selecionado durante o Planejamento do fluxo de trabalho.
+
+Antes de consultar os valores dos parâmetros de retorno para depurar seu fluxo de trabalho, você deve confirmar se a execução do fluxo de trabalho está concluída. Os valores dos parâmetros de retorno são definidos para cada execução do fluxo de trabalho. Se você tiver adicionado um parâmetro de retorno após várias execuções de um fluxo de trabalho, o valor desse parâmetro estará disponível apenas para execuções após a adição do parâmetro.
+
+
+
+== Parâmetros que podem ser usados como parâmetros de retorno
+
+[cols="2*"]
+|===
+| Parâmetros de retorno | Exemplo 
+
+
+ a| 
+Atributos variáveis que são escalares
+ a| 
+`volume1.name,` que é um atributo da variável "nome do volume"
+
+
+
+ a| 
+Constantes
+ a| 
+MAX_VOLUME_SIZE
+
+
+
+ a| 
+Entradas do utilizador
+ a| 
+Nome exclusivo
+
+
+
+ a| 
+Expressões MVEL que envolvem atributos variáveis, constantes e entradas de usuário
+ a| 
+volume1.name+'-'+$clusterName
+
+
+
+ a| 
+O parâmetro return que um comando adiciona durante a execução
+ a| 
+O `$volumeUUID` parâmetro é adicionado como um parâmetro de retorno quando você usa a seguinte linha em um comando PowerShell: `Add-WfaWorkflowParameter -Name "VolumeUUID" -Value "`12345`" -AddAsReturnParameter $true.`
+
+|===
+
+
+== Exemplos de parâmetros de retorno em fluxos de trabalho predefinidos
+
+Se você quiser entender como os parâmetros de retorno são especificados, você pode abrir os seguintes fluxos de trabalho predefinidos no Designer e revisar os parâmetros de retorno especificados:
+
+* Crie um volume NFS em um vFiler
+* Crie um compartilhamento Qtree CIFS em um vFiler
+* Crie um compartilhamento CIFS de volume do Data ONTAP em cluster
+

@@ -1,0 +1,218 @@
+---
+section: windows-install
+title: Instalação e configuração para Windows
+entries:
+- title: Visão geral do OnCommand Workflow Automation
+  pdf-filename: Visão geral do OnCommand Workflow Automation Windows
+  url: "/windows-install/concept-overview-of-oncommand-workflow-automation.html"
+  entries:
+  - title: Arquitetura de implantação do OnCommand Workflow Automation
+    url: "/windows-install/concept-oncommand-workflow-automation-deployment-architecture.html"
+  - title: Visão geral da instalação e configuração do OnCommand Workflow Automation
+    url: "/windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html"
+  - title: Limitações e melhorias conhecidas
+    url: "/windows-install/concept-known-limitations-and-enhancements.html"
+- title: Requisitos de sistema para a instalação do OnCommand Workflow Automation
+  pdf-filename: Requisitos de sistema para instalar o OnCommand Workflow Automation
+    Windows
+  url: "/windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html"
+  entries:
+  - title: Portas necessárias para o Workflow Automation
+    url: "/windows-install/reference-ports-required-for-oncommand-workflow-automation.html"
+- title: Pré-requisitos para instalar o Workflow Automation
+  url: "/windows-install/reference-prerequisites-for-installing-workflow-automation.html"
+- title: Gerenciamento da alta disponibilidade
+  pdf-filename: Gerenciamento do Windows de alta disponibilidade
+  url: "/windows-install/concept-managing-high-availability.html"
+  entries:
+  - title: Configure a automação do fluxo de trabalho em MSCS para alta disponibilidade
+    url: "/windows-install/task-set-up-wfa-in-mscs.html"
+    entries:
+    - title: Configure o MSCS para instalar o Workflow Automation
+      url: "/windows-install/task-configure-mscs-to-install-wfa.html"
+    - title: Instale o OnCommand Workflow Automation no Windows
+      url: "/windows-install/task-install-workflow-automation-on-windows.html"
+    - title: Configurar a automação do fluxo de trabalho com MSCS
+      url: "/windows-install/task-configure-wfa-with-mscs-using-configuration-scripts.html"
+  - title: Configure versões anteriores do OnCommand Workflow Automation para alta
+      disponibilidade
+    url: "/windows-install/task-configure-an-earlier-version-of-wfa-foir-high-availability-windows.html"
+  - title: Desinstalar Workflow Automation em um ambiente MSCS
+    url: "/windows-install/task-uninstall-wfa-in-an-mscs-environment.html"
+  - title: Faça backup e restaure o banco de dados e configurações do OnCommand Workflow
+      Automation no Windows
+    url: "/windows-install/task-back-up-and-restore-the-wfa-database-and-configurations-windows.html"
+- title: Configurar o OnCommand Workflow Automation
+  pdf-filename: Configurando o OnCommand Workflow Automation Windows
+  url: "/windows-install/concept-setting-up-oncommand-workflow-automation.html"
+  entries:
+  - title: Acesse o OnCommand Workflow Automation
+    url: "/windows-install/task-access-oncommand-workflow-automation.html"
+  - title: Fontes de dados do OnCommand Workflow Automation
+    pdf-filename: Fontes de dados do OnCommand Workflow Automation
+    url: "/windows-install/concept-wfa-data-sources.html"
+    entries:
+    - title: Configurando um usuário de banco de dados no DataFabric Manager
+      pdf-filename: Configurando um usuário de banco de dados no DataFabric Manager
+        Windows
+      url: "/windows-install/reference-configuring-a-database-user-on-datafabric-manager.html"
+      entries:
+      - title: Configure um usuário de banco de dados executando o ocsetup no Windows
+        url: "/windows-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html"
+      - title: Configure um usuário de banco de dados executando o ocsetup no Linux
+        url: "/windows-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html"
+    - title: Configure um usuário de banco de dados no Active IQ Unified Manager
+      url: "/windows-install/task-configure-a-database-user-on-active-iq-unified-manager.html"
+    - title: Configure uma fonte de dados
+      url: "/windows-install/task-set-up-a-data-source.html"
+    - title: Adicione um servidor Unified Manager atualizado como uma fonte de dados
+      url: "/windows-install/task-add-an-upgraded-unified-manager-server-data-source.html"
+  - title: Crie usuários locais
+    url: "/windows-install/task-create-local-users.html"
+  - title: Configure as credenciais de um sistema de destino
+    url: "/windows-install/task-configure-the-credentials-of-a-target-system.html"
+  - title: Configurando o OnCommand Workflow Automation
+    pdf-filename: Configurando o OnCommand Workflow Automation Windows
+    url: "/windows-install/concept-advanced-configuring-oncommand-workflow-automation.html"
+    entries:
+    - title: Configurar o AutoSupport
+      url: "/windows-install/task-configure-autosupport.html"
+    - title: Configure as definições de autenticação
+      url: "/windows-install/task-configure-authentication-settings.html"
+    - title: Adicionar grupos do ative Directory
+      url: "/windows-install/task-add-active-directory-group-names.html"
+    - title: Configurar notificações por e-mail
+      url: "/windows-install/task-configure-mail.html"
+    - title: Configurar o SNMP
+      pdf-filename: Configurar o SNMP Windows
+      url: "/windows-install/task-configure-snmp.html"
+      entries:
+      - title: Configurar SNMP versão 1
+        url: "/windows-install/task-configure-snmp-version-1.html"
+      - title: Configurar SNMP versão 3
+        url: "/windows-install/task-configure-snmp-version-3.html"
+    - title: Configurar Syslog
+      url: "/windows-install/task-configure-syslog.html"
+    - title: Configurar protocolos para conexão a sistemas remotos
+      url: "/windows-install/task-configure-protocols-for-connecting-to-remote-systems.html"
+  - title: Desative a política de senha padrão
+    url: "/windows-install/task-disable-the-default-password-policy.html"
+  - title: Modifique a política de senha padrão para o Windows
+    url: "/windows-install/task-modify-the-default-password-policy-windows.html"
+  - title: Ative o acesso remoto ao banco de dados do OnCommand Workflow Automation
+      no Windows
+    url: "/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html"
+  - title: Restringir os direitos de acesso do OnCommand Workflow Automation no host
+    url: "/windows-install/task-restrict-access-rights-of-oncommand-workflow-automation-on-the-host.html"
+  - title: Modifique a configuração de tempo limite da transação do OnCommand Workflow
+      Automation
+    url: "/windows-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation.html"
+  - title: Configure o valor de tempo limite para o Workflow Automation
+    url: "/windows-install/task-configure-the-timeout-value-for-windows.html"
+  - title: Ativar cifras e adicionar novas cifras
+    url: "/windows-install/concept-enabling-ciphers-and-adding-new-ciphers.html"
+- title: Atualize o OnCommand Workflow Automation
+  url: "/windows-install/task-upgrade-oncommand-workflow-automation.html"
+  entries:
+  - title: Atualize a partir do OnCommand Workflow Automation 3,1 ou versões posteriores
+    url: "/windows-install/task-upgrade-from-oncommand-workflow-automation-3-1-or-later-on-windows.html"
+    entries:
+    - title: Identificação do pacote durante a atualização
+      url: "/windows-install/reference-pack-identification-during-upgrade.html"
+- title: Atualização de produtos de terceiros
+  pdf-filename: Atualizar produtos de terceiros Windows
+  url: "/windows-install/concept-upgrading-third-party-products-in-windows.html"
+  entries:
+  - title: Atualize o OpenJDK
+    url: "/windows-install/task-upgrade-openjdk-on-windows-wfa.html"
+  - title: Atualize o MySQL
+    url: "/windows-install/task-upgrade-mysql-on-windows-wfa.html"
+  - title: Atualize o ActiveState Perl
+    url: "/windows-install/task-upgrade-active-state-perl-on-windows.html"
+- title: Fazer backup do banco de dados OnCommand Workflow Automation
+  pdf-filename: Fazer backup do banco de dados OnCommand Workflow Automation Windows
+  url: "/windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html"
+  entries:
+  - title: Faça backup do banco de dados DO WFA a partir do portal da Web
+    url: "/windows-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html"
+  - title: Faça backup do banco de dados WFA usando o script PowerShell
+    url: "/windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html"
+  - title: Fazer backup do banco de dados WFA usando a CLI
+    pdf-filename: Fazer backup do banco de dados WFA usando o CLI Windows
+    url: "/windows-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html"
+    entries:
+    - title: Faça backup (completo) do banco de dados WFA usando a CLI
+      url: "/windows-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html"
+    - title: Fazer backup (regular) do banco de dados WFA usando a CLI
+      url: "/windows-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html"
+  - title: Fazer backup do banco de dados WFA usando APIS REST
+    url: "/windows-install/concept-backing-up-the-wfa-database-using-rest-apis.html"
+    entries:
+    - title: Execute um backup completo do banco de dados WFA usando APIS REST
+      url: "/windows-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html"
+    - title: Faça um backup regular do banco de dados WFA usando APIS REST
+      url: "/windows-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html"
+- title: Restaurar a base de dados OnCommand Workflow Automation
+  pdf-filename: Restaurando o banco de dados do OnCommand Workflow Automation Windows
+  url: "/windows-install/concept-restoring-the-wfa-database.html"
+  entries:
+  - title: Restaure o banco de dados WFA
+    url: "/windows-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html"
+  - title: Restaurando o banco de dados WFA usando a CLI
+    pdf-filename: Restaurando o banco de dados WFA usando o CLI Windows
+    url: "/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html"
+    entries:
+    - title: Restaurar (completo) banco de dados WFA usando a CLI
+      url: "/windows-install/task-fully-restore-the-oncommand-workflow-automation-database-using-clis-windows.html"
+    - title: Restaure o banco de dados WFA (regular) usando a CLI
+      url: "/windows-install/task-regular-restore-of-the-oncommand-workflow-automation-database-using-clis-windows.html"
+  - title: Restaurando o banco de dados WFA usando APIS REST
+    pdf-filename: Restaurando o banco de dados WFA usando APIs REST Windows
+    url: "/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html"
+    entries:
+    - title: Restaure (completo) o banco de dados WFA usando APIS REST
+      url: "/windows-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html"
+    - title: Restaure (regular) o banco de dados WFA usando APIS REST
+      url: "/windows-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html"
+- title: Redefina a senha de administrador criada durante a instalação
+  url: "/windows-install/task-reset-the-admin-password-created-during-installation.html"
+- title: Importar conteúdo OnCommand Workflow Automation
+  pdf-filename: Importar conteúdo do OnCommand Workflow Automation Windows
+  url: "/windows-install/task-import-oncommand-workflow-automation-content.html"
+  entries:
+  - title: Considerações ao importar conteúdo do OnCommand Workflow Automation
+    url: "/windows-install/reference-considerations-of-importing-wfa-content.html"
+- title: Migrar a instalação do OnCommand Workflow Automation
+  url: "/windows-install/task-migrate-oncommand-workflow-automation.html"
+- title: Desinstale o OnCommand Workflow Automation
+  url: "/windows-install/task-uninstall-oncommand-workflow-automation.html"
+- title: Gerenciando certificado SSL OnCommand Workflow Automation
+  url: "/windows-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html"
+  entries:
+  - title: Substitua o certificado SSL padrão do Workflow Automation
+    url: "/windows-install/task-replace-the-default-workflow-automation-ssl-certificate.html"
+  - title: Criar uma solicitação de assinatura de certificado para o Workflow Automation
+    url: "/windows-install/task-create-a-certificate-signing-request-for-workflow-automation-windows.html"
+- title: Gerenciando módulos Perl e Perl
+  pdf-filename: Gerenciando módulos Perl e Perl Windows
+  url: "/windows-install/reference-managing-perl-and-perl-modules.html"
+  entries:
+  - title: Configure sua distribuição Perl preferida
+    url: "/windows-install/task-configure-your-preferred-perl-interpreter.html"
+  - title: Gerencie módulos Perl específicos do site
+    url: "/windows-install/task-manage-site-specific-perl-modules.html"
+  - title: Repare a instalação ActivePerl
+    url: "/windows-install/task-repair-the-activeperl-installation.html"
+- title: Solução de problemas de instalação e configuração
+  pdf-filename: Solução de problemas de instalação e configuração Windows
+  url: "/windows-install/reference-troubleshooting.html"
+  entries:
+  - title: Não é possível abrir a página de login do OnCommand Workflow Automation
+    url: "/windows-install/reference-cannot-open-the-oncommand-workflow-automation-login-page.html"
+  - title: Não é possível visualizar os dados do Performance Advisor no WFA
+    url: "/windows-install/reference-cannot-view-performance-advisor-data-in-wfa.html"
+  - title: O OnCommand Workflow Automation (WFA) exibe uma página em branco no Windows
+      2012
+    url: "/windows-install/reference-wfa-displays-a-blank-page-on-windows-2012.html"
+- title: Documentação relacionada para o OnCommand Workflow Automation
+  url: "/windows-install/reference-related-documentation-for-oncommand-workflow-automation.html"

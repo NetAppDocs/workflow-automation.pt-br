@@ -1,0 +1,123 @@
+---
+permalink: windows-install/task-manage-site-specific-perl-modules.html 
+sidebar: sidebar 
+keywords: manage, site-specific, perl modules 
+summary: 'Você pode usar o ActiveState Perl Package Manager (ppm) para gerenciar seus módulos Perl específicos do site. Você deve instalar seus módulos Perl específicos do site fora do diretório de instalação do OnCommand Workflow Automation (WFA) para evitar a exclusão de seus módulos Perl durante uma atualização DO WFA.' 
+---
+= Gerencie módulos Perl específicos do site
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o ActiveState Perl Package Manager (ppm) para gerenciar seus módulos Perl específicos do site. Você deve instalar seus módulos Perl específicos do site fora do diretório de instalação do OnCommand Workflow Automation (WFA) para evitar a exclusão de seus módulos Perl durante uma atualização DO WFA.
+
+Usando a variável de ambiente PERL5LIB, você pode configurar o interpretador Perl instalado no servidor WFA para usar seus módulos Perl.
+
+A instalação do módulo Perl try-Tiny na área do usuário em c: Perl é usada como um exemplo neste procedimento. Essa área de usuário não é excluída quando você desinstalar O WFA, e você pode reutilizar a área depois que O WFA for reinstalado ou atualizado.
+
+.Passos
+. Defina a variável de ambiente PERL5LIB para o local onde você deseja instalar seus módulos Perl.
++
+`c:\>echo %PERL5LIB%` `c:\Perl`
+
+. Verifique se a área do módulo Perl não foi inicializada usando `ppm area list`o .
++
+`c:\Program Files\NetApp\WFA\Perl64\bin>ppm area list`
+
++
+[listing]
+----
+┌────────┬──────┬───────────────────────────────────────────────────┐
+│ name   │ pkgs │ lib                                               │
+├────────┼──────┼───────────────────────────────────────────────────┤
+│ (user) │  n/a │ C:/Perl                                           │
+│  site* │  0   │ C:/Program Files/NetApp/WFA/Perl64/site/lib       │
+│  perl  │  229 │ C:/Program Files/NetAPP/WFA/Perl64/lib            │
+└────────┴──────┴───────────────────────────────────────────────────┘
+----
+. Inicialize a área do módulo Perl usando `ppm area init user`o .
++
+`c:\Program Files\NetApp\WFA\Perl64\bin>ppm area init user`
+
++
+[listing]
+----
+Syncing user PPM database with .packlists...done
+----
+. Verifique se a área do módulo Perl é inicializada usando `ppm area list`o .
++
+`c:\Program Files\NetApp\WFA\Perl64\bin>ppm area list`
+
++
+[listing]
+----
+┌────────┬──────┬───────────────────────────────────────────────────┐
+│ name   │ pkgs │ lib                                               │
+├────────┼──────┼───────────────────────────────────────────────────┤
+│  user  │  0   │ C:/Perl                                           │
+│  site* │  0   │ C:/Program Files/NetApp/WFA/Perl64/site/lib       │
+│  perl  │  229 │ C:/Program Files/NetAPP/WFA/Perl64/lib            │
+└────────┴──────┴───────────────────────────────────────────────────┘
+----
+. Adicione os repositórios necessários e instale os pacotes necessários.
++
+.. Adicione o repositório necessário usando `ppm repo add`o .
++
+`+c:\Program Files\NetApp\WFA\Perl64\bin>ppm repo add http://ppm4.activestate.com/MSWin32-x64/5.16/1600/package.xml+`
+
++
+[listing]
+----
+Downloading ppm4.activestate.com packlist...done
+Updating ppm4.activestate.com database...done
+Repo 1 added.
+----
+.. Verifique se o repositório necessário é adicionado usando `ppm repo list`o .
++
+`c:\Program Files\NetApp\WFA\Perl64\bin>ppm repo list`
+
++
+[listing]
+----
+┌────────┬──────┬────────────────────────────────────────────────┐
+│ id     │ pkgs │ name                                           │
+├────────┼──────┼────────────────────────────────────────────────┤
+│  1     │17180 │ ppmr.activestate.com                           │
+└────────┴──────┴────────────────────────────────────────────────┘
+ (1 enabled repository)
+----
+.. Instale o módulo Perl necessário usando `ppm install`o .
++
+`c:\Program Files\NetApp\WFA\Perl64\bin>ppm install Try-Tiny --area user`
+
++
+[listing]
+----
+Downloading ppm4.activestate.com packlist...done
+Updating ppm4.activestate.com database...done
+Downloading Try-Tiny-0.18...done
+Unpacking Try-Tiny-0.18...done
+Generating HTML for Try-Tiny-0.18...done
+Updating files in user area...done
+   2 files installed
+----
+.. Verifique se o módulo Perl necessário está instalado usando `ppm area list`o .
++
+`c:\Program Files\NetApp\WFA\Perl64\bin>ppm area list`
+
++
+[listing]
+----
+┌────────┬──────┬────────────────────────────────────────────────┐
+│ name   │ pkgs │ lib                                            │
+├────────┼──────┼────────────────────────────────────────────────┤
+│  user  │  1   │ C:/Perl                                        │
+│  site* │  0   │ C:/Program Files/NetApp/WFA/Perl64/site/lib    │
+│  perl  │  229 │ C:/Program Files/NetAPP/WFA/Perl64/lib         │
+└────────┴──────┴────────────────────────────────────────────────┘
+----
+
+
+

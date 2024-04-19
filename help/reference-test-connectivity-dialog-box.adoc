@@ -1,0 +1,44 @@
+---
+permalink: help/reference-test-connectivity-dialog-box.html 
+sidebar: sidebar 
+keywords: test, connectivity, dialog box, enable, test, system, associated, credential, operation, trigger, search, path, first, look, exact, match, pattern, service, authentication 
+summary: A caixa de diálogo testar conetividade permite testar a conexão com o sistema associado a uma credencial. A operação de conetividade de teste aciona o caminho de pesquisa e primeiro procura uma correspondência exata, depois uma correspondência de padrão e, finalmente, a autenticação de serviço LDAP. 
+---
+= Caixa de diálogo testar conetividade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo testar conetividade permite testar a conexão com o sistema associado a uma credencial. A operação de conetividade de teste aciona o caminho de pesquisa e primeiro procura uma correspondência exata, depois uma correspondência de padrão e, finalmente, a autenticação de serviço LDAP.
+
+O ICMP (Internet Control Message Protocol) é utilizado para verificar se o sistema está em execução antes de testar a conetividade.
+
+
+
+== Testar parâmetros de conetividade
+
+* *Tipo*
++
+Permite selecionar o tipo de credencial na lista suspensa.
+
+* *Nome/IP*
++
+Permite especificar o nome do host ou o endereço IP da credencial.
+
+
+
+
+
+== Botões de comando
+
+* *Teste*
++
+Abre uma tentativa de conexão com o nome do host ou endereço IP.
+
+* *Fechar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

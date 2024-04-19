@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-dictionary-entries-are.html 
+sidebar: sidebar 
+keywords: dictionary, entries, oncommand, workflow, automation, building, blocks, use, represent, object, types, relationships, storage, environments, filters, return, value, natural, keys 
+summary: 'Entradas de dicionário são um dos blocos de construção do OnCommand Workflow Automation (WFA). Você pode usar entradas de dicionário para representar tipos de objetos e seus relacionamentos em ambientes relacionados ao armazenamento e armazenamento. Em seguida, você pode usar filtros em fluxos de trabalho para retornar o valor das chaves naturais das entradas do dicionário.' 
+---
+= Quais são as entradas do dicionário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Entradas de dicionário são um dos blocos de construção do OnCommand Workflow Automation (WFA). Você pode usar entradas de dicionário para representar tipos de objetos e seus relacionamentos em ambientes relacionados ao armazenamento e armazenamento. Em seguida, você pode usar filtros em fluxos de trabalho para retornar o valor das chaves naturais das entradas do dicionário.
+
+Uma entrada de dicionário é a definição de um tipo de objeto que é suportado pelo WFA. Cada entrada de dicionário representa um tipo de objeto e sua relação nos ambientes relacionados ao armazenamento e armazenamento suportados. Um objeto de dicionário consiste em uma lista de atributos, que podem ser verificados. Um objeto de dicionário com valores completos descreve uma instância de objeto de um tipo. Além disso, os atributos de referência descrevem a relação do objeto com o ambiente; por exemplo, um objeto de dicionário de volume tem muitos atributos, como nome, tamanho_mb e volume_guarantee. Além disso, o objeto de dicionário de volume inclui referências ao agregado e ao array que contém o volume na forma de array_id e aggregate_id.
+
+A tabela de cache de um objeto é um banco de dados contendo alguns ou todos os atributos da entrada do dicionário que são marcados para cache. Para que uma entrada de dicionário inclua uma tabela de cache, pelo menos um dos atributos da entrada de dicionário deve ser marcado para cache. As entradas de dicionário incluem chaves naturais, que são identificadores exclusivos para os objetos; por exemplo, os volumes do modo 7 são identificados exclusivamente pelo seu nome e pelo endereço IP da matriz que os contém. As Qtrees são identificadas pelo nome de qtree, pelo nome do volume e pelo endereço IP da matriz. Você deve identificar os atributos do dicionário que fazem parte das chaves naturais da entrada do dicionário ao criar entradas do dicionário.

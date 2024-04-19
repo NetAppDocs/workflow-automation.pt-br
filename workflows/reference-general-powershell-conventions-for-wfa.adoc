@@ -1,0 +1,34 @@
+---
+permalink: workflows/reference-general-powershell-conventions-for-wfa.html 
+sidebar: sidebar 
+keywords: must, understand, certain, powershell, perl, conventions, use, create, scripts, consistent, existing, script 
+summary: Você deve entender certas convenções PowerShell e Perl que são usadas no WFA para criar scripts que são consistentes com scripts existentes. 
+---
+= Convenções gerais do PowerShell e Perl para O WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve entender certas convenções PowerShell e Perl que são usadas no WFA para criar scripts que são consistentes com scripts existentes.
+
+* Use variáveis que ajudam a esclarecer o que você quer que o script faça.
+* Escreva código legível que pode ser entendido sem comentários.
+* Mantenha os scripts e comandos o mais simples possível.
+* Para scripts do PowerShell:
++
+** Use cmdlets sempre que possível.
+** Invoque o código .NET quando não houver cmdlet disponível.
+
+
+* Para scripts Perl:
++
+** Sempre termine as declarações "die" com carateres de nova linha.
++
+Na ausência de um caractere de nova linha, o número da linha do script é impresso, o que não é útil para depurar comandos Perl executados pelo WFA.
+
+** No módulo "getopt", torne obrigatório os argumentos de string para um comando.
+
+
+

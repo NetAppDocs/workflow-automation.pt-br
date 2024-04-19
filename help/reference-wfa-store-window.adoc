@@ -1,0 +1,16 @@
+---
+permalink: help/reference-wfa-store-window.html 
+sidebar: sidebar 
+keywords: storage, automation, store, cotains, netapp-certified, workflow, pack, developed, use, oncommand, download, import, execute 
+summary: 'O repositório de automação do storage contém pacotes de fluxo de trabalho de storage automatizado certificados pela NetApp, desenvolvidos para uso com o OnCommand Workflow Automation (WFA). Você pode baixar os pacotes e depois importá-los para O WFA para executá-los.' 
+---
+= Janela do armazenamento de automação de storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O repositório de automação do storage contém pacotes de fluxo de trabalho de storage automatizado certificados pela NetApp, desenvolvidos para uso com o OnCommand Workflow Automation (WFA). Você pode baixar os pacotes e depois importá-los para O WFA para executá-los.
+
+Os fluxos de trabalho automatizados estão disponíveis na https://automationstore.netapp.com["Armazenamento de automação de storage"^]

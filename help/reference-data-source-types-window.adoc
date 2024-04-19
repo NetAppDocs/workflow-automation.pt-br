@@ -1,0 +1,158 @@
+---
+permalink: help/reference-data-source-types-window.html 
+sidebar: sidebar 
+keywords: data, source, types, window, display, available, manage 
+summary: A janela tipos de fonte de dados exibe os tipos de fonte de dados disponíveis. Pode gerir os tipos de origem de dados a partir desta janela. 
+---
+= Janela tipos de origem de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela tipos de fonte de dados exibe os tipos de fonte de dados disponíveis. Pode gerir os tipos de origem de dados a partir desta janela.
+
+Um tipo de fonte de dados é usado para definir uma fonte de dados, que contém informações sobre a origem dos dados em um banco de dados específico e o método usado para adquirir dados da fonte de dados. Por exemplo, uma fonte de dados pode ser um banco de dados Active IQ Unified Manager que contém informações sobre um ambiente de storage ou um banco de dados VMware com informações sobre um data center.
+
+
+
+== Tabela tipos origem dados
+
+A tabela tipos de fonte de dados lista os tipos de fonte de dados disponíveis. Cada entrada é identificada como uma das seguintes:
+
+* image:../media/community_certification.gif[""] - conteúdo criado pelos usuários
+* image:../media/ps_certified_icon_wfa.gif[""] - Conteúdo desenvolvido por Serviços profissionais (PS), que está disponível apenas em instalações personalizadas feitas pela PS
+* image:../media/community_certification.gif[""] - pacotes desenvolvidos pelos usuários
+* image:../media/lock_icon_wfa.gif[""] - conteúdo criado por usuários que está bloqueado
+* image:../media/netapp_certified.gif[""] - Conteúdo certificado pela NetApp
+
+
+Você pode personalizar a exibição da tabela usando os recursos de filtragem e classificação disponíveis para cada coluna, bem como reorganizando a ordem da coluna.
+
+* image:../media/filter_icon_wfa.gif["Ícone de filtro"] ativa ou desativa a filtragem de toda a tabela. Um "x" vermelho aparece sobre o ícone se a filtragem estiver desativada.
+* Clicar duas vezes image:../media/filter_icon_wfa.gif["Ícone de filtro"]limpa e redefine as seleções de filtragem.
+* image:../media/wfa_filter_icon.gif["Ícone de filtro"] em cada cabeçalho de coluna permite filtrar com base no conteúdo das colunas. Clicar image:../media/wfa_filter_icon.gif["Ícone de filtro"] em uma coluna permite filtrar um item específico na lista suspensa ou em todos os itens disponíveis.
+* Clicar no cabeçalho da coluna alterna entre a ordem ascendente e descendente de ordenação. É possível identificar a ordem de classificação aplicada pelas setas de classificação (image:../media/wfa_sortarrow_up_icon.gif["Ícone de ordenação"] para ascendente e image:../media/wfa_sortarrow_down_icon.gif["Ícone de ordenação"]descendente).
+* Para reorganizar a localização das colunas, você pode arrastar e soltar colunas para colocá-las em qualquer ordem necessária. No entanto, você não pode ocultar ou excluir nenhuma dessas colunas.
+* Clicar na caixa de texto filtro *pesquisar* permite-lhe procurar conteúdo específico. Além disso, você pode pesquisar usando operadores suportados para o tipo de coluna aplicável, alfabético ou numérico.
+
+
+A tabela tipos de fonte de dados contém as seguintes colunas:
+
+* * Certificação *
++
+Indica se o tipo de fonte de dados é criado pelo usuário (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""] ), comunidade (image:../media/community_certification.gif[""] ), bloqueado pelo usuário (image:../media/lock_icon_wfa.gif[""] ) ou certificado pela NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Fonte de dados*
++
+Exibe o nome do tipo de fonte de dados.
+
+* * Esquema*
++
+Exibe o esquema associado ao tipo de fonte de dados. Um esquema representa o modelo de dados de um sistema. Por exemplo, um esquema de vc contém dados relevantes para o seu ambiente virtual, como máquinas virtuais, hosts e datastores.
+
++
+A seguir estão os esquemas padrão que são selecionados por padrão:
+
++
+** cm_performance
+** cm_storage
+** desempenho
+** armazenamento
+** vc
+
+
+* *Versão da entidade*
++
+Exibe o número da versão do objeto no `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Compatibilidade com os*
++
+Indica se o tipo de fonte de dados é compatível com o sistema operacional host.
+
+* * Atualizado em *
++
+Exibe a data e a hora em que o tipo de fonte de dados foi atualizado pela última vez.
+
+* *Atualizado por*
++
+Exibe o usuário que atualizou o tipo de fonte de dados.
+
+* *Versão da fonte de dados*
++
+Exibe a versão da fonte de dados associada ao tipo de fonte de dados.
+
+* *Driver de fonte de dados*
++
+Apresenta o tipo de controlador utilizado para adquirir dados da fonte de dados.
+
+* *Método*
++
+Exibe o método usado para adquirir dados da fonte de dados, como SQL e script.
+
+* *Linguagem de script*
++
+Exibe a linguagem de script usada pelo tipo de fonte de dados.
+
+
+
+
+
+== Barra de ferramentas
+
+A barra de ferramentas está localizada acima do cabeçalho da coluna. Pode utilizar os ícones na barra de ferramentas para executar várias acões. Estas ações também podem ser acedidas a partir do menu de clique com o botão direito do rato na janela.
+
+* image:../media/new_wfa_icon.gif["Novo ícone"]* (Novo)*
++
+Abre a janela novo tipo de fonte de dados, que permite criar um novo tipo de fonte de dados.
+
+* image:../media/edit_wfa_icon.gif["Ícone de edição"]* (Editar)*
++
+Abre a janela <EntryName> do tipo de fonte de dados para o tipo de fonte de dados selecionado, que permite editar o tipo de fonte de dados.
+
+* image:../media/clone_wfa_icon.gif["Ícone de clone"]* (Clone)*
++
+Abre a janela Nova <EntryName> de tipo de fonte de dados, que permite criar uma cópia do tipo de fonte de dados selecionado.
+
+* image:../media/lock_wfa_icon.gif["Ícone de bloqueio"]* (Bloqueio)*
++
+Abre a caixa de diálogo Bloquear o tipo de fonte de dados, que permite bloquear o tipo de dados de origem criado pelo usuário selecionado.
+
+* image:../media/unlock_wfa_icon.gif["Ícone de desbloqueio"]* (Desbloquear)*
++
+Abre a caixa de diálogo desbloquear o tipo de fonte de dados de confirmação, que permite desbloquear o tipo de fonte de dados selecionado. Esta opção está ativada apenas para os tipos de origem de dados bloqueados. Os administradores podem desbloquear tipos de fontes de dados bloqueados por outros usuários.
+
+* image:../media/delete_wfa_icon.gif["Eliminar ícone"]* (Apagar)*
++
+Abre a caixa de diálogo Excluir tipo de fonte de dados, que permite excluir o tipo de fonte de dados criado pelo usuário selecionado.
+
++
+
+NOTE: Não é possível eliminar um tipo de fonte de dados WFA ou PS.
+
+* image:../media/export_wfa_icon.gif["Ícone de exportação"]* (Exportação)*
++
+Permite exportar o tipo de fonte de dados criado pelo utilizador selecionado.
+
++
+
+NOTE: Não é possível exportar um tipo de fonte de dados WFA ou PS.
+
+* image:../media/add_to_pack.png["adicionar ao ícone de embalagem"]* (Add to Pack)*
++
+Abre a caixa de diálogo Adicionar ao tipo de fonte de dados do pacote, que permite adicionar o tipo de fonte de dados e suas entidades confiáveis a um pacote, que é editável.
+
++
+
+NOTE: O recurso Adicionar ao pacote é ativado somente para tipos de fonte de dados para os quais a certificação está definida como nenhum.
+
+* image:../media/remove_from_pack.png["remover do ícone do pacote"]* (Remover do pacote)*
++
+Abre a caixa de diálogo Remover da fonte de dados do pacote para o tipo de fonte de dados selecionado, que permite excluir ou remover o tipo de fonte de dados do pacote.
+
++
+
+NOTE: O recurso Remover do pacote é ativado somente para tipos de fontes de dados para os quais a certificação está definida como nenhum.
+
+

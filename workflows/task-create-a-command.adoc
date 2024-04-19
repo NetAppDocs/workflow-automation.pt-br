@@ -1,0 +1,139 @@
+---
+permalink: workflows/task-create-a-command.html 
+sidebar: sidebar 
+keywords: create, wfa command, complete, specific, task, workflow, predefined, suitable 
+summary: Você pode criar um comando WFA para concluir uma tarefa específica em seu fluxo de trabalho se não houver um comando WFA predefinido adequado para a tarefa. 
+---
+= Crie um comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um comando WFA para concluir uma tarefa específica em seu fluxo de trabalho se não houver um comando WFA predefinido adequado para a tarefa.
+
+.O que você vai precisar
+Você deve saber como escrever o código necessário para o comando usando PowerShell ou Perl.
+
+.Passos
+. Clique em *Workflow Design* > *comandos*.
+. Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Na guia *Propriedades* da caixa de diálogo *Nova Definição de comando*, insira ou selecione os detalhes necessários nos campos *Nome*, *Descrição* e *tempo limite*.
++
+.. No campo *String representation*, insira uma representação de string para o comando usando a sintaxe MVEL.
++
+`+VolumeName + "=>" + SnapshotName+`
+
++
+A representação de string de um comando é usada para exibir as informações que você deseja ver no design do fluxo de trabalho durante o Planejamento e a execução. Você deve usar apenas os parâmetros do comando na representação de string para um comando.
+
+.. *Opcional:* se você estiver criando um comando Wait, selecione *Wait for Condition* na seção *Command type* e defina o valor necessário no campo *Waiting Interval(s)*.
+
+
+. Na guia *Código*, execute as seguintes etapas:
++
+.. Selecione a linguagem de script necessária para o comando na lista *linguagem de script*.
++
+Você pode clicar e selecionar um idioma adicional para o comando.
+
+.. Introduza o código apropriado para o comando no separador de idioma selecionado.
++
+Se você quiser usar o tipo de senha para entradas de usuário no script do PowerShell, crie um alias para o parâmetro e inclua `_Password` no atributo. Para o script Perl, você pode especificar o tipo como *Password* na guia *Parameters Definition*.
+
++
+
+NOTE: Os carateres especiais a seguir não são suportados no editor de comandos: ">", "&amp" e etiquetas XML ">".
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="Specify an AD administrator password.")]
+  [Alias("ADAdminPassword_Password")]  [string]$ADAdminPassword
+)
+----
+
+
+. Na guia *Definição de parâmetros*, execute as seguintes etapas:
++
+.. Clique em *Discover Parameters* para preencher a tabela de definição de parâmetros.
++
+Os parâmetros e seus atributos são extraídos do código e exibidos na tabela. Por exemplo, os parâmetros Array e VolumeName são extraídos do seguinte código:
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$true, HelpMessage="Array name or IP address")]
+  [string]$Array,
+
+  [parameter(Mandatory=$true, HelpMessage="Volume name")]
+  [string]$VolumeName,
+)
+----
+.. Clique na coluna de descrição dos parâmetros para editar a descrição.
++
+Não é possível editar nenhum outro campo nesta guia.
+
+
+
+. Na guia *Mapeamento de parâmetros*, execute as seguintes etapas para cada parâmetro:
++
+.. Na coluna *Type*, selecione o objeto de dicionário apropriado.
+.. Na coluna *Atributo*, insira ou selecione os atributos apropriados para o objeto do dicionário na lista.
++
+Depois de inserir um atributo, você pode inserir um ponto (.) e incluir outro atributo desse objeto.
+
++
+Digite `cm_storage.volume` como tipo e `aggregate.name` como o atributo para o parâmetro AggregateName.
+
+.. Na coluna *Nome do objeto*, insira um nome de objeto.
++
+O nome do objeto é usado para agrupar os parâmetros em uma guia na caixa de diálogo parâmetros para <command> quando você está especificando os detalhes do comando em um fluxo de trabalho.
+
+
+
++
+Os parâmetros não mapeados são exibidos na guia *outros parâmetros* da caixa de diálogo parâmetros para <command> quando você estiver especificando os detalhes do comando em um fluxo de trabalho.
+
+. Na guia *Reservation*, insira um script de reserva usando consultas SQL para reservar os recursos necessários pelo comando durante a execução de um fluxo de trabalho programado:
++
+.. *Opcional:* no campo *representação de reserva*, insira uma representação de cadeia de carateres para a reserva usando a sintaxe MVEL.
++
+"Adicionar regra para SnapMirror label"
+
++
+`" + SnapMirrorLabel + "[.code]` Para a política SnapMirror "
+
++
+`" + PolicyName + "`"`
+
++
+A representação de cadeia de carateres é usada para exibir os detalhes dos recursos reservados na janela Reservas.
+
+
+
++
+
+NOTE: O script de reserva não deve executar nenhuma operação em bancos de dados, exceto os esquemas cm_storage, cm_performance, armazenamento, desempenho, vc e personalizados.
+
+. *Opcional:* na guia *Verificação*, insira uma consulta SQL para verificar se o comando afetou as fontes de dados e o cache WFA conforme esperado para que a reserva possa ser removida.
++
+A consulta SQL que você insere só pode consistir em instruções SQL SELECT.
+
++
+.. Clique em *Verificação de teste* para testar o script de verificação.
+.. Na caixa de diálogo *Verificação*, insira os parâmetros de teste necessários.
+.. Se você não quiser usar os dados de reserva para testar o script de verificação, desmarque o campo *usar *dados de reserva no teste*.
+.. Clique em *Teste*.
+.. Depois de rever o resultado do teste, feche a caixa de diálogo.
+
+
+. Clique em *Test* para testar o comando.
+. Na caixa de diálogo *Testing Command <command name>*, clique em *Test*.
++
+O resultado do teste é exibido na seção mensagens de Registro da caixa de diálogo.
+
+. Clique em *Salvar*.
+

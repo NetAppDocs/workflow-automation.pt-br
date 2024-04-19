@@ -1,0 +1,117 @@
+---
+permalink: help/reference-edit-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, data, source, dialog box, enable, modify, existing 
+summary: A caixa de diálogo Editar origem de dados permite modificar uma fonte de dados existente. 
+---
+= Caixa de diálogo Editar origem de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Editar origem de dados permite modificar uma fonte de dados existente.
+
+
+
+== Propriedades de Configuração da fonte de dados
+
+* *Nome*
++
+Permite modificar o nome da fonte de dados.
+
+* *Tipo de fonte de dados*
++
+Exibe o tipo de fonte de dados para a fonte de dados. Não é possível modificar este campo.
+
+* *Nome do anfitrião*
++
+Permite especificar o nome do host ou o endereço IP (IPv4 ou IPv6) para a fonte de dados.
+
++
+
+NOTE: O tipo de fonte de dados Active IQ Unified Manager não suporta endereços IPv6.
+
+* *Porto*
++
+Exibe o número da porta associada, se houver, para o tipo de fonte de dados selecionado. Você pode alterar o número da porta padrão para a fonte de dados.
+
+* * Esquema*
++
+Exibe o esquema associado ao tipo de fonte de dados selecionado - por exemplo _cm_storage_ para Unified Manager - 6,0 (MYSQL).
+
++
+Não é possível modificar esta propriedade.
+
+* *Nome de utilizador*
++
+Exibe o nome de usuário associado, se houver, para o tipo de fonte de dados selecionado.
+
++
+Você deve especificar o nome de usuário apropriado para essa fonte de dados para substituir o nome de usuário padrão:
+
++
+** No Unified Manager 6,0 e posterior, você deve inserir o nome de usuário da conta de usuário do banco de dados criada no servidor do Unified Manager.
+** Para o Consultor de desempenho, você deve inserir o nome de usuário de um usuário do Active IQ Unified Manager com uma função mínima de GlobalRead.
+
+
+* *Senha*
++
+Permite especificar uma palavra-passe para o tipo de fonte de dados selecionado.
+
++
+Você deve especificar uma senha para substituir a senha padrão para o nome de usuário desta fonte de dados:
+
++
+** Para o Unified Manager 6,0 e posterior, você deve inserir a senha da conta de usuário do banco de dados criada no servidor.
+** Para o Performance Advisor, você deve inserir a senha de um usuário do Unified Manager com uma função mínima de GlobalRead.
+
+
+* *Base de dados*
++
+Exibe o nome do banco de dados associado, se houver, para o tipo de fonte de dados selecionado.
+
+* *Intervalo (minutos)*
++
+Permite clicar no valor e selecionar um intervalo (em minutos) utilizando as setas para cima e para baixo.
+
++
+
+NOTE: Se o intervalo estiver definido para zero (0), a amostragem automática é desativada.
+
++
+O intervalo predefinido para a amostragem de dados é:
+
++
+** Tipo de fonte de dados baseada em script: 1440 (desempenho e vc)
+** Tipo de fonte de dados baseada em SQL: 30 (cm_storage, armazenamento e cm_performance)
+
+
+* *Consulte o Guia de instruções de configuração*
++
+Abre a caixa de diálogo Setup Instruction Guide (Guia de instruções de configuração), que descreve os passos para configurar a fonte de dados.
+
+
+
+
+
+== Botões de comando
+
+* * Redefinir esquema*
++
+Abre a caixa de diálogo Redefinir esquema de confirmação. Esta caixa de diálogo permite redefinir o armazenamento em cache para o esquema selecionado, que ocorre durante a próxima aquisição de dados.
+
++
+
+IMPORTANT: O processo de redefinição exclui todos os dados armazenados em cache, incluindo todas as tabelas. Todo o cache é construído desde o início durante a próxima aquisição de dados.
+
+* *Guardar*
++
+Salva as configurações e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

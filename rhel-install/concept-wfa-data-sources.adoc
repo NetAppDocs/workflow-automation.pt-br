@@ -1,0 +1,22 @@
+---
+permalink: rhel-install/concept-wfa-data-sources.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, data, sources 
+summary: 'A OnCommand Workflow Automation (WFA) opera com dados adquiridos a partir de fontes de dados. Várias versões do Active IQ Unified Manager e do VMware vCenter Server são fornecidas como tipos de fonte de dados predefinidos DO WFA. Você deve estar ciente dos tipos de fonte de dados predefinidos antes de configurar as fontes de dados para aquisição de dados.' 
+---
+= Fontes de dados do OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A OnCommand Workflow Automation (WFA) opera com dados adquiridos a partir de fontes de dados. Várias versões do Active IQ Unified Manager e do VMware vCenter Server são fornecidas como tipos de fonte de dados predefinidos DO WFA. Você deve estar ciente dos tipos de fonte de dados predefinidos antes de configurar as fontes de dados para aquisição de dados.
+
+Uma fonte de dados é uma estrutura de dados somente leitura que serve como uma conexão com o objeto fonte de dados de um tipo específico de fonte de dados. Por exemplo, uma fonte de dados pode ser uma conexão com um banco de dados Active IQ Unified Manager de um tipo de fonte de dados Active IQ Unified Manager 6,3. Você pode adicionar uma fonte de dados personalizada ao WFA depois de definir o tipo de fonte de dados necessário.
+
+Para obter mais informações sobre os tipos de fonte de dados predefinidos, consulte a Matriz de interoperabilidade.
+
+*Informações relacionadas*
+
+https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^]

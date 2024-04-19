@@ -1,0 +1,33 @@
+---
+permalink: help/task-configure-snmp-version-1.html 
+sidebar: sidebar 
+keywords: configure, version 1, snmp 
+summary: Configurar SNMP versão 1 
+---
+= Configurar SNMP versão 1
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como usuário admin e, em seguida, acesse o servidor WFA.
+. Clique em *Configurações* e, em *Configuração*, clique em *SNMP*.
+. Marque a caixa de seleção *Enable SNMP* (Ativar VRF*).
+. Na lista suspensa **versão**, selecione *versão 1*.
+. Insira um endereço IPv4 ou IPv6 ou o nome do host e o número da porta do host de gerenciamento.
++
+O WFA envia traps SNMP para o número de porta especificado. O número da porta padrão é 162.
+
+. Na seção *Notify On*, selecione uma ou mais das seguintes caixas de seleção:
++
+** Execução do fluxo de trabalho iniciada
+** Execução do fluxo de trabalho concluída com êxito
+** A execução do fluxo de trabalho falhou/foi parcialmente bem-sucedida
+** Execução do fluxo de trabalho a aguardar aprovação
+** Falha na aquisição
+
+
+. Clique em *Enviar notificação de teste* para verificar as configurações.
+. Clique em *Salvar*.
+

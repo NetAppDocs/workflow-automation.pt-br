@@ -1,0 +1,48 @@
+---
+permalink: rhel-install/concept-unsupported-features-for-wfa-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations 
+summary: 'O OnCommand Workflow Automation (WFA) 5,1 inclui algumas limitações e recursos não suportados que você deve estar ciente antes de instalar e configurar O WFA.' 
+---
+= Limitações conhecidas para o OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Workflow Automation (WFA) 5,1 inclui algumas limitações e recursos não suportados que você deve estar ciente antes de instalar e configurar O WFA.
+
+* * Autenticação LDAP*
++
+** Você pode usar apenas o servidor LDAP (Lightweight Directory Access Protocol) do Microsoft ative Directory para autenticação LDAP.
+** Você deve ser membro de um grupo LDAP para usar a autenticação LDAP.
+** Você não deve usar um nome de usuário LDAP que faça parte de uma estrutura hierárquica de vários domínios para autenticação ou notificação.
+
+
+
+
+[NOTE]
+====
+O Microsoft ative Directory Lightweight Directory Services (AD LDS) não é suportado.
+
+====
+* *Tipos de fontes de dados WFA*
++
+Os tipos de fonte de dados do OnCommand Unified Manager 6,0, 6,1 e 6,2 são obsoletos na versão WFA 4,1, e esses tipos de fonte de dados não serão suportados em versões futuras.
+
+* *WFA instalado no Linux*
++
+** O conteúdo certificado da Data ONTAP que opera no modo 7 não está disponível no momento.
+** Os comandos que incluem apenas o código PowerShell não são compatíveis com o Linux.
+** Os comandos certificados for7-Mode e VMware não são atualmente portados para Perl e, portanto, não são compatíveis com Linux.
+
+
+* *Criando nomes de categorias*
++
+** Quando um hífen (-) é usado em um nome de categoria, ele é substituído por um espaço assim que a categoria é salva. Por exemplo, se o nome da categoria "abc-xyz" for fornecido, o nome da categoria será salvo como "abc xyz", com o hífen removido. Para evitar esse problema, não use hífens em nomes de categorias.
+** Quando um ponto-e-vírgula (:) é usado em um nome de categoria, a cadeia de texto antes do ponto-e-vírgula é ignorada quando a categoria é salva. Por exemplo, se o nome da categoria "abc : xyz" for fornecido, o nome da categoria será salvo como "xyz", com a string"abc" removida. Para evitar esse problema, não use dois pontos em nomes de categorias.
+** Não há verificação para evitar que duas categorias tenham o mesmo nome. No entanto, isso causa um problema ao selecionar essas categorias no painel de navegação. Para evitar este problema, certifique-se de que cada nome de categoria é único.
+
+
+

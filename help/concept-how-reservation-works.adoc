@@ -1,0 +1,36 @@
+---
+permalink: help/concept-how-reservation-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, resource, reservation, capability, require, resource, ensure, available, successful, execution, workflow 
+summary: A funcionalidade de reserva de recursos do OnCommand Workflow Automation reserva os recursos necessários para garantir que os recursos estejam disponíveis para a execução bem-sucedida de fluxos de trabalho. 
+---
+= Como a reserva funciona
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A funcionalidade de reserva de recursos do OnCommand Workflow Automation reserva os recursos necessários para garantir que os recursos estejam disponíveis para a execução bem-sucedida de fluxos de trabalho.
+
+Os comandos WFA podem reservar os recursos necessários e remover a reserva depois que o recurso estiver disponível no banco de dados de cache WFA, normalmente após uma aquisição de cache. O recurso de reserva garante que os recursos reservados estejam disponíveis para o fluxo de trabalho até o período de expiração da reserva que você configurou nas configurações DO WFA.
+
+Você pode usar o recurso de reserva para excluir recursos reservados por outros fluxos de trabalho durante a seleção de recursos. Por exemplo, se um fluxo de trabalho que reservou 100 GB de espaço em um agregado for programado para execução após uma semana, e você estiver executando outro fluxo de trabalho que usa o comando *Create volume*, o fluxo de trabalho que está sendo executado não consome o espaço reservado pelo fluxo de trabalho agendado para criar um novo volume. Além disso, o recurso de reserva permite que fluxos de trabalho sejam executados em paralelo.
+
+Ao visualizar um fluxo de trabalho para execução, o planejador WFA considera todos os objetos reservados, incluindo os objetos existentes no banco de dados de cache. Se você ativou a reserva, os efeitos dos fluxos de trabalho programados e os fluxos de trabalho que estão sendo executados em paralelo e a existência de elementos de armazenamento serão considerados ao Planejar o fluxo de trabalho.
+
+A seta na ilustração a seguir mostra que a reserva está ativada para o fluxo de trabalho:
+
+image::../media/reservation.png[reserva]
+
+
+
+== Exemplos de reservas em fluxos de trabalho predefinidos
+
+Você pode abrir os seguintes fluxos de trabalho predefinidos no Designer para entender como a reserva é usada:
+
+* Ambiente clone
+* Criar um volume Data ONTAP agrupado
+* Estabelecer peering de cluster
+* Remover um volume Data ONTAP agrupado
+

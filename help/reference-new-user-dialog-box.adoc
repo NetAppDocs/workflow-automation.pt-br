@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-user-dialog-box.html 
+sidebar: sidebar 
+keywords: new, user, dialog box, enable, create, account 
+summary: A caixa de diálogo novo usuário permite que você crie uma nova conta de usuário. 
+---
+= Caixa de diálogo novo usuário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo novo usuário permite que você crie uma nova conta de usuário.
+
+* *Nome de usuário*
++
+Especifica o nome de usuário.
+
+* *Função*
++
+Permite selecionar uma das seguintes funções de utilizador:
+
++
+** Convidado: Este usuário só pode exibir o status de uma execução de fluxo de trabalho ou pode ser notificado sobre uma alteração no status de uma execução de fluxo de trabalho.
+** Operador: Este usuário tem permissão para visualizar e executar fluxos de trabalho para os quais o usuário é fornecido acesso.
+** Arquiteto: Este usuário tem acesso total para criar fluxos de trabalho, mas está impedido de modificar as configurações globais do SERVIDOR WFA.
+** Admin: Este usuário tem acesso completo ao servidor WFA.
+** Backup: Este usuário é o único usuário que pode gerar remotamente backups do SERVIDOR WFA; no entanto, o usuário está restrito a todos os outros acessos.
+
+
+* *E-mail*
++
+Permite especificar o endereço de e-mail do usuário para o qual as notificações são enviadas se a opção notificar ligado estiver selecionada.
+
+* *Senha*
++
+Especifica a senha para o usuário.
+
+* *Confirmar*
++
+Especifica a senha novamente.
+
+* *Notificar em*
++
+Permite selecionar quando o usuário da conta deve ser notificado por e-mail. As notificações de status de execução do fluxo de trabalho são específicas para os fluxos de trabalho executados pelo usuário. Você pode selecionar qualquer combinação das seguintes opções:
+
++
+** Execução do fluxo de trabalho iniciada: Notifica o usuário quando a execução do fluxo de trabalho começa.
+** Falha na execução do fluxo de trabalho/parcialmente bem-sucedida: Notifica o usuário se a execução do fluxo de trabalho falhar ou se o fluxo de trabalho tiver sido executado com êxito mesmo que uma ou mais etapas tenham falhado.
++
+A execução é concluída porque as etapas com falha foram configuradas de modo que a execução do fluxo de trabalho continua mesmo quando a etapa falhou.
+
+** Execução do fluxo de trabalho concluída com êxito: Notifica o utilizador quando a execução do fluxo de trabalho é concluída com êxito.
+** Execução do fluxo de trabalho aguardando aprovação: Notifica o usuário se a execução do fluxo de trabalho estiver aguardando aprovação de um usuário Operator ou Architect, dependendo da configuração DO WFA.
+** Falha de aquisição: Notifica o usuário quando a aquisição de dados para fontes de dados falha.
++
+Esta opção está ativada apenas para utilizadores Admin e Architect.
+
+
+
+
+
+
+
+== Botões de comando
+
+* *Guardar*
++
+Guarda as definições de configuração e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

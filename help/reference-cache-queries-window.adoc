@@ -1,0 +1,130 @@
+---
+permalink: help/reference-cache-queries-window.html 
+sidebar: sidebar 
+keywords: cache, queries, window, enable, manage, dictionary, entries, data, source, types 
+summary: A janela consultas de cache permite gerenciar consultas de cache para as entradas do dicionário WFA e seus tipos de fonte de dados associados. 
+---
+= Janela consultas de cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela consultas de cache permite gerenciar consultas de cache para as entradas do dicionário WFA e seus tipos de fonte de dados associados.
+
+Uma consulta de cache é uma consulta SQL que recupera os dados necessários da tabela especificada na consulta. Uma consulta de cache é associada a uma entrada de dicionário e um ou mais tipos de fonte de dados. Você pode definir uma consulta de cache quando quiser recuperar algumas informações, como volume de uma tabela de uma fonte de dados do Gerenciador Unificado OnCommand 6,0 para o cache WFA.
+
+* Tabela de consultas de cache
+* Barra de ferramentas
+
+
+
+
+== Lista de consultas de cache
+
+A tabela consultas de cache lista as entradas do dicionário e seus tipos de fonte de dados associados. Você pode personalizar a exibição da tabela usando os recursos de filtragem e classificação disponíveis para cada coluna, bem como reorganizando a ordem da coluna.
+
+* image:../media/filter_icon_wfa.gif["Ícone de filtro"] ativa ou desativa a filtragem de toda a tabela. Um "x" vermelho aparece sobre o ícone se a filtragem estiver desativada.
+* Clicar duas vezes image:../media/filter_icon_wfa.gif["Ícone de filtro"]limpa e redefine as seleções de filtragem.
+* image:../media/wfa_filter_icon.gif["Ícone de filtro"] em cada cabeçalho de coluna permite filtrar com base no conteúdo das colunas. Clicar image:../media/wfa_filter_icon.gif["Ícone de filtro"] em uma coluna permite filtrar um item específico na lista suspensa ou em todos os itens disponíveis.
+* Clicar no cabeçalho da coluna alterna entre a ordem ascendente e descendente de ordenação. É possível identificar a ordem de classificação aplicada pelas setas de classificação (image:../media/wfa_sortarrow_up_icon.gif["Ícone de ordenação"] para ascendente e image:../media/wfa_sortarrow_down_icon.gif["Ícone de ordenação"]descendente).
+* Para reorganizar a localização das colunas, você pode arrastar e soltar colunas para colocá-las em qualquer ordem necessária. No entanto, você não pode ocultar ou excluir nenhuma dessas colunas.
+* Clicar na caixa de texto filtro *pesquisar* permite-lhe procurar conteúdo específico. Além disso, você pode pesquisar usando operadores suportados para o tipo de coluna aplicável, alfabético ou numérico.
+
+
+A tabela consultas de cache contém as seguintes colunas:
+
+* * Certificação *
++
+Indica se a consulta de cache é criada pelo usuário (image:../media/community_certification.gif[""] ), PS (image:../media/ps_certified_icon_wfa.gif[""] ), comunidade (image:../media/community_certification.gif[""] ), bloqueada pelo usuário (image:../media/lock_icon_wfa.gif[""] ) ou certificada pela NetApp (image:../media/netapp_certified.gif[""]).
+
+* * Esquema*
++
+Indica um nome de esquema (esquema) que contém dados relevantes para o seu ambiente. Por exemplo, um esquema de armazenamento em cache *cm_storage* contém dados relevantes para o Clustered Data ONTAP. As informações relevantes do esquema são obtidas a partir da fonte de dados.
+
+* *Entrada de dicionário*
++
+Exibe a entrada do dicionário associada ao esquema.
+
+* *Versão da entidade*
++
+Exibe o número da versão do objeto no `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* * Tipos de fonte de dados*
++
+Exibe o tipo de fonte de dados associado à entrada do dicionário.
+
+* * Atualizado em *
++
+Exibe a data e a hora em que a consulta de cache foi atualizada pela última vez.
+
+* *Atualizado por*
++
+Exibe o usuário que atualizou a consulta de cache.
+
+
+
+
+
+== Barra de ferramentas
+
+A barra de ferramentas está localizada acima do cabeçalho da coluna. Pode utilizar os ícones na barra de ferramentas para executar várias acões. Estas ações também podem ser acedidas a partir do menu de clique com o botão direito do rato na janela.
+
+* image:../media/new_wfa_icon.gif["Novo ícone"]* (Novo)*
++
+Abre a caixa de diálogo Adicionar consulta de cache, que permite criar uma consulta de cache.
+
+* image:../media/edit_wfa_icon.gif["Ícone de edição"]* (Editar)*
++
+Abre a caixa de diálogo Editar consulta de cache para a consulta de cache selecionada, que permite editar a consulta de cache.
+
+* image:../media/clone_wfa_icon.gif["Ícone de clone"]* (Clone)*
++
+Abre a caixa de diálogo Adicionar consulta de cache, que permite criar um clone ou cópia da consulta de cache selecionada.
+
+* image:../media/lock_wfa_icon.gif["Ícone de bloqueio"]* (Bloqueio)*
++
+Abre a caixa de diálogo de confirmação, que permite bloquear a consulta de cache selecionada.
+
+* image:../media/unlock_wfa_icon.gif["Ícone de desbloqueio"]* (Desbloquear)*
++
+Abre a caixa de diálogo de confirmação, que permite desbloquear a consulta de cache selecionada. Esta opção está ativada apenas para as consultas de cache que estão bloqueadas por si. No entanto, os administradores podem desbloquear consultas de cache bloqueadas por outros usuários.
+
+* image:../media/delete_wfa_icon.gif["Eliminar ícone"]* (Apagar)*
++
+Abre a caixa de diálogo de confirmação, que permite eliminar a consulta de cache criada pelo utilizador selecionada.
+
++
+
+NOTE: Não é possível excluir consultas de cache de amostra, PS ou WFA.
+
+* image:../media/export_wfa_icon.gif["Ícone de exportação"]* (Exportação)*
++
+Abre a caixa de diálogo de confirmação, que permite exportar a consulta de cache criada pelo usuário selecionada.
+
++
+
+NOTE: Não é possível exportar consultas de cache de amostra, PS ou WFA.
+
+* image:../media/test_wfa_icon.gif["ícone de teste"]* (Teste)*
++
+Abre a caixa de diálogo Test Cache Query (consulta de cache de teste), que permite testar a consulta de cache selecionada.
+
+* image:../media/add_to_pack.png["adicionar ao ícone de embalagem"]* (Add to Pack)*
++
+Abre a caixa de diálogo Add to Pack Cache Query, que permite adicionar a consulta de cache e suas entidades confiáveis a um pacote, que é editável.
+
++
+
+NOTE: O recurso Adicionar ao pacote é ativado somente para a consulta de cache para a qual a certificação está definida como *nenhum.*
+
+* image:../media/remove_from_pack.png["remover do ícone do pacote"]* (Remover do pacote)*
++
+Abre a caixa de diálogo Remover da consulta de cache do pacote para a consulta de cache selecionada, que permite excluir ou remover a consulta de cache do pacote.
+
++
+
+NOTE: O recurso Remover do pacote é ativado somente para consulta de cache para a qual a certificação está definida como *nenhum.*
+
+

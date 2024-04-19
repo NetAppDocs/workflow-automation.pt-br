@@ -1,0 +1,74 @@
+---
+permalink: help/reference-edit-user-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, user, dialog box, enable, view, modify, account, settings 
+summary: A caixa de diálogo Editar utilizador permite visualizar e modificar as definições da conta de utilizador. 
+---
+= Caixa de diálogo Edit User (Editar utilizador)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Editar utilizador permite visualizar e modificar as definições da conta de utilizador.
+
+Dependendo do Privileges da conta e da função, talvez você não tenha acesso à janela usuários. No entanto, você pode editar as configurações da sua conta selecionando *Configurações* e, em *Gerenciamento*, clique em *Configurações da conta*.
+
+
+NOTE: Os campos que estão disponíveis para edição dependem da função atribuída e do Privileges da conta.
+
+* *Nome*
++
+Apresenta o nome de utilizador da conta de utilizador.
+
+* *Função*
++
+Exibe a função atribuída para a conta de usuário.
+
+* *E-mail*
++
+Especifica o e-mail da conta de usuário para a qual as notificações são enviadas se uma opção notificar ligado estiver selecionada.
+
+* * Alterar senha*
++
+Permite-lhe alterar a palavra-passe atual da conta de utilizador. Quando esta caixa de verificação está selecionada, são necessários os seguintes campos:
+
++
+** *Nova senha*--especifica a nova senha.
+** *Confirm*--especifica a nova senha novamente.
+
+
+* *Notificar em*
++
+Permite selecionar quando o usuário da conta deve ser notificado por e-mail durante a execução do fluxo de trabalho. Quando esta caixa de verificação estiver selecionada, pode selecionar qualquer combinação das seguintes opções:
+
++
+** Execução do fluxo de trabalho iniciada: Notifica o usuário quando a execução do fluxo de trabalho começa.
+** Falha na execução do fluxo de trabalho/parcialmente bem-sucedida: Notifica o usuário se a execução do fluxo de trabalho falhar ou se o fluxo de trabalho tiver sido executado com êxito mesmo que uma ou mais etapas tenham falhado.
++
+A execução é concluída porque as etapas com falha foram configuradas de modo que a execução do fluxo de trabalho continua mesmo quando a etapa falhou.
+
+** Execução do fluxo de trabalho concluída com êxito: Notifica o utilizador quando a execução do fluxo de trabalho é concluída com êxito.
+** Execução do fluxo de trabalho aguardando aprovação: Notifica o usuário se a execução do fluxo de trabalho estiver aguardando aprovação de um usuário Operator ou Architect, dependendo da configuração DO WFA.
+** Falha de aquisição: Notifica o usuário quando a aquisição de dados para fontes de dados falha.
++
+Esta opção está ativada apenas para utilizadores Admin e Architect.
+
+
+
+
+
+
+
+== Botões de comando
+
+* *Guardar*
++
+Guarda as definições de configuração e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

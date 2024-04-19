@@ -1,0 +1,39 @@
+---
+permalink: rhel-install/task-back-up-the-wfa-database-and-configurations-linux.html 
+sidebar: sidebar 
+keywords: back up, restore, oncommand, workflow, automation, database, configurations, linux 
+summary: 'Você pode fazer backup e restaurar o banco de dados OnCommand Workflow Automation (WFA) e as configurações compatíveis para que você possa recuperar os dados em caso de desastre. As configurações suportadas incluem acesso a dados, tempo limite HTTP e certificados SSL.' 
+---
+= Faça backup e restaure o banco de dados OnCommand Workflow Automation e as configurações no Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode fazer backup e restaurar o banco de dados OnCommand Workflow Automation (WFA) e as configurações compatíveis para que você possa recuperar os dados em caso de desastre. As configurações suportadas incluem acesso a dados, tempo limite HTTP e certificados SSL.
+
+É necessário ter credenciais de administrador Privileges ou arquiteto.
+
+Você deve criar o backup em um local seguro, pois a restauração do backup fornecerá acesso a todos os sistemas de armazenamento acessados pelo WFA.
+
+[NOTE]
+====
+* Um backup abrangente de bancos de dados e configurações DO WFA é necessário durante a recuperação de desastres e pode ser usado em ambientes autônomos e de alta disponibilidade.
+* Você só pode usar os comandos de CLI ou APIS REST para operações abrangentes de backup e restauração durante a recuperação de desastres.
++
+Você não pode usar a IU da Web para fazer backup ou restaurar o banco de dados WFA durante a recuperação de desastres.
+
+
+
+====
+.Passos
+. Faça backup do banco de dados do OnCommand Workflow Automation.
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["Fazer backup do banco de dados OnCommand Workflow Automation"]
+
+. Restaure um backup anterior do banco de dados do OnCommand Workflow Automation.
++
+link:concept-restoring-the-wfa-database.html["Restaurar a base de dados OnCommand Workflow Automation"]
+
+

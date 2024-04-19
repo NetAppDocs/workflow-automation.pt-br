@@ -1,0 +1,30 @@
+---
+permalink: workflows/task-create-a-template.html 
+sidebar: sidebar 
+keywords: create, template, use, blueprint, fill, attribute, command, details 
+summary: Você pode criar um modelo que pode ser usado como um blueprint para preencher atributos em detalhes de comando. 
+---
+= Crie um modelo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um modelo que pode ser usado como um blueprint para preencher atributos em detalhes de comando.
+
+.Passos
+. Clique em *Workflow Design* > *Templates*.
+. Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Na caixa de diálogo *novo modelo*, insira ou selecione os detalhes necessários nos campos *Nome*, *tipo* e *Descrição*.
++
+A tabela atributos é preenchida com base no objeto do dicionário selecionado no campo *tipo*.
+
+. Clique na coluna valor de cada atributo e execute um dos seguintes procedimentos:
++
+** Introduza ou selecione o valor pretendido na lista.
+** Insira uma entrada de entrada de usuário - por exemplo, `$size` para entrada de usuário de tamanho.
+
+
+. Clique em *Salvar*.
+

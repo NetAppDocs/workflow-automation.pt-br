@@ -1,0 +1,36 @@
+---
+permalink: workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html 
+sidebar: sidebar 
+keywords: customize, workflows, requirements, example, modify, predefined, create, volume, share, include, deduplication, compression 
+summary: Você pode personalizar seus fluxos de trabalho com base em suas necessidades. Por exemplo, você pode modificar o fluxo de trabalho de criação de volume e compartilhamento CIFS predefinido para incluir deduplicação e compactação. 
+---
+= Personalize o fluxo de trabalho criar um volume e um compartilhamento CIFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode personalizar seus fluxos de trabalho com base em suas necessidades. Por exemplo, você pode modificar o fluxo de trabalho predefinido _Create a volume e um CIFS Share_ para incluir deduplicação e compactação.
+
+.Sobre esta tarefa
+A personalização e ilustrações nesta tarefa são exemplos; você pode modificar os fluxos de trabalho DO WFA com base em suas necessidades.
+
+.Passos
+. Clique em *Workflow Design* > *fluxos de trabalho*.
+. Selecione o fluxo de trabalho *criar um volume e um compartilhamento CIFS* e clique image:../media/clone_wfa_icon.gif["Ícone de clone"]na barra de ferramentas.
+. Clique na guia *Detalhes* e edite a descrição do fluxo de trabalho no campo *Nome do fluxo de trabalho*.
+. Clique na guia *Workflow*, expanda o esquema *storage* e arraste e solte o comando *Configuração de desduplicação e compactação* entre os comandos *criar volume* e *criar compartilhamento CIFS*.
+. Coloque o cursor do Mouse abaixo do comando *Configuração de desduplicação e compactação* na primeira linha e clique image:../media/add_object_wfa_icon.gif[""]em .
+. Na guia *volume* da caixa de diálogo *parâmetros para 'Configuração de deduplicação e compactação'*, selecione a opção *usando um volume definido anteriormente* e, em seguida, selecione a opção *Share_volume* no campo *Definir volume*, que é a variável volume objeto criada pelo comando *criar volume* no fluxo de trabalho.
+. Clique na guia *outros parâmetros* e execute as seguintes etapas:
++
+.. Selecione *True* no campo *StartNow*.
+.. Selecione *Inline* no campo *Compression*.
+.. Digite `'sun-sat@1'` expressão no campo *Schedule*, que agenda deduplicação e compactação em todos os dias da semana às 1 da manhã
+
+
+. Clique em *OK*.
+. Clique em *Preview* para garantir que o Planejamento do fluxo de trabalho seja concluído com êxito e clique em *OK*.
+. Clique em *Salvar*.
+

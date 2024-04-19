@@ -1,0 +1,133 @@
+---
+permalink: rhel-install/reference-prerequisites-for-installing-workflow-automation.html 
+sidebar: sidebar 
+keywords: prerequisites, install, workflow, automation 
+summary: 'Antes de instalar o OnCommand Workflow Automation (WFA), você deve garantir que você tenha as informações necessárias e que tenha concluído certas tarefas.' 
+---
+= Pré-requisitos para instalar o Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar o OnCommand Workflow Automation (WFA), você deve garantir que você tenha as informações necessárias e que tenha concluído certas tarefas.
+
+Antes de instalar O WFA em um sistema, você deve ter concluído as seguintes tarefas:
+
+* Transferir o ficheiro de instalação DO WFA a partir do site de suporte da NetApp e copiar o ficheiro para o servidor no qual pretende instalar O WFA
++
+
+NOTE: Você deve ter credenciais válidas para fazer login no site de suporte da NetApp. Se você não tiver credenciais válidas, poderá se Registrar no site de suporte da NetApp para obter as credenciais.
+
+* Verificar se o sistema tem acesso ao seguinte, conforme aplicável:
++
+** Controladores de storage
+** Active IQ Unified Manager
+
+
+
+
+[NOTE]
+====
+Se o seu ambiente requer acessibilidade SSH (Secure Shell), você deve garantir que o SSH esteja habilitado nos controladores de destino.
+
+====
+* Verificando se o Perl v5.10.1 está instalado
+
+
+
+
+== Informações de configuração necessárias
+
+[cols="3*"]
+|===
+| Unidade ou sistema | Detalhes | Finalidade 
+
+
+ a| 
+Arrays
+ a| 
+* Endereço IP
+* Nome de utilizador e palavra-passe
+
+ a| 
+Realizar operações em sistemas de storage
+
+[NOTE]
+====
+As credenciais de conta de administrador ou raiz são necessárias para armazenamento (arrays).
+
+====
+
+
+ a| 
+Repositórios externos, como o OnCommand Balance e bancos de dados personalizados
+ a| 
+* Endereço IP
+* Nome de usuário e senha de uma conta de usuário somente leitura
+
+ a| 
+Adquirir dados você deve criar o conteúdo WFA relevante, como entradas de dicionário e consultas de cache para os repositórios externos, a fim de adquirir dados dos repositórios externos.
+
+
+
+ a| 
+Servidor de correio
+ a| 
+* Endereço IP
+* Nome de utilizador e palavra-passe
+
+
+
+NOTE: O nome de usuário e a senha são necessários se o servidor de e-mail exigir autenticação.
+ a| 
+Receba notificações DO WFA por e-mail
+
+
+
+ a| 
+Servidor AutoSupport
+ a| 
+* Host de e-mail
+
+ a| 
+Enviar mensagens AutoSupport através do SMTPIf você não tem um host de e-mail configurado, você pode usar HTTP ou HTTPS para enviar mensagens AutoSupport.
+
+
+
+ a| 
+Servidor LDAP do Microsoft ative Directory (AD)
+ a| 
+* Endereço IP
+* Nome de utilizador e palavra-passe
+* Nome do grupo
+
+ a| 
+Autentique e autorize usando AD LDAP ou AD LDAPS
+
+
+
+ a| 
+Aplicação de gestão SNMP
+ a| 
+* Endereço IP
+* Porta
+
+ a| 
+Receber notificações WFA SNMP
+
+
+
+ a| 
+Servidor syslog
+ a| 
+* Endereço IP
+
+ a| 
+Enviar dados de registo
+
+|===
+*Informações relacionadas*
+
+https://mysupport.netapp.com/site/["Suporte à NetApp"^]

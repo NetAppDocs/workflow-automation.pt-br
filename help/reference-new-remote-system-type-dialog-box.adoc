@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: new, remote, system, type, dialog box, enable, add, oncommand, workflow, automation, predefined, meet, requirement, change, configuration 
+summary: 'A caixa de diálogo novo tipo de sistema remoto permite adicionar um novo tipo de sistema remoto ao OnCommand Workflow Automation (WFA) se um tipo de sistema predefinido não atender aos seus requisitos ou se você quiser alterar a configuração de um tipo de sistema predefinido.' 
+---
+= Caixa de diálogo novo tipo de sistema remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo novo tipo de sistema remoto permite adicionar um novo tipo de sistema remoto ao OnCommand Workflow Automation (WFA) se um tipo de sistema predefinido não atender aos seus requisitos ou se você quiser alterar a configuração de um tipo de sistema predefinido.
+
+* Separador Detalhes
+* Separador Script de validação
+
+
+
+
+== Separador Detalhes
+
+Permite especificar os detalhes do tipo de sistema remoto, como nome, descrição, versão e protocolo de conexão.
+
+* *Nome*
++
+Permite especificar um nome para o tipo de sistema remoto. Você deve especificar um nome para salvar o tipo de sistema remoto.
+
+* *Descrição*
++
+Permite introduzir uma descrição para o tipo de sistema remoto.
+
+* *Versão*
++
+Permite especificar o número da versão para o tipo de sistema remoto em `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Protocolo de conexão*
++
+Permite selecionar um dos seguintes protocolos que devem ser utilizados pelo WFA ao ligar ao sistema remoto:
+
++
+** HTTPS com fallback para HTTP
++
+A conexão utiliza principalmente HTTPS. Se a conexão por HTTPS falhar, HTTP é usado. Se a conexão através de HTTP também falhar, a tentativa de conexão será descartada.
+
+** Apenas HTTPS
+** Apenas HTTP
+** Personalizado
+
+
+
+
+Quando você seleciona um protocolo de conexão, os campos protocolo, porta padrão e tempo limite padrão (seg) são preenchidos com dados.
+
+
+
+== Separador Script de validação
+
+Permite testar a conetividade do protocolo selecionado com o tipo de sistema remoto.
+
+Você pode clicar em *Test Perl Script* para executar o script para testar a conetividade.
+
+
+
+== Botões de comando
+
+* *Guardar*
++
+Guarda as definições de configuração do tipo de sistema remoto e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

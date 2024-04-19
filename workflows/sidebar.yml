@@ -1,0 +1,196 @@
+---
+section: workflow
+title: Fluxo de trabalho
+entries:
+- title: Visão geral do OnCommand Workflow Automation
+  url: "/workflows/concept-overview-of-oncommand-workflow-automation.html"
+- title: Entendendo o designer do Workflow Automation
+  url: "/workflows/concept-understanding-workflow-automation-designer.html"
+  entries:
+  - title: Trabalhando com os blocos de construção em OnCommand Workflow Automation
+    url: "/workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html"
+    entries:
+    - title: Quais são as fontes de dados
+      url: "/workflows/concept-what-data-sources-are.html"
+    - title: Quais são as entradas do dicionário
+      url: "/workflows/concept-what-dictionary-entries-are.html"
+    - title: Como os comandos funcionam
+      url: "/workflows/concept-how-commands-work.html"
+    - title: Quais são os filtros
+      url: "/workflows/concept-what-filters-are.html"
+    - title: O que são os localizadores
+      url: "/workflows/concept-what-finders-are.html"
+    - title: Quais são as funções
+      url: "/workflows/concept-what-functions-are.html"
+    - title: Quais são os esquemas
+      url: "/workflows/concept-what-schemes-are.html"
+    - title: Quais são os tipos de sistema remoto
+      url: "/workflows/concept-what-remote-system-types-are.html"
+    - title: Como você usa modelos
+      url: "/workflows/concept-how-you-use-templates.html"
+    - title: Como você usa categorias
+      url: "/workflows/concept-how-you-use-categories.html"
+    - title: Como funciona o versionamento de entidade
+      url: "/workflows/concept-how-entity-versioning-works.html"
+  - title: O que é um banco de dados playground
+    url: "/workflows/concept-what-a-playground-database-is.html"
+- title: Gerenciamento de fluxos de trabalho
+  url: "/workflows/concept-managing-workflows.html"
+  entries:
+  - title: Personalizar fluxos de trabalho predefinidos
+    url: "/workflows/task-customize-predefined-workflows.html"
+    entries:
+    - title: Personalize o fluxo de trabalho criar um volume e um compartilhamento
+        CIFS
+      url: "/workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html"
+  - title: Criação de fluxos de trabalho
+    url: "/workflows/concept-creating-workflows.html"
+    entries:
+    - title: Tarefas envolvidas na criação de fluxos de trabalho
+      url: "/workflows/concept-tasks-involved-in-creating-workflows.html"
+    - title: Como você define fluxos de trabalho
+      url: "/workflows/concept-how-you-define-workflows.html"
+    - title: Como as entradas do usuário são definidas
+      url: "/workflows/concept-how-you-define-user-input.html"
+    - title: Como você mapeia parâmetros de comando
+      url: "/workflows/concept-how-you-map-command-parameters.html"
+    - title: Como você define constantes
+      url: "/workflows/concept-how-you-define-constants.html"
+    - title: Como a repetição de linha funciona
+      url: "/workflows/concept-how-repeat-row-works.html"
+    - title: Como a seleção de recursos funciona
+      url: "/workflows/concept-how-resource-selection-works.html"
+    - title: Como a reserva funciona
+      url: "/workflows/concept-how-reservation-works.html"
+    - title: Qual é a nomenclatura incremental
+      url: "/workflows/concept-what-incremental-naming-is.html"
+    - title: Qual é a execução condicional
+      url: "/workflows/concept-what-conditional-execution-is.html"
+    - title: Como os parâmetros de retorno funcionam
+      url: "/workflows/concept-what-return-parameters-are.html"
+    - title: Quais são os pontos de aprovação
+      url: "/workflows/concept-what-approval-points-are.html"
+    - title: Como você executa pontos finais DE DESCANSO personalizados
+      url: "/workflows/concept-how-you-execute-custom-rest-end-points.html"
+    - title: Como continuar na falha funciona
+      url: "/workflows/concept-what-continue-on-failure-is.html"
+    - title: Exemplo de lista de verificação de requisitos de fluxo de trabalho
+      url: "/workflows/reference-workflow-requirements-checklist.html"
+    - title: Crie um fluxo de trabalho
+      url: "/workflows/task-create-a-workflow.html"
+      entries:
+      - title: Criar conteúdo de ajuda de fluxo de trabalho
+        url: "/workflows/task-create-workflow-help-content.html"
+  - title: Crie pacotes de fluxo de trabalho WFA
+    url: "/workflows/task-create-a-workflow-automation-pack.html"
+    entries:
+    - title: Adicione entidades aos pacotes de fluxo de trabalho DO WFA
+      url: "/workflows/task-add-entity-to-a-workflow-automation-pack.html"
+    - title: Eliminar pacotes OnCommand Workflow Automation
+      url: "/workflows/task-delete-wfa-packs.html"
+    - title: Exportar conteúdo OnCommand Workflow Automation
+      url: "/workflows/task-export-oncommand-workflow-automation-content.html"
+    - title: Importar conteúdo OnCommand Workflow Automation
+      url: "/workflows/task-import-oncommand-workflow-automation-content.html"
+    - title: Importar pacotes de fluxo de trabalho WFA
+      url: "/workflows/task-import-an-oncommand-workflow-automation-pack.html"
+    - title: Considerações ao importar conteúdo do OnCommand Workflow Automation
+      url: "/workflows/reference-considerations-of-importing-wfa-content.html"
+    - title: Identificação do pacote durante a atualização
+      url: "/workflows/reference-pack-identification-during-upgrade.html"
+  - title: Integração de pacotes de fluxo de trabalho WFA com o repositório SCM
+    url: "/workflows/concept-integrating-the-wfa-pack-with-scm-repository.html"
+    entries:
+    - title: Faça check-in em um novo pacote de fluxo de trabalho para o SCM
+      url: "/workflows/task-check-in-a-new-pack-to-scm.html"
+    - title: Verifique uma nova versão de um pacote de fluxo de trabalho WFA
+      url: "/workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html"
+    - title: Atualizar pacotes de fluxo de trabalho WFA a partir do servidor SCM
+      url: "/workflows/task-update-the-pack-from-scm.html"
+    - title: Verifique os pacotes de fluxo de trabalho WFA existentes para o servidor
+        SCM
+      url: "/workflows/task-check-in-an-already-existing-pack-into-scm.html"
+    - title: Remover pacotes de fluxo de trabalho WFA de entidades
+      url: "/workflows/task-remove-entities-from-a-pack.html"
+    - title: Reverter um pacote de fluxo de trabalho WFA para sua versão anterior
+        no SCM
+      url: "/workflows/task-rollback-pack-to-a-previous-version-in-scm.html"
+- title: Criando componentes básicos para fluxos de trabalho
+  url: "/workflows/concept-creating-building-blocks-for-workflows.html"
+  entries:
+  - title: Crie um tipo de fonte de dados
+    url: "/workflows/task-create-a-data-source-type.html"
+  - title: Crie um comando
+    url: "/workflows/task-create-a-command.html"
+    entries:
+    - title: Teste o script de reserva para comandos
+      url: "/workflows/task-test-the-wfa-reservation-script-for-commands.html"
+  - title: Crie um localizador
+    url: "/workflows/task-create-a-finder.html"
+  - title: Crie um filtro
+    url: "/workflows/task-create-a-filter.html"
+  - title: Crie uma entrada de dicionário
+    url: "/workflows/task-create-a-dictionary-entry.html"
+  - title: Crie uma função
+    url: "/workflows/task-create-a-function.html"
+  - title: Crie um modelo
+    url: "/workflows/task-create-a-template.html"
+  - title: Crie uma consulta de cache
+    url: "/workflows/task-create-a-cache-query.html"
+  - title: Crie agendas recorrentes
+    url: "/workflows/task-create-recurring-schedules.html"
+  - title: Definir regras de filtro
+    url: "/workflows/task-define-filter-rules.html"
+  - title: Adicione pontos de aprovação
+    url: "/workflows/task-add-approval-points.html"
+- title: Diretrizes de codificação para WFA
+  url: "/workflows/concept-coding-guidelines-for-wfa.html"
+  entries:
+  - title: Diretrizes para variáveis
+    url: "/workflows/reference-guidelines-for-variables.html"
+  - title: Diretrizes para indentação
+    url: "/workflows/reference-guidelines-for-indentation.html"
+  - title: Diretrizes para comentários
+    url: "/workflows/reference-guidelines-for-comments.html"
+  - title: Diretrizes para o Registro de logs
+    url: "/workflows/reference-guidelines-for-logging.html"
+  - title: Diretrizes para tratamento de erros
+    url: "/workflows/reference-guidelines-for-error-handling.html"
+  - title: Convenções gerais do PowerShell e Perl para O WFA
+    url: "/workflows/reference-general-powershell-conventions-for-wfa.html"
+    entries:
+    - title: Módulos Perl empacotados com Windows
+      url: "/workflows/reference-perl-database-modules-bundled-with-windows.html"
+  - title: Considerações para adicionar módulos personalizados PowerShell e Perl
+    url: "/workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html"
+  - title: Cmdlets e funções DO WFA
+    url: "/workflows/reference-wfa-powershell-functions.html"
+  - title: Módulos do PowerShell e Perl WFA
+    url: "/workflows/reference-powershell-and-perl-wfa-modules.html"
+  - title: Considerações ao converter comandos do PowerShell para Perl
+    url: "/workflows/reference-guidelines-for-other-programming-aspects.html"
+  - title: Diretrizes para blocos de construção WFA
+    url: "/workflows/reference-guidelines-for-wfa-building-blocks.html"
+    entries:
+    - title: Diretrizes para SQL no WFA
+      url: "/workflows/reference-guidelines-for-sql-in-wfa.html"
+    - title: Diretrizes para funções WFA
+      url: "/workflows/reference-guidelines-for-wfa-functions.html"
+    - title: Diretrizes para entradas do dicionário WFA
+      url: "/workflows/reference-guidelines-for-wfa-dictionary-entry.html"
+    - title: Diretrizes para comandos
+      url: "/workflows/reference-guidelines-for-commands.html"
+    - title: Diretrizes para fluxos de trabalho
+      url: "/workflows/reference-guidelines-for-workflows.html"
+    - title: Diretrizes para criar scripts de validação para tipos de sistema remotos
+      url: "/workflows/reference-guidelines-for-creating-a-validation-script-for-remote-system-type.html"
+    - title: Diretrizes para criar tipos de fonte de dados
+      url: "/workflows/reference-guidelines-for-data-source-type.html"
+- title: Palavras reservadas
+  url: "/workflows/reference-reserved-words.html"
+- title: Como você usa APIs REST
+  url: "/workflows/concept-how-you-use-the-rest-api.html"
+- title: Referências ao material de aprendizagem
+  url: "/workflows/reference-references-to-learning-material.html"
+- title: Documentação relacionada para o OnCommand Workflow Automation
+  url: "/workflows/reference-related-documentation-for-oncommand-workflow-automation.html"

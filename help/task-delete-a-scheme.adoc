@@ -1,0 +1,31 @@
+---
+permalink: help/task-delete-a-scheme.html 
+sidebar: sidebar 
+keywords: delete, scheme, create, oncommand, workflow, automation, require 
+summary: 'Você pode excluir um esquema que você criou do OnCommand Workflow Automation (WFA) se não precisar mais dele.' 
+---
+= Eliminar um esquema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um esquema que você criou do OnCommand Workflow Automation (WFA) se não precisar mais dele.
+
+*O que você vai precisar*
+
+* Você deve ter instalado O WFA.
+* Você precisa ter credenciais de administrador do Privileges ou arquiteto para O WFA.
+
+
+*Sobre esta tarefa*
+
+Não é possível eliminar esquemas predefinidos.
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador ou arquiteto.
+. Clique em *Design de fonte de dados* > *esquemas*.
+. Selecione o esquema que pretende eliminar e, em seguida, clique image:../media/delete_wfa_icon.gif["Eliminar ícone"] na barra de ferramentas.
+. Na caixa de diálogo *Excluir esquema* de confirmação, clique em *Sim*.
+

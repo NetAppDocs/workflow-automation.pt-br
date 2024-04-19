@@ -1,0 +1,43 @@
+---
+permalink: help/concept-what-approval-points-are.html 
+sidebar: sidebar 
+keywords: approval, point, check, workflow, pause, execution, resume, based, user 
+summary: Os pontos de aprovação são pontos de verificação usados em um fluxo de trabalho para pausar a execução do fluxo de trabalho e retomá-lo com base na aprovação de um usuário. 
+---
+= Quais são os pontos de aprovação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os pontos de aprovação são pontos de verificação usados em um fluxo de trabalho para pausar a execução do fluxo de trabalho e retomá-lo com base na aprovação de um usuário.
+
+A barra vertical azul mostrada na ilustração a seguir é um ponto de aprovação:
+
+image::../media/approval_point.png[ponto de aprovação]
+
+Você pode usar pontos de aprovação para execução incremental de um fluxo de trabalho, onde seções do fluxo de trabalho devem ser executadas somente após uma determinada condição ser atendida. Por exemplo, quando a próxima seção tem que ser aprovada ou quando a execução bem-sucedida da primeira seção é validada. Os pontos de aprovação não lidam com nenhum processo entre pausar e retomar um fluxo de trabalho. As notificações de e-mail e SNMP são enviadas, conforme especificado na configuração DO WFA, e o operador de armazenamento pode ser solicitado a executar determinadas ações ao receber a notificação de pausa do fluxo de trabalho. Por exemplo, o operador de storage pode enviar detalhes de Planejamento para o administrador, aprovador ou operador para aprovação e retomar o fluxo de trabalho quando a aprovação for recebida.
+
+As aprovações podem não ser necessárias em todos os momentos. Em alguns cenários, a aprovação pode ser necessária apenas se uma condição específica for atendida e as condições puderem ser configuradas quando um ponto de aprovação for adicionado. Por exemplo, considere um fluxo de trabalho projetado para aumentar o tamanho de um volume. Você pode adicionar um ponto de aprovação no início do fluxo de trabalho para que o operador de armazenamento obtenha aprovação dos gerentes quando o aumento no tamanho do volume resultar em um uso de 85% do espaço no agregado que contém o volume. Durante a execução do fluxo de trabalho e ao selecionar um volume que resulte nessa condição, a execução é interrompida até que seja aprovada.
+
+A condição configurada para o ponto de aprovação pode ter uma das seguintes opções:
+
+* Sem qualquer condição
+* Quando a variável que você especificou é encontrada
+* Quando a variável especificada não for encontrada
+* Quando a expressão especificada for avaliada como verdadeira
+
+
+Não há limitação no número de pontos de aprovação em um fluxo de trabalho. Você pode inserir pontos de aprovação antes de comandos em um fluxo de trabalho e definir os comandos após o ponto de aprovação para aguardar aprovação antes da execução. Os pontos de aprovação fornecem informações, como o tempo de mudança, o usuário e os comentários, permitindo que você veja quando e por que a execução do fluxo de trabalho foi pausada ou retomada. Os comentários do ponto de aprovação podem incluir expressões MVEL.
+
+
+
+== Exemplos de pontos de aprovação em fluxos de trabalho predefinidos
+
+Você pode abrir os seguintes fluxos de trabalho predefinidos no Designer para entender como os pontos de aprovação são usados:
+
+* Remover um volume Data ONTAP agrupado
+* Atualização de controladora e compartimento de um par de HA
+* Migrar volumes
+

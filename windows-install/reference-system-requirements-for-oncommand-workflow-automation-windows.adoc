@@ -1,0 +1,95 @@
+---
+permalink: windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, system requirements, install 
+summary: 'Você deve estar ciente dos requisitos de hardware e software do OnCommand Workflow Automation (WFA) antes de instalar O WFA.' 
+---
+= Requisitos de sistema para a instalação do OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve estar ciente dos requisitos de hardware e software do OnCommand Workflow Automation (WFA) antes de instalar O WFA.
+
+
+
+== Requisitos de hardware para a instalação DO WFA
+
+A tabela a seguir lista os requisitos mínimos de hardware e as especificações de hardware recomendadas para o servidor WFA.
+
+[cols="3*"]
+|===
+| Componente | Requisitos mínimos | Especificações recomendadas 
+
+
+ a| 
+CPU
+ a| 
+2,27 GHz ou mais rápido, 4 núcleos, 64 bits
+ a| 
+2,27 GHz ou mais rápido, 4 núcleos, 64 bits
+
+
+
+ a| 
+RAM
+ a| 
+4 GB
+ a| 
+8 GB
+
+
+
+ a| 
+Espaço livre em disco
+ a| 
+5 GB
+ a| 
+20 GB
+
+|===
+Se você estiver instalando O WFA em uma máquina virtual (VM), você deve reservar a memória e a CPU necessárias para que a VM tenha recursos suficientes. O instalador não verifica a velocidade da CPU.
+
+
+
+== Requisitos de software para a instalação DO WFA
+
+O WFA é executado em um sistema operacional Windows de 64 bits e deve ser instalado em máquinas físicas dedicadas ou VMs. Você não deve instalar nenhum outro aplicativo no servidor que executa O WFA.
+
+O WFA é executado do Microsoft Windows Server 2012 Enterprise Edition para o Microsoft Windows Server 2016 (todas as edições). Enterprise Edition é o sistema operacional Windows recomendado.
+
+Para servidores Windows 2012, o .NET Framework versão 4.5.2 deve ser instalado no seu sistema Windows. Se o .NET Framework versão 4.5.2 não estiver instalado, a instalação DO WFA 5,1 falhará.
+
+* Um dos seguintes navegadores suportados:
++
+** Mozilla Firefox
+** Microsoft Internet Explorer
+** Google Chrome
+
+
+* PowerShell 3,0
+* VMware PowerCLI versão 5
++
+
+NOTE: A extensão do PowerShell para APIs VMware é necessária somente se você estiver usando O WFA para executar fluxos de trabalho no VMware vSphere.
+
+
+
+
+NOTE: Os aplicativos antivírus podem impedir que os serviços DO WFA sejam iniciados.
+
+Para evitar esse problema, configure exclusões de verificação antivírus para os seguintes diretórios WFA:
+
+* O diretório onde você instalou O WFA
+* O diretório onde você instalou Perl
+* O diretório onde você instalou o OpenJDK
+* O diretório de dados MySQL
+
+
+Para obter mais detalhes, consulte a ferramenta Matriz de interoperabilidade.
+
+*Informações relacionadas*
+
+https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^]

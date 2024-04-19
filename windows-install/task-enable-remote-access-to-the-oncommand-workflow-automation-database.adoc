@@ -1,0 +1,44 @@
+---
+permalink: windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html 
+sidebar: sidebar 
+keywords: enable, remote access, oncommand, workflow, automation, database, windows 
+summary: 'Por padrão, o banco de dados OnCommand Workflow Automation (WFA) pode ser acessado apenas por clientes que estão sendo executados no sistema host WFA. Pode alterar as predefinições se pretender aceder à base de dados WFA a partir de um sistema remoto.' 
+---
+= Ative o acesso remoto ao banco de dados do OnCommand Workflow Automation no Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Por padrão, o banco de dados OnCommand Workflow Automation (WFA) pode ser acessado apenas por clientes que estão sendo executados no sistema host WFA. Pode alterar as predefinições se pretender aceder à base de dados WFA a partir de um sistema remoto.
+
+* Você deve ter feito login no sistema host WFA como um usuário admin.
+* Se um firewall estiver instalado no sistema anfitrião WFA, tem de ter configurado as definições da firewall para permitir o acesso a partir do sistema remoto.
+
+
+O caminho de instalação padrão DO WFA é usado neste procedimento. Se você alterou o local padrão durante a instalação, você deve usar o caminho de instalação personalizado DO WFA.
+
+.Passos
+. Abra o Explorador do Windows e navegue para o seguinte diretório: WFA_install_location
+. Execute uma das seguintes ações:
++
+[cols="2*"]
+|===
+| Para... | Digite o seguinte comando... 
+
+
+ a| 
+Ativar o acesso remoto
+ a| 
+`.\wfa --db-access=public --restart`
+
+
+
+ a| 
+Desativar o acesso remoto
+ a| 
+`.\wfa --db-access=default --restart`
+
+|===
+

@@ -1,0 +1,24 @@
+---
+permalink: rhel-install/task-configure-the-timeout-value-for-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 'Você pode configurar o valor de tempo limite para a GUI da Web do Workflow Automation (WFA), em vez de usar o valor de tempo limite padrão de 180 segundos.' 
+---
+= Configure o valor de tempo limite para o Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o valor de tempo limite para a GUI da Web do Workflow Automation (WFA), em vez de usar o valor de tempo limite padrão de 180 segundos.
+
+O valor de tempo limite definido é um tempo limite absoluto em vez de um tempo limite relacionado à inatividade. Por exemplo, se você definir este valor para 30 minutos, então você será desconetado após 30 minutos, mesmo que esteja ativo no final desse tempo. Não é possível definir o valor de tempo limite da GUI da Web DO WFA.
+
+.Passos
+. Faça login como usuário root na máquina host WFA.
+. Defina o valor de tempo limite:
++
+`installdir bin/wfa -S=timeout value in minutes`
+
+

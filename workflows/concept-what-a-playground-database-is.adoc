@@ -1,0 +1,85 @@
+---
+permalink: workflows/concept-what-a-playground-database-is.html 
+sidebar: sidebar 
+keywords: playground, database, mysql, include, Workflow, automation, server, installation, add, tables, information, filters, queries, user, input 
+summary: 'O banco de dados playground é um banco de dados MySQL, que está incluído na instalação do servidor do Workflow Automation (WFA). Você pode adicionar tabelas ao banco de dados playground para incluir informações, que podem ser usadas por filtros e consultas SQL para entradas de usuário.' 
+---
+= O que é um banco de dados playground
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O banco de dados playground é um banco de dados MySQL, que está incluído na instalação do servidor do Workflow Automation (WFA). Você pode adicionar tabelas ao banco de dados playground para incluir informações, que podem ser usadas por filtros e consultas SQL para entradas de usuário.
+
+O banco de dados playground é um esquema que não pode ser acessado através do portal web DO WFA. Você pode usar um cliente MySQL, como SQLyog, Toad for MySQL e MySQL Workbench ou uma interface de linha de comando (CLI), para acessar o banco de dados.
+
+Você deve usar as seguintes credenciais para acessar o banco de dados do playground:
+
+* Nome de usuário: wfa
+* Senha: Wfa123
+
+
+As credenciais fornecem acesso completo ao banco de dados playground e acesso somente leitura a outros esquemas definidos no banco de dados MySQL WFA. Você pode criar as tabelas necessárias no banco de dados do playground.
+
+Você pode adicionar as tags ou metadados que você está usando para objetos de armazenamento em seu ambiente a uma tabela no banco de dados do playground. As tags ou metadados podem então ser usados juntamente com as informações em outras tabelas de cache WFA por filtros WFA e consultas de entrada de usuário.
+
+Por exemplo, você pode usar o banco de dados playground para os seguintes casos de uso:
+
+* A marcação de agregados com o nome da unidade de negócio (BU) e a alocação de volumes para o barramento com base nessas tags
+* Marcação de unidades do vFiler com nomes BU
+* Adicionando detalhes de geografia ou localização a objetos de armazenamento
+* Definindo o acesso de administradores de banco de dados para bancos de dados
+
+
+Por exemplo, se você estiver usando o nome da BU como uma tag para os objetos de storage, como agregados e unidades do vFiler, poderá criar uma tabela no banco de dados do playground que inclua o nome da BU. O nome BU pode então ser usado por filtros e consultas de entrada do usuário para seus fluxos de trabalho.
+
+A seguir está um exemplo de tabela de banco de dados playground (playground.volume_bu):
+
+[cols="3*"]
+|===
+| array_ip | volume_name | BU 
+
+
+ a| 
+10.225.126.23
+ a| 
+data_11
+ a| 
+Marketing
+
+
+
+ a| 
+10.225.126.28
+ a| 
+arch_11
+ a| 
+HR
+
+|===
+A seguir está um exemplo de consulta SQL que você pode usar para filtrar volumes por BU:
+
+[listing]
+----
+SELECT
+    vol.name,
+    array.ip AS 'array.ip'
+FROM
+    storage.volume AS vol,
+    storage.array AS array,
+    playground.volume_bu AS vol_bu
+WHERE
+    vol.array_id = array.id
+    AND array.ip = vol_bu.array_ip
+    AND vol.name = vol_bu.volume_name
+    AND vol_bu.bu = '{$bu}'
+----
+*Informações relacionadas*
+
+https://www.webyog.com/["SQLyog"^]
+
+http://www.mysql.com/products/workbench/["MySQL Workbench"^]
+
+http://www.quest.com/toad-for-mysql/["Toad para MySQL"^]

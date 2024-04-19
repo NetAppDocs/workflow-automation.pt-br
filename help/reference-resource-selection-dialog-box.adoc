@@ -1,0 +1,109 @@
+---
+permalink: help/reference-resource-selection-dialog-box.html 
+sidebar: sidebar 
+keywords: resource, selection, dialog box, enable, search, map, command 
+summary: A caixa de diálogo seleção de recursos permite pesquisar recursos e mapear os recursos para um comando. 
+---
+= Caixa de diálogo seleção de recursos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo seleção de recursos permite pesquisar recursos e mapear os recursos para um comando.
+
+* Selecione <dictionary object> by tab
+* Separador Advanced (Avançado)
+
+
+
+
+== Selecione <dictionary object> by tab
+
+Este separador permite especificar um localizador ou filtros como critérios de pesquisa e introduzir atributos para os critérios de pesquisa selecionados. Você também pode salvar os filtros selecionados como um localizador.
+
+* *Defina regras de filtro*
++
+Permite definir um conjunto de regras para recursos de entrada de dicionário, como unidades do vFiler, agregados e máquinas virtuais.
+
++
+As regras de filtro podem conter um ou mais grupos de regras.
+
++
+Uma regra consiste em um atributo de entrada de dicionário, um operador e um valor. O atributo também pode incluir atributos de suas referências. Por exemplo, você pode especificar uma regra para agregados da seguinte forma: Listar todos os agregados com nome começando com a cadeia "'aggr'" e ter um tamanho disponível maior que 5 GB. A primeira regra no grupo é o atributo "nome", com o operador "tarts-with", e o valor "agir". A segunda regra para o mesmo grupo é o atributo "available_size_mb", com o operador "">" e o valor "'5000".
+
++
+A opção *Definir regras de filtro* é desativada se tiver selecionado um localizador.
+
++
+Você pode limpar os valores especificados clicando no botão *Reset*.
+
+* *Selecione um recurso por suas chaves naturais*
++
+Permite selecionar um recurso com base nas chaves naturais do recurso.
+
+* *Finder*
++
+Permite selecionar um localizador na lista. *Nenhum* é selecionado por padrão.
+
++
+Os filtros são exibidos abaixo da lista do localizador. Não é possível selecionar filtros se tiver selecionado um localizador.
+
+* *Parâmetros*
++
+Permite-lhe introduzir os valores para o localizador ou filtros selecionados. Tem de introduzir todos os valores necessários para completar os critérios de pesquisa.
+
+* *Botões de comando*
++
+** *Salvar como Finder*
++
+Guarda os filtros selecionados como um localizador.
+
+** *Teste*
++
+Permite testar os parâmetros para os filtros selecionados antes de especificar os valores na área parâmetros.
+
+** *OK*
++
+Salva as configurações e fecha a caixa de diálogo.
+
+** *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+
+
+
+
+
+
+== Separador Advanced (Avançado)
+
+Esta guia permite especificar quando a pesquisa deve ser realizada e permite classificar os atributos do recurso e o status dos atributos do recurso.
+
+* *Execute esta busca sempre*
++
+Executa a pesquisa sem qualquer restrição quando o comando é executado.
+
+* *Execute a pesquisa somente quando a expressão a seguir for avaliada COMO VERDADEIRA*
++
+Executa a pesquisa somente quando o valor do atributo opcional especificado na caixa for "'true'". Você pode usar a sintaxe MVFLEX Expression Language (MVEL) para especificar o atributo opcional.
+
+* *Tabela de classificação*
++
+Exibe os atributos e a ordem de classificação dos filtros selecionados na guia *Selecionar <dictionary object> por*. A ordem de classificação é significativa para a seleção de recursos - por exemplo, se você selecionou descendente como a ordem de classificação para agregados, o agregado com máximo `available_space` é selecionado como o recurso. Para alterar a ordem de classificação de um atributo, você pode clicar na coluna de status do atributo e selecionar a ordem de classificação necessária na lista.
+
+* *Botões de comando*
++
+** *Para cima*
++
+Move a entrada selecionada para cima uma linha na tabela de classificação.
+
+** *Para baixo*
++
+Move a entrada selecionada para baixo uma linha na tabela de classificação.
+
+
+
+

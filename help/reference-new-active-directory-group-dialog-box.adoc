@@ -1,0 +1,87 @@
+---
+permalink: help/reference-new-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: active, directory, group, enable, create, new, oncommand, workflow, automation 
+summary: A caixa de diálogo novo grupo do ative Directory permite criar um novo grupo do ative Directory do OnCommand Workflow Automation. 
+---
+= Nova caixa de diálogo Grupo do ative Directory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo novo grupo do ative Directory permite criar um novo grupo do ative Directory do OnCommand Workflow Automation.
+
+* *Nome do grupo*
++
+Especifica o nome do grupo.
+
+* *Função*
++
+Permite selecionar uma das seguintes funções de grupo:
+
++
+** *Hóspede*
++
+Esse grupo só pode exibir o status de uma execução de fluxo de trabalho ou ser notificado sobre uma alteração no status de uma execução de fluxo de trabalho.
+
+** *Operador*
++
+Este grupo tem permissão para visualizar e executar fluxos de trabalho para os quais o grupo tem acesso fornecido.
+
+** *Aprovador*
++
+Este grupo tem permissão para visualizar, executar, aprovar e rejeitar fluxos de trabalho para os quais o grupo tem acesso fornecido.
+
++
+
+NOTE: Você deve fornecer o ID de e-mail do aprovador e o status do fluxo de trabalho que deve ser notificado ao aprovador. Se houver vários aprovadores, você poderá fornecer um ID de e-mail do grupo no campo *e-mail*.
+
+** *Arquiteto*
++
+Esse grupo tem acesso total para criar fluxos de trabalho, mas está impedido de modificar as configurações globais do SERVIDOR WFA.
+
+** *Admin*
++
+Este grupo tem acesso completo ao servidor WFA.
+
++
+
+NOTE: Você deve configurar pelo menos um grupo de administradores.
+
+
+
+* *E-mail*
++
+Permite especificar o endereço de e-mail do grupo para o qual as notificações são enviadas se a opção *notificar ligado* estiver selecionada.
+
+* *Notificar em*
++
+Permite selecionar quando o grupo de diretórios ativo deve ser notificado por e-mail. As notificações de status de execução de fluxo de trabalho são específicas para os fluxos de trabalho executados pelo grupo. Você pode selecionar qualquer combinação das seguintes opções:
+
++
+** Execução do fluxo de trabalho iniciada: Notifica o grupo quando a execução do fluxo de trabalho começa.
+** Falha na execução do fluxo de trabalho/parcialmente bem-sucedida: Notifica o grupo se a execução do fluxo de trabalho falhar ou se o fluxo de trabalho foi executado com sucesso mesmo que uma ou mais etapas falharam.
++
+A execução é concluída porque as etapas com falha foram configuradas para permitir que a execução do fluxo de trabalho continue mesmo quando a etapa falha.
+
+** Execução do fluxo de trabalho concluída com êxito: Notifica o grupo quando a execução do fluxo de trabalho é concluída com êxito.
+** Execução do fluxo de trabalho aguardando aprovação: Notifica o grupo se a execução do fluxo de trabalho estiver aguardando aprovação do grupo Aprovador, arquiteto ou Operador, dependendo da configuração DO WFA.
+
+
+
+
+
+
+== Botões de comando
+
+* *Guardar*
++
+Guarda as definições de configuração e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

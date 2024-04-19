@@ -1,0 +1,59 @@
+---
+permalink: rhel-install/task-configure-wfa-with-vcs-using-configuration-scripts-linux.html 
+sidebar: sidebar 
+keywords: configure, workflow, automation, vcs 
+summary: 'Depois de instalar o Workflow Automation (WFA) no VCS, você deve configurar O WFA no VCS usando scripts de configuração para alta disponibilidade.' 
+---
+= Configurar o Workflow Automation no VCS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de instalar o Workflow Automation (WFA) no VCS, você deve configurar O WFA no VCS usando scripts de configuração para alta disponibilidade.
+
+* Você deve ter instalado a mesma versão DO WFA em ambos os nós de cluster.
+* Você deve ter o mesmo caminho de instalação para ambos os nós.
+* Você deve criar um backup do WFA.
+
+
+.Passos
+. Faça login no primeiro nó do cluster.
+. Use o Cluster Manager para verificar se o estado de HA de ambos os nós está em execução.
+. No prompt do shell, execute o script ha_setup.pl para mover os dados DO WFA para o local compartilhado e configurar O WFA com VCS para failover: `perl ha_setup.pl --first [-t type_of_cluster_vcs] [-g cluster_group_name] [-e NIC_card_name] [-i IP_address] [-m Netmask] [-n cluster_name] [-f mount_point_of_shared_LUN] [-v name_of_logical_volume] [-d disk_group_name] [-l install_directory]`
++
+Para o local de instalação padrão, o script está disponível em /opt/NetApp/wfa/bin/ha/.
+
++
+`perl ha_setup.pl --first -t vcs -g WFA -e eth0 -i 10.238.170.3 -m 255.255.255.0 -n wfa_cluster -f /mnt/wfa_mount/ -v lun_volume -d lun_dg -l /opt/netapp/wfa`
+
+. Use o Gerenciador de clusters para verificar se os serviços WFA, ponto de montagem, IP virtual, NIC e grupo de volume são adicionados ao grupo de cluster.
+. Use o Cluster Manager para mover os recursos DO WFA para o nó secundário:
++
+.. Selecione e clique com o botão direito do rato no grupo de cluster.
+.. Selecione *mudar para* > *nó secundário*.
+
+
+. Verifique se a montagem de dados, o IP virtual, o grupo de volumes e as placas NIC estão no segundo nó do cluster.
+. Coloque os serviços DO WFA offline usando o Cluster Manager:
++
+.. Selecione *WFA* > *Application* > *wfa-server*.
+.. Clique com o botão direito do rato e selecione *Offline*.
+.. Selecione *WFA* > *Application* > *wfa-dB*.
+.. Clique com o botão direito do rato e selecione *Offline*.
+
+
+. No prompt do shell, execute o script ha_setup.pl no nó secundário do cluster para configurar O WFA para usar os dados do local compartilhado: `perl ha_setup.pl --join [-t type_of_cluster_vcs] [-f mount_point_of_shared_LUN]`
++
+Para o local de instalação padrão, o script está disponível em /opt/NetApp/wfa/bin/ha/.
+
++
+`perl ha_setup.pl --join -t vcs -f /mnt/wfa_mount/`
+
+. Aceda ao Gestor de clusters e clique em *Grupo de clusters* > *Online* > *servidor*.
++
+Pode demorar um pouco até que o Cluster Manager mostre que os recursos do aplicativo estão online. Você também pode clicar com o botão direito do Mouse nos recursos do aplicativo e verificar se os recursos estão online.
+
+. Certifique-se de que O WFA está acessível através do endereço IP utilizado durante esta configuração.
+

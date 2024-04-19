@@ -1,0 +1,36 @@
+---
+permalink: help/task-create-a-scheme.html 
+sidebar: sidebar 
+keywords: create, scheme, data, cached, new, data, source, type, store, workflows, directly, database 
+summary: Você deve criar um esquema quando os dados tiverem que ser armazenados em cache de um novo tipo de fonte de dados ou quando os dados tiverem que ser armazenados por fluxos de trabalho diretamente no banco de dados. 
+---
+= Crie um esquema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve criar um esquema quando os dados tiverem que ser armazenados em cache de um novo tipo de fonte de dados ou quando os dados tiverem que ser armazenados por fluxos de trabalho diretamente no banco de dados.
+
+*O que você vai precisar*
+
+* Você deve ter instalado O WFA.
+* Você precisa ter credenciais de administrador do Privileges ou arquiteto para O WFA.
+
+
+*Sobre esta tarefa*
+
+Por padrão, O WFA suporta dois tipos de esquemas: Aquisição de fonte de dados e outros.
+
+* Esquemas de aquisição de fontes de dados: As tabelas nesses esquemas são armazenadas em cache por fontes de dados definidas para adquirir dados de sistemas remotos.
+* Outros esquemas: As tabelas nesses esquemas são preenchidas com dados através de fluxos de trabalho que são personalizados para resolver problemas específicos.
+
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador ou arquiteto.
+. Clique em *Design de fonte de dados* > *esquemas*.
+. Crie um novo esquema clicando image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Insira as informações necessárias, como nome, tipo, descrição e versão da entidade do esquema na caixa de diálogo *novos esquemas*.
+. Clique em *Salvar*.
+

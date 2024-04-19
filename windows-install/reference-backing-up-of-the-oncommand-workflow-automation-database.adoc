@@ -1,0 +1,46 @@
+---
+permalink: windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html 
+sidebar: sidebar 
+keywords: back up, oncommand, workflow, automation, database 
+summary: 'Um backup do banco de dados do OnCommand Workflow Automation (WFA) inclui as configurações do sistema e informações de cache, incluindo o banco de dados playground. Você pode usar o backup para fins de restauração no mesmo sistema ou em um sistema diferente.' 
+---
+= Fazer backup do banco de dados OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um backup do banco de dados do OnCommand Workflow Automation (WFA) inclui as configurações do sistema e informações de cache, incluindo o banco de dados playground. Você pode usar o backup para fins de restauração no mesmo sistema ou em um sistema diferente.
+
+Um backup automático do banco de dados é criado diariamente às 2 da manhã e é salvo como um arquivo .zip no seguinte local: wfa_install_location/WFA-backups.
+
+O WFA economiza até cinco backups no diretório WFA-backups e substitui o backup mais antigo pelo backup mais recente. O diretório WFA-backups não é excluído quando você desinstalar O WFA. Você pode usar o backup criado automaticamente para restauração se você não criou um backup do banco de dados WFA durante a desinstalação DO WFA.
+
+Você também pode fazer backup manual DO banco de dados DO WFA quando precisar salvar alterações específicas para restauração; por exemplo, se quiser fazer backup das alterações feitas antes que o backup automático ocorra.
+
+[NOTE]
+====
+* Você pode restaurar um backup de banco de dados WFA apenas para um sistema que esteja executando a mesma versão ou uma versão posterior do WFA.
++
+Por exemplo, se você criou um backup em um sistema que está executando O WFA 4,2, o backup só pode ser restaurado para sistemas que estejam executando O WFA 4,2 ou posterior.
+
+* Não é possível usar a IU da Web para fazer backup do banco de dados WFA durante a recuperação de desastres em uma configuração de alta disponibilidade.
+
+
+====
+
+
+== Backup e restauração de credenciais de usuário
+
+O backup do banco de dados DO WFA inclui as credenciais do usuário DO WFA.
+
+
+NOTE: O banco de dados WFA também está incluído nos dados do AutoSupport; no entanto, a senha de qualquer usuário DO WFA não está incluída nos dados do AutoSupport.
+
+Quando um banco de dados WFA é restaurado a partir de um backup, os seguintes itens são preservados:
+
+* As credenciais de usuário admin que foram criadas durante a instalação atual DO WFA.
+* Se um usuário com admin Privileges diferente do usuário admin padrão restaurar o banco de dados, as credenciais de ambos os usuários admin.
+* Todas as outras credenciais de usuário da instalação atual DO WFA são substituídas pelas credenciais de usuário do backup.
+

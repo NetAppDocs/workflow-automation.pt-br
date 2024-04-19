@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-restrict-access-rights-of-oncommand-workflow-automation-on-the-host.html 
+sidebar: sidebar 
+keywords: restrict, access rights, oncommand, workflow, automation, host 
+summary: 'Por padrão, o OnCommand Workflow Automation (WFA) executa os fluxos de trabalho como o administrador do sistema host. Você pode restringir os direitos DO WFA no sistema host alterando as configurações padrão.' 
+---
+= Restringir os direitos de acesso do OnCommand Workflow Automation no host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Por padrão, o OnCommand Workflow Automation (WFA) executa os fluxos de trabalho como o administrador do sistema host. Você pode restringir os direitos DO WFA no sistema host alterando as configurações padrão.
+
+Você deve ter feito login no sistema host DO WFA como administrador.
+
+.Passos
+. Crie uma nova conta de usuário do Windows com permissões para abrir sockets e gravar no diretório home DO WFA.
+. Abra o console de serviços do Windows usando services.msc e clique duas vezes em *NetApp WFA Database*.
+. Clique no separador *Iniciar sessão*.
+. Selecione *esta conta* e insira as credenciais do novo usuário que você criou e clique em *OK*.
+. Clique duas vezes em *servidor WFA NetApp*.
+. Clique no separador *Iniciar sessão*.
+. Selecione *esta conta* e insira as credenciais do novo usuário que você criou e clique em *OK*.
+. Reinicie o *Banco de dados WFA do NetApp* e os serviços *servidor WFA do NetApp*.
+

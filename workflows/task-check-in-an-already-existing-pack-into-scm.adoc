@@ -1,0 +1,29 @@
+---
+permalink: workflows/task-check-in-an-already-existing-pack-into-scm.html 
+sidebar: sidebar 
+keywords: check, existing, packs, source, control, management, scm server, oncommand, workflow, automation 
+summary: 'Você pode fazer o check-in de pacotes já existentes para o servidor de gerenciamento de controle de fonte (SCM) do OnCommand Workflow Automation (WFA).' 
+---
+= Verifique os pacotes de fluxo de trabalho WFA existentes para o servidor SCM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode fazer o check-in de pacotes já existentes para o servidor de gerenciamento de controle de fonte (SCM) do OnCommand Workflow Automation (WFA).
+
+.O que você vai precisar
+O SCM precisa ser configurado e você precisa ter credenciais de administrador ou arquiteto.
+
+.Passos
+. Faça login na janela *WFA* através de um navegador da Web.
+. Clique em *Gerenciamento de conteúdo* > *Pacotes*.
+. Clique no ícone *Exportar para servidor*.
+. Na caixa de diálogo *Exportar para pasta do servidor*, no campo *localização da pasta no sistema do servidor*, insira o local da pasta do servidor onde o pacote é salvo no servidor.
++
+Isso exporta o pacote em uma forma explodida no sistema de arquivos onde o cliente SCM é criado.
+
+. No local do cliente SCM, verifique o conteúdo do pacote para o servidor SCM.
+. Use as ferramentas de comparação fornecidas pelo SCM para verificar as alterações em relação à versão SCM do pacote.
+

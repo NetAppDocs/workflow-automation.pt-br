@@ -1,0 +1,50 @@
+---
+permalink: help/task-configure-authentication-settings.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, use, microsoft, active, directory, lightweight, access, protocol, server, authentication, authorization 
+summary: 'Você pode configurar o OnCommand Workflow Automation (WFA) para usar um servidor LDAP (Lightweight Directory Access Protocol) do Microsoft ative Directory (AD) para autenticação e autorização.' 
+---
+= Configure as definições de autenticação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o OnCommand Workflow Automation (WFA) para usar um servidor LDAP (Lightweight Directory Access Protocol) do Microsoft ative Directory (AD) para autenticação e autorização.
+
+*O que você vai precisar*
+
+Você deve ter configurado um servidor LDAP do Microsoft AD em seu ambiente.
+
+*Sobre esta tarefa*
+
+Apenas a autenticação LDAP do Microsoft AD é suportada para O WFA. Você não pode usar outros métodos de autenticação LDAP, incluindo o Microsoft AD Lightweight Directory Services (AD LDS) ou o Catálogo Global da Microsoft.
+
+
+NOTE: Durante a comunicação, o LDAP envia o nome de utilizador e a palavra-passe em texto simples. No entanto, a comunicação LDAPS (LDAP Secure) é criptografada e segura.
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador.
+. Clique em *Configurações* e, em *Configuração*, clique em *Autenticação*.
+. Marque a caixa de seleção *Ativar ative Directory* .
+. Introduza as informações necessárias nos campos:
++
+.. *Opcional:* se você quiser usar o formato _usu `sAMAccountName` `userPrincipalName`
+.. *Opcional:* se forem necessários valores exclusivos para o seu ambiente, edite os campos obrigatórios.
+.. Digite o URI do servidor AD da seguinte forma: `ldap://active_directory_server_address\[:port\]`
++
+`ldap://NB-T01.example.com[:389]`
+
++
+Se tiver ativado o LDAP sobre SSL, pode utilizar o seguinte formato URI: `ldaps://active_directory_server_address\[:port\]`
+
+.. Adicione uma lista de nomes de grupos AD as funções necessárias.
++
+
+NOTE: Você pode adicionar uma lista de nomes de grupos do AD às funções necessárias na janela grupos do ative Directory.
+
+
+
+. Clique em *Salvar*.
+

@@ -1,0 +1,237 @@
+---
+permalink: help/reference-execution-status-window.html 
+sidebar: sidebar 
+keywords: execution, window, display, status, process, workflow, submitted, enable, view, details, process, control, access, select 
+summary: A janela execuções exibe o status do processo de execução para cada fluxo de trabalho que foi enviado para execução. A janela permite visualizar detalhes do processo de execução e controlar a execução de um fluxo de trabalho. Pode aceder a esta janela selecionando execução > execuções. 
+---
+= Janela execuções
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela execuções exibe o status do processo de execução para cada fluxo de trabalho que foi enviado para execução. A janela permite visualizar detalhes do processo de execução e controlar a execução de um fluxo de trabalho. Pode aceder a esta janela selecionando *execução* > *execuções*.
+
+* Tabela de fluxo de trabalho
+* Barra de ferramentas
+
+
+
+
+== Tabela de fluxo de trabalho
+
+A tabela fluxo de trabalho lista os fluxos de trabalho enviados para execução. Você pode personalizar a exibição da tabela usando os recursos de filtragem e classificação disponíveis para cada coluna, bem como reorganizando a ordem da coluna.
+
+* image:../media/filter_icon_wfa.gif["Ícone de filtro"] ativa ou desativa a filtragem de toda a tabela. Um "x" vermelho aparece sobre o ícone se a filtragem estiver desativada.
+* Clicar duas vezes image:../media/filter_icon_wfa.gif["Ícone de filtro"]limpa e redefine as seleções de filtragem.
+* image:../media/wfa_filter_icon.gif["Ícone de filtro"] em cada cabeçalho de coluna permite filtrar com base no conteúdo das colunas. Clicar image:../media/wfa_filter_icon.gif["Ícone de filtro"] em uma coluna permite filtrar um item específico na lista suspensa ou em todos os itens disponíveis.
+* Clicar no cabeçalho da coluna alterna entre a ordem ascendente e descendente de ordenação. É possível identificar a ordem de classificação aplicada pelas setas de classificação (image:../media/wfa_sortarrow_up_icon.gif["Ícone de ordenação"] para ascendente e image:../media/wfa_sortarrow_down_icon.gif["Ícone de ordenação"]descendente).
+* Para reorganizar a localização das colunas, você pode arrastar e soltar colunas para colocá-las em qualquer ordem necessária. No entanto, você não pode ocultar ou excluir nenhuma dessas colunas.
+* Clicar na caixa de texto filtro *pesquisar* permite-lhe procurar conteúdo específico. Além disso, você pode pesquisar usando operadores suportados para o tipo de coluna aplicável, alfabético ou numérico.
+
+
+A tabela a seguir descreve os operadores suportados para colunas alfabéticas e numéricas na tabela fluxo de trabalho, disponível na caixa de texto filtro *Search*.
+
+[cols="2*"]
+|===
+| Alfabético | Numérico 
+
+
+ a| 
+* Contém
+* Não contém
+* Começa com
+* Termina com
+* Igual a
+* Não é igual
+* Repor
+
+ a| 
+* Igual a
+* Não é igual
+* Menos de
+* Superior a.
+* Inferior ou igual a
+* Maior ou igual a
+* Entre
+* Repor
+
+
+|===
+A tabela fluxo de trabalho contém as seguintes colunas:
+
+* *Número de trabalho*
++
+Apresenta o número de identificação do trabalho.
+
++
+O número de identificação do trabalho é único e é atribuído pelo servidor quando inicia o trabalho.
+
+* *Nome*
++
+Exibe o nome do fluxo de trabalho.
+
+* *Hora de início*
++
+Exibe a data e a hora em que o fluxo de trabalho foi iniciado.
+
++
+Clique no ícone de calendário na caixa de texto filtro de pesquisa para procurar fluxos de trabalho com uma data de início específica.
+
+* *Hora de fim*
++
+Exibe a data e a hora em que o fluxo de trabalho terminou.
+
++
+Clique no ícone de calendário na caixa de texto filtro de pesquisa para procurar fluxos de trabalho com uma data de fim específica.
+
+* *Status*
++
+Apresenta o estado de execução do trabalho. O status pode ser um dos seguintes:
+
++
+** Falha
++
+Indica que o fluxo de trabalho falhou durante a execução. Com base no tempo decorrido desde a execução do fluxo de trabalho, você pode retomar o fluxo de trabalho a partir do comando com falha.
+
+** Em execução
++
+Indica que o fluxo de trabalho está sendo executado. O fluxo de trabalho executa o plano que foi criado na fase de Planejamento, que precede qualquer outra execução.
+
+** Bem-sucedido
++
+Indica que o fluxo de trabalho foi executado com êxito.
+
+** Cancelado
++
+Indica que o fluxo de trabalho foi cancelado por um utilizador.
+
+** A aguardar aprovação
++
+Indica que um ponto de aprovação faz parte do fluxo de trabalho. O fluxo de trabalho permanece nesse estado até que o usuário especificado aprove a execução do fluxo de trabalho.
+
+** Programado
++
+Indica que o Planejamento do fluxo de trabalho está concluído e o fluxo de trabalho está programado para execução.
+
+** A abortar
++
+Indica que o fluxo de trabalho está a ser abortado. Um fluxo de trabalho abortado não continua com a execução; qualquer parte previamente concluída do fluxo de trabalho permanece concluída.
+
+** Obsoleto
++
+Indica que o fluxo de trabalho agendado não foi executado dentro do tempo especificado de acordo com o agendamento.
+
+** Planejamento
++
+Indica a resolução do projeto do fluxo de trabalho, localização de todos os recursos, verificação da viabilidade do projeto e formulação do plano de execução. O Planejamento pode ser uma ação independente, parte da verificação do projeto ou parte da execução, porque cada execução começa com um novo Planejamento.
+
+** Pendente
++
+Indica que o fluxo de trabalho está na fila de planeamento. Este é um estado interno. O fluxo de trabalho é recuperado para Planejamento a partir deste status.
+
+** Parcialmente bem-sucedido
++
+Indica que, embora o fluxo de trabalho tenha sido executado com sucesso, há uma ou mais etapas que falharam. A execução é concluída porque as etapas com falha foram configuradas de modo que a execução do fluxo de trabalho continua mesmo quando a etapa falhou.
+
+
+
+* *Concluído*
++
+Exibe o número de etapas concluídas do número total de etapas para o fluxo de trabalho selecionado.
+
+* *Enviado por*
++
+Exibe o nome de usuário do usuário que enviou o fluxo de trabalho.
+
+* *Submetido em*
++
+Exibe a data e a hora em que o fluxo de trabalho foi enviado.
+
++
+Clique no ícone de calendário na caixa de texto filtro de pesquisa para pesquisar fluxos de trabalho com uma data específica enviada.
+
+* *Comentário de execução*
++
+Exibe o comentário especificado para a execução do fluxo de trabalho.
+
+* *Programado para*
++
+Exibe a data e a hora agendadas para a execução do fluxo de trabalho.
+
++
+Clique no ícone de calendário na caixa de texto filtro de pesquisa para procurar fluxos de trabalho com uma data específica agendada. Quando um filtro para exibir os trabalhos em uma data posterior for aplicado na coluna, os trabalhos com ""número de tarefa zero"" podem ser exibidos. Isso indica que o trabalho ainda não foi criado e será criado na hora programada.
+
+* *ID recorrente*
++
+Exibe o identificador da programação recorrente.
+
+* *Nome da programação*
++
+Exibe o nome da programação.
+
+* * Último status de alteração*
++
+Exibe a hora em que um status foi alterado.
+
++
+Clique no ícone de calendário na caixa de texto filtro de pesquisa para pesquisar fluxos de trabalho com uma data específica de última alteração de status.
+
+* *Comentário do ponto de aprovação*
++
+Indica a mensagem exibida ao usuário no último ponto de aprovação, se aplicável, durante a execução do fluxo de trabalho.
+
+
+
+
+
+== Barra de ferramentas
+
+A barra de ferramentas está localizada acima do cabeçalho da coluna. Pode utilizar os ícones na barra de ferramentas para executar várias acões. Estas ações também podem ser acedidas a partir do menu de clique com o botão direito do rato na janela.
+
+* image:../media/details_wfa_icon.gif["Ícone de detalhes"]* (Detalhes)*
++
+Abre a janela Monitoramento do fluxo de trabalho selecionado, que contém as seguintes guias para obter informações detalhadas sobre o fluxo de trabalho:
+
++
+** Fluxo
+** Plano execução
+** Entradas do utilizador
+** Parâmetros de retorno
+** História
+
+
+
+
+Você também pode clicar duas vezes em uma entrada na tabela para abrir a janela Monitoramento para exibir informações detalhadas.
+
+* image:../media/abort_wfa_icon.gif["Ícone de abortar"]* (Cancelar)*
++
+Impede que o processo de execução continue. Esta opção está ativada para fluxos de trabalho que estão no modo de execução.
+
+* image:../media/reschedule_wfa_icon.gif["Ícone Reschecule"]* (Reprogramar)*
++
+Abre uma caixa de diálogo Reprogramar fluxo de trabalho, que permite alterar o tempo de execução do fluxo de trabalho. A opção está ativada para fluxos de trabalho que estão no estado agendado.
+
+* image:../media/resume_wfa_icon.gif["Ícone retomar"]* (Retomar)*
++
+Abre uma caixa de diálogo Retomar fluxo de trabalho, que permite retomar a execução do fluxo de trabalho depois de modificar problemas de ambiente (por exemplo, credenciais erradas para um array, licenças ausentes ou array está inativo). A opção está ativada para fluxos de trabalho que estão no `Failed` estado.
+
+* image:../media/approve_resume_wfa_icon.gif["Ícone aprovar e retomar"]* (Aprovar e retomar)*
++
+Permite aprovar a execução do fluxo de trabalho e continuar o processo de execução. Esta opção está ativada para fluxos de trabalho que estão no `Waiting For Approval state`.
+
+* image:../media/reject_abort_wfa_icon.gif["Ícone rejeitar e abortar"]* (Rejeitar e cancelar)*
++
+Permite rejeitar a execução do fluxo de trabalho e parar o processo de execução. Esta opção está ativada para fluxos de trabalho que estão no `Waiting For Approval state`.
+
+* image:../media/clean_reservation_wfa_icon.gif["Ícone de reserva limpa"]* (Reserva limpa)*
++
+Permite limpar a reserva de recursos feita para um fluxo de trabalho a partir do cache local. A reserva limpa está disponível apenas para fluxos de trabalho programados, com falha e parcialmente bem-sucedidos. Você não pode retomar a reserva depois que ela é limpa.
+
+* image:../media/refresh_wfa_icon.gif["Ícone Refrech"]* (Atualizar)*
++
+Atualiza a lista de fluxos de trabalho. A vista é atualizada automaticamente. Pode ativar e desativar a atualização automática clicando image:../media/refresh_icon_wfa.gif[""]na barra de estado.
+
+

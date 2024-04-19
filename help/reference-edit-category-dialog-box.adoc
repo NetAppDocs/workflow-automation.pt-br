@@ -1,0 +1,62 @@
+---
+permalink: help/reference-edit-category-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, category, dialog box, enable, workflow 
+summary: A caixa de diálogo Editar categoria permite editar uma categoria de fluxo de trabalho. 
+---
+= Caixa de diálogo Editar categoria
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Editar categoria permite editar uma categoria de fluxo de trabalho.
+
+* *Nome*
++
+Permite editar o nome da categoria.
+
+* *Descrição*
++
+Permite editar a descrição da categoria.
+
+* *Fluxos de trabalho disponíveis*
++
+Exibe todos os fluxos de trabalho disponíveis que não são movidos para a caixa fluxos de trabalho selecionados.
+
+* *Fluxos de trabalho selecionados*
++
+Exibe todos os fluxos de trabalho selecionados para a categoria.
+
+* *Categoria utilizada para autorização de fluxo de trabalho*
++
+Permite conceder acesso a usuários com função de operador para executar a categoria. A caixa de seleção não está selecionada por padrão.
+
+* *Operadores disponíveis*
++
+Exibe todos os usuários com função de operador que não têm acesso à categoria.
+
+* *Operadores selecionados*
++
+Exibe os usuários que recebem acesso à categoria.
+
+
+
+
+
+== Botões de comando
+
+* *Botões de seleção*
++
+Move a entrada selecionada de uma caixa para outra.
+
+* *Guardar*
++
+Salva a categoria e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Não salva a categoria e fecha a caixa de diálogo.
+
+

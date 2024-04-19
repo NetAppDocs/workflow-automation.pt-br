@@ -1,0 +1,37 @@
+---
+permalink: help/concept-how-resource-selection-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, wfa, search, algorithm, storage, resource, execution, design, efficient 
+summary: 'O OnCommand Workflow Automation (WFA) usa algoritmos de pesquisa para selecionar recursos de armazenamento para execução de fluxo de trabalho. Você deve entender como a seleção de recursos funciona para projetar fluxos de trabalho de forma eficiente.' 
+---
+= Como a seleção de recursos funciona
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Workflow Automation (WFA) usa algoritmos de pesquisa para selecionar recursos de armazenamento para execução de fluxo de trabalho. Você deve entender como a seleção de recursos funciona para projetar fluxos de trabalho de forma eficiente.
+
+WFA seleciona recursos de entrada de dicionário - como unidades do vFiler, agregados e máquinas virtuais - usando algoritmos de pesquisa. Os recursos selecionados são então usados para executar o fluxo de trabalho. Os algoritmos de busca DO WFA fazem parte dos blocos de construção DO WFA, e incluem finders e filtros. Para localizar e selecionar os recursos necessários, os algoritmos de pesquisa pesquisam os dados armazenados em cache de diferentes repositórios, como Active IQ Unified Manager, VMware vCenter Server e um banco de dados. Por padrão, um filtro está disponível para cada entrada de dicionário para procurar um recurso com base em suas chaves naturais.
+
+Você deve definir os critérios de seleção de recursos para cada comando em seu fluxo de trabalho. Além disso, você pode usar um localizador para definir os critérios de seleção de recursos em cada linha do fluxo de trabalho. Por exemplo, quando você está criando um volume que requer uma quantidade específica de espaço de armazenamento, você pode usar o localizador ""Localizar agregado por capacidade disponível"" no comando ""criar volume""", que seleciona um agregado com uma quantidade específica de espaço disponível e cria o volume nele.
+
+Você pode definir um conjunto de regras de filtro para recursos de entrada de dicionário, como unidades do vFiler, agregados e máquinas virtuais. As regras de filtro podem conter um ou mais grupos de regras. Uma regra consiste em um atributo de entrada de dicionário, um operador e um valor. O atributo também pode incluir atributos de suas referências. Por exemplo, você pode especificar uma regra para agregados da seguinte forma: Listar todos os agregados que têm nomes começando com a cadeia "'aggr'" e ter mais de 5 GB de espaço disponível. A primeira regra no grupo é o atributo "nome", com o operador "tarts-with", e o valor "agir". A segunda regra para o mesmo grupo é o atributo "available_size_mb", com o operador "">", e o valor "'5000". Você pode definir um conjunto de regras de filtro juntamente com filtros públicos. A opção Definir regras de filtro será desativada se tiver selecionado um localizador. A opção Salvar como Finder será desativada se você tiver selecionado a caixa de seleção Definir regras de filtro.
+
+Além dos filtros e localizadores, você pode usar um comando de pesquisa ou definição para procurar recursos disponíveis. O comando search ou define é a opção preferida sobre os comandos no-op. O comando pesquisar e definir pode ser usado para definir recursos do tipo de entrada do dicionário certificado e do tipo de entrada do dicionário personalizado. O comando pesquisar ou definir procura recursos, mas não executa nenhuma ação no recurso. No entanto, quando um localizador é usado para procurar recursos, ele é usado no contexto de um comando, e as ações definidas pelo comando são executadas nos recursos. Os recursos retornados por um comando de pesquisa ou definição são usados como variáveis para os outros comandos no fluxo de trabalho.
+
+A ilustração a seguir mostra que um filtro é usado para a seleção de recursos:
+
+image::../media/resource_selection_5_x.png[seleção de recursos 5 x]
+
+
+
+== Exemplos de seleção de recursos em fluxos de trabalho predefinidos
+
+Você pode abrir os detalhes do comando dos seguintes fluxos de trabalho predefinidos no Designer para entender como as opções de seleção de recursos são usadas:
+
+* Criar um volume de NFS Data ONTAP em cluster
+* Estabelecer peering de cluster
+* Remover um volume Data ONTAP agrupado
+

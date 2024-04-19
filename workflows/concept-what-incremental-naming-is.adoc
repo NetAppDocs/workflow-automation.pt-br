@@ -1,0 +1,32 @@
+---
+permalink: workflows/concept-what-incremental-naming-is.html 
+sidebar: sidebar 
+keywords: incremental, naming, algorithm, enable, name, attributes, workflow, base, search, result, parameter, custom, expression, functionality, convention, requirement 
+summary: Nomenclatura incremental é um algoritmo que permite nomear os atributos em um fluxo de trabalho com base nos resultados de pesquisa de um parâmetro. Você pode nomear os atributos com base em um valor incremental ou uma expressão personalizada. A funcionalidade de nomenclatura incremental ajuda você a implementar uma convenção de nomenclatura com base em suas necessidades. 
+---
+= Qual é a nomenclatura incremental
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nomenclatura incremental é um algoritmo que permite nomear os atributos em um fluxo de trabalho com base nos resultados de pesquisa de um parâmetro. Você pode nomear os atributos com base em um valor incremental ou uma expressão personalizada. A funcionalidade de nomenclatura incremental ajuda você a implementar uma convenção de nomenclatura com base em suas necessidades.
+
+Você pode usar a funcionalidade de nomenclatura incremental ao projetar fluxos de trabalho para nomear dinamicamente os objetos criados pelo fluxo de trabalho. A funcionalidade permite especificar critérios de pesquisa para um objeto usando o recurso de seleção de recursos e o valor retornado pelos critérios de pesquisa é usado para o atributo do objeto. Além disso, você pode especificar um valor para o atributo se nenhum objeto foi encontrado com os critérios de pesquisa especificados.
+
+Você pode usar uma das seguintes opções para nomear os atributos:
+
+* Fornecendo um valor de incremento e sufixo
++
+Você pode fornecer um valor que deve ser usado juntamente com o valor do objeto encontrado pelos critérios de pesquisa e incremento com o número especificado. Por exemplo, se você quiser criar volumes com a convenção de nomenclatura de `filer name_unique number_environment,` você pode usar um localizador para encontrar o último volume pelo prefixo de nome e incrementar o número exclusivo por 1, bem como adicionar o nome do sufixo ao nome do volume. Se o último prefixo do nome do volume encontrado foi _vf_023_ _ prod e você está criando três volumes, os nomes dos volumes criados são _vf_024_prod, vf_025_prod e VF_026_ prod.
+
+* Fornecendo uma expressão personalizada
++
+Você pode fornecer um valor que deve ser usado juntamente com o valor do objeto encontrado pelos critérios de pesquisa e adicionar valores adicionais com base na expressão inserida. Por exemplo, se você quiser criar um volume com a convenção de nomenclatura `last volume name_environment name padded with 1,`, você pode digitar a expressão `last_volume.name + '_' + nextName("lab1")`. Se o último nome do volume encontrado for VF_023_, o nome do volume criado será _vf_023_lab2_.
+
+
+
+A ilustração a seguir mostra como uma expressão personalizada pode ser fornecida para especificar uma convenção de nomenclatura:
+
+image::../media/incrmnmgwzd.png[incrmnmgwzd]

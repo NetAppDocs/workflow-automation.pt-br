@@ -1,0 +1,28 @@
+---
+permalink: workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: workflow, automation, consist, several, building, blocks, include, library, predefined, provide, create, requirements, organization 
+summary: 'Os fluxos de trabalho de automação do fluxo de trabalho (WFA) consistem em vários blocos de construção e O WFA inclui uma biblioteca dos blocos de construção predefinidos. Você pode usar os componentes básicos que O WFA fornece para criar fluxos de trabalho que correspondam aos requisitos da sua organização.' 
+---
+= Trabalhando com os blocos de construção em OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os fluxos de trabalho de automação do fluxo de trabalho (WFA) consistem em vários blocos de construção e O WFA inclui uma biblioteca dos blocos de construção predefinidos. Você pode usar os componentes básicos que O WFA fornece para criar fluxos de trabalho que correspondam aos requisitos da sua organização.
+
+A WFA fornece a estrutura para processos de automação de armazenamento. A flexibilidade DO WFA é baseada em como os fluxos de trabalho são construídos usando os blocos de construção do fluxo de trabalho.
+
+Os blocos de construção DO WFA são os seguintes:
+
+* Entradas do dicionário
+* Comandos
+* Filtros
+* Localizadores
+* Funções
+* Modelos
+
+
+Você deve entender como os blocos de construção são usados no WFA para ajudá-lo a criar os fluxos de trabalho.

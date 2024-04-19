@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-upgrade-from-wfa-4-2.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later 
+summary: 'Você pode executar uma atualização no local do OnCommand Workflow Automation (WFA) 3,1 ou posterior para a versão mais recente disponível do WFA para usar os novos recursos e aprimoramentos.' 
+---
+= Atualize a partir do OnCommand Workflow Automation 3,1 ou posterior
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode executar uma atualização no local do OnCommand Workflow Automation (WFA) 3,1 ou posterior para a versão mais recente disponível do WFA para usar os novos recursos e aprimoramentos.
+
+Você deve ter baixado o arquivo binário .bin do site de suporte da NetApp para a máquina host DO WFA.
+
+Você pode restaurar para O WFA 5,1 apenas a partir DO WFA 5,0 ou 4,2. Um backup de banco de dados WFA só pode ser restaurado para um sistema que esteja executando a mesma versão ou uma versão posterior do WFA.
+
+A conexão de cluster WFA 5,1 precisa aceitar o certificado SSL. Ao atualizar de uma versão anterior DO WFA para O WFA 5,1, você precisa certificar a conexão do cluster. Salve os detalhes da conexão do cluster para a certificação do cluster após a atualização no local.
+
+Você não pode instalar O MYSQL por conta própria ao atualizar a partir de versões anteriores do WFA. Você pode instalar o MySQL por conta própria:
+
+* Quando você está atualizando do WFA 4,2 para versões posteriores DO WFA.
+* Atualize a partir DO WFA 3,1 ou posterior escolhendo um dos seguintes métodos:
++
+** Instalação interativa
++
+... Navegue até o arquivo binário .bin na máquina host WFA e execute o arquivo.
+... Siga as instruções apresentadas no ecrã para concluir a atualização.
+
+
+** Instalação silenciosa
++
+No prompt do shell:
+
++
+`./WFA-version_number-build_number.bin [-y] [-u admin_user_name] [-p admin_user_password]`
+
++
+*Exemplo:*
+
++
+`./WFA-3.1-Z3234343435.bin -y -u admin -p Company*234`
+
++
+Durante a atualização silenciosa, você deve incluir valores para todas as seguintes opções de comando:
+
++
+*** `-y` ignora a confirmação da instalação.
+*** `-u` especifica o nome de usuário do administrador.
+*** `-p` especifica a senha do usuário admin.
++
+Se não tiver fornecido a palavra-passe do utilizador admin, tem de introduzir a palavra-passe quando lhe for pedido.
+
+
+
+
+
+

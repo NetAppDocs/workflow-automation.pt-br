@@ -1,0 +1,52 @@
+---
+permalink: help/reference-new-schedule-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, schedule, dialog box, create, workflow, execute, specified, frequency, monday 
+summary: Você pode usar a caixa de diálogo Nova programação para criar uma nova programação para qualquer fluxo de trabalho para que o fluxo de trabalho seja executado em uma frequência especificada. Por exemplo, você pode agendar um fluxo de trabalho para ser executado todas as segundas-feiras. 
+---
+= Caixa de diálogo Nova Agenda
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Nova programação para criar uma nova programação para qualquer fluxo de trabalho para que o fluxo de trabalho seja executado em uma frequência especificada. Por exemplo, você pode agendar um fluxo de trabalho para ser executado todas as segundas-feiras.
+
+
+
+== Novas propriedades de Configuração de Agendamento
+
+* *Nome*
++
+Permite especificar um nome para a programação.
+
+* *Descrição*
++
+Permite-lhe introduzir uma descrição para a programação.
+
+* *Frequência*
++
+Permite especificar a frequência na qual o fluxo de trabalho associado à programação deve ser executado. A opção hora está selecionada por padrão. A frequência pode ser horária, diária, semanal ou mensal.
+
++
+Por exemplo, se você quiser que um fluxo de trabalho seja executado todas as terças-feiras às 9 DA MANHÃ, você deve selecionar a opção semanal e digitar a hora como `9:00` e o dia, pois `Tuesday.` você deve usar dois pontos quando especificar a hora.
+
++
+O formato de 24 horas é suportado. Os dados introduzidos serão baseados na hora do servidor.
+
+
+
+
+
+== Botões de comando
+
+* *OK*
++
+Salva as configurações e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

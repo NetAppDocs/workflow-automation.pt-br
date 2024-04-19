@@ -1,0 +1,34 @@
+---
+permalink: rhel-install/task-uninstall-wfa-in-a-vcs-environment.html 
+sidebar: sidebar 
+keywords: uninstall, workflow, automation, vcs, environment 
+summary: 'Você pode desinstalar o Workflow Automation (WFA) de um cluster excluindo todos os serviços WFA dos nós do cluster.' 
+---
+= Desinstalar o Workflow Automation em um ambiente VCS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode desinstalar o Workflow Automation (WFA) de um cluster excluindo todos os serviços WFA dos nós do cluster.
+
+.Passos
+. Coloque os serviços offline usando o Gerenciador de clusters:
++
+.. Clique com o botão direito do rato no grupo de clusters.
+.. Selecione *Offline* e, em seguida, selecione o nó.
+
+
+. Desinstale O WFA no primeiro nó e, em seguida, desinstale O WFA no segundo nó.
++
+link:task-uninstall-oncommand-workflow-automation-linux.html["Desinstale o OnCommand Workflow Automation"]
+
+. Excluir os recursos do cluster do Gerenciador de clusters:
++
+.. Clique com o botão direito do rato no grupo de clusters.
+.. Selecione *Eliminar*.
+
+
+. Elimine manualmente os dados na localização partilhada.
+

@@ -1,0 +1,23 @@
+---
+permalink: help/task-create-a-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: create, workflow, packs, oncommand, workflow, automation, storage, integration, requirements 
+summary: 'Você pode criar pacotes de fluxo de trabalho no OnCommand Workflow Automation (WFA) para seus requisitos de integração e automação de storage.' 
+---
+= Crie pacotes de fluxo de trabalho WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar pacotes de fluxo de trabalho no OnCommand Workflow Automation (WFA) para seus requisitos de integração e automação de storage.
+
+.Passos
+. Faça login na janela *WFA* através de um navegador da Web.
+. Clique em *Gerenciamento de conteúdo* > *Pacotes*.
+. Clique no ícone *New Pack*.
+. Na caixa de diálogo *New Pack*, insira valores para os campos *Name*, *Author*, *Version* e *Description*.
+. Clique em *Salvar*.
+. Verifique se o novo pacote foi criado na janela *Packs*.
+

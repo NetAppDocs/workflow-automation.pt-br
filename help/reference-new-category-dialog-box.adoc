@@ -1,0 +1,74 @@
+---
+permalink: help/reference-new-category-dialog-box.html 
+sidebar: sidebar 
+keywords: new, category, dialog box, enable, create, workflow 
+summary: A caixa de diálogo Nova Categoria permite criar uma nova categoria de fluxo de trabalho. 
+---
+= Caixa de diálogo Nova Categoria
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Nova Categoria permite criar uma nova categoria de fluxo de trabalho.
+
+* *Nome*
++
+Permite-lhe introduzir um nome para a categoria. Tem de introduzir um nome para guardar a categoria.
+
+* *Descrição*
++
+Permite-lhe introduzir uma descrição para a categoria.
+
+* *Fluxos de trabalho disponíveis*
++
+Exibe todos os fluxos de trabalho disponíveis que não são movidos para a caixa *fluxos de trabalho selecionados*.
+
+* *Fluxos de trabalho selecionados*
++
+Exibe todos os fluxos de trabalho selecionados para a categoria.
+
+* *Categoria utilizada para autorização de fluxo de trabalho*
++
+Permite selecionar utilizadores com função de operador que podem executar a categoria. Por padrão, a caixa de seleção não está selecionada e a categoria está disponível para todos os usuários.
+
+* *Restrinja o acesso a fluxos de trabalho nesta categoria aos seguintes usuários e grupos do ative Directory*
++
+Permite restringir o acesso a fluxos de trabalho na categoria selecionada a usuários e grupos do ative Directory selecionados.
+
+* *Aprovadores e operadores disponíveis*
++
+Exibe todos os usuários com funções de aprovador e operador.
+
+* *Aprovadores e operadores selecionados*
++
+Exibe os usuários que têm permissão para executar a categoria.
+
+* *Grupos de aprovadores e operadores disponíveis*
++
+Exibe todos os grupos com funções de aprovador e operador.
+
+* *Grupos de aprovadores e operadores selecionados*
++
+Exibe os grupos que têm permissão para executar a categoria.
+
+
+
+
+
+== Botões de comando
+
+* *Botões de seleção*
++
+Permite mover a entrada selecionada de uma caixa para outra.
+
+* *Guardar*
++
+Salva a categoria e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Não salva a categoria e fecha a caixa de diálogo.
+
+

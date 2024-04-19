@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, cli 
+summary: 'Durante um desastre, ao recuperar dados, você pode restaurar o banco de dados OnCommand Workflow Automation (WFA) e as configurações com suporte que você fez backup anteriormente usando a interface de linha de comando (CLI). As configurações suportadas incluem acesso a dados, tempo limite HTTP e certificados SSL.' 
+---
+= Restaurando o banco de dados WFA usando a CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durante um desastre, ao recuperar dados, você pode restaurar o banco de dados OnCommand Workflow Automation (WFA) e as configurações com suporte que você fez backup anteriormente usando a interface de linha de comando (CLI). As configurações suportadas incluem acesso a dados, tempo limite HTTP e certificados SSL.
+
+A seguir estão os dois tipos de restauração:
+
+* Restauração completa
+* Restauração regular
+

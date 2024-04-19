@@ -1,0 +1,244 @@
+---
+permalink: workflows/task-create-a-workflow.html 
+sidebar: sidebar 
+keywords: use, workflow, automation, create, tasks, provisioning, migrate, decommissioning, storage, databases, file, systems, predefined, wfa, match, requirements 
+summary: 'Você pode usar o Workflow Automation (WFA) para criar fluxos de trabalho para tarefas como provisionamento, migração e desativação de storage para bancos de dados ou sistemas de arquivos. Você deve criar fluxos de trabalho quando os fluxos de trabalho predefinidos DO WFA não corresponderem aos seus requisitos.' 
+---
+= Crie um fluxo de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o Workflow Automation (WFA) para criar fluxos de trabalho para tarefas como provisionamento, migração e desativação de storage para bancos de dados ou sistemas de arquivos. Você deve criar fluxos de trabalho quando os fluxos de trabalho predefinidos DO WFA não corresponderem aos seus requisitos.
+
+.O que você vai precisar
+* Você deve ter entendido os conceitos para blocos de construção WFA.
+* Você deve ter entendido recursos como repetição de linha, pontos de aprovação e seleção de recursos necessários para o fluxo de trabalho.
+* Você precisa ter concluído o Planejamento necessário para o fluxo de trabalho, incluindo a lista de verificação de requisitos de fluxo de trabalho.
+* Você deve ter criado o conteúdo de ajuda, que fornece informações sobre o fluxo de trabalho para os operadores de armazenamento.
+
+
+.Sobre esta tarefa
+A construção de cada fluxo de trabalho pode variar com base na meta e exigência do fluxo de trabalho. Esta tarefa não fornece instruções para um fluxo de trabalho específico, mas fornece instruções gerais para criar um fluxo de trabalho.
+
+.Passos
+. Clique em *Workflow Design* > *fluxos de trabalho*.
+. Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Na guia *Workflow*, execute as seguintes etapas:
++
+.. Expanda o esquema necessário e clique duas vezes no necessário image:../media/wfa_command_icon.gif["Ícone de comando"] (comando) ou image:../media/wfa_workflow_icon.gif["Ícone de fluxo de trabalho"] (fluxo de trabalho) na lista *passos disponíveis*.
++
+Pode repetir este passo conforme necessário. Você pode arrastar e soltar etapas para reorganizar as etapas no editor de fluxo de trabalho.
+
+.. *Opcional:* clique image:../media/add_row2_wfa_icon.gif[""] para adicionar o número necessário de linhas, que são usadas para especificar detalhes para execução de etapas.
++
+Cada etapa é executada com base nos detalhes da etapa especificada na linha e coluna especificadas. As etapas são executadas da esquerda para a direita e na ordem superior para a inferior.
+
+.. Posicione o cursor abaixo da etapa que você adicionou e clique image:../media/add_object_wfa_icon.gif["ícone de detalhes do comando"] para adicionar detalhes da etapa para a execução da etapa, na linha desejada.
++
+[cols="2*"]
+|===
+| Para esta etapa... | Faça isso... 
+
+
+ a| 
+Fluxo de trabalho
+ a| 
+Introduza as entradas de utilizador necessárias no separador *fluxo de trabalho* e a condição necessária no separador *Avançado*.
+
+
+
+ a| 
+Comando
+ a| 
+Na guia parâmetros para <command>, clique em cada guia objeto, selecione a opção necessária para definir os atributos do objeto e, em seguida, insira os detalhes necessários na guia Avançado e na guia outros parâmetros.
+
+
+
+ a| 
+PESQUISE ou defina
+ a| 
+Selecione o objeto de entrada do dicionário que deve ser pesquisado ou definido.
+
+|===
++
+A ilustração a seguir mostra as opções disponíveis para definir os atributos do objeto:
+
++
+image::../media/define_object_options.gif[definir opções de objeto]
+
++
+Escolha a ação apropriada:
+
++
+[cols="2*"]
+|===
+| Para... | Faça isso... 
+
+
+ a| 
+preenchendo os atributos
+ a| 
+Insira o valor dos atributos usando as seguintes opções:
+
+*** Expressões
+*** Variáveis
+*** Entradas do utilizador
+*** Seleção de recursos
+*** Nomenclatura incremental
+
+
+Você deve posicionar o cursor sobre os campos de atributo e clicar image:../media/elipsisicon.gif[""] para usar os recursos de seleção de recursos ou nomeação incremental.
+
+
+
+ a| 
+usando um definido anteriormente `_object_`
+ a| 
+Selecione o anteriormente `object` definido na caixa antes da lista de opções.
+
+
+
+ a| 
+procurando por um existente `_object_`
+ a| 
+... Clique em *Digite os critérios de pesquisa* para pesquisar o objeto usando o recurso de seleção de recursos.
+... Selecione uma das opções necessárias para execução se o objeto necessário não for encontrado:
++
+**** Abortar fluxo de trabalho
++
+Esta opção aborta a execução do fluxo de trabalho se o objeto específico não for encontrado.
+
+**** Desativar este comando
++
+ This option disables only the current step and executes the workflow.
+**** Preencha os atributos `object` e execute o comando
++
+ This option enables you to enter the required attributes and execute the workflow.
+
+
+
+
+|===
+
+
+. Se pretender inserir um ponto de aprovação, clique image:../media/approval_point_hover_icon.gif["ícone do ponto de aprovação"] e introduza o comentário necessário para o ponto de aprovação.
++
+Os comentários do ponto de aprovação podem incluir expressões MVEL.
+
+. Clique image:../media/repeat_row_arrow.gif[""] no que está ao lado dos números de linha para executar o seguinte:
++
+** Insira uma linha.
+** Copie a linha.
+** Repita a linha.
++
+Você pode usar uma das seguintes opções para especificar a repetição dos parâmetros do comando:
+
++
+*** Número de vezes
++
+Você pode usar essa opção para repetir a execução do comando para o número de repetições que você especificar. Por exemplo, você pode especificar que o comando "create qtree" deve ser repetido três vezes para criar três qtrees.
+
++
+Você também pode usar essa opção para um número dinâmico de execuções de comandos. Por exemplo, você pode criar uma variável de entrada de usuário para o número de LUNs a serem criados e usar o número especificado pelo operador de armazenamento quando o fluxo de trabalho é executado ou programado.
+
+*** Para cada recurso em um grupo
++
+Você pode usar essa opção e, em seguida, especificar um critério de pesquisa para um objeto. O comando é repetido tantas vezes quanto o objeto é retornado pelos critérios de pesquisa. Por exemplo, você pode procurar os nós em um cluster e repetir o comando ""Create iSCSI Logical Interface"" para cada nó.
+
+
+
+** Adicione uma condição para execução da linha.
+** Retire a linha.
+
+
+. Na guia *Detalhes*, execute as seguintes etapas:
++
+.. Especifique as informações necessárias nos campos *Nome do fluxo de trabalho* e *Descrição do fluxo de trabalho*.
++
+O nome e a descrição do fluxo de trabalho devem ser exclusivos para cada fluxo de trabalho.
+
+.. * Opcional: * Especifique a versão da entidade.
+.. *Opcional:* desmarque a caixa de seleção *considerar elementos reservados* se você não quiser usar a capacidade de reserva.
+.. *Opcional:* desmarque a caixa de seleção *Ativar validação de existência de elementos* se não quiser habilitar a validação para elementos que existem com o mesmo nome.
+
+
+. Se pretender editar as entradas do utilizador, execute as seguintes etapas:
++
+.. Clique no separador *User Inputs* (entradas do utilizador).
+.. Clique duas vezes na entrada do usuário que você deseja editar.
+.. Na caixa de diálogo *Editar variável: <user input>*, edite a entrada do usuário.
+
+
+. Se você quiser adicionar constantes, execute as etapas a seguir
++
+.. Clique na guia *constantes* e, em seguida, adicione as constantes necessárias para o seu fluxo de trabalho usando o botão *Adicionar*.
++
+Você pode definir constantes quando estiver usando um valor comum para definir os parâmetros para vários comandos. Por exemplo, veja a constante AGGREGATE_OVERFLOW_THRESHOLD usada no fluxo de trabalho "'criar, mapear e proteger LUNs com SnapVault'".
+
+.. Introduza o nome, a descrição e o valor de cada constante.
+
+
+. Clique na guia *Return Parameters* e, em seguida, adicione os parâmetros necessários para o seu fluxo de trabalho usando o botão *Add*.
++
+Você pode usar parâmetros de retorno quando o Planejamento e a execução do fluxo de trabalho devem retornar alguns valores calculados ou selecionados durante o Planejamento. Você pode exibir os valores calculados ou selecionados na guia parâmetros de retorno da janela de monitoramento na visualização do fluxo de trabalho ou após a conclusão da execução do fluxo de trabalho.
+
++
+Agregado: Você pode especificar o agregado como um parâmetro de retorno para ver qual agregado foi selecionado usando a lógica de seleção de recursos.
+
++
+Se você incluiu um fluxo de trabalho filho no fluxo de trabalho e se os nomes de parâmetros de retorno do fluxo de trabalho filho contiverem um espaço, sinal de dólar ou uma função, especifique o nome do parâmetro de retorno entre colchetes no fluxo de trabalho pai para exibir o valor do parâmetro de retorno do fluxo de trabalho filho no fluxo de trabalho pai.
+
++
+[cols="2*"]
+|===
+| Se o nome do parâmetro for... | Especificar como... 
+
+
+ a| 
+`ChildWorkflow1.abc$value`
+ a| 
+`ChildWorkflow1["abc$"+"value"]`
+
+
+
+ a| 
+`ChildWorkflow1.$value`
+ a| 
+`ChildWorkflow1["$"+"value"]`
+
+
+
+ a| 
+`ChildWorkflow1.value$`
+ a| 
+`ChildWorkflow1.value$`
+
+
+
+ a| 
+`ChildWorkflow1.P N`
+ a| 
+`ChildWorkflow1["P N"]`
+
+
+
+ a| 
+`ChildWorkflow1.return_string("HW")`
+ a| 
+`ChildWorkflow1["return_string(\"HW\")"]`
+
+|===
+. *Opcional:* clique na guia *conteúdo da Ajuda* para adicionar o arquivo de conteúdo de ajuda que você criou para o fluxo de trabalho.
+. Clique em *Preview* e certifique-se de que o Planejamento do fluxo de trabalho seja concluído com êxito.
+. Clique em *OK* para fechar a janela de visualização.
+. Clique em *Salvar*.
+
+
+
+
+== Depois de terminar
+
+Teste o fluxo de trabalho em seu ambiente de teste e marque o fluxo de trabalho como pronto para produção em *_WorkflowName_* > *_Details_*.

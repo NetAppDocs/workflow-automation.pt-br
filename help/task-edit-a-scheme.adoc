@@ -1,0 +1,32 @@
+---
+permalink: help/task-edit-a-scheme.html 
+sidebar: sidebar 
+keywords: edit, display, name, description, entity, version, scheme, create 
+summary: Você pode editar o nome de exibição, a descrição e a versão da entidade de um esquema que você criou. 
+---
+= Edite um esquema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar o nome de exibição, a descrição e a versão da entidade de um esquema que você criou.
+
+*O que você vai precisar*
+
+* Você deve ter instalado O WFA.
+* Você precisa ter credenciais de administrador do Privileges ou arquiteto para O WFA.
+
+
+*Sobre esta tarefa*
+
+Não é possível modificar esquemas predefinidos.
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador ou arquiteto.
+. Clique em *Design de fonte de dados* > *esquemas*.
+. Selecione o esquema que pretende modificar e, em seguida, clique image:../media/edit_wfa_icon.gif["Ícone de edição"] na barra de ferramentas.
+. Modifique as informações necessárias na caixa de diálogo *schemes <SchemeName>*.
+. Clique em *Salvar*.
+

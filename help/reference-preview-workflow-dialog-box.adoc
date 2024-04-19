@@ -1,0 +1,34 @@
+---
+permalink: help/reference-preview-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: preview, workflow, dialog box, enable, specify, value, user input, associated 
+summary: A caixa de diálogo Visualizar fluxo de trabalho permite especificar valores para entradas de usuário associadas a um fluxo de trabalho e, em seguida, visualizar a execução desse fluxo de trabalho com os valores especificados. 
+---
+= Caixa de diálogo Preview Workflow (Pré-visualização do fluxo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Visualizar fluxo de trabalho permite especificar valores para entradas de usuário associadas a um fluxo de trabalho e, em seguida, visualizar a execução desse fluxo de trabalho com os valores especificados.
+
+
+
+== O utilizador introduz valores
+
+A caixa de diálogo Visualizar fluxo de trabalho exibe as entradas do usuário associadas ao fluxo de trabalho selecionado e permite definir os valores para entradas do usuário.
+
+
+
+== Botões de comando
+
+* *Pré-visualização*
++
+Abre a janela Monitoramento do fluxo de trabalho associado.
+
+* *Cancelar*
++
+Fecha a caixa de diálogo.
+
+

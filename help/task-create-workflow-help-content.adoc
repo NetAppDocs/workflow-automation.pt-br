@@ -1,0 +1,51 @@
+---
+permalink: help/task-create-workflow-help-content.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, admins, architects, design, create, help, content, include 
+summary: Administradores e arquitetos do OnCommand Workflow Automation que projetam fluxos de trabalho podem criar conteúdo de ajuda para os fluxos de trabalho e incluí-lo no fluxo de trabalho. 
+---
+= Criar conteúdo de ajuda de fluxo de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Administradores e arquitetos do OnCommand Workflow Automation que projetam fluxos de trabalho podem criar conteúdo de ajuda para os fluxos de trabalho e incluí-lo no fluxo de trabalho.
+
+*O que você vai precisar*
+
+Você deve estar ciente de como criar páginas da Web usando HTML.
+
+*Sobre esta tarefa*
+
+A ajuda deve fornecer informações sobre o fluxo de trabalho e as entradas do usuário para o fluxo de trabalho para o operador de armazenamento que executa o fluxo de trabalho.
+
+.Passos
+. Crie uma pasta com o seguinte nome: Workflow-help.
+. Crie o conteúdo de ajuda usando um editor HTML ou um editor de texto e salve-o como um `index.htm` arquivo na `workflow-help` pasta.
++
+Você não deve incluir arquivos JavaScript como parte do conteúdo da ajuda. A seguir estão as extensões de arquivo suportadas:
+
++
+** `.jpg`
+** `.jpeg`
+** `.gif`
+** `.png`
+** `.xml`
+** `.thmx`
+** `.htm`
+** `.html`
+** `.css`
+
+
++
+Você também pode incluir o `Thumbs.db` arquivo, que é criado pelo Windows.
+
+. Verifique se o `index.htm` arquivo e outros arquivos associados ao conteúdo da ajuda, como imagens, estão disponíveis na `workflow-help` pasta.
+. Crie um `.zip` ficheiro da pasta e certifique-se de que o tamanho do `.zip` ficheiro não seja superior a 2 MB.
++
+*Exemplo:* `Create an NFS volume-help.zip`
+
+. Edite o fluxo de trabalho para o qual você criou o conteúdo de ajuda e clique em *Setup* > *Help Content* > *Browse* para carregar o `.zip` arquivo.
+

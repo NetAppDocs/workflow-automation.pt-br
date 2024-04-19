@@ -1,0 +1,53 @@
+---
+permalink: rhel-install/task-configure-protocols-for-connecting-to-remote-systems.html 
+sidebar: sidebar 
+keywords: configure, protocols, connect, remote systems 
+summary: 'Pode configurar o protocolo utilizado pelo OnCommand Workflow Automation (WFA) para ligar a sistemas remotos. Você pode configurar o protocolo com base nos requisitos de segurança da sua organização e no protocolo suportado pelo sistema remoto.' 
+---
+= Configurar protocolos para conexão a sistemas remotos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode configurar o protocolo utilizado pelo OnCommand Workflow Automation (WFA) para ligar a sistemas remotos. Pode configurar o protocolo com base nos requisitos de segurança da sua organização e no protocolo suportado pelo sistema remoto.
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador.
+. Clique em *Data Source Design* > *Remote System Types*.
+. Execute uma das seguintes ações:
++
+[cols="2*"]
+|===
+| Se você quiser... | Faça isso... 
+
+
+ a| 
+Configurar um protocolo para um novo sistema remoto
+ a| 
+.. Clique image:../media/new_wfa_icon.gif["Novo ícone"]em .
+.. Na caixa de diálogo novo tipo de sistema remoto, especifique os detalhes, como nome, descrição e versão.
+
+
+
+
+ a| 
+Modifique a configuração do protocolo de um sistema remoto existente
+ a| 
+.. Selecione e faça duplo clique no sistema remoto que pretende modificar.
+.. Clique image:../media/edit_wfa_icon.gif["Ícone de edição"]em .
+
+
+|===
+. Na lista Connection Protocol (Protocolo de ligação), selecione uma das seguintes opções:
++
+** HTTPS com fallback para HTTP (padrão)
+** Apenas HTTPS
+** Apenas HTTP
+** Personalizado
+
+
+. Especifique os detalhes do protocolo, da porta padrão e do tempo limite padrão.
+. Clique em *Salvar*.
+

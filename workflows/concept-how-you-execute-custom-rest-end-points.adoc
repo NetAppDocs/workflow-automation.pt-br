@@ -1,0 +1,29 @@
+---
+permalink: workflows/concept-how-you-execute-custom-rest-end-points.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, mechanism, configure, custom, end points, execute, help, architect, configure, easy, understand, intuitive, uniform, resource, identifiers, follow, conventions, post, put, delete, based, semantics, client, code, developers 
+summary: 'O OnCommand Workflow Automation (WFA) fornece um mecanismo para configurar os pontos finais REST personalizados para executar os fluxos de trabalho. Os pontos finais REST personalizados ajudam um arquiteto a configurar identificadores de recursos (URIs) fáceis de entender, intuitivos e uniformes para executar fluxos de trabalho, que seguem as CONVENÇÕES REST de POST, PUT ou DELETE com base na semântica do fluxo de trabalho. Esses URIs facilitam o desenvolvimento de código de cliente para desenvolvedores de clientes.' 
+---
+= Como você executa pontos finais DE DESCANSO personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Workflow Automation (WFA) fornece um mecanismo para configurar os pontos finais REST personalizados para executar os fluxos de trabalho. Os pontos finais REST personalizados ajudam um arquiteto a configurar identificadores de recursos (URIs) fáceis de entender, intuitivos e uniformes para executar fluxos de trabalho, que seguem as CONVENÇÕES REST de POST, PUT ou DELETE com base na semântica do fluxo de trabalho. Esses URIs facilitam o desenvolvimento de código de cliente para desenvolvedores de clientes.
+
+O WFA permite configurar um caminho de URI personalizado para execução de fluxo de trabalho através das chamadas de API. Cada segmento no caminho URI pode ser uma cadeia de carateres ou um nome válido da entrada do usuário do fluxo de trabalho entre parênteses, por exemplo, `/devops/\{ProjectName}/clone.` o fluxo de trabalho pode ser invocado como uma chamada para `_https_://WFAServer: HTTPS_PORT/rest/devops/Project1/clone/jobs.`
+
+A validação para o caminho URI é a seguinte:
+
+* O caminho DE REPOUSO deve começar com "'/'".
+* Os carateres permitidos são alfabetos, dígitos e sublinhado.
+* O nome de entrada do utilizador deve estar rodeado por "".
++
+
+NOTE: Você deve verificar se o valor cercado por "" é um nome de entrada de usuário válido.
+
+* Não deve haver segmentos de caminho vazios, por exemplo, //, //, e assim por diante.
+* A configuração do método HTTP e a configuração do caminho URI personalizado devem ser configuradas ou não configuradas.
+

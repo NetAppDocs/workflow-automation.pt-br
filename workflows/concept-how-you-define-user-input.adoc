@@ -1,0 +1,149 @@
+---
+permalink: workflows/concept-how-you-define-user-input.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, user, input, data, options, available, during, execution, define, parameters, enhance, flexibility, usability 
+summary: 'As entradas de usuário do OnCommand Workflow Automation (WFA) são opções de entrada de dados disponíveis durante a execução de fluxos de trabalho. Você deve definir os parâmetros de entrada do usuário para seus fluxos de trabalho para melhorar a flexibilidade e a usabilidade de seus fluxos de trabalho.' 
+---
+= Como as entradas do usuário são definidas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As entradas de usuário do OnCommand Workflow Automation (WFA) são opções de entrada de dados disponíveis durante a execução de fluxos de trabalho. Você deve definir os parâmetros de entrada do usuário para seus fluxos de trabalho para melhorar a flexibilidade e a usabilidade de seus fluxos de trabalho.
+
+As entradas do usuário são mostradas como campos de entrada, que podem ser preenchidos com dados relevantes ao visualizar ou executar fluxos de trabalho. Você pode criar um campo de entrada de usuário ao especificar os detalhes do comando em um fluxo de trabalho prefixando um rótulo ou variável com o sinal de dólar. Por exemplo, o VolumeName cria um campo de entrada de usuário Nome de volume. O WFA preenche automaticamente o separador User Inputs (entradas do utilizador) na janela Workflow <workflow name> (fluxo de trabalho) com as etiquetas de entrada do utilizador que criou. Você também pode definir o tipo de entrada do usuário e personalizar os campos de entrada modificando os atributos de entrada do usuário, como tipo, nome de exibição, valores padrão e valores de validação.
+
+
+
+== Opções do tipo de entrada do usuário
+
+* * String*
++
+Você pode usar uma expressão regular para valores válidos - por exemplo, a*.
+
++
+Strings, como `0d` e `0f`, são avaliadas como números semelhantes aos `0d` avaliados como 0 do tipo duplo.
+
+* *Número*
++
+Você pode definir um intervalo numérico que pode ser selecionado - por exemplo, 1 through15.
+
+* *Enum*
++
+Você pode criar valores de enumeração que podem ser selecionados ao preencher o campo de entrada do usuário usando o tipo enum. Opcionalmente, você pode bloquear os valores de enum que você criou para garantir que apenas os valores que você criou sejam selecionados para a entrada do usuário.
+
+* *Consulta*
++
+Você pode selecionar o tipo de consulta quando quiser que a entrada do usuário seja selecionada a partir dos valores disponíveis no cache WFA. Por exemplo, você pode usar a seguinte consulta para preencher automaticamente os campos de entrada do usuário com os valores de endereço IP e nome do cache WFA: *`SELECT ip, name FROM storage.array.`* Você pode opcionalmente bloquear os valores recuperados por uma consulta para que apenas os resultados tentados pela consulta sejam selecionados.
+
+* *Consulta (multi-select)*
++
+O tipo de consulta (multi-select), que é semelhante ao tipo de consulta, permite a seleção de vários valores durante a execução do fluxo de trabalho. Por exemplo, os usuários podem selecionar vários volumes ou um volume juntamente com seus compartilhamentos e exportações. Você pode permitir que os usuários selecionem várias linhas ou restringir a seleção a uma única linha. Selecionar uma linha seleciona os valores de todas as colunas da linha selecionada.
+
+
+
+Você pode usar as seguintes funções ao usar o tipo de consulta (seleção múltipla) de entrada de usuário:
+
+* GetSize
+* GetValueAt
+* getValueAt2D
+* getValueFrom2DByRowKey
++
+** *Booleano*
++
+Você pode usar o tipo booleano para exibir uma caixa de seleção na caixa de diálogo de entrada do usuário. Você deve usar o tipo booleano para entradas de usuário que têm "'true'" e "'false'" como os valores possíveis.
+
+** *Tabela*
++
+Você pode usar o tipo de tabela de entrada de usuário para especificar os cabeçalhos de coluna de uma tabela que podem ser usados para inserir vários valores durante a execução do fluxo de trabalho. Por exemplo, uma tabela que pode ser usada para especificar uma lista de nomes de nós e nomes de portas. Você também pode especificar um dos seguintes tipos de entrada de usuário para os cabeçalhos de coluna para validar os valores que são inseridos durante o tempo de execução:
+
+
+
+* Cadeia de carateres
+* Número
+* Enum
+* Booleano
+* 
+`String`Query é o tipo de entrada padrão do usuário para os cabeçalhos de coluna. Você deve clicar duas vezes na coluna tipo para especificar um tipo de entrada de usuário diferente.
++
+Você pode abrir o fluxo de trabalho Create SnapMirror policy and rules no Designer para ver como os tipos de entrada de usuário são usados na entrada de usuário "'SnapMirrorPolicyRule'".
+
++
+Você pode usar as seguintes funções ao usar o tipo de tabela de entrada do usuário:
+
+* GetSize
+* GetValueAt
+* getValueAt2D
+* getValueFrom2DByRowKey você pode abrir o fluxo de trabalho *criar e configurar uma Máquina Virtual de armazenamento com Infinite volume* no Designer para ver como o tipo de tabela é usado.
++
+** *Senha*
++
+Você pode usar o tipo de senha para entradas de usuário que são destinadas a inserir senhas. A palavra-passe introduzida pelo utilizador é encriptada e apresentada como uma sequência de carateres de asterisco na aplicação WFA e nos ficheiros de registo. Você pode usar as seguintes funções para descriptografar a senha, que pode ser usada pelo comando:
+
+
+
+* Para comandos Perl: WFAUtil::getWfaInputPassword (em inglês)
+* Para comandos do PowerShell: Get-WfaInputPassword -EncriptedPassword
++
+Aqui, a senha é a senha criptografada que é passada pelo WFA para o comando.
+
++
+** *Dicionário*
++
+Você pode adicionar os dados da tabela para a entrada do dicionário selecionado. O atributo de entrada do dicionário seleciona o atributo que deve ser retornado. Você pode selecionar um único valor ou vários valores durante a execução do fluxo de trabalho. Por exemplo, você pode selecionar um único volume ou vários volumes. Por padrão, valores únicos são selecionados. Você também pode selecionar regras para filtragem. Uma regra consiste em um atributo de entrada de dicionário, um operador e um valor. O atributo também pode incluir atributos de suas referências.
+
++
+Por exemplo, você pode especificar uma regra para agregados listando todos os agregados com nome começando com a cadeia "'aggr" e ter um tamanho disponível maior que 5 GB. A primeira regra no grupo é o atributo `name`, com o operador `starts-with`e o valor aggr. A segunda regra para o mesmo grupo é o atributo `available_size_mb`, com o operador `>` e o valor `5000.`
+
+
+
+
+
+A tabela a seguir lista as opções que você pode aplicar aos tipos de entrada de usuário:
+
+[cols="2*"]
+|===
+| Opção | Descrição 
+
+
+ a| 
+A validar
+ a| 
+Você pode validar o tipo de entradas do usuário para que apenas valores válidos sejam inseridos pelos usuários:
+
+* Os tipos de string e número de entrada do usuário podem ser validados com os valores inseridos durante o tempo de execução do fluxo de trabalho.
+* O tipo de string também pode ser validado com uma expressão regular.
+* O tipo de número é um campo numérico de ponto flutuante e pode ser validado usando um intervalo numérico especificado.
+
+
+
+
+ a| 
+Valores de bloqueio
+ a| 
+Você pode bloquear os valores dos tipos de consulta e enum para impedir que o usuário substitua os valores suspensos e ativar a seleção apenas dos valores exibidos.
+
+
+
+ a| 
+Marcação como obrigatória
+ a| 
+Você pode marcar as entradas do usuário como obrigatórias para que os usuários tenham que inserir certas entradas de usuário para continuar com a execução do fluxo de trabalho.
+
+
+
+ a| 
+Agrupamento
+ a| 
+Você pode agrupar entradas de usuário relacionadas e fornecer um nome para o grupo de entrada de usuário. Os grupos podem ser expandidos e colapsados na caixa de diálogo de entrada do usuário. Você pode selecionar um grupo que deve ser expandido por padrão.
+
+
+
+ a| 
+Condições de aplicação
+ a| 
+Com a capacidade condicional de entrada de usuário, você pode definir o valor de uma entrada de usuário com base no valor inserido para outra entrada de usuário. Por exemplo, em um fluxo de trabalho que configura o protocolo nas, você pode especificar a entrada de usuário necessária para o protocolo como NFS para habilitar a entrada de usuário "'Read/Write host lists'".
+
+|===

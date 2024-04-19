@@ -1,0 +1,25 @@
+---
+permalink: rhel-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa database, web portal 
+summary: 'Você pode fazer backup do banco de dados OnCommand Workflow Automation (WFA) do portal da Web e usar o arquivo de backup para fins de recuperação de dados. Não é possível efetuar uma cópia de segurança completa a partir do portal da Web.' 
+---
+= Faça backup do banco de dados DO WFA a partir do portal da Web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode fazer backup do banco de dados OnCommand Workflow Automation (WFA) do portal da Web e usar o arquivo de backup para fins de recuperação de dados. Não é possível efetuar uma cópia de segurança completa a partir do portal da Web.
+
+Você precisa ter credenciais de administrador ou arquiteto para executar essa tarefa.
+
+Um usuário DO WFA com função de backup não pode fazer login no portal da Web para executar um backup. Os usuários DO WFA com função de backup só podem executar backups remotos ou com script.
+
+.Passos
+. Faça login na GUI da Web DO WFA como administrador.
+. Clique em *Configurações* e em *Manutenção*, clique em *Backup & Restore*.
+. Clique em *Backup*.
+. Na caixa de diálogo que se abre, selecione um local e, em seguida, salve o arquivo.
+

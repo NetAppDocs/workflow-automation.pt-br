@@ -1,0 +1,66 @@
+---
+permalink: help/reference-add-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: add, cache, query, dialog, enable, create, new, dictionary, entry, associate, data, provide, type, specific, unified manager, version 
+summary: A caixa de diálogo Adicionar consulta de cache permite criar uma nova consulta de cache para uma entrada de dicionário e associar a consulta a um tipo de fornecimento de dados, como uma versão específica do Active IQ Unified Manager. 
+---
+= Caixa de diálogo Adicionar consulta de cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Adicionar consulta de cache permite criar uma nova consulta de cache para uma entrada de dicionário e associar a consulta a um tipo de fornecimento de dados, como uma versão específica do Active IQ Unified Manager.
+
+* *Entrada de dicionário*
++
+Permite selecionar uma entrada de dicionário para a qual você deseja criar uma consulta de cache.
+
+* *Versão da entidade*
++
+Permite que você insira o número da versão para a consulta de cache em `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* * Tipos de fonte de dados*
++
+Permite selecionar os tipos de fonte de dados que deseja associar à consulta de cache - por exemplo, Active IQ Unified Manager_6,0.
+
+
+
+
+
+== Estrutura da tabela
+
+* *Separador atributos*
++
+Exibe os atributos associados à entrada do dicionário.
+
+* * Criar tabela guia SQL*
++
+Exibe o script criar Tabela para essa entrada do dicionário.
+
+
+
+
+
+== Consulta de seleção SQL
+
+Permite que você insira a consulta SQL SELECT que recupera dados da tabela do provedor de dados especificado.
+
+
+
+== Botões de comando
+
+* *Teste*
++
+Permite testar a consulta SQL inserida no campo *SQL SELECT query*.
+
+* *Guardar*
++
+Salva a consulta de cache e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

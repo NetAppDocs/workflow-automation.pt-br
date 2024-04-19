@@ -1,0 +1,16 @@
+---
+permalink: help/reference-oncommand-workflow-automation-designer-features.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, include, various, feature, help, design, storage 
+summary: O OnCommand Workflow Automation inclui vários recursos para ajudar você a criar fluxos de trabalho de storage. 
+---
+= Recursos do OnCommand Workflow Automation Designer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Workflow Automation inclui vários recursos para ajudar você a criar fluxos de trabalho de storage.
+
+Para obter mais informações sobre os recursos, consulte os próximos tópicos.

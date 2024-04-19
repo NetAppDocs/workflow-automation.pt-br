@@ -1,0 +1,36 @@
+---
+permalink: windows-install/task-uninstall-wfa-in-an-mscs-environment.html 
+sidebar: sidebar 
+keywords: uninstall, workflow, automation, mscs environment 
+summary: 'Você pode desinstalar o Workflow Automation (WFA) de um cluster excluindo todos os serviços WFA dos nós do cluster.' 
+---
+= Desinstalar Workflow Automation em um ambiente MSCS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode desinstalar o Workflow Automation (WFA) de um cluster excluindo todos os serviços WFA dos nós do cluster.
+
+Esta tarefa aplica-se ao Windows Server 2012.
+
+.Passos
+. Coloque os serviços offline usando o Gerenciador de Cluster de failover:
++
+.. Clique com o botão direito do rato na função.
+.. Selecione *Parar função*.
+
+
+. Desinstale O WFA no primeiro nó e, em seguida, desinstale O WFA no segundo nó.
++
+link:task-uninstall-oncommand-workflow-automation.html["Desinstale o OnCommand Workflow Automation"]
+
+. Exclua os recursos do cluster do Gerenciador de Cluster de failover:
++
+.. Clique com o botão direito do rato na função.
+.. Selecione *Remover*.
+
+
+. Elimine manualmente os dados na localização partilhada.
+

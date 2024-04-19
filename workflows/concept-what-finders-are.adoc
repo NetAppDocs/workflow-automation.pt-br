@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-finders-are.html 
+sidebar: sidebar 
+keywords: finders, combination, filters, together, identify, common, results, workflows, select, required, resources, execution 
+summary: Um localizador é uma combinação de um ou mais filtros que são usados em conjunto para identificar resultados comuns. Você pode usar um localizador em seus fluxos de trabalho para selecionar os recursos necessários para a execução do fluxo de trabalho. 
+---
+= O que são os localizadores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um localizador é uma combinação de um ou mais filtros que são usados em conjunto para identificar resultados comuns. Você pode usar um localizador em seus fluxos de trabalho para selecionar os recursos necessários para a execução do fluxo de trabalho.
+
+Os localizadores podem aplicar uma ordem de classificação para diferenciar os resultados aplicáveis. Os localizadores retornam o melhor recurso com base nos critérios de seleção e classificação.
+
+Os localizadores retornam um resultado ou nenhum resultado; portanto, eles podem ser usados para verificar a existência de certos elementos de armazenamento. No entanto, quando um localizador é usado como parte de uma definição de linha repetida, os conjuntos de resultados são usados para formar a lista de membros do grupo. Os filtros que são usados em finders retornam a chave natural do tipo de dicionário, no mínimo, mas podem retornar campos adicionais, cujo valor pode ser referenciado. Uma ordem de classificação pode ser aplicada a qualquer campo retornado da consulta SQL de um filtro.
+
+Você pode testar os resultados de um localizador. Ao testar um localizador, você pode visualizar os resultados comuns de todos os filtros WFA, onde o resultado efetivo do localizador é destacado nos resultados. Ao usar um localizador em um fluxo de trabalho, você pode criar uma mensagem de erro personalizada para transmitir informações significativas ao operador de armazenamento.

@@ -1,0 +1,59 @@
+---
+permalink: help/task-configure-email-notifications-for-data-source-acquisition-failures.html 
+sidebar: sidebar 
+keywords: control, notifications, generate, oncommand, workflow, automation, data, source, acquisition, fail, configure, threshold, interval, factor, notifications 
+summary: 'Você pode controlar as notificações que são geradas no OnCommand Workflow Automation (WFA) quando uma aquisição de fonte de dados falha. Você pode configurar o limite e o fator de intervalo para as notificações.' 
+---
+= Configurar notificações de e-mail para falhas de aquisição de origem de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode controlar as notificações que são geradas no OnCommand Workflow Automation (WFA) quando uma aquisição de fonte de dados falha. Você pode configurar o limite e o fator de intervalo para as notificações.
+
+*O que você vai precisar*
+
+Você deve ter configurado notificações por e-mail no OnCommand Workflow Automation (WFA).
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador.
+. Configurar o limite de notificação:
++
+.. Clique em *Configurações* e, em *Configuração*, clique em *Configurações de fluxo de trabalho*.
+.. Role para baixo até a seção *Avançado*.
+.. No campo *limiar de notificação de aquisição*, introduza o valor pretendido.
++
+O valor padrão é 2.
+
++
+Se o valor especificado for 2, O WFA aguarda duas falhas consecutivas de aquisição de fonte de dados antes de enviar uma notificação por e-mail.
+
+
+
+. Clique em *Salvar*.
+. Configurar o fator de intervalo de notificação:
++
+.. Clique em *Configurações* e, em *Configuração*, clique em *fontes de dados*.
+.. Anote o intervalo especificado para a fonte de dados necessária.
++
+O valor padrão é 30. Pode editar a fonte de dados para modificar o tempo de intervalo.
+
+.. Clique em *Configurações* e, em *Configuração*, clique em *Configurações de fluxo de trabalho*.
+.. Role para baixo até a seção *Avançado*.
+.. No campo *Acquisition Notification Interval factor* (fator de intervalo de notificação de aquisição*), introduza o valor pretendido.
++
+O valor padrão é 6.
+
++
+Se o intervalo especificado para uma fonte de dados for de 30 minutos e o fator de multiplicação for 6, uma notificação por e-mail será enviada quando a aquisição da fonte de dados para a fonte de dados não ocorrer por 180 minutos.
+
++
+
+NOTE: Se especificar 12 horas ou mais como intervalo de aquisição para uma fonte de dados, O WFA considera o fator de intervalo como 1 e envia uma notificação após o intervalo de aquisição especificado para a fonte de dados.
+
+
+
+. Clique em *Salvar*.
+

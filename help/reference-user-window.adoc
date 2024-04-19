@@ -1,0 +1,149 @@
+---
+permalink: help/reference-user-window.html 
+sidebar: sidebar 
+keywords: users, window, enable, view, create, edit, delete, oncommand, workflow, automation, access, settings, under, management 
+summary: 'A janela usuários permite exibir, criar, editar e excluir os usuários do OnCommand Workflow Automation (WFA). Você pode acessar essa janela selecionando Configurações e, em Gerenciamento, clique em usuários.' 
+---
+= Janela usuários
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela usuários permite exibir, criar, editar e excluir os usuários do OnCommand Workflow Automation (WFA). Você pode acessar essa janela selecionando *Configurações* e, em *Gerenciamento*, clique em *usuários*.
+
+
+NOTE: Dependendo da sua função e do Privileges da conta, esta janela pode não ser exibida.
+
+
+
+== Tabela usuários
+
+A janela usuários exibe usuários existentes. Você pode personalizar a exibição da tabela usando os recursos de filtragem e classificação disponíveis para cada coluna, bem como reorganizando a ordem da coluna.
+
+* image:../media/filter_icon_wfa.gif["Ícone de filtro"] ativa ou desativa a filtragem de toda a tabela. Um "x" vermelho aparece sobre o ícone se a filtragem estiver desativada.
+* Clicar duas vezes image:../media/filter_icon_wfa.gif["Ícone de filtro"]limpa e redefine as seleções de filtragem.
+* image:../media/wfa_filter_icon.gif["Ícone de filtro"] em cada cabeçalho de coluna permite filtrar com base no conteúdo das colunas. Clicar image:../media/wfa_filter_icon.gif["Ícone de filtro"] em uma coluna permite filtrar um item específico na lista suspensa ou em todos os itens disponíveis.
+* Clicar no cabeçalho da coluna alterna entre a ordem ascendente e descendente de ordenação. É possível identificar a ordem de classificação aplicada pelas setas de classificação (image:../media/wfa_sortarrow_up_icon.gif["Ícone de ordenação"] para ascendente e image:../media/wfa_sortarrow_down_icon.gif["Ícone de ordenação"]descendente).
+* Para reorganizar a localização das colunas, você pode arrastar e soltar colunas para colocá-las em qualquer ordem necessária. No entanto, você não pode ocultar ou excluir nenhuma dessas colunas.
+* Clicar na caixa de texto filtro *pesquisar* permite-lhe procurar conteúdo específico. Além disso, você pode pesquisar usando operadores suportados para o tipo de coluna aplicável, alfabético ou numérico.
+
+
+A tabela a seguir lista os operadores suportados para colunas alfabéticas e numéricas na tabela usuários, disponível na caixa de texto filtro *pesquisar*.
+
+[cols="2*"]
+|===
+| Alfabético | Numérico 
+
+
+ a| 
+* Contém
+* Não contém
+* Começa com
+* Termina com
+* Igual a
+* Não é igual
+* Repor
+
+ a| 
+* Igual a
+* Não é igual
+* Menos de
+* Superior a.
+* Inferior ou igual a
+* Maior ou igual a
+* Entre
+* Repor
+
+
+|===
+A tabela usuários contém as seguintes colunas:
+
+* *Nome de usuário*
++
+Exibe o nome de usuário da conta.
+
+* *Função*
++
+Exibe a função atribuída para o usuário. As funções podem incluir qualquer uma das seguintes opções:
+
++
+** *Hóspede*
++
+Este utilizador só pode visualizar o estado de uma execução de fluxo de trabalho ou pode ser notificado de uma alteração no estado de uma execução de fluxo de trabalho.
+
+** *Operador*
++
+Esse usuário tem permissão para visualizar e executar fluxos de trabalho para os quais o usuário é fornecido acesso.
+
+** *Aprovador*
++
+Esse usuário tem permissão para visualizar, executar, aprovar e rejeitar fluxos de trabalho para os quais o usuário recebe acesso.
+
++
+
+NOTE: Você deve fornecer o ID de e-mail do aprovador e o status do fluxo de trabalho que deve ser notificado ao aprovador. Se houver vários aprovadores, você poderá fornecer um ID de e-mail do grupo no campo *e-mail*.
+
+** *Arquiteto*
++
+Esse usuário tem acesso total para criar fluxos de trabalho, mas está impedido de modificar as configurações globais do SERVIDOR WFA.
+
+** *Admin*
++
+Este utilizador tem acesso completo ao servidor WFA.
+
++
+
+NOTE: Você deve configurar pelo menos um usuário de administrador.
+
+** *Backup*
++
+Este é o único usuário que pode gerar remotamente backups do SERVIDOR WFA; no entanto, este usuário está restrito a todos os outros acessos.
+
+
+
+* *Categorias*
++
+Exibe a categoria de fluxo de trabalho atribuída a um operador, que fornece autorização de fluxo de trabalho e Privileges ao operador designado.
+
++
+Você pode definir essa configuração de autorização clicando em *Gerenciamento de conteúdo* > *categorias*.
+
+* *E-mail*
++
+Exibe o endereço de e-mail do usuário. Você pode usar esse e-mail para notificação sobre o status do fluxo de trabalho.
+
+* *Notificações ativadas*
++
+Indica se o usuário pode receber notificações por e-mail (verdadeiro ou falso) sobre o status das execuções de fluxo de trabalho que foram acionadas por esse usuário.
+
+* *LDAP*
++
+Indica se o usuário está provisionado por meio do servidor externo do ative Directory acessado pelo LDAP (verdadeiro ou falso).
+
+* *Grupo do ative Directory*
++
+Indica se o usuário faz parte dos grupos LDAP ou do ative Directory.
+
+
+
+
+
+== Barra de ferramentas
+
+A barra de ferramentas está localizada acima do cabeçalho da coluna. Pode utilizar os ícones na barra de ferramentas para executar várias acões. Estas ações também podem ser acedidas a partir do menu de clique com o botão direito do rato na janela.
+
+* image:../media/new_wfa_icon.gif["Novo ícone"]* (Novo)*
++
+Abre a caixa de diálogo novo usuário, que permite adicionar uma nova conta de usuário.
+
+* image:../media/edit_wfa_icon.gif["Ícone de edição"]* (Editar)*
++
+Abre a caixa de diálogo Editar utilizador, que permite editar a conta de utilizador selecionada.
+
+* image:../media/delete_wfa_icon.gif["Eliminar ícone"]* (Apagar)*
++
+Abre a caixa de diálogo Excluir confirmação do usuário, que permite excluir a conta de usuário selecionada.
+
+

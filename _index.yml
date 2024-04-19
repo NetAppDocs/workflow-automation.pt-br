@@ -1,0 +1,54 @@
+---
+indexpage:
+  title: Documentação do OnCommand Workflow Automation
+  summary: Bem-vindo à Biblioteca de Informação OnCommand Workflow Automation 5,1.
+  keywords: oncommand, workflow automation, installation, system requirements, linux,
+    windows,uninstall.
+  lead: Bem-vindo à Biblioteca de Informação OnCommand Workflow Automation 5,1.
+  tiles:
+  - title: Comece agora
+    links:
+    - title: Notas de versão
+      url: reference-releasenotes.html
+  - title: Instalar e configurar em sistemas Linux
+    links:
+    - title: Requisitos de sistema para a instalação do OnCommand Workflow Automation
+      url: rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html
+    - title: Gerenciar a alta disponibilidade
+      url: rhel-install/concept-managing-high-availability.html
+    - title: Configure o OnCommand Workflow Automation
+      url: rhel-install/concept-setting-up-oncommand-workflow-automation.html
+    - title: Faça backup do banco de dados do OnCommand Workflow Automation
+      url: rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html
+    - title: Restaure o banco de dados OnCommand Workflow Automation
+      url: rhel-install/concept-restoring-the-wfa-database.html
+    - title: Desinstale o OnCommand Workflow Automation
+      url: rhel-install/task-uninstall-oncommand-workflow-automation-linux.html
+    - title: Solucionar problemas de instalação e configuração
+      url: rhel-install/reference-troubleshooting.html
+  - title: Instalar e configurar em sistemas Windows
+    links:
+    - title: Requisitos de sistema para a instalação do OnCommand Workflow Automation
+      url: windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html
+    - title: Instale o OnCommand Workflow Automation no Windows
+      url: windows-install/task-install-workflow-automation-on-windows.html
+    - title: Configure o OnCommand Workflow Automation
+      url: windows-install/concept-setting-up-oncommand-workflow-automation.html
+    - title: Faça backup do banco de dados do OnCommand Workflow Automation
+      url: windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html
+    - title: Restaure o banco de dados OnCommand Workflow Automation
+      url: windows-install/concept-restoring-the-wfa-database.html
+    - title: Desinstale o OnCommand Workflow Automation
+      url: windows-install/task-uninstall-oncommand-workflow-automation.html
+    - title: Solucionar problemas de instalação e configuração
+      url: windows-install/reference-troubleshooting.html
+  - title: Crie e gerencie fluxos de trabalho
+    links:
+    - title: Gerenciamento de fluxos de trabalho
+      url: workflows/concept-managing-workflows.html
+  - title: Mais informações
+    links:
+    - title: NetApp comunidade
+      url: http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29
+    - title: Matriz de interoperabilidade
+      url: http://mysupport.netapp.com/matrix/

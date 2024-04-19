@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-create-recurring-schedules.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, schedule, options, execute, specific, time, create, recurring, associate, routinely 
+summary: 'O OnCommand Workflow Automation (WFA) fornece duas opções de agendamento para fluxos de trabalho. Você pode agendar um fluxo de trabalho para ser executado uma vez em um momento específico ou criar agendas recorrentes e associar as programações a fluxos de trabalho para que os fluxos de trabalho sejam executados rotineiramente.' 
+---
+= Crie agendas recorrentes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Workflow Automation (WFA) fornece duas opções de agendamento para fluxos de trabalho. Você pode agendar um fluxo de trabalho para ser executado uma vez em um momento específico ou criar agendas recorrentes e associar as programações a fluxos de trabalho para que os fluxos de trabalho sejam executados rotineiramente.
+
+.Sobre esta tarefa
+Uma programação que você criou pode ser reutilizada e associada a vários fluxos de trabalho.
+
+.Passos
+. Clique em *execução* > *horários*.
+. Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Na caixa de diálogo *Nova programação*, insira ou selecione um nome, descrição e frequência para a programação.
++
+Para a frequência, tem de introduzir a hora no formato de 24 horas. A hora do servidor WFA é aplicada às programações.
+
+. Clique em *OK*.
+
+
+
+
+== Depois de terminar
+
+* Você pode associar a programação a um fluxo de trabalho ao executar o fluxo de trabalho usando a opção *Executar recursivamente*.
+* Você pode visualizar os detalhes de um fluxo de trabalho e sua associação com um agendamento clicando em *execução* > *horários recorrentes*.
++
+O Planejamento de recursos e execução dos fluxos de trabalho que estão programados para serem executados uma vez são feitos imediatamente quando os fluxos de trabalho são cronogramas. No entanto, o Planejamento de recursos e execução para os fluxos de trabalho com agendamento recorrente ocorre na hora agendada e não quando a programação está associada a um fluxo de trabalho.
+
+

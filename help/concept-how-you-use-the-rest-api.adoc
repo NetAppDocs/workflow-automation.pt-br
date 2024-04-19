@@ -1,0 +1,31 @@
+---
+permalink: help/concept-how-you-use-the-rest-api.html 
+sidebar: sidebar 
+keywords: rest api, workflow, automation, invoke, provide, external, portal, data, center, orchestration, software, support, xml, json, content, type 
+summary: 'Você pode usar as APIS REST fornecidas pelo Workflow Automation (WFA) para invocar fluxos de trabalho de portais externos e o software de orquestração do data center. O WFA suporta tipos de conteúdo XML e JSON para todas as APIs REST.' 
+---
+= Como você usa APIs REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar as APIS REST fornecidas pelo Workflow Automation (WFA) para invocar fluxos de trabalho de portais externos e o software de orquestração do data center. O WFA suporta tipos de conteúdo XML e JSON para todas as APIs REST.
+
+O WFA permite que serviços externos acessem várias coleções de recursos, como fluxos de trabalho, usuários, filtros e localizadores, por meio de caminhos URI. Os serviços externos podem usar métodos HTTP, como GET, PUT, POST e DELETE, nesses URIs para executar operações CRUD nos recursos.
+
+Você pode executar várias ações por meio das APIs REST DO WFA, incluindo as seguintes:
+
+* Acesse definições de fluxo de trabalho e metadados.
+* Execute fluxos de trabalho e monitore sua execução.
+* Exibir usuários e funções e alterar senhas.
+* Execute e teste filtros de seleção de recursos.
+* Executar e testar os localizadores de recursos.
+* Gerenciar credenciais de storage ou outros objetos de data center.
+* Exibir fontes de dados e tipos de fontes de dados.
+
+
+_REST documentation_ tem mais informações sobre APIs REST:
+
+_Https_://`wfa_server_ip:port/rest/docs` _wfa_Server_ip_ é o endereço IP do seu servidor WFA e `port` é o número da porta TCP que você usou para o servidor WFA durante a instalação.

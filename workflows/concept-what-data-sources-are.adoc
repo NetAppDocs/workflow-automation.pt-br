@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-data-sources-are.html 
+sidebar: sidebar 
+keywords: data, source, method, establishing, connection, systems, files, databases, order, extract, example, active iq, unified manager 9.4, type 
+summary: Uma fonte de dados é um método para estabelecer uma conexão com outros sistemas, arquivos e bancos de dados, a fim de extrair dados. Por exemplo, uma fonte de dados pode ser uma conexão com um banco de dados Active IQ Unified Manager do tipo de fonte de dados Active IQ Unified Manager 9,4. 
+---
+= Quais são as fontes de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma fonte de dados é um método para estabelecer uma conexão com outros sistemas, arquivos e bancos de dados, a fim de extrair dados. Por exemplo, uma fonte de dados pode ser uma conexão com um banco de dados Active IQ Unified Manager do tipo de fonte de dados Active IQ Unified Manager 9,4.
+
+Você pode adicionar uma fonte de dados personalizada ao OnCommand Workflow Automation (WFA) para aquisição de dados depois de definir o tipo de fonte de dados necessário associando o esquema de armazenamento em cache, a porta necessária e o método de aquisição com o tipo de fonte de dados.
+
+O WFA armazena informações em cache através de várias fontes de dados. O WFA coleta informações de recursos das fontes de dados e formata-as para o esquema de armazenamento em cache. As tabelas de cache, que são as tabelas dentro dos esquemas de cache, são formatadas para corresponder aos objetos de entrada do dicionário. Quando você usa um localizador em fluxos de trabalho, ele retorna um objeto de dicionário e os dados do objeto de dicionário são preenchidos a partir das tabelas de cache. O processo de aquisição de dados das fontes de dados é conhecido como _aquisição de fonte de dados_. Você pode usar um método baseado em script ou um método baseado em driver para aquisição de fonte de dados. As fontes podem ser diferentes umas das outras e a aquisição da fonte de dados pode amostrá-las em intervalos de tempo diferentes. O WFA, em seguida, funde essas informações no banco de dados e sobrepõe os dados de reserva para manter as informações de recursos atualizadas no banco de dados.
+
+O banco de dados WFA inclui vários esquemas de armazenamento em cache diferentes. Um esquema de cache é um conjunto de tabelas e cada tabela inclui informações de um determinado tipo de entrada de dicionário; no entanto, as tabelas podem incluir informações combinadas de várias fontes de um tipo de fonte de dados específico. O WFA usa as informações do banco de dados para entender o status dos recursos, executar cálculos e executar comandos nos recursos.

@@ -1,0 +1,53 @@
+---
+permalink: windows-install/task-configure-snmp-version-3.html 
+sidebar: sidebar 
+keywords: snmp Version 3, snmp traps, configure 
+summary: 'Você também pode configurar o OnCommand Workflow Automation (WFA) para enviar traps de protocolo de gerenciamento de rede simples (SNMP) versão 3 sobre o status das operações de fluxo de trabalho.' 
+---
+= Configurar SNMP versão 3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você também pode configurar o OnCommand Workflow Automation (WFA) para enviar traps de protocolo de gerenciamento de rede simples (SNMP) versão 3 sobre o status das operações de fluxo de trabalho.
+
+A versão 3 oferece duas opções de segurança adicionais:
+
+* Versão 3 com autenticação
++
+As armadilhas são enviadas sem criptografia pela rede. Os aplicativos de gerenciamento SNMP, que são configurados pelos mesmos parâmetros de autenticação que as mensagens de intercetação SNMP, podem receber traps.
+
+* Versão 3 com autenticação e criptografia
++
+As armadilhas são enviadas criptografadas pela rede. Para receber e descriptografar esses traps, você deve configurar aplicativos de gerenciamento SNMP com os mesmos parâmetros de autenticação e chave de criptografia que os traps SNMP.
+
+
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como usuário admin e, em seguida, acesse o servidor WFA.
+. Clique em *Configurações* e, em *Configuração*, clique em *SNMP*.
+. Marque a caixa de seleção *Enable SNMP* (Ativar VRF*).
+. Na lista suspensa *Version*, selecione uma das seguintes opções:
++
+** Versão 3
+** Versão 3 com autenticação
+** Versão 3 com autenticação e criptografia
+
+
+. Selecione as opções de configuração SNMP que correspondem à opção específica do SNMP versão 3 que escolheu no passo 4.
+. Insira um endereço IPv4 ou IPv6 ou o nome do host e o número da porta do host de gerenciamento. O WFA envia traps SNMP para o número de porta especificado. O número da porta padrão é 162.
+. Na seção notificar ligado , marque uma ou mais das seguintes caixas de seleção:
++
+** Planeamento do fluxo de trabalho iniciado/falhou/concluído
+** Execução do fluxo de trabalho iniciada
+** Execução do fluxo de trabalho concluída com êxito
+** Execução do fluxo de trabalho falhou/ parcialmente bem-sucedida
+** Execução do fluxo de trabalho a aguardar aprovação
+** Falha na aquisição
+
+
+. Clique em *Enviar notificação de teste* para verificar as configurações.
+. Clique em *Salvar*.
+

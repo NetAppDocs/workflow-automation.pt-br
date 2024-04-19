@@ -1,0 +1,46 @@
+---
+permalink: help/reference-execute-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: execute, workflow, dialog box, enable, specify, user, iputs, time, execution, comment 
+summary: A caixa de diálogo Executar fluxo de trabalho permite especificar as entradas de usuário necessárias, o tempo de execução e o comentário de execução para um fluxo de trabalho. 
+---
+= Caixa de diálogo Executar fluxo de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Executar fluxo de trabalho permite especificar as entradas de usuário necessárias, o tempo de execução e o comentário de execução para um fluxo de trabalho.
+
+
+
+== Entradas do utilizador
+
+Permite especificar as entradas para o fluxo de trabalho. Os atributos obrigatórios são marcados com um asterisco (*) e a borda para as caixas está em vermelho.
+
+
+
+== Opções
+
+Permite especificar o tempo para a execução do fluxo de trabalho.
+
+* *Execute agora*
++
+Permite executar o fluxo de trabalho imediatamente.
+
+* *Execute recursivamente*
++
+Permite que você defina o fluxo de trabalho para reaparecer periodicamente. Esta opção é apresentada apenas quando uma agenda tiver sido criada.
+
+* *Execute uma vez*
++
+Permite programar a execução do fluxo de trabalho.
+
+
+
+
+
+== Comentário execução
+
+Permite especificar um comentário para a execução do fluxo de trabalho. Este comentário é exibido na janela Status da execução.

@@ -1,0 +1,26 @@
+---
+permalink: windows-install/reference-wfa-displays-a-blank-page-on-windows-2012.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, wfa, displays, blank page, windows 2012 
+summary: Uma página em branco pode ser exibida se você tiver baixado e instalado o Adobe Flash Player separadamente do site da Adobe. Você não deve baixar e instalar o Flash Player separadamente, pois ele é fornecido com o Internet Explorer no Windows 2012. As atualizações para o Flash Player são instaladas através de atualizações do Windows. 
+---
+= O OnCommand Workflow Automation (WFA) exibe uma página em branco no Windows 2012
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma página em branco pode ser exibida se você tiver baixado e instalado o Adobe Flash Player separadamente do site da Adobe. Você não deve baixar e instalar o Flash Player separadamente, pois ele é fornecido com o Internet Explorer no Windows 2012. As atualizações para o Flash Player são instaladas através de atualizações do Windows.
+
+Se você tiver baixado e instalado o Flash Player separadamente, execute as seguintes etapas:
+
+.Passos
+. Desinstale o Flash Player que você já instalou.
+. No Windows, abra *Server Manager* > *servidor local* > *FUNÇÕES E RECURSOS* > *TAREFAS* e selecione *Adicionar funções e recursos*.
+. No Assistente para adicionar funções e recursos, clique em *recursos* > *Interface do usuário e infraestrutura*, selecione *experiência no desktop* e, em seguida, complete a adição do recurso.
++
+Adicionar experiência de desktop adiciona o Flash Player ao Windows.
+
+. Reinicie o Windows.
+

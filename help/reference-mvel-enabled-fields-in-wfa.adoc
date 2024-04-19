@@ -1,0 +1,78 @@
+---
+permalink: help/reference-mvel-enabled-fields-in-wfa.html 
+sidebar: sidebar 
+keywords: field, oncommand, workflow, automation, enable, expression, language, syntax, design 
+summary: 'Vários campos no OnCommand Workflow Automation (WFA) são ativados para MVFLEX Expression Language (MVEL). Você pode usar as sincronizações MVEL nesses campos ao projetar fluxos de trabalho.' 
+---
+= Campos habilitados para MVEL no OnCommand Workflow Automation
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vários campos no OnCommand Workflow Automation (WFA) são ativados para MVFLEX Expression Language (MVEL). Você pode usar as sincronizações MVEL nesses campos ao projetar fluxos de trabalho.
+
+A tabela a seguir explica quando e onde você pode usar as sintaxes MVEL na interface WFA:
+
+[cols="2*"]
+|===
+| Quando... | Onde usar... 
+
+
+ a| 
+Criar ou editar um fluxo de trabalho
+ a| 
+* _Menu:Workflow_[Detalhes > parâmetros de retorno > valor do parâmetro]
+* _Menu:Workflow_[Detalhes > constantes > valor]
+
+
+
+
+ a| 
+Criando ou editando detalhes de comando em um fluxo de trabalho
+ a| 
+* Menu:comandos[parâmetros para _Parameter_name_ > introduzir critérios de pesquisa > seleção de recursos > Finder > parâmetros]
+* Menu:comandos[parâmetros para _Parameter_name_ > Digite os critérios de pesquisa > seleção de recursos > Avançado > Executar pesquisa somente quando a seguinte expressão for avaliada COMO VERDADEIRO]
+* Menu:comandos[parâmetros para _Parameter_name_ > Avançado > se a seguinte expressão for VERDADEIRA]
+* Menu:comandos[parâmetros para _Parameter_name_ > outros parâmetros]
+* Menu:comandos[_Parameter_name_ > atributos]
+
+
+
+
+ a| 
+Criando ou editando um comando
+ a| 
+* Menu:comandos[Definição de comando _command_name_ > Propriedades > representação de cadeia]
+
+
+
+
+ a| 
+Criar ou editar uma função
+ a| 
+* Menu:funções[function _function_name_ > function definition] (função _function_name_ > function definition)
+
+
+
+
+ a| 
+Criar ou editar um modelo
+ a| 
+* Menu:Template[Parameter_name_ > Template _template_name_ > Attributes > value]
+
+
+
+
+ a| 
+Editar uma linha
+ a| 
+* _Menu:Workflow_[Workflow > Repetir linha > repetições > número de vezes]
+* _Menu:Workflow_[Workflow > Repetir linha > variáveis > variáveis para _Initial_value_ e _Expression_]
+* _Menu:Workflow_[Workflow > Repeat Row > Repeat Repeat > Repeat > Repeat Row > Repeat > for every resource in a group > Resource Search Criteria > Parameters to filter]
+* _Menu:Workflow_[Workflow > Add Condition > se a seguinte expressão for VERDADEIRA]
+
+
+|===

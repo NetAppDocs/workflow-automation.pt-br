@@ -1,0 +1,39 @@
+---
+permalink: workflows/reference-related-documentation-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: additional, documents, tools, help, learn, perform, advanced, configuration, oncommand, workflow, automation, server 
+summary: 'Existem documentos e ferramentas adicionais para ajudá-lo a aprender a executar uma configuração mais avançada do seu servidor OnCommand Workflow Automation (WFA).' 
+---
+= Documentação relacionada para o OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Existem documentos e ferramentas adicionais para ajudá-lo a aprender a executar uma configuração mais avançada do seu servidor OnCommand Workflow Automation (WFA).
+
+
+
+== Outras referências
+
+O espaço de automação do fluxo de trabalho na comunidade NetApp fornece recursos de aprendizado adicionais, incluindo os seguintes:
+
+* *Comunidade NetApp*
++
+http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29["Comunidade NetApp: Automação de fluxo de trabalho (WFA)"^]
+
+
+
+
+
+== Referências da ferramenta
+
+* *Matriz de interoperabilidade*
++
+Lista combinações suportadas de componentes de hardware e versões de software.
+
++
+http://mysupport.netapp.com/matrix/["Matriz de interoperabilidade"^]
+
+

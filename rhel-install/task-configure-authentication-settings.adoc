@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-configure-authentication-settings.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, authentication, settings 
+summary: 'Você pode configurar o OnCommand Workflow Automation (WFA) para usar um servidor LDAP (Lightweight Directory Access Protocol) do Microsoft ative Directory (AD) para autenticação e autorização.' 
+---
+= Configure as definições de autenticação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o OnCommand Workflow Automation (WFA) para usar um servidor LDAP (Lightweight Directory Access Protocol) do Microsoft ative Directory (AD) para autenticação e autorização.
+
+Você deve ter configurado um servidor LDAP do Microsoft AD em seu ambiente.
+
+Apenas a autenticação LDAP do Microsoft AD é suportada para O WFA. Você não pode usar outros métodos de autenticação LDAP, incluindo o Microsoft AD Lightweight Directory Services (AD LDS) ou o Catálogo Global da Microsoft.
+
+
+NOTE: Durante a comunicação, o LDAP envia o nome de utilizador e a palavra-passe em texto simples. No entanto, a comunicação LDAPS (LDAP Secure) é criptografada e segura.
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador.
+. Adicione uma lista de nomes de grupos do ative Directory às funções necessárias.
++
+
+NOTE: Você pode adicionar uma lista de nomes de grupos do AD às funções necessárias na janela grupos do ative Directory.
+
++
+xref:task-add-active-directory-group-names.adoc[Janela grupos do ative Directory]
+
+. Clique em *Administration* > *WFA Configuration*.
+. Na caixa de diálogo Configuração DO WFA, clique na guia *Autenticação* e marque a caixa de seleção *Ativar ative Directory* .
+. Introduza as informações necessárias nos campos:
++
+.. Se você quiser usar o formato de domínio para usuários de domínio, substitua sAMAccountName por userPrincipalName no campo *User name attribute*.
+.. Se forem necessários valores exclusivos para o seu ambiente, edite os campos obrigatórios.
+
+
+. Clique em *Adicionar* para adicionar o ative Directory na tabela servidores do ative Directory com um formato URI: `ldap://active_directory_server_address\[:port\]`
++
+LDAP://NB-T01.example.com[:389]
+
++
+Se tiver ativado o LDAP sobre SSL, pode utilizar o seguinte formato URI: `ldaps://active_directory_server_address\[:port\]`
+
+. Forneça as credenciais para vincular o servidor LDAP e o DN base.
+. Teste a autenticação do usuário dado:
++
+.. Introduza o nome de utilizador e a palavra-passe.
+.. Clique em *Test Authentication*.
+
+
++
+
+NOTE: Você deve ter adicionado o Grupo do ative Directory para testar a autenticação do usuário fornecido no WFA.
+
+. Clique em *Salvar*.
+

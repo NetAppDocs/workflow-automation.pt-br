@@ -1,0 +1,84 @@
+---
+permalink: help/reference-new-filter-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, filter, dialog box, create, develop, finders 
+summary: Você pode usar a caixa de diálogo novo filtro para criar um novo filtro. Você pode usar o filtro para desenvolver localizadores. 
+---
+= Caixa de diálogo novo filtro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo novo filtro para criar um novo filtro. Você pode usar o filtro para desenvolver localizadores.
+
+* Separador Propriedades
+* Guia consulta
+
+
+
+
+== Separador Propriedades
+
+A guia *Propriedades* permite especificar um nome para o filtro, selecionar um objeto de dicionário e inserir uma descrição para o filtro.
+
+* *Nome*
++
+Permite-lhe introduzir um nome para o filtro.
+
+* *Tipo*
++
+Permite selecionar um objeto de dicionário na lista.
+
+* *Versão da entidade*
++
+Permite que você insira o número da versão do filtro em `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Descrição*
++
+Permite-lhe introduzir uma descrição para o filtro.
+
+
+
+
+
+== Guia consulta
+
+Permite inserir uma consulta SQL e editar o rótulo e a descrição dos atributos.
+
+* *Consulta SQL*
++
+Permite inserir uma consulta SQL para o filtro.
+
+* *Tabela de parâmetros de entrada*
++
+Exibe a lista de parâmetros da consulta SQL que você inseriu que exigem a entrada do usuário quando o filtro é usado. Você pode clicar na coluna *Label* ou *Description* de um parâmetro para editar o rótulo ou inserir uma descrição.
+
+* *Tabela de atributos retornados*
++
+Exibe a lista de atributos retornados da consulta SQL.
+
+
+
+
+
+== Botões de comando
+
+* *Teste*
++
+Permite testar o filtro que definiu.
+
+* *Atualizar*
++
+Preenche a tabela *parâmetros de entrada* e a tabela *atributos retornados* com valores alterados, se houver.
+
+* *Guardar*
++
+Salva o filtro e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Não salva o filtro e fecha a caixa de diálogo.
+
+

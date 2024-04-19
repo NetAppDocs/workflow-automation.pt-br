@@ -1,0 +1,49 @@
+---
+permalink: workflows/reference-perl-database-modules-bundled-with-windows.html 
+sidebar: sidebar 
+keywords: perl, modules, bundle, windows, active, state, distribution, oncommand, workflow, automation, use, code, writing, commands 
+summary: 'Alguns módulos Perl são empacotados com a distribuição Perl de estado ativo do Windows para OnCommand Workflow Automation (WFA). Você pode usar esses módulos Perl em seu código Perl para escrever comandos, apenas se eles estiverem empacotados com o Windows.' 
+---
+= Módulos Perl empacotados com Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alguns módulos Perl são empacotados com a distribuição Perl de estado ativo do Windows para OnCommand Workflow Automation (WFA). Você pode usar esses módulos Perl em seu código Perl para escrever comandos, apenas se eles estiverem empacotados com o Windows.
+
+A tabela a seguir lista os módulos de banco de dados Perl que são empacotados com o Windows para WFA.
+
+[cols="2*"]
+|===
+| Módulo da base de dados | Descrição 
+
+
+ a| 
+DBD::mysql
+ a| 
+Driver de interface de banco de dados Perl5 que permite que você se conete ao banco de dados MySQL.
+
+
+
+ a| 
+Tente::Tiny
+ a| 
+Minimiza erros comuns com blocos de avaliação.
+
+
+
+ a| 
+XML::libxml
+ a| 
+Interface para libxml2 que fornece analisadores XML e HTML com interfaces Dom, SAX e XMLReader.
+
+
+
+ a| 
+DBD::Cassandra
+ a| 
+Driver de interface de banco de dados Perl5 para Cassandra que usa a linguagem de consulta CQL3.
+
+|===

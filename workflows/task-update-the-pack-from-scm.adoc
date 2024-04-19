@@ -1,0 +1,34 @@
+---
+permalink: workflows/task-update-the-pack-from-scm.html 
+sidebar: sidebar 
+keywords: update, pack, source, control, management, server, import, oncommand, workflow, automation 
+summary: 'Você pode atualizar um pacote no servidor Gerenciamento de Controle de fonte (SCM) e importar o pacote atualizado para o OnCommand Workflow Automation (WFA).' 
+---
+= Atualizar pacotes de fluxo de trabalho WFA a partir do servidor SCM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar um pacote no servidor Gerenciamento de Controle de fonte (SCM) e importar o pacote atualizado para o OnCommand Workflow Automation (WFA).
+
+.O que você vai precisar
+O SCM precisa ser configurado e você precisa ter credenciais de administrador ou arquiteto
+
+.Sobre esta tarefa
+Se você fizer quaisquer alterações ou atualizações em um pacote no servidor SCM, o administrador ou arquiteto precisa resolver os conflitos, se houver, usando as ferramentas diff fornecidas pelo SCM. O WFA adapta o ficheiro diff XML para mostrar apenas as alterações relevantes.
+
+Antes de importar o pacote, você é notificado sobre as alterações que vão para o conteúdo do pacote WFA.
+
+.Passos
+. Faça login na janela DO WFA através de um navegador da Web.
+. Importe o pacote atualizado para O WFA.
++
+link:task-import-an-oncommand-workflow-automation-pack.html["Importar pacotes de fluxo de trabalho WFA"]
+
++
+
+NOTE: Se o banco de dados WFA já contiver o mesmo pacote, o conteúdo do pacote será substituído.
+
+

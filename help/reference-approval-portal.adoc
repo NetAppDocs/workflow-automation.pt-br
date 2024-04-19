@@ -1,0 +1,46 @@
+---
+permalink: help/reference-approval-portal.html 
+sidebar: sidebar 
+keywords: approval, portal, window, enable, reject, workflow 
+summary: A janela Portal de aprovação permite aprovar ou rejeitar um fluxo de trabalho. 
+---
+= Janela Portal de aprovação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela Portal de aprovação permite aprovar ou rejeitar um fluxo de trabalho.
+
+Você pode fazer login na janela do Portal de aprovação a partir do link fornecido na notificação por e-mail para aprovação do fluxo de trabalho.
+
+* *Retorno à WFA*
++
+Leva você de volta para o aplicativo WFA a partir da janela do Portal de aprovação.
+
+
+
+
+
+== Portal de aprovação
+
+* *Digite o comentário*
++
+Permite-lhe introduzir o seu comentário para aprovação ou rejeição do fluxo de trabalho.
+
+
+
+
+
+== Botões de comando
+
+* *Aprovar e retomar*
++
+Permite aprovar o fluxo de trabalho, que retoma o fluxo de trabalho.
+
+* *Rejeitar e abortar*
++
+Permite rejeitar o fluxo de trabalho, que aborta o fluxo de trabalho.
+
+

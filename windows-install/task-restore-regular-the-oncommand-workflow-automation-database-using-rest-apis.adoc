@@ -1,0 +1,36 @@
+---
+permalink: windows-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, regular, wfa, database, rest, apis 
+summary: 'Você pode fazer uma restauração regular do banco de dados OnCommand Workflow Automation (WFA) usando APIS REST. Em uma restauração regular, você só pode restaurar o banco de dados WFA.' 
+---
+= Restaure (regular) o banco de dados WFA usando APIS REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode fazer uma restauração regular do banco de dados OnCommand Workflow Automation (WFA) usando APIS REST. Em uma restauração regular, você só pode restaurar o banco de dados WFA.
+
+* Você deve ter criado um backup .zip do banco de dados WFA.
+* Você precisa ter credenciais de administrador ou arquiteto.
+* Se você estiver restaurando o banco de dados como parte do procedimento de migração, será necessário fazer uma restauração completa.
+
+
+.Passos
+. Digite o seguinte URL no navegador do cliente REST: `+https://IP address of WFA server/rest/backups+`
+. Na janela Backup, selecione o método *POST*.
+. Na lista suspensa *Part*, selecione *Multipart Body*.
+. No campo *File* (ficheiro), introduza as seguintes informações:
++
+.. Na lista suspensa *Content type*, selecione *multi-part/form-data*.
+.. Na lista suspensa *Charset*, selecione *ISO-8859-1*.
+.. No campo **File name**, insira o nome do arquivo de backup como backupFile.
+.. Clique em *Procurar*.
+.. Selecione a localização do ficheiro de cópia de segurança .zip.
+
+
+. Navegue até o diretório WFA_install_location e reinicie os serviços WFA:
+. Verifique se a operação de restauração foi bem-sucedida e O WFA está acessível.
+

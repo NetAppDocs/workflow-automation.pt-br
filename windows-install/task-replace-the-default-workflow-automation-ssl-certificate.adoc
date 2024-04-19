@@ -1,0 +1,54 @@
+---
+permalink: windows-install/task-replace-the-default-workflow-automation-ssl-certificate.html 
+sidebar: sidebar 
+keywords: replace, default, workflow, automation, ssl certificate 
+summary: 'Você pode substituir o certificado SSL padrão do Workflow Automation (WFA) se o certificado tiver expirado ou se quiser aumentar o período de validade do certificado.' 
+---
+= Substitua o certificado SSL padrão do Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir o certificado SSL padrão do Workflow Automation (WFA) se o certificado tiver expirado ou se quiser aumentar o período de validade do certificado.
+
+Você deve ter o Windows admin Privileges no servidor WFA.
+
+O caminho de instalação padrão DO WFA é usado neste procedimento. Se você alterou o local padrão durante a instalação, você deve usar o caminho de instalação personalizado DO WFA.
+
+.Passos
+. Faça login como usuário admin na máquina host WFA.
+. Use o console de Serviços do Windows para interromper os seguintes serviços DO WFA:
++
+** Banco de dados NetApp WFA
+** Servidor WFA NetApp
+
+
+. Exclua o arquivo wfa.keystore do seguinte local:
++
+`<WFA_install_location>\WFA\jboss\standalone\configuration\keystore`
+
+. Abra um prompt de comando no servidor WFA e mude os diretórios para o seguinte local:<OpenJDK_install_location>
+. Obter a chave da base de dados:
++
+`keytool -keysize 2048 -genkey -alias "ssl keystore" -keyalg RSA -keystore "<WFA_install_location>\WFA\jboss\standalone\configuration\keystore\wfa.keystore" -validity xxxx`
+
++
+xxxx é o número de dias para a validade do novo certificado.
+
+. Quando solicitado, forneça a senha (padrão ou nova).
++
+A senha padrão é uma senha criptografada gerada aleatoriamente.
+
++
+Para obter e descriptografar a senha padrão, siga as etapas no artigo da base de dados de Conhecimento link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["Como renovar o certificado auto-assinado no WFA 5.1.1.0.4"^]
+
++
+Para usar uma nova senha, siga as etapas no artigo da base de dados de Conhecimento link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_update_a_new_password_for_the_keystore_in_WFA["Como atualizar uma nova senha para o keystore no WFA."^]
+
+. Introduza os detalhes necessários para o certificado.
+. Reveja as informações apresentadas e `Yes` introduza .
+. Pressione *Enter* quando solicitado pela seguinte mensagem: Digite a senha da chave para <SSL keystore>.
+. Reinicie os serviços DO WFA usando o console dos Serviços do Windows.
+

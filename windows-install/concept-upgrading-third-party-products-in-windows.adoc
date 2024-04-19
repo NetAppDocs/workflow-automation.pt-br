@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-upgrading-third-party-products-in-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, third-party products 
+summary: 'Você pode atualizar produtos de terceiros no OnCommand Workflow Automation (WFA), como OpenJDK, MySQL e ActiveState Perl no Windows. Produtos de terceiros, como Open JDK, MYSQL e assim por diante, relatam vulnerabilidades de segurança. A partir desta versão DO WFA, agora você pode atualizar produtos de terceiros por conta própria.' 
+---
+= Atualização de produtos de terceiros
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar produtos de terceiros no OnCommand Workflow Automation (WFA), como OpenJDK, MySQL e ActiveState Perl no Windows. Produtos de terceiros, como Open JDK, MYSQL e assim por diante, relatam vulnerabilidades de segurança. A partir desta versão DO WFA, agora você pode atualizar produtos de terceiros por conta própria.

@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-configure-the-timeout-value-for-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 'Você pode configurar o valor de tempo limite para a GUI da Web do Workflow Automation (WFA), em vez de usar o valor de tempo limite padrão.' 
+---
+= Configure o valor de tempo limite para o Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o valor de tempo limite para a GUI da Web do Workflow Automation (WFA), em vez de usar o valor de tempo limite padrão.
+
+O valor de tempo limite padrão para a GUI da Web DO WFA é de 180 minutos. Você pode configurar o valor de tempo limite para atender aos seus requisitos por meio da CLI. Não é possível definir o valor de tempo limite da GUI da Web DO WFA.
+
+
+NOTE: O valor de tempo limite definido é um tempo limite absoluto em vez de um tempo limite relacionado à inatividade. Por exemplo, se você definir este valor para 30 minutos, então você será desconetado após 30 minutos, mesmo que esteja ativo no final desse tempo.
+
+.Passos
+. Faça login como administrador na máquina host DO WFA.
+. Defina o valor de tempo limite:
++
+`installdir bin/wfa -S=timeout value in minutes`
+
+

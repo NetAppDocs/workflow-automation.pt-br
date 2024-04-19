@@ -1,0 +1,24 @@
+---
+permalink: help/task-configure-a-database-user-on-active-iq-unified-manager.html 
+sidebar: sidebar 
+keywords: create, database, user, active iq, unified manager, configure, read-only, access, oncommand, workflow, automation 
+summary: Você deve criar um usuário de banco de dados no Active IQ Unified Manager para configurar o acesso somente leitura do banco de dados do Active IQ Unified Manager para o OnCommand Workflow Automation. 
+---
+= Configure um usuário de banco de dados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve criar um usuário de banco de dados no Active IQ Unified Manager para configurar o acesso somente leitura do banco de dados do Active IQ Unified Manager para o OnCommand Workflow Automation.
+
+.Passos
+. Faça login no Active IQ Unified Manager com credenciais de administrador.
+. Clique em *Configurações* > *usuários*.
+. Clique em *Adicionar um novo usuário*.
+. Selecione *Database User* como o tipo de usuário.
++
+O mesmo usuário deve ser usado no OnCommand Workflow Automation ao adicionar o Active IQ Unified Manager como uma fonte de dados no OnCommand Workflow Automation.
+
+

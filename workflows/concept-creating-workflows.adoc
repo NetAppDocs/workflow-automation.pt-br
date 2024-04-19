@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-workflows.html 
+sidebar: sidebar 
+keywords: predefined, workflows, match, requirements, create, understand, capabilities, available, designer, checklist 
+summary: Se os fluxos de trabalho predefinidos não corresponderem aos seus requisitos, pode criar o fluxo de trabalho necessário. Antes de criar seus fluxos de trabalho, você deve entender os recursos disponíveis no designer DO WFA e criar uma lista de verificação de fluxo de trabalho. 
+---
+= Criação de fluxos de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se os fluxos de trabalho predefinidos não corresponderem aos seus requisitos, pode criar o fluxo de trabalho necessário. Antes de criar seus fluxos de trabalho, você deve entender os recursos disponíveis no designer DO WFA e criar uma lista de verificação de fluxo de trabalho.

@@ -1,0 +1,63 @@
+---
+permalink: workflows/task-create-a-data-source-type.html 
+sidebar: sidebar 
+keywords: create, data, source, type, enable, acquisition, predefined, oncommand, workflow, automation 
+summary: 'Você deve criar um tipo de fonte de dados para habilitar a aquisição de dados de uma fonte de dados, que não está predefinida no OnCommand Workflow Automation (WFA).' 
+---
+= Crie um tipo de fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve criar um tipo de fonte de dados para habilitar a aquisição de dados de uma fonte de dados, que não está predefinida no OnCommand Workflow Automation (WFA).
+
+.O que você vai precisar
+* Você deve ter criado a entrada e o esquema de dicionário necessários se você estiver criando um tipo de fonte de dados personalizado que não está predefinido no WFA.
+* Você deve estar ciente do script do PowerShell para criar um tipo de fonte de dados que use o método de script.
+
+
+.Passos
+. Clique em *Data Source Design* > *Data Source Types*.
+. Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Na caixa de diálogo *novo tipo de fonte de dados*, insira ou selecione os detalhes necessários nos campos *fonte de dados*, *versão da fonte de dados* e *Esquema*.
+. No campo *default port* (porta padrão), insira o número da porta.
++
+`2638`
+
++
+O número da porta que introduziu é preenchido quando adiciona este tipo de fonte de dados para aquisição de dados. Por padrão, a porta é usada pelo WFA para se comunicar com a fonte de dados e a porta deve estar aberta no servidor de origem de dados.
+
+. Na lista *método*, selecione o método que O WFA deve usar para adquirir dados:
++
+[cols="2*"]
+|===
+| Se você selecionou... | Então... 
+
+
+ a| 
+SQL
+ a| 
+Na lista *tipo de driver*, selecione um dos seguintes drivers apropriados para a fonte de dados:
+
+** *Conetor MySQL/J*
+** *Driver JDBC do servidor MySQL 3,0*
+** * Oracle JDBC Driver 11,2.0,3*
+
+
+
+
+ a| 
+SCRIPT
+ a| 
+No campo *Script*, insira o script do PowerShell que é usado para conetar e recuperar dados da fonte de dados.
+
+[NOTE]
+====
+Os dados na entrada do dicionário arquivos CSV equivalentes devem incluir guias como separador de campo. Por exemplo, consulte o script do PowerShell para o tipo de fonte de dados do VMware vCenter.
+
+====
+|===
+. Clique em *Salvar*.
+

@@ -1,0 +1,57 @@
+---
+permalink: rhel-install/task-upgrade-mysql-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, mysql, linux 
+summary: Você pode atualizar para uma versão mais recente do MySQL no servidor Linux no qual o OnCommand Workflow Automation está instalado para obter correções para vulnerabilidades de segurança. 
+---
+= Atualize o MySQL no Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar para uma versão mais recente do MySQL no servidor Linux no qual o OnCommand Workflow Automation está instalado para obter correções para vulnerabilidades de segurança.
+
+Você deve ter o root Privileges para o sistema Linux no qual O WFA está instalado.
+
+
+NOTE: Antes de reinstalar O WFA 4,2, você deve excluir o diretório de dados do MySQL se tiver desinstalado o MySQL.
+
+Você só pode atualizar para pequenas atualizações do MySQL 5,7, por exemplo, 5.7.22 para 5,7.26. Você não pode atualizar para as principais versões do MySQL, por exemplo, versão 5,8.
+
+.Passos
+. Faça login como usuário root na máquina host WFA.
+. Baixe o pacote .rpm mais recente do MySQL Community Server no sistema de destino.
+. Descompacte o bundle para um diretório no sistema de destino.
+. Você receberá vários pacotes .rpm no diretório depois de descompactar o pacote, mas O WFA só precisa dos seguintes pacotes rpm:
++
+** mysql-community-client-5,7.x
+** mysql-community-libs-5,7.x
+** mysql-community-server-5,7.x
+** mysql-community-common-5,7.x
+** MySQL-Community-libs-compat-5,7.x Excluir todos os outros pacotes .rpm. Instalar todos os pacotes em um pacote rpm não causará problemas.
+
+
+. No prompt do shell, pare o banco de dados DO WFA e os serviços do servidor:
++
+`service wfa-db stop`
+
++
+`service wfa-server stop`
+
+. Invoque a atualização do MySQL usando o seguinte comando:
++
+`rpm -uvh *.rpm`
+
++
+`*.rpm` Refere-se aos pacotes .rpm no diretório em que você baixou a versão mais recente do MySQL.
+
+. Inicie os serviços WFA:
++
+`service wfa-db start`
+
++
+`service wfa-server start`
+
+

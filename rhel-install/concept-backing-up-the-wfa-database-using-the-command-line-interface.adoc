@@ -1,0 +1,20 @@
+---
+permalink: rhel-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, database, back up, cli 
+summary: 'Se você quiser fazer backup do banco de dados OnCommand Workflow Automation (WFA) com frequência, você pode usar a interface de linha de comando (CLI) DO WFA fornecida com o pacote de instalação DO WFA.' 
+---
+= Fazer backup do banco de dados WFA usando a CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você quiser fazer backup do banco de dados OnCommand Workflow Automation (WFA) com frequência, você pode usar a interface de linha de comando (CLI) DO WFA fornecida com o pacote de instalação DO WFA.
+
+A seguir estão os dois tipos de backup:
+
+* Backup completo
+* Backup regular
+

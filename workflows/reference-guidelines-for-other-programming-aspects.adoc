@@ -1,0 +1,129 @@
+---
+permalink: workflows/reference-guidelines-for-other-programming-aspects.html 
+sidebar: sidebar 
+keywords: aware, certain, important, considerations, convert, powershell, commands, perl, different, capabilities 
+summary: Você deve estar ciente de certas considerações importantes ao converter comandos do PowerShell para Perl porque o PowerShell e o Perl têm recursos diferentes. 
+---
+= Considerações ao converter comandos do PowerShell para Perl
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve estar ciente de certas considerações importantes ao converter comandos do PowerShell para Perl porque o PowerShell e o Perl têm recursos diferentes.
+
+
+
+== Tipos de entrada de comando
+
+O OnCommand Workflow Automation (WFA) permite que os designers de fluxo de trabalho usem arrays e hash como entrada para o comando ao definir um comando. Esses tipos de entrada não podem ser usados quando o comando é definido usando Perl. Se você quiser que um comando Perl aceite entradas de array e hash, você pode definir a entrada como uma string no designer. A definição do comando pode então analisar a entrada, que é passada para criar um array ou hash, conforme necessário. A descrição para a entrada descreve o formato em que a entrada é esperada.
+
+[listing]
+----
+my @input_as_array  = split(',', $InputString); #Parse the input string of format val1,val2 into an array
+
+my %input_as_hash = split /[;=]/, $InputString; #Parse the input string of format key1=val1;key2=val2 into a hash.
+----
+
+
+== Declaração do PowerShell
+
+Os exemplos a seguir mostram como uma entrada de array pode ser passada para o PowerShell e Perl. Os exemplos descrevem a entrada CronMonth, que especifica o mês em que a tarefa cron está programada para ser executada. Os valores válidos são inteiros -1 a 11. Um valor de -1 indica que o cronograma é executado a cada mês. Qualquer outro valor denota um mês específico, com 0 sendo janeiro e 11 sendo dezembro.
+
+[listing]
+----
+[parameter(Mandatory=$false, HelpMessage="Months in which the schedule executes. This is a comma separated list of values from 0 through 11. Value -1 means all months.")]
+  [ValidateRange(-1, 11)]
+  [array]$CronMonths,
+----
+
+
+== Declaração Perl
+
+[listing]
+----
+GetOptions(
+    "Cluster=s"         => \$Cluster,
+    "ScheduleName=s"    => \$ScheduleName,
+    "Type=s"            => \$Type,
+    "CronMonths=s"      => \$CronMonths,
+) or die 'Illegal command parameters\n';
+
+sub get_cron_months {
+    return get_cron_input_hash('CronMonths', $CronMonths, 'cron-month', -1,
+        11);
+}
+
+sub get_cron_input_hash {
+    my $input_name   = shift;
+    my $input_value  = shift;
+    my $zapi_element = shift;
+    my $low          = shift;
+    my $high         = shift;
+    my $exclude      = shift;
+
+    if (!defined $input_value) {
+        return undef;
+    }
+
+    my @values = split(',', $input_value);
+
+    foreach my $val (@values) {
+        if ($val !~ /^[+-]?\d+$/) {
+            die
+                "Invalid value '$input_value' for $input_name: $val must be an integer.\n";
+        }
+        if ($val < $low || $val > $high) {
+            die
+                "Invalid value '$input_value' for $input_name: $val must be from $low to $high.\n";
+        }
+        if (defined $exclude && $val == $exclude) {
+            die
+                "Invalid value '$input_value' for $input_name: $val is not valid.\n";
+        }
+    }
+    # do something
+}
+----
+
+
+== Definição do comando
+
+Uma expressão de uma linha no PowerShell usando um operador pipe pode ter que ser expandida em vários blocos de instruções em Perl para alcançar a mesma funcionalidade. Um exemplo de um dos comandos Wait é mostrado na tabela a seguir.
+
+[cols="2*"]
+|===
+| Declaração do PowerShell | Declaração Perl 
+
+
+ a| 
+[listing]
+----
+# Get the latest job which moves the specified volume to the specified
+ aggregate.
+$job = Get-NcJob -Query $query | where
+{$_.JobDescription -eq "Split" + $VolumeCloneName} | Select-Object -First 1
+---- a| 
+[listing]
+----
+my $result = $server->job_get_iter(
+	'query' => {'job-type' => 'VOL_CLONE_SPLIT'},
+	'desired-attributes' => {
+		'job-type' => '',
+		'job-description' => '',
+		'job-progress' => '',
+		'job-state' => ''
+	}
+);
+my @jobarray;
+for my $job (@{ $result->{'attributes-list'}})
+{
+	my $description = $job->{'job-description'};
+	if($description =~ /$VolumeCloneName/)
+	{
+		push(@jobarray, $job)
+	}
+}
+----
+|===

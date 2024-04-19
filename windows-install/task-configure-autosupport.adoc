@@ -1,0 +1,60 @@
+---
+permalink: windows-install/task-configure-autosupport.html 
+sidebar: sidebar 
+keywords: configure, autosupport 
+summary: Você pode configurar várias configurações do AutoSupport, como a programação, o conteúdo das mensagens do AutoSupport e o servidor proxy. O AutoSupport envia logs semanais do conteúdo que você selecionou para o suporte técnico para arquivamento e análise de problemas. 
+---
+= Configurar o AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar várias configurações do AutoSupport, como a programação, o conteúdo das mensagens do AutoSupport e o servidor proxy. O AutoSupport envia logs semanais do conteúdo que você selecionou para o suporte técnico para arquivamento e análise de problemas.
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador.
+. Clique em *Configurações* e, em *Configuração*, clique em *AutoSupport*.
+. Certifique-se de que a caixa *Enable AutoSupport* está selecionada.
+. Introduza as informações necessárias.
+. Selecione uma das seguintes opções na lista *Content*:
++
+[cols="2*"]
+|===
+| Se você quiser incluir... | Em seguida, escolha esta opção... 
+
+
+ a| 
+Apenas detalhes de configuração, como usuários, fluxos de trabalho e comandos de sua instalação DO WFA
+ a| 
+`send only configuration data`
+
+
+
+ a| 
+Detalhes de configuração DO WFA e dados em tabelas de cache DO WFA, como o esquema
+ a| 
+`send configuration and cache data` (predefinição)
+
+
+
+ a| 
+Detalhes de configuração DO WFA, dados em tabelas de cache DO WFA e dados no diretório de instalação
+ a| 
+`send configuration and cache extended data`
+
+|===
++
+
+NOTE: A senha de qualquer usuário DO WFA é _não_ incluída nos dados do AutoSupport.
+
+. Teste se você pode baixar uma mensagem do AutoSupport:
++
+.. Clique em *Download*.
+.. Na caixa de diálogo que se abre, selecione o local para guardar o ficheiro .7z.
+
+
+. Teste o envio de uma mensagem AutoSupport para o destino especificado clicando em *Enviar agora*.
+. Clique em *Salvar*.
+

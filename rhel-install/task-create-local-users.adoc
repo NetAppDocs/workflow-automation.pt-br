@@ -1,0 +1,55 @@
+---
+permalink: rhel-install/task-create-local-users.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, create, local users 
+summary: 'O OnCommand Workflow Automation (WFA) permite criar e gerenciar usuários locais DO WFA com permissões específicas para várias funções, como convidado, operador, aprovador, arquiteto, administrador e backup.' 
+---
+= Crie usuários locais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Workflow Automation (WFA) permite criar e gerenciar usuários locais DO WFA com permissões específicas para várias funções, como convidado, operador, aprovador, arquiteto, administrador e backup.
+
+Você deve ter instalado O WFA e logado como administrador.
+
+O WFA permite que você crie usuários para as seguintes funções:
+
+* *Hóspede*
++
+Esse usuário pode visualizar o portal e o status de uma execução de fluxo de trabalho e pode ser notificado de uma alteração no status de uma execução de fluxo de trabalho.
+
+* *Operador*
++
+Este usuário tem permissão para visualizar e executar fluxos de trabalho para os quais o usuário tem acesso.
+
+* *Aprovador*
++
+Esse usuário tem permissão para visualizar, executar, aprovar e rejeitar fluxos de trabalho para os quais o usuário recebe acesso.
+
++
+
+NOTE: Recomenda-se fornecer o ID de e-mail do aprovador. Se houver vários aprovadores, você poderá fornecer um ID de e-mail do grupo no campo *e-mail*.
+
+* *Arquiteto*
++
+Esse usuário tem acesso total para criar fluxos de trabalho, mas está impedido de modificar as configurações globais do SERVIDOR WFA.
+
+* *Admin*
++
+Este utilizador tem acesso completo ao servidor WFA.
+
+* *Backup*
++
+Este é o único usuário que pode gerar remotamente backups do SERVIDOR WFA. No entanto, o usuário está restrito a todos os outros acessos.
+
+
+
+.Passos
+. Clique em *Configurações* e, em *Gerenciamento*, clique em *usuários*.
+. Crie um novo usuário clicando image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Introduza as informações necessárias na caixa de diálogo novo utilizador.
+. Clique em *Salvar*.
+

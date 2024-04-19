@@ -1,0 +1,273 @@
+---
+permalink: help/reference-edit-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, display, select, associated, commands, parameters, blue boxes, columns, arranged, sequential, order, execution, left, right, variables, objects, gray boxes 
+summary: 'A janela Workflow <workflow name> (fluxo de trabalho) exibe o fluxo de trabalho selecionado e seus comandos e parâmetros associados. Os comandos associados ao fluxo de trabalho são exibidos como caixas azuis em colunas organizadas na ordem sequencial de execução, da esquerda para a direita. As variáveis e objetos para cada comando são exibidos como caixas cinza abaixo do comando.' 
+---
+= Janela Workflow <workflow name> (fluxo de trabalho)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela Workflow <workflow name> (fluxo de trabalho) exibe o fluxo de trabalho selecionado e seus comandos e parâmetros associados. Os comandos associados ao fluxo de trabalho são exibidos como caixas azuis em colunas organizadas na ordem sequencial de execução - da esquerda para a direita. As variáveis e objetos para cada comando são exibidos como caixas cinza abaixo do comando.
+
+
+
+== Separador fluxo de trabalho
+
+O separador fluxo de trabalho permite selecionar e utilizar fluxos de trabalho e comandos secundários e personalizar o nome de apresentação.
+
+* *Passos disponíveis*
++
+Fornece uma lista de fluxos de trabalho e comandos filho disponíveis que você pode adicionar ao seu fluxo de trabalho.
+
++
+Você pode pesquisar fluxos de trabalho ou comandos filho usando o nome, esquema e versão mínima do software como strings de pesquisa na caixa de texto.
+
++
+Pode personalizar a apresentação do fluxo de trabalho reorganizando a ordem dos comandos. Para reorganizar os comandos, pode arrastar e largar comandos na ordem pretendida. Clicar duas vezes em um comando move esse comando para o final da lista. Você pode modificar o nome de exibição clicando duas vezes no nome de exibição do comando na caixa azul. Você pode excluir um comando movendo o cursor sobre a caixa azul e, em seguida, clicando em "X" no canto superior direito.
+
++
+Você pode clicar no número da linha para executar várias funções na linha.
+
++
+** *Insira uma linha*
++
+Insere uma nova linha acima ou abaixo da linha selecionada no fluxo de trabalho.
+
+** *Copiar linha*
++
+Copia a linha selecionada do fluxo de trabalho e salva-a na área de transferência. Os detalhes de repetição definidos para a linha são copiados quando uma linha é copiada.
+
+** *Repetir linha*
++
+Abre a caixa de diálogo Detalhes da repetição de linhas, que permite especificar o tipo de repetição.
+
+** *Adicionar condição*
++
+Abre a caixa de diálogo Condition for ROW (condição para o ROW <row number>), que permite selecionar uma condição. A condição selecionada é aplicável a todos os comandos na linha. Todos os comandos na linha serão executados somente se a condição selecionada for atendida.
+
+** *Remover linha*
++
+Exclui a linha selecionada do fluxo de trabalho.
+
+
+
+* *Colar linha*
++
+Cola a linha copiada acima ou abaixo da linha selecionada. Esta opção está disponível depois de selecionar a função Copiar linha.
+
+
+
+
+
+== Separador Detalhes
+
+A guia Detalhes permite que você forneça informações gerais sobre o fluxo de trabalho.
+
+* *Nome do fluxo de trabalho*
++
+Permite especificar o nome do fluxo de trabalho utilizando uma cadeia de carateres alfanuméricos.
+
+* *Versão da entidade*
++
+Permite que você insira um número de versão para o fluxo de trabalho no `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Categorias*
++
+Exibe a categoria associada para o fluxo de trabalho. Você pode atribuir um fluxo de trabalho a uma categoria na janela Categoria.
+
+* *Descrição do fluxo de trabalho*
++
+Permite-lhe introduzir uma descrição do fluxo de trabalho. Você pode clicar no campo para abrir a caixa de diálogo Editar descrição.
+
+* *Pronto para produção*
++
+Permite marcar o fluxo de trabalho pronto para produção, o que permite que o fluxo de trabalho seja executado e listado na janela fluxos de trabalho.
+
+* *Considere elementos reservados*
++
+Permite que você use o recurso de reserva para o fluxo de trabalho, quando os recursos selecionados estiverem disponíveis para o fluxo de trabalho até o período de expiração da reserva que você configurou. O recurso reserva permite excluir recursos reservados por outros fluxos de trabalho durante a seleção de recursos.
+
++
+
+NOTE: Você não deve selecionar essa caixa de seleção se precisar que os filtros pesquisem apenas o conteúdo do cache persistente sem considerar reservas definidas por outros fluxos de trabalho.
+
+* *Ativar validação de existência de elemento*
++
+Permite validar a existência de elementos e evitar falhas de certas ações durante a execução de fluxos de trabalho. Por exemplo, você pode evitar criar um novo volume em um array com o mesmo nome que o de um volume existente.
+
+* *Versões mínimas de software*
++
+Especifica as versões mínimas do software necessárias para executar o fluxo de trabalho. Por exemplo, o software pode ser agrupado em cluster Data ONTAP 8.2,0 e vCenter 6,0. As versões são exibidas como valores separados por vírgulas.
+
+
+
+
+
+== Guia entradas do usuário
+
+A guia entradas do usuário permite exibir e editar os atributos de entrada do usuário que você criou quando você definiu os objetos de fluxo de trabalho e criou entradas do usuário. Os valores para os atributos de entrada do usuário são preenchidos quando você visualiza ou executa o fluxo de trabalho.
+
+Você pode clicar duas vezes na entrada do usuário que deseja editar, que abre a caixa de diálogo Editar variável: <user_input>, permitindo editar a entrada do usuário.
+
+Você pode personalizar a exibição da tabela reorganizando a ordem da coluna. Para reorganizar as colunas, pode arrastar e largar colunas na ordem pretendida. No entanto, você não pode ocultar ou excluir nenhuma dessas colunas.
+
+* *Nome*
++
+Exibe o nome do atributo de entrada do usuário.
+
+* *Nome de exibição*
++
+Exibe o nome exibido ao usuário do fluxo de trabalho.
+
+* *Tipo*
++
+Exibe o tipo de entrada do usuário, como string, query, boolean, table ou password.
+
+* *Valores*
++
+Exibe os valores permitidos para a entrada do usuário - por exemplo, intervalo para números e expressão regular para strings.
+
+* *Valor padrão*
++
+Exibe o valor padrão da entrada do usuário.
+
+* *Dependência de entrada*
++
+Exibe outra entrada de usuário da lista que fornece um valor para a entrada de usuário selecionada.
+
+* *Grupo*
++
+Exibe o nome do grupo para os atributos de entrada do usuário.
+
+* *Obrigatório*
++
+Exibe o status da entrada do usuário. Se a caixa de seleção for exibida como selecionada, os atributos de entrada do usuário serão obrigatórios para a execução do fluxo de trabalho.
+
+* *Botões de comando*
++
+** *Para cima*
++
+Move a entrada selecionada para cima uma linha na tabela.
+
+** *Para baixo*
++
+Move a entrada selecionada para baixo uma linha na tabela.
+
+
+
+
+
+
+
+== Separador constantes
+
+A guia constantes permite definir o valor das constantes que podem ser usadas várias vezes no fluxo de trabalho. Você pode especificar o seguinte como o valor de constantes:
+
+* Números
+* Cordas
+* Expressões MVEL
+* Funções
+* Entradas do utilizador
+* Variáveis
+
+
+Você pode personalizar a exibição da tabela classificando cada coluna, bem como reorganizando a ordem da coluna.
+
+* *Nome*
++
+Exibe o nome da constante.
+
+* *Descrição*
++
+Permite especificar uma descrição para a constante.
+
+* *Valor*
++
+Permite especificar um valor para a constante.
+
+* *Botões de comando*
++
+** *Adicionar*
++
+Adiciona uma nova linha na tabela constantes.
+
+** *Remover*
++
+Exclui a linha selecionada da tabela constantes.
+
+
+
++
+Você também pode clicar com o botão direito do Mouse nas constantes para usar a funcionalidade copiar e colar.
+
+
+
+
+
+== Guia retornar parâmetros
+
+O separador Return Parameters (parâmetros de retorno) permite definir e fornecer uma descrição dos parâmetros de retorno para o fluxo de trabalho que podem ser visualizados a partir da janela Monitoring (monitorização) ou dos serviços Web.
+
+* *Valor do parâmetro*
++
+Permite especificar o valor do parâmetro.
+
+* *Nome do parâmetro*
++
+Permite especificar o nome do parâmetro.
+
+* *Descrição*
++
+Permite especificar uma descrição para o parâmetro selecionado.
+
+* *Botões de comando*
++
+** *Adicionar linha*
++
+Adiciona uma nova linha na tabela Return Parameters (parâmetros de retorno).
+
+** *Remover linha*
++
+Exclui a linha selecionada da tabela Return Parameters (parâmetros de retorno).
+
+
+
+
+
+
+
+== Guia conteúdo da Ajuda
+
+A guia conteúdo da Ajuda permite adicionar, exibir e remover o conteúdo da Ajuda do fluxo de trabalho. O conteúdo da Ajuda do fluxo de trabalho fornece informações sobre o fluxo de trabalho para operadores de armazenamento.
+
+
+
+== Separador Advanced (Avançado)
+
+A guia Avançado permite configurar um caminho URI personalizado para execução de fluxo de trabalho por meio de chamadas de API. Cada segmento no caminho URI pode ser uma cadeia de carateres ou um nome válido da entrada do usuário do fluxo de trabalho entre parênteses.
+
+Por exemplo, /devops/(ProjectName)/clone. O fluxo de trabalho pode ser invocado como uma chamada para _https:_//WFA-Server:HTTPS_PORT/REST/devops/Project1/clone/jobs.
+
+
+
+== Botões de comando
+
+Os botões de comando estão disponíveis na parte inferior da janela de fluxo de trabalho. Os comandos também podem ser acessados a partir do menu de clique com o botão direito do Mouse na janela.
+
+* *Pré-visualização*
++
+Abre a caixa de diálogo Visualizar fluxo de trabalho, que permite especificar atributos de entrada do usuário.
+
+* *Salvar como*
++
+Permite guardar o fluxo de trabalho com um novo nome.
+
+* *Guardar*
++
+Guarda as definições de configuração.
+
+

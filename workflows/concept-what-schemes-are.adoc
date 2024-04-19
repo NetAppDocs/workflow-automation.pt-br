@@ -1,0 +1,48 @@
+---
+permalink: workflows/concept-what-schemes-are.html 
+sidebar: sidebar 
+keywords: scheme, represent, data, model, system, collection, dictionary, entries, define, source, type, acquire, populate, virtual, environment, machines, hosts, datastores 
+summary: Um esquema representa o modelo de dados de um sistema. Um modelo de dados é uma coleção de entradas de dicionário. Você pode definir um esquema e, em seguida, definir um tipo de fonte de dados. A fonte de dados define como os dados são adquiridos e o esquema é preenchido. Por exemplo, um esquema de vc adquire dados sobre seu ambiente virtual, como máquinas virtuais, hosts e datastores. 
+---
+= Quais são os esquemas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um esquema representa o modelo de dados de um sistema. Um modelo de dados é uma coleção de entradas de dicionário. Você pode definir um esquema e, em seguida, definir um tipo de fonte de dados. A fonte de dados define como os dados são adquiridos e o esquema é preenchido. Por exemplo, um esquema de vc adquire dados sobre seu ambiente virtual, como máquinas virtuais, hosts e datastores.
+
+Os esquemas também podem ser preenchidos diretamente com dados por meio de fluxos de trabalho personalizados para resolver problemas específicos.
+
+As entradas do dicionário são associadas a um esquema existente quando as entradas do dicionário são criadas. Entradas de dicionário também são associadas a consultas de cache, e as consultas de cache incluem consultas SQL.
+
+Os esquemas podem adquirir dados usando o tipo de fonte de dados baseada em script ou o tipo de fonte de dados SQL. Os scripts são definidos ao criar o tipo de fonte de dados e as consultas SQL são definidas nas consultas de cache.
+
+Os seguintes esquemas estão incluídos no WFA:
+
+* *Modo 7 (armazenamento)*
++
+Esquema para adquirir dados através do Active IQ Unified Manager a partir do Data ONTAP operando no modo 7D.
+
+* *Clustered Data ONTAP (cm_storage)*
++
+Esquema para adquirir dados por meio do Active IQ Unified Manager a partir do Clustered Data ONTAP.
+
+* *Desempenho de 7 modos (desempenho)*
++
+Esquema para adquirir dados de desempenho do Data ONTAP operando no modo 7 por meio do Performance Advisor.
+
+* *Desempenho de cluster Data ONTAP (cm_performance)*
++
+Esquema para adquirir dados de desempenho do Clustered Data ONTAP por meio do consultor de desempenho.
+
+* *VMware vCenter (VC)*
++
+Esquema para adquirir dados do VMware vCenter.
+
+* *Playground (playground)*
++
+Esquema que você pode preencher diretamente com dados.
+
+

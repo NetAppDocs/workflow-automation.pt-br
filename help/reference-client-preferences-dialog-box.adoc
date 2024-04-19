@@ -1,0 +1,61 @@
+---
+permalink: help/reference-client-preferences-dialog-box.html 
+sidebar: sidebar 
+keywords: preference, window, enable, view, modify, refresh, logging, options, client, associated specific, workflow, automation, server, access, settings, setup, click 
+summary: 'A janela Preferências permite exibir e modificar as opções de atualização e Registro de todos os clientes associados ao servidor WFA (Workflow Automation) específico. Você pode acessar essa janela selecionando Configurações e, em Configuração, clique em Preferências.' 
+---
+= Janela de preferências
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela Preferências permite exibir e modificar as opções de atualização e Registro de todos os clientes associados ao servidor WFA (Workflow Automation) específico. Você pode acessar essa janela selecionando *Configurações* e, em *Configuração*, clique em *Preferências*.
+
+* *Ativar atualização automática*
++
+Permite escolher a atualização automática do cliente, que é acionada pelo servidor. Esta opção é selecionada por predefinição. Quando selecionada, as seguintes tabelas WFA são atualizadas automaticamente:
+
++
+** Estado execução
+** Fontes de dados
+** Reservas
+
+
+
+
+Se não estiver selecionada, as tabelas não serão atualizadas até clicar em *Atualizar*. Esta caixa de verificação está selecionada por predefinição.
+
+* *Intervalo de atualização (segundos)*
++
+Permite selecionar o intervalo de atualização. O valor padrão é de 3 segundos.
+
+* *Número máximo de linhas a exibir*
++
+Permite clicar no valor na coluna *tamanho máximo* e modificar o número de linhas que o servidor recupera e exibe ao usuário por tipo de lista.
+
++
+Por exemplo, a configuração *execução do fluxo de trabalho* exibe o número de execuções do histórico passado para o usuário. Os seguintes são os valores padrão:
+
++
+** Execução do fluxo de trabalho: 100
+** Histórico de aquisições: 30
+** Reservas: 100
+** Adicionar linhas de inventário: 1000
++
+Permite especificar o número máximo de resultados que devem ser obtidos por inventário. O valor padrão é 1000.
+
+
+
+
+
+
+
+== Botão de comando
+
+* *Guardar*
++
+Guarda as definições de configuração.
+
+

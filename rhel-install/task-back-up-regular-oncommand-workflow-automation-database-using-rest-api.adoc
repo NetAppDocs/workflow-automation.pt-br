@@ -1,0 +1,23 @@
+---
+permalink: rhel-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, perform, regular backup, wfa database, rest apis 
+summary: 'Você pode executar um backup regular do banco de dados OnCommand Workflow Automation (WFA) usando as APIS REST. Em um backup regular, somente o banco de dados WFA é feito backup.' 
+---
+= Faça um backup regular do banco de dados WFA usando APIS REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode executar um backup regular do banco de dados OnCommand Workflow Automation (WFA) usando as APIS REST. Em um backup regular, somente o banco de dados WFA é feito backup.
+
+Você precisa ter credenciais de administrador, arquiteto ou backup.
+
+.Passo
+. Insira o seguinte URL no seu navegador da Web: `+https://IP address of the WFA server/rest/backups+`
++
+Para obter mais informações, consulte a documentação do REST.
+
+

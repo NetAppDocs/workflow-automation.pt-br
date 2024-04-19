@@ -1,0 +1,117 @@
+---
+permalink: help/reference-clone-finder-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, finder, dialog box, enable, create, copy, finder, edit 
+summary: A caixa de diálogo Clone Finder permite criar uma cópia do localizador e editar o localizador clonado. 
+---
+= Caixa de diálogo Localizador de clones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Clone Finder permite criar uma cópia do localizador e editar o localizador clonado.
+
+* Separador Propriedades
+* Filtros
+* Guia atributos retornados
+
+
+
+
+== Separador Propriedades
+
+A guia Propriedades permite editar o nome do localizador, o tipo de objeto e a descrição do localizador. O separador também apresenta os parâmetros de entrada do filtro utilizado no localizador.
+
+* *Nome*
++
+Permite editar o nome do localizador. O nome do localizador que você selecionou para clonar é usado como o nome do clone e anexado com `- copy` por padrão.
+
+* *Tipo*
++
+Permite selecionar o tipo de objeto na lista. Os filtros para o objeto selecionado são exibidos na guia filtros.
+
+* *Versão da entidade*
++
+Permite-lhe introduzir o número da versão para o localizador em `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Descrição*
++
+Permite editar a descrição do localizador.
+
+* *Tabela de parâmetros de entrada*
++
+Apresenta os parâmetros de entrada dos filtros selecionados.
+
+
+
+
+
+== Separador filtros
+
+Permite selecionar os filtros necessários na lista de filtros disponíveis.
+
+* *Filtros disponíveis*
++
+Exibe a lista de filtros disponíveis para o objeto selecionado na guia Propriedades.
+
+* *Filtros selecionados*
++
+Apresenta a lista de filtros selecionados a partir dos filtros disponíveis.
+
+* *Botões de seleção*
++
+Permite mover a entrada selecionada de uma caixa para outra.
+
+
+
+
+
+== Guia atributos retornados
+
+Permite que você veja os detalhes dos filtros disponíveis, selecione os atributos necessários dos filtros disponíveis e especifique a ordem de classificação para os atributos.
+
+* *Disponível*
++
+Exibe os filtros disponíveis e os atributos dos filtros.
+
+* *Selecionado*
++
+Exibe os filtros selecionados e os atributos, os aliases e a ordem de classificação dos filtros selecionados.
+
+* *Botões de comando*
++
+** *Para cima*
++
+Move a entrada selecionada para cima uma linha na tabela selecionada.
+
+** *Para baixo*
++
+Move a entrada selecionada para baixo uma linha na tabela selecionada.
+
+** *Botões de seleção*
++
+Move a entrada selecionada de uma tabela para outra.
+
+
+
+
+
+
+
+== Botões de comando
+
+* *Teste*
++
+Permite testar o localizador que selecionou para clonar.
+
+* *Guardar*
++
+Salva o localizador e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

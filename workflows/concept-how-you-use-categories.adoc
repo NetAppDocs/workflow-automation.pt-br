@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-categories.html 
+sidebar: sidebar 
+keywords: categorize, workflows, better, organize, apply, access, control, capability 
+summary: Você pode categorizar seus fluxos de trabalho para organizar melhor os fluxos de trabalho e aplicar a funcionalidade de controle de acesso nos fluxos de trabalho. 
+---
+= Como você usa categorias
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode categorizar seus fluxos de trabalho para organizar melhor os fluxos de trabalho e aplicar a funcionalidade de controle de acesso nos fluxos de trabalho.
+
+Você pode categorizar fluxos de trabalho de forma que eles apareçam em grupos específicos no PORTAL DO WFA. Você também pode aplicar o recurso de controle de acesso em categorias de fluxo de trabalho. Por exemplo, você pode permitir que apenas certos operadores de armazenamento ou aprovadores visualizem determinadas categorias de fluxos de trabalho. Os operadores de armazenamento ou aprovadores podem executar apenas os fluxos de trabalho dentro da categoria para a qual foram concedidos direitos de acesso.
+
+Os grupos do ative Directory também podem ser usados para controle de acesso a categorias.

@@ -1,0 +1,43 @@
+---
+permalink: windows-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html 
+sidebar: sidebar 
+keywords: configure, database, user, run, ocsetup, windows 
+summary: Você pode executar o arquivo ocsetup no servidor DataFabric Manager 5.x para configurar o acesso somente leitura do banco de dados DataFabric Manager 5.x ao OnCommand Workflow Automation. 
+---
+= Configure um usuário de banco de dados executando o ocsetup no Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode executar o arquivo ocsetup no servidor DataFabric Manager 5.x para configurar o acesso somente leitura do banco de dados DataFabric Manager 5.x ao OnCommand Workflow Automation.
+
+.Passos
+. Faça o download do arquivo wfa_ocsetup.exe para um diretório no servidor DataFabric Manager 5.x do seguinte local: _Https_://WFA_Server_IP/download/WFA_ocsetup.exe.
++
+_WFA_Server_IP_ é o endereço IP (endereço IPv4 ou IPv6) do seu SERVIDOR WFA.
+
++
+Se você tiver especificado uma porta não padrão para O WFA, você deve incluir o número da porta da seguinte forma: _Https_://wfa_Server_ip:port/download/wfa_ocsetup.exe.
+
++
+_Port_ é o número da porta TCP que você usou para o servidor WFA durante a instalação.
+
++
+Se você estiver especificando um endereço IPv6, você deve incluí-lo com colchetes.
+
+. Clique duas vezes no arquivo wfa_ocsetup.exe.
+. Leia as informações no assistente de configuração e clique em *Next*.
+. Navegue ou digite o local do OpenJDK e clique em *Next*.
+. Introduza um nome de utilizador e uma palavra-passe para substituir as credenciais predefinidas.
++
+Uma nova conta de usuário de banco de dados é criada com acesso ao banco de dados DataFabric Manager 5.x.
+
++
+
+NOTE: Se você não criar uma conta de usuário, as credenciais padrão serão usadas. Você deve criar uma conta de usuário para fins de segurança.
+
+. Clique em *seguinte* e reveja os resultados.
+. Clique em *Next* e, em seguida, clique em *Finish* para concluir o assistente.
+

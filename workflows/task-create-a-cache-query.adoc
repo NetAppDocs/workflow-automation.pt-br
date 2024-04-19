@@ -1,0 +1,60 @@
+---
+permalink: workflows/task-create-a-cache-query.html 
+sidebar: sidebar 
+keywords: define, cache, query, cache, information, dictionary, object, wfa database, data source, create, associate, entry, active iq, unified manager 
+summary: Você pode definir uma consulta de cache quando quiser armazenar em cache informações sobre um objeto de dicionário no banco de dados WFA a partir de um tipo de fonte de dados. Você pode criar uma consulta de cache e associá-la a uma entrada de dicionário e a um ou mais tipos de fonte de dados, como o Active IQ Unified Manager 6,1. 
+---
+= Crie uma consulta de cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode definir uma consulta de cache quando quiser armazenar em cache informações sobre um objeto de dicionário no banco de dados WFA a partir de um tipo de fonte de dados. Você pode criar uma consulta de cache e associá-la a uma entrada de dicionário e a um ou mais tipos de fonte de dados, como o Active IQ Unified Manager 6,1.
+
+.O que você vai precisar
+Você deve saber as sintaxes SQL apropriadas para criar uma consulta de cache.
+
+.Passos
+. Clique em *Data Source Design* > *Cache queries*.
+. Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Na caixa de diálogo *Add Cache Query* (Adicionar consulta de cache), selecione a entrada do dicionário e o tipo de fonte de dados necessários.
+. Na seção ""SQL SELECT query"", insira a consulta SQL apropriada.
++
+A consulta SQL a seguir armazena em cache informações sobre o objeto do dicionário de disco do tipo de fonte de dados do Active IQ Unified Manager 6,1:
+
++
+[listing]
+----
+SELECT
+    disk.objId AS id,
+    disk.name AS NAME,
+    disk.uid AS uid,
+    disk.effectiveInterfaceType AS TYPE,
+    disk.rpm AS rpm,
+    disk.homeNodeId AS home_node_id,
+    disk.ownerNodeId AS owner_node_id,
+    disk.model AS model,
+    disk.serialNumber AS serial_number,
+    disk.totalBytes/1024/1024 AS size_mb,
+    disk.shelf AS shelf,
+    disk.shelfBay AS shelf_bay,
+    disk.pool AS pool,
+    disk.vendor AS vendor,
+    LOWER(disk.raidPosition) AS raid_position,
+    disk.containerTypeRaw AS container_type,
+    disk.clusterId AS cluster_id
+FROM
+    netapp_model_view.disk disk
+----
+. Se você quiser testar a consulta SQL, clique em *Test*.
++
+Se você tiver selecionado mais de um tipo de fonte de dados, a caixa de diálogo testar consulta de cache será aberta e permitirá que você selecione o tipo de origem de dados necessário.
+
++
+O resultado do teste é exibido.
+
+. Feche a caixa de diálogo.
+. Clique em *Salvar*.
+

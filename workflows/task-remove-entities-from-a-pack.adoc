@@ -1,0 +1,50 @@
+---
+permalink: workflows/task-remove-entities-from-a-pack.html 
+sidebar: sidebar 
+keywords: remove, pack, entities, oncommand, workflow, automation, check, updated, source, control, management, server 
+summary: 'Você pode remover um pacote das entidades no OnCommand Workflow Automation (WFA) e verificar o pacote atualizado para o servidor Gerenciamento de Controle de fonte (SCM).' 
+---
+= Remover pacotes de fluxo de trabalho WFA de entidades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode remover um pacote das entidades no OnCommand Workflow Automation (WFA) e verificar o pacote atualizado para o servidor Gerenciamento de Controle de fonte (SCM).
+
+.O que você vai precisar
+O SCM precisa ser configurado e você precisa ter credenciais de administrador ou arquiteto.
+
+.Sobre esta tarefa
+Você pode remover um pacote das seguintes entidades:
+
+* Fluxo de trabalho
+* Localizadores
+* Filtros
+* Comandos
+* Funções
+* Modelos
+* Esquemas
+* Dicionário
+* Tipos de fontes de dados
+* Tipos de sistema remoto
+* Consultas de cache
+* Categorias
+
+
+.Passos
+. Faça login na janela *WFA* através de um navegador da Web.
+. No portal *Workflow design,* navegue até a entidade que deseja remover e clique em *<Entity>*.
+. Clique no ícone *Remover do pacote*.
+. Na caixa de diálogo *Remover do pacote <Entity>*, selecione o pacote que deseja excluir dessa entidade.
+. Clique em *OK*.
+. Clique na guia *Packs*.
+. Clique no ícone *Exportar para servidor*.
+. Na caixa de diálogo *Exportar para pasta do servidor*, no campo *localização da pasta no sistema do servidor*, insira o local da pasta do servidor onde o pacote é salvo no servidor.
++
+Isso exporta o pacote em forma explodida no sistema de arquivos onde o cliente SCM é criado.
+
+. No local do cliente SCM, verifique o conteúdo do pacote para o servidor SCM.
+. Use as ferramentas de comparação fornecidas pelo SCM para verificar as alterações em relação à versão SCM do pacote.
+

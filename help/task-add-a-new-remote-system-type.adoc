@@ -1,0 +1,28 @@
+---
+permalink: help/task-add-a-new-remote-system-type.html 
+sidebar: sidebar 
+keywords: new, remote, system, type, oncommand, Workflow, automation, predefined, meet, requirement, change, configuration, predefined 
+summary: 'Você pode adicionar um novo tipo de sistema remoto ao OnCommand Workflow Automation (WFA) se um tipo de sistema predefinido não atender aos seus requisitos ou se quiser alterar a configuração de um tipo de sistema predefinido.' 
+---
+= Adicione um novo tipo de sistema remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar um novo tipo de sistema remoto ao OnCommand Workflow Automation (WFA) se um tipo de sistema predefinido não atender aos seus requisitos ou se quiser alterar a configuração de um tipo de sistema predefinido.
+
+*O que você vai precisar*
+
+* Você deve ter instalado O WFA.
+* Você precisa ter credenciais de administrador do Privileges ou arquiteto para O WFA.
+
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador ou arquiteto.
+. Clique em *Data Source Design* > *Remote System Types*.
+. Crie um novo tipo de sistema remoto clicando image:../media/new_wfa_icon.gif["Novo ícone"] na barra de ferramentas.
+. Insira as informações necessárias, como nome, tipo, descrição e versão da entidade do tipo de sistema remoto na caixa de diálogo *novos tipos de sistema remoto*.
+. Clique em *Salvar*.
+

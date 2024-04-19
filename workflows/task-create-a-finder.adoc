@@ -1,0 +1,40 @@
+---
+permalink: workflows/task-create-a-finder.html 
+sidebar: sidebar 
+keywords: create, wfa, finder, search, resources, predefined, suitable, required 
+summary: Você pode criar um localizador WFA que pode procurar recursos se não houver um localizador WFA predefinido adequado para pesquisar os recursos necessários. 
+---
+= Crie um localizador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um localizador WFA que pode procurar recursos se não houver um localizador WFA predefinido adequado para pesquisar os recursos necessários.
+
+.O que você vai precisar
+Você deve ter criado os filtros necessários que são usados no localizador.
+
+.Passos
+. Clique em *Workflow Design* > *Finders*.
+. Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Na guia *Propriedades* da caixa de diálogo *novo Finder*, insira ou selecione os detalhes necessários nos campos *Nome*, *tipo* e *Descrição*.
+. Na guia *filtros*, selecione os filtros necessários na lista *filtros disponíveis* e clique image:../media/right_arrow_button.gif["Botão de seta para a direita"]em .
++
+Você pode adicionar ou remover filtros com base em suas necessidades.
+
+. Na guia atributos retornados, selecione os atributos necessários para o filtro na lista *disponível* e clique image:../media/right_arrow_button.gif["Botão de seta para a direita"]em .
+. *Opcional:* clique em *Teste* para testar o localizador.
++
+.. Na caixa de diálogo *Test Finder <FinderName>*, insira os parâmetros de teste necessários.
+.. Desmarque a caixa de seleção *usar dados de reserva no teste* se não quiser usar os dados de reserva para testar o localizador.
+.. Clique em *Teste*.
++
+O resultado do teste é exibido.
+
+.. Feche a caixa de diálogo.
+
+
+. Clique em *Salvar*.
+

@@ -1,0 +1,26 @@
+---
+permalink: workflows/task-add-approval-points.html 
+sidebar: sidebar 
+keywords: add, approval, point, checkpoint, workflow, pause, execution, resume, points, incremental, sections, certain condition, example, successful, validated 
+summary: Você pode adicionar um ponto de aprovação como um ponto de verificação em um fluxo de trabalho para pausar a execução do fluxo de trabalho e retomá-lo com base em sua aprovação. Você pode usar pontos de aprovação para execução incremental de um fluxo de trabalho, em que seções do fluxo de trabalho são executadas somente após uma determinada condição ser atendida, por exemplo, quando a próxima seção tiver que ser aprovada ou quando a execução bem-sucedida da primeira seção for validada. 
+---
+= Adicione pontos de aprovação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar um ponto de aprovação como um ponto de verificação em um fluxo de trabalho para pausar a execução do fluxo de trabalho e retomá-lo com base em sua aprovação. Você pode usar pontos de aprovação para execução incremental de um fluxo de trabalho, em que seções do fluxo de trabalho são executadas somente após uma determinada condição ser atendida - por exemplo, quando a próxima seção tiver que ser aprovada ou quando a execução bem-sucedida da primeira seção for validada.
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como arquiteto ou administrador.
+. Clique em *Workflow Design* > *fluxos de trabalho*.
+. Na janela *fluxos de trabalho*, clique duas vezes no fluxo de trabalho que deseja modificar.
+. Na janela *Workflow <workflow name>*, clique no image:../media/approval_point_disabled.gif["Imagem para ponto de aprovação"] ícone à esquerda da etapa para a qual deseja adicionar o ponto de aprovação.
++
+Você pode adicionar pontos de aprovação para uma ou mais etapas.
+
+. Na caixa de diálogo *novo ponto de aprovação*, forneça os detalhes do comentário e da condição.
+. Clique em *OK*.
+

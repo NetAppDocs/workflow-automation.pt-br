@@ -1,0 +1,94 @@
+---
+permalink: help/reference-clone-dictionary-entry-dialog-box.html 
+sidebar: sidebar 
+keywords: dictionary, entry, dialog box, enable, copy, object, edit, definition, clone, new 
+summary: A caixa de diálogo novo <EntryName_copy> de entrada de dicionário permite copiar um objeto de dicionário e editar a definição do objeto de dicionário clonado. 
+---
+= Caixa de diálogo de entrada do Dicionário clone
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo novo <EntryName_copy> de entrada de dicionário permite copiar um objeto de dicionário e editar a definição do objeto de dicionário clonado.
+
+* *Nome do tipo de objeto*
++
+Permite especificar um nome para o objeto de dicionário clonado.
+
+* *Descrição*
++
+Permite que você forneça uma descrição para o objeto de dicionário clonado.
+
+* * Esquema*
++
+Permite selecionar um esquema que deve ser associado ao objeto do dicionário clonado. Você pode adicionar entradas de dicionário personalizadas aos esquemas certificados.
+
+* *Versão da entidade*
++
+Permite que você insira o número da versão para a entrada do dicionário clonado no `major.minor.revision` formato - por exemplo, 1,0.0.
+
+
+
+
+
+== Tabela de atributos
+
+Permite especificar uma lista de atributos que definem o objeto do dicionário clonado.
+
+* *Nome*
++
+Permite-lhe introduzir o nome do atributo.
+
+* *Tipo*
++
+Permite que você selecione o tipo do atributo--tal como string, boolean, e integer--para verificação de tipo. Você também pode consultar uma entrada de dicionário do esquema selecionado.
+
+* * Comprimento da corda*
++
+Permite especificar o comprimento da cadeia em numerais, se o tipo de cadeia estiver selecionado para o atributo.
+
+* *Valores*
++
+Permite especificar uma lista de valores separados por vírgulas, se o tipo de enum estiver selecionado para o atributo.
+
+* *Chave natural*
++
+Permite especificar se o atributo dicionário faz parte da chave natural do objeto do dicionário.
+
++
+Uma chave natural é o identificador único de um objeto de dicionário. Por exemplo, qtrees são identificados pelo nome de qtree, pelo nome do volume e pelo endereço IP da matriz.
+
+* *Para ser armazenado em cache*
++
+Permite especificar se o atributo deve ser armazenado em cache.
+
++
+Uma entrada de dicionário pode incluir atributos que são armazenados em cache e atributos que não são armazenados em cache. Uma tabela de cache é criada e preenchida com os atributos que são marcados para cache durante a aquisição de cache do esquema. Uma tabela de cache é criada para um objeto de dicionário quando pelo menos um atributo é selecionado para ser armazenado em cache.
+
+* *Pode ser nulo*
++
+Permite especificar se o valor do atributo pode ser nulo. Esta configuração é válida apenas para atributos selecionados para serem armazenados em cache.
+
+* *Descrição*
++
+Permite especificar uma descrição para o atributo.
+
+* *Valores em colunas de chave naturais são sensíveis a maiúsculas e minúsculas*
++
+Permite especificar que as chaves naturais são sensíveis a maiúsculas e minúsculas.
+
+* *Botões de comando*
++
+** *Adicionar linha*
++
+Permite adicionar uma linha à tabela que é usada para especificar um atributo.
+
+** *Remover linha*
++
+Permite eliminar a linha selecionada.
+
+
+
+

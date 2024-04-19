@@ -1,0 +1,47 @@
+---
+permalink: windows-install/task-upgrade-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: upgrade, oncommand, workflow, automation 
+summary: 'Se você instalou uma versão anterior do OnCommand Workflow Automation (WFA), você pode atualizar para a versão mais recente do WFA para usar os novos recursos e aprimoramentos.' 
+---
+= Atualize o OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você instalou uma versão anterior do OnCommand Workflow Automation (WFA), você pode atualizar para a versão mais recente do WFA para usar os novos recursos e aprimoramentos.
+
+* Você pode atualizar para O WFA 5,1 apenas a partir DO WFA 5,0 ou 4,2.
++
+Se você estiver executando O WFA 4,1 ou versões anteriores do WFA, então você deve primeiro atualizar para O WFA 5,0 ou 4,2 e, em seguida, atualizar para O WFA 5,1.
+
+* Você pode restaurar um backup feito no WFA 5,0 ou 4,2 no WFA 5,1. Um backup de banco de dados WFA só pode ser restaurado para um sistema que esteja executando a mesma versão ou uma versão posterior do WFA.
++
+Por exemplo, se você criou um backup em um sistema que está executando O WFA 4,2, o backup só pode ser restaurado para sistemas que estejam executando O WFA 4,2 ou posterior.
+
+* Você não pode instalar o MySQL por conta própria ao atualizar a partir de versões anteriores ao WFA 4,2.
++
+No entanto, você pode instalar o MySQL por conta própria:
+
++
+** Durante uma nova instalação do WFA 4,2 e posterior OR
+** Quando você está atualizando do WFA 4,2 para versões posteriores DO WFA.
++
+... Faça backup do banco de dados WFA usando uma das seguintes opções:
+
+
+** Portal web WFA
+** Script do PowerShell se você quiser reverter para a mesma versão DO WFA, você pode usar o backup criado para restaurar seu banco de dados DO WFA.
++
+... Desinstale a versão existente do WFA.
+... Instale a versão mais recente do WFA.
+... Restaure o banco de dados WFA.
+
+
+
+
+
+
+Você pode revisar o conteúdo restaurado quanto à integridade na funcionalidade - por exemplo, você pode verificar o funcionamento de seus fluxos de trabalho personalizados.

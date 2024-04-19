@@ -1,0 +1,109 @@
+---
+permalink: rhel-install/task-set-up-a-data-source.html 
+sidebar: sidebar 
+keywords: set up, data source 
+summary: 'Você deve configurar uma conexão com uma fonte de dados no OnCommand Workflow Automation (WFA) para adquirir dados da fonte de dados.' 
+---
+= Configure uma fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve configurar uma conexão com uma fonte de dados no OnCommand Workflow Automation (WFA) para adquirir dados da fonte de dados.
+
+* Para o Active IQ Unified Manager6,0 e posterior, você precisa criar uma conta de usuário de banco de dados no servidor do Gerenciador Unificado.
++
+Consulte a Ajuda on-line do _OnCommand Unified Manager_ para obter detalhes.
+
+* A porta TCP para conexões de entrada no servidor do Unified Manager deve estar aberta.
++
+Consulte a documentação no firewall para obter detalhes.
+
++
+Os seguintes são os números de porta TCP padrão:
+
++
+[cols="3*"]
+|===
+| Número da porta TCP | Versão do servidor Unified Manager | Descrição 
+
+
+ a| 
+3306
+ a| 
+6.x
+ a| 
+Servidor de banco de dados MySQL
+
+|===
+* Para o Consultor de desempenho, você deve ter criado uma conta de usuário do Active IQ Unified Manager com uma função mínima de GlobalRead.
++
+Consulte a Ajuda on-line do _OnCommand Unified Manager_ para obter detalhes.
+
+* A porta TCP para conexões de entrada no VMware vCenter Server deve estar aberta.
++
+O número da porta TCP padrão é 443. Consulte a documentação no firewall para obter detalhes.
+
+
+
+Você pode adicionar várias fontes de dados de servidor do Unified Manager ao WFA usando este procedimento. No entanto, você não deve usar este procedimento se quiser emparelhar o servidor Unified Manager 6,3 e posterior com O WFA e usar a funcionalidade de proteção no servidor Unified Manager.
+
+Para obter mais informações sobre como emparelhar O WFA com o servidor do Unified Manager 6.x, consulte a Ajuda on-line do _OnCommand Unified Manager_.
+
+[NOTE]
+====
+Ao configurar uma fonte de dados com O WFA, você deve estar ciente de que os tipos de fonte de dados do Active IQ Unified Manager 6,0, 6,1 e 6,2 estão obsoletos na versão DO WFA 4,0, e esses tipos de fonte de dados não serão suportados em versões futuras.
+
+====
+.Passos
+. Acesse O WFA usando um navegador da Web.
+. Clique em *Configurações* e, em *Configuração*, clique em *fontes de dados*.
+. Escolha a ação apropriada:
++
+[cols="2*"]
+|===
+| Para... | Faça isso... 
+
+
+ a| 
+Crie uma nova fonte de dados
+ a| 
+Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+
+
+
+ a| 
+Edite uma fonte de dados restaurada se você atualizou O WFA
+ a| 
+Selecione a entrada de origem de dados existente e clique image:../media/edit_wfa_icon.gif["Ícone de edição"]na barra de ferramentas.
+
+|===
++
+Se você adicionou uma fonte de dados do servidor Unified Manager ao WFA e atualizou a versão do servidor Unified Manager, O WFA não reconhecerá a versão atualizada do servidor Unified Manager. Você deve excluir a versão anterior do servidor do Unified Manager e adicionar a versão atualizada do servidor do Unified Manager ao WFA.
+
+. Na caixa de diálogo Nova fonte de dados, selecione o tipo de fonte de dados necessária e insira um nome para a fonte de dados e o nome do host.
++
+Com base no tipo de fonte de dados selecionado, os campos porta, nome de usuário, senha e tempo limite podem ser preenchidos automaticamente com os dados padrão, se disponíveis. Você pode editar essas entradas conforme necessário.
+
+. Escolha uma ação apropriada:
++
+[cols="2*"]
+|===
+| Para... | Faça isso... 
+
+
+ a| 
+Active IQ Unified Manager 6,3 e posterior
+ a| 
+Insira as credenciais da conta de usuário do banco de dados que você criou no servidor do Unified Manager. Consulte _Ajuda on-line do Gerenciador Unificado do OnCommand_ para obter detalhes sobre como criar uma conta de usuário de banco de dados.
+
+
+NOTE: Você não deve fornecer as credenciais de uma conta de usuário de banco de dados do Active IQ Unified Manager que foi criada usando a interface de linha de comando ou a ferramenta ocsetup.
+
+|===
+. Clique em *Salvar*.
+. Na tabela fontes de dados, selecione a fonte de dados e clique image:../media/acquire_now_wfa_icon.gif["Ícone adquirir agora"]na barra de ferramentas.
+. Verifique o estado do processo de aquisição de dados.
+

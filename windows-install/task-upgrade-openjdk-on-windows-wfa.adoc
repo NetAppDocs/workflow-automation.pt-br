@@ -1,0 +1,26 @@
+---
+permalink: windows-install/task-upgrade-openjdk-on-windows-wfa.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, openjdk 
+summary: 'O Oracle JRE não é mais suportado no OnCommand Workflow Automation. Nesta versão, o OpenJDK substitui o Oracle JRE para Windows. Você pode atualizar novas versões do OpenJDK for OnCommand Workflow Automation (WFA) no servidor Windows. Você pode atualizar para uma versão mais recente do OpenJDK para obter correções para vulnerabilidades de segurança no servidor Windows.' 
+---
+= Atualize o OpenJDK
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Oracle JRE não é mais suportado no OnCommand Workflow Automation. Nesta versão, o OpenJDK substitui o Oracle JRE para Windows. Você pode atualizar novas versões do OpenJDK for OnCommand Workflow Automation (WFA) no servidor Windows. Você pode atualizar para uma versão mais recente do OpenJDK para obter correções para vulnerabilidades de segurança no servidor Windows.
+
+Você deve ter o Windows admin Privileges no servidor WFA.
+
+Você pode atualizar as versões do OpenJDK dentro das famílias de lançamento. Por exemplo, você pode atualizar do OpenJDK 11.0.1 para o OpenJDK 11,0.2, mas não pode atualizar diretamente do OpenJDK 11 para o OpenJDK 12.
+
+.Passos
+. Faça login como um usuário admin na máquina host WFA.
+. Baixe a versão mais recente do OpenJDK 11 (64 bits) para o sistema de destino.
+. Use o console dos Serviços do Windows para interromper os serviços DO SERVIDOR WFA e DO Banco de dados WFA.
+. Extraia a versão baixada do OpenJDK 11 para a pasta onde você instalou o Open JDK.
+. Use o console dos Serviços do Windows para iniciar os serviços DO WFA.
+

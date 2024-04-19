@@ -1,0 +1,183 @@
+---
+permalink: help/reference-filters-window.html 
+sidebar: sidebar 
+keywords: filter, window, display, available, alphabetical, order, access, select, workflow, design 
+summary: A janela filtros exibe os filtros disponíveis em ordem alfabética. Pode aceder a esta janela selecionando Design do fluxo de trabalho > filtros. 
+---
+= Janela filtros
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela filtros exibe os filtros disponíveis em ordem alfabética. Pode aceder a esta janela selecionando *Design do fluxo de trabalho* > *filtros*.
+
+
+NOTE: Dependendo da sua função e do Privileges da conta, esta janela pode não ser exibida.
+
+Filtros são regras de consulta que removem recursos irrelevantes durante a pesquisa baseada em consulta para localizar recursos. Os filtros são usados para desenvolver um localizador.
+
+* Tabela de filtros
+* Barra de ferramentas
+
+
+
+
+== Tabela de filtros
+
+A tabela filtros lista os filtros disponíveis. Cada entrada é identificada como uma das seguintes:
+
+* image:../media/community_certification.gif[""] - conteúdo criado pelos usuários
+* image:../media/ps_certified_icon_wfa.gif[""] - Conteúdo desenvolvido por Serviços profissionais (PS), que está disponível apenas em instalações personalizadas feitas pela PS
+* image:../media/community_certification.gif[""] - pacotes desenvolvidos pelos usuários
+* image:../media/lock_icon_wfa.gif[""] - conteúdo criado por usuários que está bloqueado
+* image:../media/netapp_certified.gif[""] - Conteúdo certificado pela NetApp
+
+
+Você pode personalizar a exibição da tabela usando os recursos de filtragem e classificação disponíveis para cada coluna, bem como reorganizando a ordem da coluna.
+
+* image:../media/filter_icon_wfa.gif["Ícone de filtro"] ativa ou desativa a filtragem de toda a tabela. Um "x" vermelho aparece sobre o ícone se a filtragem estiver desativada.
+* Clicar duas vezes image:../media/filter_icon_wfa.gif["Ícone de filtro"]limpa e redefine as seleções de filtragem.
+* image:../media/wfa_filter_icon.gif["Ícone de filtro"] em cada cabeçalho de coluna permite filtrar com base no conteúdo das colunas. Clicar image:../media/wfa_filter_icon.gif["Ícone de filtro"] em uma coluna permite filtrar um item específico na lista suspensa ou em todos os itens disponíveis.
+* Clicar no cabeçalho da coluna alterna entre a ordem ascendente e descendente de ordenação. É possível identificar a ordem de classificação aplicada pelas setas de classificação (image:../media/wfa_sortarrow_up_icon.gif["Ícone de ordenação"] para ascendente e image:../media/wfa_sortarrow_down_icon.gif["Ícone de ordenação"]descendente).
+* Para reorganizar a localização das colunas, você pode arrastar e soltar colunas para colocá-las em qualquer ordem necessária. No entanto, você não pode ocultar ou excluir nenhuma dessas colunas.
+* Clicar na caixa de texto filtro *pesquisar* permite-lhe procurar conteúdo específico. Além disso, você pode pesquisar usando operadores suportados para o tipo de coluna aplicável, alfabético ou numérico.
+
+
+A tabela filtros contém as seguintes colunas:
+
+* * Certificação *
++
+Indica se o filtro foi criado pelo usuário (image:../media/community_certification.gif[""] ), PS (image:../media/ps_certified_icon_wfa.gif[""] ), comunidade (image:../media/community_certification.gif[""] ), bloqueado pelo usuário (image:../media/lock_icon_wfa.gif[""] ) ou certificado pela NetApp (image:../media/netapp_certified.gif[""]).
+
++
+Você pode procurar filtros selecionando uma ou mais caixas de seleção na lista de filtros.
+
+* *Nome*
++
+Exibe o nome do filtro.
+
++
+Você pode procurar um filtro inserindo seu nome na caixa de texto filtro de pesquisa.
+
+* * Esquema*
++
+Exibe o esquema associado aos filtros. Um esquema representa o modelo de dados de um sistema. Por exemplo, um esquema de vc contém dados relevantes para o seu ambiente virtual, como máquinas virtuais, hosts e datastores.
+
++
+Você pode procurar um filtro inserindo seu esquema na caixa de texto filtro de pesquisa.
+
+* *Tipo*
++
+Exibe o tipo de objeto de dicionário do filtro (por exemplo, matriz agregada ou CIFS).
+
++
+Você pode procurar filtros inserindo o tipo na caixa de texto filtro de pesquisa.
+
+* *Versão da entidade*
++
+Exibe o número da versão do objeto no `major.minor.revision` formato - por exemplo, 1,0.0.
+
++
+Você pode procurar um filtro inserindo o número da versão na caixa de texto filtro de pesquisa.
+
+* *Descrição*
++
+Apresenta a descrição do filtro.
+
++
+Você pode procurar um filtro inserindo sua descrição na caixa de texto filtro de pesquisa.
+
+* * Atualizado em *
++
+Exibe a data e a hora em que o filtro foi atualizado pela última vez.
+
++
+Pode procurar filtros selecionando a categoria de hora na lista pendente filtro.
+
+* *Atualizado por*
++
+Exibe o usuário que atualizou o filtro.
+
++
+Pode procurar filtros introduzindo o nome de utilizador na caixa de texto filtro de pesquisa.
+
+* *Bloqueado por*
++
+Exibe o usuário que bloqueou o filtro.
+
++
+Pode procurar filtros introduzindo o nome de utilizador na caixa de texto filtro de pesquisa.
+
+
+
+
+
+== Barra de ferramentas
+
+A barra de ferramentas está localizada acima do cabeçalho da coluna. Pode utilizar os ícones na barra de ferramentas para executar várias acões. Estas ações também podem ser acedidas a partir do menu de clique com o botão direito do rato na janela.
+
+* image:../media/new_wfa_icon.gif["Novo ícone"]* (Novo)*
++
+Abre a janela novo filtro, que permite criar um filtro.
+
+* image:../media/edit_wfa_icon.gif["Ícone de edição"]* (Editar)*
++
+Abre a janela Filter <filter_name> do filtro selecionado, que permite editar o filtro.
+
++
+Você também pode clicar duas vezes no filtro para abrir a janela Editar filtro.
+
+* image:../media/clone_wfa_icon.gif["Ícone de clone"]* (Clone)*
++
+Abre a janela novo filtro <filter_name>_Copy, que permite criar uma cópia do filtro selecionado.
+
+* image:../media/lock_wfa_icon.gif["Ícone de bloqueio"]* (Bloqueio)*
++
+Abre a caixa de diálogo Bloquear filtro de confirmação, que permite bloquear o filtro selecionado.
+
+* image:../media/unlock_wfa_icon.gif["Ícone de desbloqueio"]* (Desbloquear)*
++
+Abre a caixa de diálogo de confirmação desbloquear filtro, que permite desbloquear o filtro selecionado.
+
++
+Esta opção está ativada apenas para os filtros bloqueados. Os administradores podem desbloquear filtros bloqueados por outros usuários.
+
+* image:../media/delete_wfa_icon.gif["Eliminar ícone"]* (Apagar)*
++
+Abre a caixa de diálogo Excluir filtro, que permite excluir o filtro criado pelo usuário selecionado.
+
++
+
+NOTE: Não é possível eliminar um filtro WFA, um filtro PS ou um filtro de amostra.
+
+* image:../media/export_wfa_icon.gif["Ícone de exportação"]* (Exportação)*
++
+Permite exportar o filtro criado pelo utilizador selecionado.
+
++
+
+NOTE: Não é possível exportar um filtro WFA, um filtro PS ou um filtro de amostra.
+
+* image:../media/test_wfa_icon.gif["ícone de teste"]* (Teste)*
++
+Abre a caixa de diálogo filtro de teste, que permite testar o filtro selecionado.
+
+* image:../media/add_to_pack.png["adicionar ao ícone de embalagem"]* (Add to Pack)*
++
+Abre a caixa de diálogo Adicionar a filtros de pacote, que permite adicionar o filtro e suas entidades confiáveis a um pacote, que é editável.
+
++
+
+NOTE: O recurso Adicionar ao pacote é ativado somente para filtros para os quais a certificação está definida como nenhum.
+
+* image:../media/remove_from_pack.png["remover do ícone do pacote"]* (Remover do pacote)*
++
+Abre a caixa de diálogo Remover de filtros de pacote para o filtro selecionado, que permite excluir ou remover o filtro do pacote.
+
++
+
+NOTE: O recurso Remover do pacote é ativado apenas para filtros para os quais a certificação está definida como nenhum.
+
+

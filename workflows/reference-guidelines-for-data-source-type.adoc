@@ -1,0 +1,45 @@
+---
+permalink: workflows/reference-guidelines-for-data-source-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, data, source, type, use, define, custom, oncommand, workflow, automation 
+summary: 'Você deve estar ciente das diretrizes para criar tipos de fonte de dados que são usados para definir fontes de dados personalizadas para o OnCommand Workflow Automation (WFA).' 
+---
+= Diretrizes para criar tipos de fonte de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve estar ciente das diretrizes para criar tipos de fonte de dados que são usados para definir fontes de dados personalizadas para o OnCommand Workflow Automation (WFA).
+
+Você pode definir um tipo de fonte de dados usando um dos seguintes métodos:
+
+* SQL: Você pode usar as diretrizes WFA SQL para definir consultas selecionadas de fontes de dados com base em um banco de dados externo.
+* Script: Você pode escrever um script do PowerShell que fornece os dados para um esquema específico de entradas de dicionário.
+
+
+As diretrizes para a criação de tipos de fonte de dados são as seguintes:
+
+* Você deve usar a linguagem do PowerShell deve ser usada para criar script.
+* O script do PowerShell deve fornecer a saída para cada entrada do dicionário em seu diretório de trabalho atual.
+* Os arquivos de dados devem ser nomeados `dictionary_entry.csv,` onde o nome da entrada do dicionário deve ser em carateres minúsculos.
++
+O tipo de fonte de dados predefinido que coleta informações do Performance Advisor usa um tipo de fonte de dados baseado EM SCRIPT. Os ficheiros de saída têm o nome `array_performance.csv` e. `aggregate_performance.csv.`
+
+* O `.csv` arquivo deve incluir o conteúdo na ordem exata como o dos atributos de entrada do dicionário.
++
+Uma entrada de dicionário inclui atributos na seguinte ordem: Array_IP, data, dia, hora, CPU_Busy, Total_OPS_per_sec, Disk_throughput_per_sec
+
++
+O script do PowerShell adiciona dados ao `.csv` arquivo na mesma ordem.
+
++
+[listing]
+----
+$values = get-Array-CounterValueString ([REF]$data)
+Add-Content $arrayFile ([byte[]][char[]] "\N t$arrayIP't$date't$day't$hour't$values'n")
+----
+* Você deve usar Encoding para garantir que a saída de dados do script seja carregada no cache DO WFA com precisão.
+* Você deve usar N ao inserir um valor nulo no `.csv` arquivo.
+

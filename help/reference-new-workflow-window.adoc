@@ -1,0 +1,110 @@
+---
+permalink: help/reference-new-workflow-window.html 
+sidebar: sidebar 
+keywords: new, workflow, window, display, created, associated, command 
+summary: A janela novo fluxo de trabalho exibe um fluxo de trabalho recém-criado e seus comandos associados. 
+---
+= Nova janela do fluxo de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela *New Workflow* exibe um fluxo de trabalho recém-criado e seus comandos associados.
+
+
+
+== Novo fluxo de trabalho
+
+A janela *novo fluxo de trabalho* exibe o nome do fluxo de trabalho no cabeçalho da janela. Os comandos associados são exibidos como caixas azuis em colunas que são apresentadas na ordem sequencial de execução --lidas da esquerda para a direita, de cima para baixo. As variáveis e objetos para cada comando são exibidos como caixas cinza na coluna do comando.
+
+* *Insira uma linha*
++
+Adiciona uma nova linha acima ou abaixo da linha selecionada no fluxo de trabalho.
+
++
+Você pode clicar image:../media/add_row2_wfa_icon.gif[""] para adicionar uma linha abaixo da última linha disponível.
+
+* *Copiar linha*
++
+Copia a linha selecionada do fluxo de trabalho e salva-a na área de transferência. Copiar uma linha não copia os detalhes de repetição definidos para a linha.
+
+* *Colar linha*
++
+Coloca o último item guardado na área de transferência numa nova linha abaixo da linha selecionada. Nomes únicos são usados para variáveis; no entanto, variáveis em expressões não são alteradas.
+
+* *Repetir linha*
++
+Abre a caixa de diálogo *Detalhes da repetição de linhas*.
+
+* *Editar repetição de linhas*
++
+Abre a caixa de diálogo *Detalhes de repetição de linha*, que permite modificar o conjunto de ações *Repetir linha* para a linha selecionada.
+
+* *Remova a repetição de linhas*
++
+Cancela a ação *Repetir linha* definida na caixa de diálogo *Detalhes de repetição de linha* para a linha selecionada.
+
+* *Adicionar condição*
++
+Abre a caixa de diálogo condições para o <row number> de linhas, que permite selecionar uma condição. A condição selecionada é aplicável a todos os comandos na linha. Todos os comandos na linha serão executados somente se a condição selecionada for atendida.
+
+* *Remover linha*
++
+Exclui a linha selecionada do fluxo de trabalho.
+
+* *Novo ponto de aprovação*
++
+Você pode clicar image:../media/approval_point_disabled.gif[""] para abrir a caixa de diálogo *novo ponto de aprovação*, que permite adicionar um ponto de aprovação antes da execução do comando.
+
+* *Editar ponto de aprovação*
++
+Você pode clicar image:../media/approval_point_enabled.gif[""] para abrir a caixa de diálogo *Editar ponto de aprovação*, que permite editar o comentário do ponto de aprovação.
+
+* *Adicionar parâmetros de comando*
++
+Adiciona parâmetros para um comando na linha selecionada.
+
++
+Você pode colocar o cursor abaixo do comando selecionado, na linha desejada, e clicar image:../media/add_object_wfa_icon.gif[""] para abrir a caixa de diálogo parâmetros para <command_name>.
+
+* *Editar parâmetros de comando*
++
+Abre a caixa de diálogo parâmetros para <command_name> para permitir que você modifique os parâmetros selecionados para um comando.
+
++
+Você pode colocar o cursor sobre a caixa cinza que deseja editar e clicar para abrir a caixa de diálogo parâmetros para <command_name>.
+
+* *Excluir parâmetros de comando*
++
+Remove o parâmetro.
+
++
+Você pode mover o cursor sobre a caixa cinza que deseja excluir e clicar no "'X" no canto superior direito da caixa cinza.
+
+
+
+
+
+== Botões de comando
+
+Os botões de comando estão disponíveis na parte inferior da janela de fluxo de trabalho. Os comandos também podem ser acessados a partir do menu de clique com o botão direito do Mouse na janela.
+
+* *Pré-visualização*
++
+Abre a caixa de diálogo *Preview Workflow*, que permite especificar atributos de entrada do usuário.
+
+* *Salvar como*
++
+Permite guardar o fluxo de trabalho com um novo nome.
+
+* *Guardar*
++
+Guarda o fluxo de trabalho.
+
+* *Fechar*
++
+Fecha a janela. No processo, se alguma alteração foi feita na configuração, uma caixa de diálogo *Salvar alterações de confirmação* é aberta, solicitando que você salve as alterações, feche a janela sem salvar as alterações ou cancele a ação de fechamento.
+
+

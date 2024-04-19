@@ -1,0 +1,286 @@
+---
+section: help
+title: Gerenciar e configurar
+entries:
+- title: Visão geral do OnCommand Workflow Automation
+  url: "/help/concept-overview-of-oncommand-workflow-automation.html"
+- title: Crie usuários locais
+  url: "/help/task-create-local-users.html"
+- title: Configurando o OnCommand Workflow Automation
+  pdf-filename: Configurando a ajuda do OnCommand Workflow Automation
+  url: "/help/concept-advanced-configuring-oncommand-workflow-automation.html"
+  entries:
+  - title: Configure as definições de autenticação
+    url: "/help/task-configure-authentication-settings.html"
+  - title: Configurar notificações por e-mail
+    url: "/help/task-configure-mail.html"
+  - title: Configurar o SNMP
+    pdf-filename: Configurar a ajuda SNMP
+    url: "/help/task-configure-snmp.html"
+    entries:
+    - title: Configurar SNMP versão 1
+      url: "/help/task-configure-snmp-version-1.html"
+    - title: Configurar SNMP versão 3
+      url: "/help/task-configure-snmp-version-3.html"
+  - title: Configurar Syslog
+    url: "/help/task-configure-syslog.html"
+  - title: Configurar o AutoSupport
+    url: "/help/task-configure-autosupport.html"
+  - title: Configurar notificações de e-mail para falhas de aquisição de origem de
+      dados
+    url: "/help/task-configure-email-notifications-for-data-source-acquisition-failures.html"
+  - title: Configurar reserva de recursos para fluxos de trabalho
+    url: "/help/task-configure-resource-reservation-for-workflows.html"
+- title: Configure as credenciais de um sistema de destino
+  url: "/help/task-configure-the-credentials-of-a-target-system.html"
+- title: Configurar protocolos para conexão a sistemas remotos
+  url: "/help/task-configure-protocols-for-connecting-to-remote-systems.html"
+- title: Recursos do OnCommand Workflow Automation Designer
+  url: "/help/reference-oncommand-workflow-automation-designer-features.html"
+  entries:
+  - title: Como a repetição de linha funciona
+    url: "/help/concept-how-repeat-row-works.html"
+  - title: Quais são os pontos de aprovação
+    url: "/help/concept-what-approval-points-are.html"
+  - title: Como continuar na falha funciona
+    url: "/help/concept-what-continue-on-failure-is.html"
+  - title: Como a seleção de recursos funciona
+    url: "/help/concept-how-resource-selection-works.html"
+  - title: Como a reserva funciona
+    url: "/help/concept-how-reservation-works.html"
+  - title: Qual é a nomenclatura incremental
+    url: "/help/concept-what-incremental-naming-is.html"
+  - title: Qual é a execução condicional
+    url: "/help/concept-what-conditional-execution-is.html"
+  - title: Como os parâmetros de retorno funcionam
+    url: "/help/concept-what-return-parameters-are.html"
+  - title: Quais são os esquemas
+    url: "/help/concept-what-schemes-are.html"
+  - title: Quais são os tipos de sistema remoto
+    url: "/help/concept-what-remote-system-types-are.html"
+  - title: Como funciona o versionamento de entidade
+    url: "/help/concept-how-entity-versioning-works.html"
+- title: Como você define fluxos de trabalho
+  url: "/help/concept-how-you-define-workflows.html"
+- title: Como você mapeia parâmetros de comando
+  url: "/help/concept-how-you-map-command-parameters.html"
+- title: Como as entradas do usuário são definidas
+  url: "/help/concept-how-you-define-user-input.html"
+- title: Como você define constantes
+  url: "/help/concept-how-you-define-constants.html"
+- title: Como você usa APIs REST
+  url: "/help/concept-how-you-use-the-rest-api.html"
+- title: Configure uma fonte de dados
+  url: "/help/task-set-up-a-data-source.html"
+  entries:
+  - title: Configure um usuário de banco de dados executando o ocsetup no Windows
+    url: "/help/task-configure-a-database-user-by-running-ocsetup-on-windows.html"
+  - title: Configure um usuário de banco de dados executando o ocsetup no Linux
+    url: "/help/task-configure-a-database-user-by-running-ocsetup-on-linux.html"
+  - title: Configure um usuário de banco de dados no Active IQ Unified Manager
+    url: "/help/task-configure-a-database-user-on-active-iq-unified-manager.html"
+- title: Criar conteúdo de ajuda de fluxo de trabalho
+  url: "/help/task-create-workflow-help-content.html"
+- title: Palavras reservadas
+  url: "/help/reference-reserved-words.html"
+- title: Onde encontrar informações sobre MVEL
+  url: "/help/reference-mvel-learning-material-reference.html"
+  entries:
+  - title: Campos habilitados para MVEL no OnCommand Workflow Automation
+    url: "/help/reference-mvel-enabled-fields-in-wfa.html"
+  - title: Exemplos de sintaxe MVEL
+    url: "/help/reference-mvel-examples.html"
+- title: Referências ao material de aprendizagem
+  url: "/help/reference-references-to-learning-material.html"
+- title: Workflows compatíveis no ONTAP
+  url: "/help/reference-supported-workflows-in-clustered-data-ontap.html"
+- title: Importar conteúdo OnCommand Workflow Automation
+  url: "/help/task-import-oncommand-workflow-automation-content.html"
+- title: Considerações ao importar conteúdo do OnCommand Workflow Automation
+  url: "/help/reference-considerations-of-importing-wfa-content.html"
+- title: Exportar conteúdo OnCommand Workflow Automation
+  url: "/help/task-export-oncommand-workflow-automation-content.html"
+- title: Desativar a aquisição de cache para entradas de dicionário
+  url: "/help/task-disable-cache-acquisition-for-dictionary-entries.html"
+- title: Crie pacotes de fluxo de trabalho WFA
+  url: "/help/task-create-a-workflow-automation-pack.html"
+- title: Eliminar pacotes OnCommand Workflow Automation
+  url: "/help/task-delete-wfa-packs.html"
+- title: Adicione pontos de aprovação
+  url: "/help/task-add-approval-points.html"
+- title: Definir regras de filtro
+  url: "/help/task-define-filter-rules.html"
+- title: Crie um esquema
+  url: "/help/task-create-a-scheme.html"
+- title: Edite um esquema
+  url: "/help/task-edit-a-scheme.html"
+- title: Eliminar um esquema
+  url: "/help/task-delete-a-scheme.html"
+- title: Adicione um novo tipo de sistema remoto
+  url: "/help/task-add-a-new-remote-system-type.html"
+- title: Janela Visualizador de registos
+  url: "/help/reference-log-viewer-directory-window.html"
+- title: Janela de backup e restauração
+  url: "/help/reference-backup-restore-window.html"
+- title: Janela usuários
+  url: "/help/reference-user-window.html"
+  entries:
+  - title: Caixa de diálogo novo usuário
+    url: "/help/reference-new-user-dialog-box.html"
+  - title: Caixa de diálogo Edit User (Editar utilizador)
+    url: "/help/reference-edit-user-dialog-box.html"
+- title: Janela de preferências
+  url: "/help/reference-client-preferences-dialog-box.html"
+- title: Janela grupos do ative Directory
+  url: "/help/reference-active-directory-groups-window.html"
+  entries:
+  - title: Nova caixa de diálogo Grupo do ative Directory
+    url: "/help/reference-new-active-directory-group-dialog-box.html"
+  - title: Caixa de diálogo Editar Grupo do ative Directory
+    url: "/help/reference-edit-active-directory-group-dialog-box.html"
+  - title: Janela Portal de aprovação
+    url: "/help/reference-approval-portal.html"
+- title: Janela fontes de dados
+  url: "/help/reference-data-sources-window.html"
+  entries:
+  - title: Caixa de diálogo Nova fonte de dados
+    url: "/help/reference-new-data-source-dialog-box.html"
+  - title: Caixa de diálogo Editar origem de dados
+    url: "/help/reference-edit-data-source-dialog-box.html"
+- title: Janela credenciais
+  url: "/help/reference-credentials-window.html"
+  entries:
+  - title: Caixa de diálogo testar conetividade
+    url: "/help/reference-test-connectivity-dialog-box.html"
+  - title: Caixa de diálogo novas credenciais
+    url: "/help/reference-new-credentials-dialog-box.html"
+  - title: Caixa de diálogo Editar credenciais
+    url: "/help/reference-edit-credentials-dialog-box.html"
+- title: Sobre a caixa de diálogo
+  url: "/help/reference-about-dialog-box.html"
+- title: Janela fluxos de trabalho
+  url: "/help/reference-portal-workflow-window.html"
+- title: Janela execuções
+  url: "/help/reference-execution-status-window.html"
+- title: Janela execuções recorrentes
+  url: "/help/reference-recurring-executions-window.html"
+- title: Janela de reservas
+  url: "/help/reference-reservations-window.html"
+- title: Janela de horários
+  url: "/help/reference-schedules-window.html"
+  entries:
+  - title: Caixa de diálogo Nova Agenda
+    url: "/help/reference-new-schedule-dialog-box.html"
+- title: Janela fluxos de trabalho
+  url: "/help/reference-workflows-window.html"
+  entries:
+  - title: Nova janela do fluxo de trabalho
+    url: "/help/reference-new-workflow-window.html"
+    entries:
+    - title: Parâmetros para a caixa de diálogo comandos
+      url: "/help/reference-parameters-for-commands-dialog-box.html"
+    - title: Caixa de diálogo seleção de recursos
+      url: "/help/reference-resource-selection-dialog-box.html"
+    - title: Assistente de nomes incrementais
+      url: "/help/reference-incremental-naming-wizard.html"
+    - title: Caixa de diálogo Detalhes da repetição de linhas
+      url: "/help/reference-row-repetition-details-dialog-box.html"
+  - title: Janela Workflow <workflow name> (fluxo de trabalho)
+    url: "/help/reference-edit-workflow-window.html"
+  - title: Caixa de diálogo Executar fluxo de trabalho
+    url: "/help/reference-execute-workflow-dialog-box.html"
+  - title: Caixa de diálogo Editar variável
+    url: "/help/reference-edit-variable-dialog-box.html"
+  - title: Caixa de diálogo Preview Workflow (Pré-visualização do fluxo
+    url: "/help/reference-preview-workflow-dialog-box.html"
+  - title: Janela de monitorização
+    url: "/help/reference-monitoring-window.html"
+  - title: Caixa de diálogo novo ponto de aprovação
+    url: "/help/reference-new-approval-point-dialog-box.html"
+  - title: Caixa de diálogo Editar ponto de aprovação
+    url: "/help/reference-edit-approval-point-dialog-box.html"
+- title: Janela dos localizadores
+  url: "/help/reference-finders-window.html"
+  entries:
+  - title: Nova caixa de diálogo Finder
+    url: "/help/reference-new-finder-dialog-box.html"
+  - title: Caixa de diálogo Editar Finder
+    url: "/help/reference-edit-finder-dialog-box.html"
+  - title: Caixa de diálogo Localizador de clones
+    url: "/help/reference-clone-finder-dialog-box.html"
+- title: Janela filtros
+  url: "/help/reference-filters-window.html"
+  entries:
+  - title: Caixa de diálogo novo filtro
+    url: "/help/reference-new-filter-dialog-box.html"
+  - title: Caixa de diálogo Editar filtro
+    url: "/help/reference-edit-filter-dialog-box.html"
+  - title: Caixa de diálogo filtro clone
+    url: "/help/reference-clone-filter-dialog-box.html"
+- title: Janela de comandos
+  url: "/help/reference-commands-window.html"
+  entries:
+  - title: Nova caixa de diálogo Definição de comando
+    url: "/help/reference-new-command-definition-dialog-box.html"
+  - title: Caixa de diálogo Editar Definição do comando
+    url: "/help/reference-edit-command-definition-dialog-box.html"
+  - title: Caixa de diálogo Definição do comando clone
+    url: "/help/reference-clone-command-definition-dialog-box.html"
+- title: Janela funções
+  url: "/help/reference-functions-window.html"
+- title: Janela modelos
+  url: "/help/reference-templates-window.html"
+  entries:
+  - title: Caixa de diálogo novo modelo
+    url: "/help/reference-new-template-dialog-box.html"
+  - title: Caixa de diálogo Editar modelo
+    url: "/help/reference-edit-template-dialog-box.html"
+  - title: Caixa de diálogo modelo clone
+    url: "/help/reference-clone-template-dialog-box.html"
+- title: Janela esquemas
+  url: "/help/reference-schemes-window.html"
+- title: Janela do dicionário
+  url: "/help/reference-dictionary-window.html"
+  entries:
+  - title: Nova caixa de diálogo de entrada de dicionário
+    url: "/help/reference-new-dictionary-entry-dialog-box.html"
+  - title: Caixa de diálogo Editar entrada do Dicionário
+    url: "/help/reference-edit-dictionary-entry-dialog-box.html"
+  - title: Caixa de diálogo de entrada do Dicionário clone
+    url: "/help/reference-clone-dictionary-entry-dialog-box.html"
+- title: Janela tipos de origem de dados
+  url: "/help/reference-data-source-types-window.html"
+- title: Janela tipos de sistema remoto
+  url: "/help/reference-remote-system-types-window.html"
+  entries:
+  - title: Caixa de diálogo novo tipo de sistema remoto
+    url: "/help/reference-new-remote-system-type-dialog-box.html"
+  - title: Caixa de diálogo Edit Remote System Type (Editar tipo de sistema remoto)
+    url: "/help/reference-edit-remote-system-type-dialog-box.html"
+- title: Janela consultas de cache
+  url: "/help/reference-cache-queries-window.html"
+  entries:
+  - title: Caixa de diálogo Adicionar consulta de cache
+    url: "/help/reference-add-cache-query-dialog-box.html"
+  - title: Caixa de diálogo Editar consulta de cache
+    url: "/help/reference-edit-cache-query-dialog-box.html"
+  - title: Caixa de diálogo consulta de cache clone
+    url: "/help/reference-clone-cache-query-dialog-box.html"
+- title: Janela de pacotes
+  url: "/help/reference-packs-window.html"
+  entries:
+  - title: Caixa de diálogo New Pack (novo pacote)
+    url: "/help/reference-new-pack-dialog-box.html"
+  - title: Caixa de diálogo Edit Pack (Editar pacote)
+    url: "/help/reference-edit-pack-dialog-box.html"
+- title: Janela categorias
+  url: "/help/reference-categories-window.html"
+  entries:
+  - title: Caixa de diálogo Nova Categoria
+    url: "/help/reference-new-category-dialog-box.html"
+  - title: Caixa de diálogo Editar categoria
+    url: "/help/reference-edit-category-dialog-box.html"
+  - title: Caixa de diálogo Categoria clone
+    url: "/help/reference-clone-category-dialog-box.html"
+- title: Janela do armazenamento de automação de storage
+  url: "/help/reference-wfa-store-window.html"

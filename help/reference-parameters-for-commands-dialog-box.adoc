@@ -1,0 +1,109 @@
+---
+permalink: help/reference-parameters-for-commands-dialog-box.html 
+sidebar: sidebar 
+keywords: specify, parameters, settings, execution, commands, through, parameters, dialog box 
+summary: Você pode especificar parâmetros e outras configurações para a execução de comandos através da caixa de diálogo parâmetros para comandos. 
+---
+= Parâmetros para a caixa de diálogo comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode especificar parâmetros e outras configurações para a execução de comandos através da caixa de diálogo parâmetros para comandos.
+
+A caixa de diálogo exibe uma ou mais guias de objeto de dicionário e as seguintes guias:
+
+* Outros parâmetros
+* Avançado
+
+
+
+
+== Guias <Dictionary objects>
+
+* *Definir <dictionary object>*
++
+Permite especificar os parâmetros de comando que são mapeados para o objeto dicionário especificando atributos, usando um objeto definido anteriormente ou procurando um objeto existente.
+
++
+** *preenchendo atributos*
++
+Permite inserir atributos para essa variável. Você pode usar a caixa de diálogo seleção de recursos para campos marcados com image:../media/resource_selection_icon_wfa.gif[""]. Opcionalmente, você pode usar um modelo que inclua valores predefinidos para determinados atributos do objeto. Você pode exibir e usar atributos adicionais desmarcando a caixa de seleção *Mostrar somente atributos usados pelo <dictionary object>*. A caixa ao lado de *define <dictionary object>* exibe o nome padrão da variável selecionada. Você pode editar o nome da variável. Os atributos obrigatórios são marcados com um asterisco (*) e uma borda vermelha para a caixa.
+
+** *usando um <dictionary object> previamente definido*
++
+Permite selecionar uma variável previamente definida. Você pode selecionar o objeto de dicionário definido anteriormente na caixa ao lado de *Definir <dictionary object>*.
+
+** *procurando por um <dictionary object> existente*
++
+Permite definir uma variável pesquisando um objeto de dicionário existente. Você pode especificar os critérios de pesquisa para o objeto dicionário. Você pode especificar uma das seguintes ações se o objeto dicionário for encontrado:
+
++
+*** Abortar fluxo de trabalho
+*** Desative o comando
+*** Preencha os atributos para o <dictionary object> e execute o comando
++
+
+NOTE: Essa opção é semelhante à opção *preenchendo atributos*.
+
+
+
+
+
+
+
+
+
+== Outros parâmetros
+
+Permite especificar os parâmetros de comando que não são mapeados para qualquer objeto de dicionário para a execução do comando.
+
+
+
+== Avançado
+
+Permite especificar condições para a execução do comando e fornecer uma descrição. Você também pode configurar o fluxo de trabalho para que a execução do fluxo de trabalho continue mesmo que um ou mais comandos no fluxo de trabalho tenham falhado.
+
+* *Execute este comando*
++
+** *Sempre*
++
+Executa o comando incondicionalmente.
+
+** *Se a seguinte variável foi encontrada*
++
+Permite executar um comando somente quando a variável especificada é encontrada. Você pode especificar a variável na caixa adjacente.
+
+** *Se a variável a seguir não foi encontrada*
++
+Permite executar um comando somente quando a variável especificada não for encontrada. Você pode especificar a variável na caixa adjacente.
+
+** *Se a seguinte expressão for VERDADEIRA*
++
+Permite que você execute um comando somente quando a expressão MVFLEX Expression Language (MVEL) especificada for "'true'". Você pode especificar a expressão na caixa adjacente.
+
+
+
+* *Descrição*
++
+Permite-lhe introduzir uma descrição para o comando.
+
+* *Se a execução falhar*
++
+** * Cancelar execução do fluxo de trabalho*
++
+Permite terminar a execução do fluxo de trabalho.
+
+** *Continue a execução a partir da próxima etapa*
++
+Permite-lhe continuar a execução do fluxo de trabalho a partir da próxima etapa.
+
+** *Continue a execução a partir da próxima linha*
++
+Permite-lhe continuar a execução do fluxo de trabalho a partir da próxima linha.
+
+
+
+

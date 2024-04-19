@@ -1,0 +1,64 @@
+---
+permalink: workflows/reference-guidelines-for-indentation.html 
+sidebar: sidebar 
+keywords: aware, guidelines, indentation, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'Você deve estar ciente das diretrizes para indentação ao escrever um script PowerShell ou Perl para OnCommand Workflow Automation (WFA).' 
+---
+= Diretrizes para indentação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve estar ciente das diretrizes para indentação ao escrever um script PowerShell ou Perl para OnCommand Workflow Automation (WFA).
+
+[cols="2*"]
+|===
+| Diretrizes | Exemplo 
+
+
+ a| 
+Um separador é igual a quatro espaços vazios.
+ a| 
+
+
+
+ a| 
+Use abas e chaves para mostrar o início e o fim de um bloco.
+ a| 
+Script do PowerShell
+
+[listing]
+----
+if
+($pair.length-ne 2)
+{
+throw "Got wrong input data"
+}
+----
+Script Perl
+
+[listing]
+----
+if
+(defined $MaxDirectorySize)
+{
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+}
+----
+
+
+ a| 
+Adicione linhas em branco entre conjuntos de operações ou blocos de código.
+ a| 
+[listing]
+----
+$options=$option.trim();
+$pair=$option.split(" ");
+Get-WFAlogger -Info -messages $("split options: "+
+$Pair)
+----
+|===

@@ -1,0 +1,89 @@
+---
+permalink: help/task-configure-a-database-user-by-running-ocsetup-on-linux.html 
+sidebar: sidebar 
+keywords: run, ocstep, datafabric, manager, server, configure, read-only, access, oncommand, workflow, automation 
+summary: Você pode executar o arquivo ocsetup no servidor DataFabric Manager 5.x para configurar o acesso somente leitura do banco de dados DataFabric Manager 5.x ao OnCommand Workflow Automation. 
+---
+= Configure um usuário de banco de dados executando o ocsetup no Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode executar o `ocsetup` arquivo no servidor DataFabric Manager 5.x para configurar o acesso somente leitura do banco de dados DataFabric Manager 5.x para o OnCommand Workflow Automation.
+
+.Passos
+. Faça o download do `wfa_ocsetup.sh` arquivo para seu diretório inicial no servidor DataFabric Manager 5.x usando o seguinte comando no terminal:
++
+`+wget https://WFA_Server_IP/download/wfa_ocsetup.sh+`
+
++
+_WFA_Server_IP_ é o endereço IP (endereço IPv4 ou IPv6) do seu SERVIDOR WFA.
+
++
+Se você tiver especificado uma porta não padrão para O WFA, você deve incluir o número da porta da seguinte forma:
+
++
+`+wget https://wfa_server_ip:port/download/wfa_ocsetup.sh+`
+
++
+_Port_ é o número da porta TCP que você usou para o servidor WFA durante a instalação.
+
++
+Se você estiver especificando um endereço IPv6, você deve incluí-lo com colchetes.
+
+. Use o seguinte comando no terminal para alterar o `wfa_ocsetup.sh` arquivo para um executável:
++
+ `chmod +x wfa_ocsetup.sh`
+. Execute o script inserindo o seguinte no terminal:
++
+`./wfa_ocsetup.sh OpenJDK_path`
+
++
+_OpenJDK_PATH_ é o caminho para o OpenJDK.
+
++
+Exemplo
+
++
+`/opt/NTAPdfm/java`
+
++
+A seguinte saída é exibida no terminal, indicando uma configuração bem-sucedida:
+
++
+[listing]
+----
+Verifying archive integrity... All good.
+Uncompressing WFA OnCommand Setup.....
+*** Welcome to OnCommand Setup Utility for Linux ***
+    <Help information>
+*** Please override the default credentials below ***
+Override DB Username [wfa] :
+----
+. Introduza um nome de utilizador e uma palavra-passe para substituir as credenciais predefinidas.
++
+Uma nova conta de usuário de banco de dados é criada com acesso ao banco de dados DataFabric Manager 5.x.
+
++
+
+NOTE: Se você não criar uma conta de usuário, as credenciais padrão serão usadas. Você deve criar uma conta de usuário para fins de segurança.
+
++
+A seguinte saída é exibida no terminal, indicando uma configuração bem-sucedida:
+
++
+[listing]
+----
+***** Start of response from the database *****
+>>> Connecting to database
+<<< Connected
+*** Dropped existing 'wfa' user
+=== Created user 'username'
+>>> Granting access
+<<< Granted access
+***** End of response from the database *****
+***** End of Setup *****
+----
+

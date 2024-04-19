@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-understanding-workflow-automation-designer.html 
+sidebar: sidebar 
+keywords: create, workflows, automation, designer, use, building blocks, finders, filters, commands, understanding, important, before, start 
+summary: 'Você cria fluxos de trabalho no designer do Workflow Automation (WFA) usando os componentes básicos, como finders, filtros e comandos. Entender os componentes básicos e o processo de criação de fluxo de trabalho é importante antes de começar a criar seus fluxos de trabalho.' 
+---
+= Entendendo o designer do Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você cria fluxos de trabalho no designer do Workflow Automation (WFA) usando os componentes básicos, como finders, filtros e comandos. Entender os componentes básicos e o processo de criação de fluxo de trabalho é importante antes de começar a criar seus fluxos de trabalho.

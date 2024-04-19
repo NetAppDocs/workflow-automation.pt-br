@@ -1,0 +1,58 @@
+---
+permalink: help/reference-edit-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, cache, query, dialog box, enable, associate, dictionary, entry 
+summary: A caixa de diálogo Editar consulta de cache permite editar uma consulta de cache associada a uma entrada de dicionário. 
+---
+= Caixa de diálogo Editar consulta de cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Editar consulta de cache permite editar uma consulta de cache associada a uma entrada de dicionário.
+
+* *Entrada de dicionário*
++
+Especifica uma entrada de dicionário associada à consulta de cache.
+
+* *Versão da entidade*
++
+Permite que você insira o número da versão para a consulta de cache em `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* * Tipos de fonte de dados*
++
+Especifica o tipo de fonte de dados associado à consulta de cache.
+
+
+
+
+
+== Estrutura da tabela
+
+Exibe os atributos e a sintaxe SQL associada à entrada do dicionário.
+
+* *Consulta de seleção SQL*
++
+Permite editar a consulta SQL associada à entrada do dicionário e ao tipo de provedor de dados selecionado.
+
+
+
+
+
+== Botões de comando
+
+* *Teste*
++
+Permite testar a consulta SQL inserida no campo *SQL SELECT query*.
+
+* *Guardar*
++
+Salva a consulta de cache e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

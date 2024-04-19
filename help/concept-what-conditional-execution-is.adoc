@@ -1,0 +1,38 @@
+---
+permalink: help/concept-what-conditional-execution-is.html 
+sidebar: sidebar 
+keywords: condition, execution, help, design, workflow, commands, specified, conditions 
+summary: A execução condicional ajuda você a projetar fluxos de trabalho que podem executar comandos quando condições especificadas são atendidas. 
+---
+= Qual é a execução condicional
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A execução condicional ajuda você a projetar fluxos de trabalho que podem executar comandos quando condições especificadas são atendidas.
+
+A execução de comandos em um fluxo de trabalho pode ser dinâmica. Você pode especificar uma condição para a execução de cada comando ou uma linha de comandos em seu fluxo de trabalho. Por exemplo, você pode querer que o comando ""Adicionar volume ao conjunto de dados"" seja executado somente quando um conjunto de dados específico for encontrado e você não quiser que o fluxo de trabalho falhe se o conjunto de dados não for encontrado. Nesse caso, você pode habilitar o comando "'Adicionar volume ao conjunto de dados" para pesquisar um conjunto de dados específico e, se ele não for encontrado, você pode desativar o comando no fluxo de trabalho.
+
+Opções para execução condicional de comandos estão disponíveis na `Dictionary object` guia e na guia Avançado da caixa de diálogo parâmetros para `commands`.
+
+Você pode cancelar um fluxo de trabalho ou desativar um comando específico no fluxo de trabalho. Além disso, você pode definir um comando para ser executado usando uma das seguintes opções:
+
+* Sem qualquer condição
+* Quando as variáveis que você especificou são encontradas
+* Quando as variáveis que você especificou não são encontradas
+* Quando a expressão que você especificou é verdadeira
+
+
+Você também pode definir um comando para esperar por um intervalo de tempo específico.
+
+
+
+== Exemplos de execução condicional em fluxos de trabalho predefinidos
+
+Você pode abrir os detalhes do comando dos seguintes fluxos de trabalho predefinidos no Designer para entender como a execução condicional de comandos é usada:
+
+* Crie um volume Data ONTAP básico em cluster
+* Criar um volume de NFS Data ONTAP em cluster
+

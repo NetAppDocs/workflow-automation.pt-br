@@ -1,0 +1,44 @@
+---
+permalink: help/reference-considerations-of-importing-wfa-content.html 
+sidebar: sidebar 
+keywords: certain, consideration, import, user-created, content, exported, oncommand, workflow, automation, installation, download, storage, community 
+summary: 'Você deve estar ciente de certas considerações ao importar conteúdo criado pelo usuário, conteúdo que é exportado de outra instalação do OnCommand Workflow Automation (WFA) ou conteúdo baixado do repositório de automação de storage ou da COMUNIDADE WFA.' 
+---
+= Considerações ao importar conteúdo do OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve estar ciente de certas considerações ao importar conteúdo criado pelo usuário, conteúdo que é exportado de outra instalação do OnCommand Workflow Automation (WFA) ou conteúdo baixado do repositório de automação de storage ou da COMUNIDADE WFA.
+
+* O conteúdo DO WFA é salvo como um `.dar` arquivo e pode incluir todo o conteúdo criado pelo usuário de outro sistema ou itens específicos, como fluxos de trabalho, localizadores, comandos e termos de dicionário.
+* Quando uma categoria existente é importada de um `.dar` arquivo, o conteúdo importado é mesclado com o conteúdo existente na categoria.
++
+Por exemplo, considere que existem dois fluxos de trabalho WF1 e WF2 na Categoria A no servidor WFA. Se os fluxos de trabalho WF3 e WF4 na Categoria A forem importados para o servidor WFA, a categoria A conterá fluxos de trabalho WF1, WF2, WF3 e WF4 após a importação.
+
+* Se o `.dar` arquivo contiver entradas de dicionário, as tabelas de cache correspondentes às entradas do dicionário serão atualizadas automaticamente.
++
+Se as tabelas de cache não forem atualizadas automaticamente, uma mensagem de erro será registrada no `wfa.log` arquivo.
+
+* Ao importar um `.dar` arquivo que tem uma dependência em um pacote que não está presente no servidor WFA, O WFA tenta identificar se todas as dependências nas entidades são atendidas.
++
+** Se uma ou mais entidades estiverem faltando ou se uma versão inferior de uma entidade for encontrada, a importação falhará e uma mensagem de erro será exibida.
++
+A mensagem de erro fornece detalhes dos pacotes que devem ser instalados para atender às dependências.
+
+** Se for encontrada uma versão superior de uma entidade ou se a certificação tiver sido alterada, é apresentada uma caixa de diálogo genérica sobre a incompatibilidade de versão e a importação é concluída.
++
+Os detalhes de incompatibilidade de versão são registrados em um `wfa.log` arquivo.
+
+
+
+* Perguntas e solicitações de suporte para o seguinte devem ser direcionadas para a COMUNIDADE WFA:
++
+** Qualquer conteúdo baixado da comunidade WFA
+** Conteúdo WFA personalizado que você criou
+** Conteúdo WFA que você modificou
+
+
+

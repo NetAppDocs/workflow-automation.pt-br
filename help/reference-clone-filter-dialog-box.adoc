@@ -1,0 +1,84 @@
+---
+permalink: help/reference-clone-filter-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, filter, dialog box, enable, copy, edit 
+summary: A caixa de diálogo filtro de clones permite copiar um filtro e editar o filtro. 
+---
+= Caixa de diálogo filtro clone
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo filtro de clones permite copiar um filtro e editar o filtro.
+
+* Separador Propriedades
+* Guia consulta
+
+
+
+
+== Separador Propriedades
+
+A guia *Propriedades* permite editar o nome do filtro, selecionar um objeto de dicionário e editar a descrição do filtro.
+
+* *Nome*
++
+Permite editar o nome do filtro. O nome do filtro que você selecionou para clonar é usado como o nome do clone e anexado com _copy por padrão.
+
+* *Tipo de dicionário*
++
+Permite selecionar um objeto de dicionário na lista.
+
+* *Versão da entidade*
++
+Permite que você insira o número da versão do filtro em `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Descrição*
++
+Permite editar a descrição do filtro.
+
+
+
+
+
+== Guia consulta
+
+Permite editar a consulta SQL, o rótulo e a descrição dos atributos.
+
+* *Consulta SQL*
++
+Permite editar a consulta SQL do filtro.
+
+* *Tabela de parâmetros de entrada*
++
+Exibe a lista de parâmetros da consulta SQL que você inseriu que exigem a entrada do usuário quando o filtro é usado. Você pode clicar na coluna *Label* ou *Description* de um parâmetro para editar o rótulo ou a descrição.
+
+* *Tabela de atributos retornados*
++
+Exibe a lista de atributos retornados da consulta SQL.
+
+
+
+
+
+== Botões de comando
+
+* *Teste*
++
+Permite testar o filtro.
+
+* *Atualizar*
++
+Preenche a tabela *parâmetros de entrada* e a tabela *atributos retornados* com valores alterados, se houver.
+
+* *Guardar*
++
+Salva o filtro e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Não salva o filtro e fecha a caixa de diálogo.
+
+

@@ -1,0 +1,152 @@
+---
+permalink: workflows/reference-guidelines-for-commands.html 
+sidebar: sidebar 
+keywords: must, aware, guidelines, create, commands, oncommand, workflow, automation 
+summary: 'Você deve estar ciente das diretrizes para criar comandos no OnCommand Workflow Automation (WFA).' 
+---
+= Diretrizes para comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve estar ciente das diretrizes para criar comandos no OnCommand Workflow Automation (WFA).
+
+[cols="2*"]
+|===
+| Diretrizes | Exemplo 
+
+
+ a| 
+Use um nome facilmente identificável para comandos.
+ a| 
+`Create Qtree`
+
+
+
+ a| 
+Use espaços para delimitar palavras e cada palavra deve começar com um caractere maiúsculo.
+ a| 
+`Create Volume`
+
+
+
+ a| 
+Forneça uma descrição para explicar a funcionalidade do comando, incluindo o resultado esperado dos parâmetros opcionais.
+ a| 
+Nenhum
+
+
+
+ a| 
+Por padrão, o tempo limite para comandos padrão é de 600 segundos. O tempo limite padrão é definido durante a criação do comando. Altere o valor padrão somente se o comando puder levar mais tempo para ser concluído.
+ a| 
+`Create Volume` comando
+
+
+
+ a| 
+No caso de operações de longa duração, crie dois comandos - um para invocar a operação de longa duração e outro para relatar o progresso da operação periodicamente. O primeiro comando deve ser um `Standard Execution` tipo de comando e o segundo deve ser `Wait for Condition` tipo de comando.
+ a| 
+`Create VSM` e `Wait for VSM` comandos
+
+
+
+ a| 
+Prefix os `Wait for condition` nomes de comando com "'wait'" para fácil identificação.
+ a| 
+`Wait for CM Volume Move`
+
+
+
+ a| 
+Use um intervalo de espera apropriado para os comandos "'wait for condition'". O valor especificado controla o intervalo no qual o comando de polling é executado para verificar se a operação de longa duração está concluída.
+ a| 
+60s intervalo de amostragem para o `Wait for VSM` comando
+
+
+
+ a| 
+Para os `Wait for condition` comandos, use um tempo limite apropriado com base no tempo esperado para a operação de longa duração ser concluída. O tempo esperado pode ser consideravelmente mais longo se a operação envolver transferência de dados em uma rede.
+ a| 
+Uma transferência de linha de base VSM pode levar muitos dias para ser concluída. Portanto, o tempo limite especificado é de 6 dias.
+
+|===
+
+
+== Representação de cadeia de carateres
+
+A representação de string de um comando exibe os detalhes de um comando em um design de fluxo de trabalho durante o Planejamento e a execução. Somente os parâmetros do comando podem ser usados na representação de string para um comando.
+
+[cols="2*"]
+|===
+| Diretrizes | Exemplo 
+
+
+ a| 
+Evite usar atributos que não tenham nenhum valor. Um atributo sem um valor é exibido como na.
+ a| 
+VolName 10.68.66.212[na]aggr1/testVol7
+
+
+
+ a| 
+Separe diferentes entradas na representação de string usando os seguintes delimitadores: [ ] , / :
+ a| 
+`_ArrayName[ArrayIp]_`
+
+
+
+ a| 
+Forneça rótulos significativos para cada valor na representação de cadeia de carateres.
+ a| 
+`_Volume name=VolumeName_`
+
+|===
+
+
+== Linguagem de definição de comando
+
+Os comandos podem ser escritos usando as seguintes linguagens de script suportadas:
+
+* PowerShell
+* Perl
+
+
+
+
+== Definição do parâmetro do comando
+
+Os parâmetros do comando são descritos por Nome, Descrição, tipo, um valor padrão para o parâmetro e se o parâmetro é obrigatório. O tipo de parâmetro pode ser String, Boolean, Integer, Long, Double, Enum, DateTime, Capacity, Array, Hashtable, Password ou XmlDocument. Embora os valores para a maioria dos tipos sejam intuitivos, os valores para Array e Hashtable devem estar em um formato específico, conforme descrito na tabela a seguir:
+
+[cols="2*"]
+|===
+| Diretrizes | Exemplo 
+
+
+ a| 
+Certifique-se de que o valor de um tipo de entrada Array seja uma lista de valores, separados por vírgula.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Months in which the schedule executes.")]
+[array]$CronMonths
+----
+A entrada é passada da seguinte forma: 0,3,6,9
+
+
+
+ a| 
+Certifique-se de que o valor de um tipo de entrada Hashtable seja uma lista de pares chave-valor, separados por ponto-e-vírgula.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Volume names and size (in MB)")]
+[hashtable]$VolumeNamesAndSize
+----
+A entrada é passada da seguinte forma: volume1-100; Volume2-250; Volume3-50
+
+|===

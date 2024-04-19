@@ -1,0 +1,19 @@
+---
+permalink: help/reference-log-viewer-directory-window.html 
+sidebar: sidebar 
+keywords: log, viewer, window, list, available, oncommand, workflow, automation, access, select, maintenance, click, log viewer 
+summary: A janela Visualizador de registos lista todos os registos disponíveis no OnCommand Workflow Automation. Pode aceder a esta janela selecionando Definições e, em Manutenção, clique em Visualizador de registos. 
+---
+= Janela Visualizador de registos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela Visualizador de registos lista todos os registos disponíveis no OnCommand Workflow Automation. Pode aceder a esta janela selecionando *Definições* e, em *Manutenção*, clique em *Visualizador de registos*.
+
+A janela Visualizador de logs lista os arquivos de log (em ordem alfabética) e inclui o tamanho e a data do arquivo quando cada arquivo foi gerado.
+
+
+NOTE: Este recurso não é suportado no Microsoft Windows Server 2003.

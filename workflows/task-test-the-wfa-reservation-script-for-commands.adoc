@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-test-the-wfa-reservation-script-for-commands.html 
+sidebar: sidebar 
+keywords: test, reservation, scripts, written, oncommand, workflow, automation, commands, playground, database, ensure, affect, table 
+summary: 'Você pode testar os scripts de reserva que você escreveu para comandos OnCommand Workflow Automation (WFA) no banco de dados playground para garantir que os scripts estejam funcionando bem e não afetando as tabelas de banco de dados DO WFA.' 
+---
+= Teste o script de reserva para comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode testar os scripts de reserva que você escreveu para comandos OnCommand Workflow Automation (WFA) no banco de dados playground para garantir que os scripts estejam funcionando bem e não afetando as tabelas de banco de dados DO WFA.
+
+.Sobre esta tarefa
+O caminho de instalação padrão DO WFA é usado neste procedimento. Se você alterou o local padrão durante a instalação, você deve usar o caminho de instalação alterado DO WFA.
+
+.Passos
+. Abra um prompt de comando no servidor WFA e mude os diretórios para o seguinte local: `c:\Program Files\NetApp\WFA\mysql\bin`
+. Crie um dump do banco de dados WFA usando o seguinte comando: `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table database_tables> dump_location`
++
+Comando para criar um despejo das tabelas da base de dados cm_storage: `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table cm_storage> c:\tmp\cmSt2.sql`
+
+. Restaure o despejo que você criou no banco de dados DO playground DO WFA usando o seguinte comando: `mysql -u wfa -pWfa123 playground < dump_location`
++
+`mysql -u wfa -pWfa123 playground < c:\tmp\cmSt2.sql`
+
+. Crie ou edite um comando WFA e escreva o script de reserva na guia *Reservation*.
++
+Você deve garantir que os scripts de reserva e verificação usam apenas o banco de dados playground.
+
+. Crie ou edite um fluxo de trabalho, inclua o comando no fluxo de trabalho e execute o fluxo de trabalho.
+. Verifique se os scripts de reserva e verificação estão funcionando conforme esperado.
++
+O processo de aquisição da fonte de dados WFA não atualiza a base de dados do playground. Você deve remover as reservas criadas pelo comando manualmente.
+
+

@@ -1,0 +1,133 @@
+---
+permalink: workflows/concept-how-you-map-command-parameters.html 
+sidebar: sidebar 
+keywords: parameter, workflow, automation, commands, mapped, specific, attributes, dictionary, entry, references, certain, rules, aware, map, command, create, edit 
+summary: 'Os parâmetros nos comandos do Workflow Automation (WFA) são mapeados para atributos específicos e referências de entrada de dicionário com base em certas regras. Você deve estar ciente das regras para mapear parâmetros de comando ao criar ou editar um comando WFA.' 
+---
+= Como você mapeia parâmetros de comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os parâmetros nos comandos do Workflow Automation (WFA) são mapeados para atributos específicos e referências de entrada de dicionário com base em certas regras. Você deve estar ciente das regras para mapear parâmetros de comando ao criar ou editar um comando WFA.
+
+O mapeamento de parâmetros de comando define como os detalhes do comando são definidos nos fluxos de trabalho. Os parâmetros de comando mapeados de um comando são exibidos em abas quando você está especificando os detalhes do comando para comandos em fluxos de trabalho. As guias são nomeadas com base no nome do grupo especificado na coluna Nome do objeto da guia Mapeamento de parâmetros. Os parâmetros que não são mapeados são exibidos na guia outros parâmetros quando você está especificando os detalhes do comando em fluxos de trabalho.
+
+As regras para mapeamento de parâmetros de comando são aplicáveis com base na categoria de comando e como os comandos são representados no editor de fluxo de trabalho.
+
+A seguir estão as categorias de comando:
+
+* Comandos que criam objetos
+* Comandos que atualizam objetos
+* Comandos que removem objetos
+* Comandos que lidam com objetos pai e filho opcionais
+* Comandos que atualizam associações entre objetos
+
+
+As regras estão listadas abaixo para cada categoria:
+
+
+
+== Todas as categorias de comandos
+
+Ao mapear um parâmetro de comando, você deve usar o caminho natural com base em como o comando é usado em fluxos de trabalho.
+
+Os exemplos a seguir mostram como você pode definir um caminho natural:
+
+* Para o parâmetro ArrayIP, dependendo do comando, você deve usar o atributo aggregate.array.ip da entrada do dicionário volume e não o atributo array.ip.
++
+Isso é importante quando um fluxo de trabalho cria um volume e, em seguida, executa uma etapa adicional com o volume criado consultando-o. Os seguintes exemplos são semelhantes:
+
++
+** Volume.Aggregate.array.ip da entrada do dicionário Qtree
+** Volume.Aggregate.array.ip da entrada do dicionário LUN
+
+
+* Para Cluster usado em comandos, você deve usar um dos seguintes:
++
+** SVM.cluster.primary_address da entrada do dicionário volume
+** Volume.vserver.cluster.primary_address da entrada do dicionário Qtree
+
+
+
+
+
+
+== Comandos que criam objetos
+
+Esta categoria de comandos é usada para um dos seguintes:
+
+* Encontrando um objeto pai e definindo novos objetos
+* Procurar um objeto e criar o objeto se o objeto não existir
+
+
+Você deve usar as seguintes regras de mapeamento de parâmetros para esta categoria de comandos:
+
+* Mapeie os parâmetros relevantes do objeto que é criado para a entrada do dicionário do objeto.
+* Mapeie o objeto pai através das referências da entrada do dicionário criada.
+* Certifique-se de que o atributo relevante esteja presente na entrada do dicionário ao adicionar um novo parâmetro.
++
+A seguir estão os cenários de exceção para esta regra:
+
++
+** Alguns objetos que são criados não têm uma entrada de dicionário correspondente e apenas o objeto pai é mapeado para a entrada relevante do dicionário pai - por exemplo, o comando *Create VIF* - no qual apenas uma matriz pode ser mapeada para a entrada do dicionário de matriz.
+** O mapeamento de parâmetros não é necessário
++
+Por exemplo, o parâmetro ExecutionTimeout no comando *criar ou redimensionar agregado* é um parâmetro não mapeado.
+
+
+
+
+
+Os seguintes comandos certificados são exemplos para esta categoria:
+
+* Criar volume
+* Criar LUN
+
+
+
+
+== Comandos que atualizam objetos
+
+Esta categoria de comandos é usada para encontrar um objeto e atualizar os atributos.
+
+Você deve usar as seguintes regras de mapeamento de parâmetros para esta categoria de comandos:
+
+* Mapeie os objetos que são atualizados para a entrada do dicionário.
+* Não mapeie os parâmetros que são atualizados para o objeto.
++
+Por exemplo, no comando *Set volume State*, o parâmetro volume é mapeado, mas o novo Estado não é mapeado.
+
+
+
+
+
+== Comandos que removem objetos
+
+Esta categoria de comandos é usada para encontrar um objeto e excluí-lo.
+
+Você deve mapear o objeto que é excluído pelo comando para sua entrada de dicionário. Por exemplo, no comando *Remover volume*, o volume a ser excluído é mapeado para os atributos e referências relevantes da entrada do dicionário volume.
+
+
+
+== Comandos que lidam com objetos pai e filho opcionais
+
+Você deve usar as seguintes regras de mapeamento de parâmetros para esta categoria de comandos:
+
+* Não mapeie qualquer parâmetro obrigatório de um comando como referência a partir de um parâmetro opcional do comando.
++
+Essa regra é mais relevante quando um comando lida com objetos filho opcionais de um objeto pai específico. Nesse caso, o objeto filho e pai devem ser mapeados explicitamente. Por exemplo, no comando *Stop Deduplication jobs*, o comando pára uma tarefa de deduplicação em execução em um volume específico quando especificado junto com Array ou em todos os volumes da matriz dada. Nesse caso, o parâmetro array deve ser mapeado diretamente para a entrada do dicionário array e não para volume.Array porque o volume é um parâmetro opcional neste comando.
+
+* Se existir uma relação pai e filho entre entradas de dicionário no nível lógico, mas não entre as instâncias reais em um comando específico, esses objetos devem ser mapeados separadamente.
++
+Por exemplo, no comando *mover volume*, volume é movido de seu agregado pai atual para um novo agregado de destino. Portanto, os parâmetros de volume são mapeados para uma entrada do dicionário de volume e os parâmetros agregados de destino são mapeados separadamente para a entrada do dicionário agregado, mas não como volume.aggregate.name.
+
+
+
+
+
+== Comandos que atualizam associações entre objetos
+
+Para esta categoria de comandos, você deve mapear tanto a associação quanto os objetos para entradas relevantes do dicionário. Por exemplo, no comando Adicionar volume ao vFiler, os parâmetros volume e vFiler são mapeados para os atributos relevantes das entradas do dicionário volume e do vFiler.

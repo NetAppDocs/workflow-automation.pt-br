@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-create-a-dictionary-entry.html 
+sidebar: sidebar 
+keywords: create, wfa, dictionary, entry, define, object, type, relationship, storage, environment 
+summary: Você pode criar uma entrada de dicionário WFA quando quiser definir um novo tipo de objeto e sua relação em seu ambiente de armazenamento. 
+---
+= Crie uma entrada de dicionário
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar uma entrada de dicionário WFA quando quiser definir um novo tipo de objeto e sua relação em seu ambiente de armazenamento.
+
+.Passos
+. Clique em *Design da fonte de dados* > *Dicionário*.
+. Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Na caixa de diálogo *Nova entrada do Dicionário*, insira os detalhes necessários nos campos *Nome do tipo de objeto* e *Descrição*.
+. Para o campo *Scheme*, execute uma das seguintes ações:
++
+** Selecione um dos esquemas disponíveis na lista.
+** Clique em *Adicionar novo esquema*, insira o *Nome do esquema* obrigatório na caixa de diálogo novo esquema e clique em *Adicionar*.
+
+
+. Clique em *Adicionar linha* e execute as seguintes etapas para descrever o atributo:
++
+.. Clique na coluna *Nome* e insira o nome do atributo.
+.. Na coluna *Type*, selecione o tipo necessário.
++
+A coluna *comprimento da cadeia* é preenchida e editável se você selecionou a cadeia de carateres como o tipo. Além disso, a coluna *values* é editável se você selecionou *enum* como o tipo.
+
+.. Marque as caixas de seleção apropriadas para o atributo nos `Natural Key, To be Cached`, e `Can be Null columns`.
++
+Se tiver selecionado a caixa de verificação *Natural Key*, não poderá selecionar a caixa de verificação *pode ser nulo*.
+
+.. Adicione os atributos necessários para o objeto dicionário.
+.. *Opcional:* Selecione a caixa de seleção *valores nas colunas de chave natural diferenciam maiúsculas de minúsculas* se você quiser que as teclas naturais sejam sensíveis a maiúsculas e minúsculas.
+
+
+. Clique em *Salvar*.
+

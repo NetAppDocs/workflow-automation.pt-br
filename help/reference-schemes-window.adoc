@@ -1,0 +1,167 @@
+---
+permalink: help/reference-schemes-window.html 
+sidebar: sidebar 
+keywords: scheme, window, display, available, scheme, enable, manage, oncommand, workflow, automation, acquire, data, relevant, environment 
+summary: 'A janela esquemas exibe os esquemas disponíveis e permite gerenciar os esquemas. A OnCommand Workflow Automation (WFA) utiliza esquemas para adquirir dados relevantes para um ambiente.' 
+---
+= Janela esquemas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela esquemas exibe os esquemas disponíveis e permite gerenciar os esquemas. A OnCommand Workflow Automation (WFA) utiliza esquemas para adquirir dados relevantes para um ambiente.
+
+Um esquema representa o modelo de dados de um sistema. O modelo de dados é uma coleção de entradas de dicionário. Você pode definir um esquema e, em seguida, definir um tipo de fonte de dados. A fonte de dados define como os dados são adquiridos e o esquema é preenchido. Por exemplo, um esquema _vc_ contém dados relevantes para o seu ambiente virtual, como máquinas virtuais, hosts e datastores.
+
+
+
+== Tabela esquemas
+
+A tabela esquemas lista as entradas de esquema disponíveis. Cada entrada é identificada como uma das seguintes:
+
+* image:../media/community_certification.gif[""] - conteúdo criado pelos usuários
+* image:../media/ps_certified_icon_wfa.gif[""] - Conteúdo desenvolvido por Serviços profissionais (PS), que está disponível apenas em instalações personalizadas feitas pela PS
+* image:../media/community_certification.gif[""] - pacotes desenvolvidos pelos usuários
+* image:../media/lock_icon_wfa.gif[""] - conteúdo criado por usuários que está bloqueado
+* image:../media/netapp_certified.gif[""] - Conteúdo certificado pela NetApp
+
+
+Você pode personalizar a exibição da tabela usando os recursos de filtragem e classificação disponíveis para cada coluna, bem como reorganizando a ordem da coluna.
+
+* image:../media/filter_icon_wfa.gif["Ícone de filtro"] ativa ou desativa a filtragem de toda a tabela. Um "x" vermelho aparece sobre o ícone se a filtragem estiver desativada.
+* Clicar duas vezes image:../media/filter_icon_wfa.gif["Ícone de filtro"]limpa e redefine as seleções de filtragem.
+* image:../media/wfa_filter_icon.gif["Ícone de filtro"] em cada cabeçalho de coluna permite filtrar com base no conteúdo das colunas. Clicar image:../media/wfa_filter_icon.gif["Ícone de filtro"] em uma coluna permite filtrar um item específico na lista suspensa ou em todos os itens disponíveis.
+* Clicar no cabeçalho da coluna alterna entre a ordem ascendente e descendente de ordenação. É possível identificar a ordem de classificação aplicada pelas setas de classificação (image:../media/wfa_sortarrow_up_icon.gif["Ícone de ordenação"] para ascendente e image:../media/wfa_sortarrow_down_icon.gif["Ícone de ordenação"]descendente).
+* Para reorganizar a localização das colunas, você pode arrastar e soltar colunas para colocá-las em qualquer ordem necessária. No entanto, você não pode ocultar ou excluir nenhuma dessas colunas.
+* Clicar na caixa de texto filtro *pesquisar* permite-lhe procurar conteúdo específico. Além disso, você pode pesquisar usando operadores suportados para o tipo de coluna aplicável, alfabético ou numérico.
+
+
+A tabela esquemas contém as seguintes colunas:
+
+* * Certificação *
++
+Indica se o esquema foi criado pelo usuário (image:../media/community_certification.gif[""] ), PS (image:../media/ps_certified_icon_wfa.gif[""] ), comunidade (image:../media/community_certification.gif[""] ), bloqueado pelo usuário (image:../media/lock_icon_wfa.gif[""] ) ou certificado pela NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nome*
++
+Exibe o nome do esquema.
+
++
+Você pode procurar um esquema inserindo seu nome na caixa de texto filtro *pesquisar*.
+
+* *Nome de exibição*
++
+Exibe o nome do esquema.
+
++
+Você pode procurar um esquema inserindo seu nome na caixa de texto filtro *pesquisar*.
+
+* *Versão da entidade*
++
+Exibe o número da versão do objeto no `major.minor.revision` formato - por exemplo, 1,0.0.
+
++
+Você pode procurar um esquema inserindo o número da versão na caixa de texto filtro *pesquisar*.
+
+* *Descrição*
++
+Apresenta a descrição do esquema.
+
++
+Você pode procurar um esquema inserindo sua descrição na caixa de texto filtro *pesquisar*.
+
+* *Tipo*
++
+Indica se o esquema é usado para adquirir dados de um sistema remoto ou diretamente de fluxos de trabalho ou comandos. Os valores possíveis são aquisição de origem de dados e outros.
+
++
+Você pode pesquisar esquemas digitando o tipo na caixa de texto filtro *Search*.
+
+* *Repor sinalizador*
++
+Indica se o esquema é reposto durante o próximo ciclo de aquisição de dados. Valores possíveis são verdadeiros e falsos.
+
+* * Atualizado em *
++
+Exibe a data e a hora em que o esquema foi atualizado pela última vez.
+
++
+Pode procurar esquemas selecionando a categoria de hora pretendida na lista pendente filtro.
+
+* *Atualizado por*
++
+Exibe o nome do usuário que atualizou o esquema.
+
++
+Você pode procurar esquemas digitando o nome de usuário na caixa de texto filtro *pesquisar*.
+
+* *Bloqueado por*
++
+Exibe o nome do usuário que bloqueou o esquema.
+
++
+Você pode procurar esquemas digitando o nome de usuário na caixa de texto filtro *pesquisar*.
+
+
+
+
+
+== Barra de ferramentas
+
+A barra de ferramentas está localizada acima do cabeçalho da coluna. Pode utilizar os ícones na barra de ferramentas para executar várias acões. Estas ações também podem ser acedidas a partir do menu de clique com o botão direito do rato na janela.
+
+* image:../media/new_wfa_icon.gif["Novo ícone"]* (Novo)*
++
+Abre a caixa de diálogo novos esquemas, que permite criar um novo esquema.
+
+* image:../media/edit_wfa_icon.gif["Ícone de edição"]* (Editar)*
++
+Abre a caixa de diálogo Scheme <SchemeName> para o esquema selecionado, que permite editar o esquema.
+
+* image:../media/lock_wfa_icon.gif["Ícone de bloqueio"]* (Bloqueio)*
++
+Abre a caixa de diálogo Bloquear o esquema de confirmação, que permite bloquear o esquema selecionado. Esta opção está ativada apenas para os esquemas que criou.
+
+* image:../media/unlock_wfa_icon.gif["Ícone de desbloqueio"]* (Desbloquear)*
++
+Abre a caixa de diálogo desbloquear o esquema de confirmação, que lhe permite desbloquear o esquema selecionado. Esta opção está ativada apenas para os esquemas bloqueados. Os administradores podem desbloquear esquemas bloqueados por outros utilizadores.
+
+* image:../media/delete_wfa_icon.gif["Eliminar ícone"]* (Apagar)*
++
+Abre a caixa de diálogo Excluir esquema de confirmação, que permite excluir os esquemas criados pelo usuário selecionados.
+
++
+
+NOTE: Não é possível eliminar um esquema WFA ou PS.
+
+* image:../media/export_wfa_icon.gif["Ícone de exportação"]* (Exportação)*
++
+Permite exportar o esquema criado pelo utilizador selecionado.
+
++
+
+NOTE: Não é possível exportar um esquema WFA ou PS.
+
+* image:../media/reset_scheme_wfa_icon.gif["Repor ícone de esquema"]* (Redefinir esquema)*
++
+Permite-lhe repor o esquema durante o próximo ciclo de aquisição de dados.
+
+* image:../media/add_to_pack.png["adicionar ao ícone de embalagem"]* (Add to Pack)*
++
+Abre a caixa de diálogo Adicionar a esquemas de Pacote, que permite adicionar o esquema e suas entidades confiáveis a um pacote, que é editável.
+
++
+
+NOTE: O recurso Adicionar ao pacote é ativado apenas para esquemas para os quais a certificação está definida como *nenhum.*
+
+* image:../media/remove_from_pack.png["remover do ícone do pacote"]* (Remover do pacote)*
++
+Abre a caixa de diálogo Remover de esquemas de pacotes para o esquema selecionado, que permite excluir ou remover o esquema do pacote.
+
++
+
+NOTE: O recurso Remover do pacote é ativado apenas para esquemas para os quais a certificação está definida como *nenhum.*
+
+

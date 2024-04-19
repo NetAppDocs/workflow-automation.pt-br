@@ -1,0 +1,79 @@
+---
+permalink: workflows/task-define-filter-rules.html 
+sidebar: sidebar 
+keywords: define, set, rules, filtering, dictionary, entry, resources, units, aggregates, virtual, machines, customize, existing, workflows, create 
+summary: Você pode definir um conjunto de regras para filtrar recursos de entrada de dicionário, como unidades do vFiler, agregados e máquinas virtuais. Você pode personalizar as regras para fluxos de trabalho existentes e novos fluxos de trabalho enquanto as cria. 
+---
+= Definir regras de filtro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode definir um conjunto de regras para filtrar recursos de entrada de dicionário, como unidades do vFiler, agregados e máquinas virtuais. Você pode personalizar as regras para fluxos de trabalho existentes e novos fluxos de trabalho enquanto as cria.
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador.
+. Clique em *Workflow Design* > *fluxos de trabalho*.
+. Na janela *fluxos de trabalho*, clique duas vezes no fluxo de trabalho que deseja modificar.
++
+É apresentada a janela Workflow <workflow name> (fluxo de trabalho).
+
+. Defina um conjunto de regras escolhendo uma das seguintes opções:
++
+[cols="2*"]
+|===
+| Se você quiser... | Então faça isso... 
+
+
+ a| 
+Procure recursos quando os comandos em uma linha forem repetidos
+ a| 
+.. Clique em um número de linha e selecione *Repetir linha*.
+.. Na caixa de diálogo repetições de linha, selecione a opção *para cada recurso no grupo* na lista suspensa *repetições*.
+.. Selecione um tipo de recurso.
+.. Clique no link *Digite os critérios de pesquisa*.
+
+
+
+
+ a| 
+Procure recursos necessários em entradas de comando
+ a| 
+.. Clique image:../media/add_object_wfa_icon.gif["Ícone para adicionar um comando"]em .
+.. Na caixa de diálogo parâmetros para <command_name>, selecione a opção *procurando por uma opção <dictionary object>* existente na lista suspensa *Definir <dictionary object>*.
+.. Clique no link *Digite os critérios de pesquisa*.
+
+
+
+
+ a| 
+PESQUISE recursos referenciados por variáveis em entradas de comando
+ a| 
+.. Clique image:../media/add_object_wfa_icon.gif["Ícone para adicionar um comando"]em .
+.. Na caixa de diálogo parâmetros para <command_name>, selecione a opção *preenchendo atributos* na lista suspensa *Definir <dictionary object>*.
+.. Clique image:../media/ellipses.gif[""] em para obter um campo marcado com image:../media/resource_selection_icon_wfa.gif["Ícone para objetos de referência"].
+
+
+
+
+ a| 
+Entradas de comando Name do tipo String
+ a| 
+.. Clique image:../media/add_object_wfa_icon.gif["Ícone para adicionar um comando"]em .
+.. Na caixa de diálogo parâmetros para <command_name>, selecione a opção *preenchendo atributos* na lista suspensa *Definir <dictionary object>*.
+.. Clique image:../media/ellipses.gif["Ícone para elipses"] para obter um campo de cadeia de carateres.
+
+
+|===
+. Na caixa de diálogo *seleção de recursos*, marque a caixa de seleção *Definir regras de filtro*.
++
+Se você tiver selecionado uma das opções na caixa de diálogo Finder drop-down of Resource Selection (seleção de recursos), a caixa de seleção Definir regras de filtro será desativada. O valor para o localizador deve ser definido como ""nenhum"" para que as regras de filtro definam sejam ativadas.
+
+. Insira o atributo, operador e valor da regra.
++
+O valor deve ser fornecido dentro de aspas simples. As regras de filtro podem conter um ou mais grupos.
+
+. Clique em *OK*.
+

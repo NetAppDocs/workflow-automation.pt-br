@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-oncommand-workflow-automation-deployment-architecture.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, deployment, architecture 
+summary: 'O servidor OnCommand Workflow Automation (WFA) é instalado para orquestrar as operações de fluxo de trabalho em vários datacenters.' 
+---
+= Arquitetura de implantação do OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O servidor OnCommand Workflow Automation (WFA) é instalado para orquestrar as operações de fluxo de trabalho em vários datacenters.
+
+Você pode gerenciar centralmente seu ambiente de automação conetando seu SERVIDOR WFA a várias implantações do Active IQ Unified Manager e VMware vCenters.
+
+A ilustração a seguir mostra um exemplo de implantação:
+
+image::../media/wfa_arch_isg.gif[arco de wfa isg]

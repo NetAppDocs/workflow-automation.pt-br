@@ -1,0 +1,30 @@
+---
+permalink: rhel-install/task-configure-mail.html 
+sidebar: sidebar 
+keywords: configure, email, notifications 
+summary: 'Você pode configurar o OnCommand Workflow Automation (WFA) para enviar notificações por e-mail sobre operações de fluxo de trabalho, por exemplo, fluxo de trabalho iniciado ou falha no fluxo de trabalho.' 
+---
+= Configurar notificações por e-mail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o OnCommand Workflow Automation (WFA) para enviar notificações por e-mail sobre operações de fluxo de trabalho - por exemplo, fluxo de trabalho iniciado ou falha no fluxo de trabalho.
+
+Você deve ter configurado um host de e-mail em seu ambiente.
+
+.Passos
+. Faça login NO WFA através de um navegador da Web como administrador.
+. Clique em *Configurações* e, em *Configuração*, clique em *Mail*.
+. Introduza as informações necessárias nos campos.
+. Teste as configurações de e-mail executando as seguintes etapas:
++
+.. Clique em *Enviar e-mail de teste*.
+.. Na caixa de diálogo testar conexão, digite o endereço de e-mail para o qual você deseja enviar o e-mail.
+.. Clique em *Teste*.
+
+
+. Clique em *Salvar*.
+

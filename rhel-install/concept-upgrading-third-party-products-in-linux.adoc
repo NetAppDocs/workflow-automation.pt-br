@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/concept-upgrading-third-party-products-in-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, third-party, products 
+summary: 'Você pode atualizar produtos de terceiros no Workflow Automation (WFA), como OpenJDK e MySQL no Linux.' 
+---
+= Atualização de produtos de terceiros
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar produtos de terceiros no Workflow Automation (WFA), como OpenJDK e MySQL no Linux.

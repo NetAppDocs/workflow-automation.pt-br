@@ -1,0 +1,50 @@
+---
+permalink: help/reference-edit-template-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, template, dialog box, enable 
+summary: A caixa de diálogo Editar modelo permite editar um modelo. 
+---
+= Caixa de diálogo Editar modelo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Editar modelo permite editar um modelo.
+
+* *Nome*
++
+Permite editar o nome do modelo.
+
+* *Tipo*
++
+Permite selecionar um objeto de dicionário na lista.
+
+* *Versão da entidade*
++
+Permite-lhe introduzir o número da versão do modelo no `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Descrição*
++
+Permite editar a descrição do modelo.
+
+* *Atributos*
++
+Exibe os atributos para o objeto do dicionário selecionado e permite que você insira um valor para cada atributo, como enum e função.
+
+
+
+
+
+== Botões de comando
+
+* *Guardar*
++
+Salva as alterações e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Não salva as alterações, se houver, e fecha a caixa de diálogo.
+
+

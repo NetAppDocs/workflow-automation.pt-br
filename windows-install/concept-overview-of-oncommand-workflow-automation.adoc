@@ -1,0 +1,52 @@
+---
+permalink: windows-install/concept-overview-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: overview, oncommand, workflow, automation 
+summary: 'O OnCommand Workflow Automation (WFA) é uma solução de software que ajuda a automatizar tarefas de gerenciamento de storage, como provisionamento, migração, desativação, configurações de proteção de dados e clonagem de storage. Você pode usar O WFA para criar fluxos de trabalho para concluir tarefas que são especificadas por seus processos. O WFA suporta ONTAP e Data ONTAP operando no modo 7D.' 
+---
+= Visão geral do OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Workflow Automation (WFA) é uma solução de software que ajuda a automatizar tarefas de gerenciamento de storage, como provisionamento, migração, desativação, configurações de proteção de dados e clonagem de storage. Você pode usar O WFA para criar fluxos de trabalho para concluir tarefas que são especificadas por seus processos. O WFA suporta ONTAP e Data ONTAP operando no modo 7D.
+
+Um fluxo de trabalho é uma tarefa repetitiva e processual que consiste em etapas sequenciais, incluindo os seguintes tipos de tarefas:
+
+* Provisionamento, migração ou desativação de storage para bancos de dados ou sistemas de arquivos
+* Configuração de um novo ambiente de virtualização, incluindo switches de storage e datastores
+* Configuração do storage de uma aplicação como parte de um processo de orquestração completo
+
+
+Os arquitetos de storage podem definir fluxos de trabalho para seguir as práticas recomendadas e atender a requisitos organizacionais, como os seguintes:
+
+* Usando convenções de nomenclatura necessárias
+* Definir opções exclusivas para objetos de armazenamento
+* Selecionando recursos
+* Integração de banco de dados de gerenciamento de configuração interna (CMDB) e aplicativos de emissão de tíquetes
+
+
+
+
+== Caraterísticas DO WFA
+
+* Portal de design de fluxo de trabalho para criar fluxos de trabalho
++
+O portal de design de fluxo de trabalho inclui vários blocos de construção, como comandos, modelos, localizadores, filtros e funções, que são usados para criar fluxos de trabalho. O designer permite que você inclua recursos avançados para fluxos de trabalho, como seleção automatizada de recursos, repetição de linhas (looping) e pontos de aprovação.
+
++
+O portal de design de fluxo de trabalho também inclui componentes básicos, como entradas de dicionário, consultas de cache e tipos de fonte de dados, para armazenar dados em cache de sistemas externos.
+
+* Portal de execução para executar fluxos de trabalho, verificar o status da execução do fluxo de trabalho e acessar logs
+* Opção Administration/Settings (Administração/Definições) para tarefas como configurar O WFA, ligar a fontes de dados e configurar credenciais do utilizador
+* Interfaces de serviço da Web para invocar fluxos de trabalho de portais externos e software de orquestração de data center
+* Armazenamento Automation Store para baixar pacotes WFA. O pacote ONTAP 9.7,0 é fornecido com WFA 5,1.
+
+
+
+
+== Informações de licença WFA
+
+Nenhuma licença é necessária para usar o servidor OnCommand Workflow Automation.

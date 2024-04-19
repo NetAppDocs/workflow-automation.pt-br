@@ -1,0 +1,303 @@
+---
+permalink: workflows/reference-guidelines-for-variables.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, variables, oncommand, automation, create, command, data, source, type 
+summary: 'Você deve estar ciente das diretrizes para variáveis PowerShell e Perl no OnCommand Workflow Automation (WFA) ao criar um comando ou um tipo de fonte de dados.' 
+---
+= Diretrizes para variáveis
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve estar ciente das diretrizes para variáveis PowerShell e Perl no OnCommand Workflow Automation (WFA) ao criar um comando ou um tipo de fonte de dados.
+
+
+
+== Variáveis do PowerShell
+
+[cols="2*"]
+|===
+| Diretrizes | Exemplo 
+
+
+ a| 
+Para parâmetros de entrada de script:
+
+* Use Pascal Case.
+* Não utilize sublinhados.
+* Não utilize abreviaturas.
+
+ a| 
+`$VolumeName`
+
+`$AutoDeleteOptions`
+
+`$Size`
+
+
+
+ a| 
+Para variáveis internas de script:
+
+* Use Camel Case.
+* Não utilize sublinhados.
+* Não utilize abreviaturas.
+
+ a| 
+`$newVolume`
+
+`$qtreeName`
+
+`$time`
+
+
+
+ a| 
+Para funções:
+
+* Use Pascal Case.
+* Não utilize sublinhados.
+* Não utilize abreviaturas.
+
+ a| 
+`GetVolumeSize`
+
+
+
+ a| 
+Nomes de variáveis não são sensíveis a maiúsculas e minúsculas. No entanto, para melhorar a legibilidade, você não deve usar letras maiúsculas diferentes para o mesmo nome.
+ a| 
+`$variable` é o mesmo que `$Variable.`
+
+
+
+ a| 
+Os nomes das variáveis devem estar em inglês simples e devem estar relacionados à funcionalidade do script.
+ a| 
+Use `$name` e não `$a.`
+
+
+
+ a| 
+Declare o tipo de dados para cada variável, explicitamente.
+ a| 
+[string]nome
+
+[int]tamanho
+
+
+
+ a| 
+Não use carateres especiais (! a e % , .) e espaços.
+ a| 
+Nenhum
+
+
+
+ a| 
+Não use palavras-chave reservadas do PowerShell.
+ a| 
+Nenhum
+
+
+
+ a| 
+Agrupe os parâmetros de entrada colocando os parâmetros obrigatórios primeiro seguidos pelos parâmetros opcionais.
+ a| 
+[listing]
+----
+param(
+[parameter(Mandatory=$true)]
+[string]$Type,
+
+[parameter(Mandatory=$true)]
+[string]$Ip,
+
+[parameter(Mandatory=$false)]
+[string]$VolumeName
+)
+----
+
+
+ a| 
+Comente todas as variáveis de entrada usando `_HelpMessage_` anotação com uma mensagem de ajuda significativa.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="LUN to map")]
+[string]$LUNName
+----
+
+
+ a| 
+Não use "'Filer'" como um nome de variável; use "'Array'" em vez disso.
+ a| 
+Nenhum
+
+
+
+ a| 
+ `_ValidateSet_`Use a anotação nos casos em que o argumento obtém valores enumerados. Isso se traduz automaticamente para o tipo de dados Enum para o parâmetro.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume state")]
+[ValidateSet("online","offline","restricted")]
+[string]$State
+----
+
+
+ a| 
+Adicione um alias a um parâmetro que termine com "'_capacity" para indicar que o parâmetro é do tipo capacidade.
+ a| 
+O comando "Create volume" usa aliases da seguinte forma:
+
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume increment size in MB")]
+[Alias("AutosizeIncrementSize_Capacity")]
+[int]$AutosizeIncrementSize
+----
+
+
+ a| 
+Adicione um alias a um parâmetro que termine com "'_Password" para indicar que o parâmetro é do tipo de senha.
+ a| 
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="In order to create an Active Directory machine account for the CIFS server or setup CIFS service for Storage Virtual Machine, you must supply the password of a Windows account with sufficient privileges")]  [Alias("Pwd_Password")]  [string]$ADAdminPassword
+)
+----
+|===
+
+
+== Variáveis Perl
+
+[cols="2*"]
+|===
+| Diretrizes | Exemplo 
+
+
+ a| 
+Para parâmetros de entrada de script:
+
+* Use Pascal Case.
+* Não utilize sublinhados.
+* Não utilize abreviaturas.
+
+ a| 
+`$VolumeName`
+
+`$AutoDeleteOptions`
+
+`$Size`
+
+
+
+ a| 
+Não use abreviações para variáveis internas de script.
+ a| 
+`$new_volume`
+
+`$qtree_name`
+
+`$time`
+
+
+
+ a| 
+Não utilize abreviaturas para funções.
+ a| 
+`get_volume_size`
+
+
+
+ a| 
+Nomes de variáveis são sensíveis a maiúsculas e minúsculas. Para melhorar a legibilidade, você não deve usar letras maiúsculas diferentes para o mesmo nome.
+ a| 
+`$variable` não é o mesmo que `$Variable.`
+
+
+
+ a| 
+Os nomes das variáveis devem estar em inglês simples e devem estar relacionados à funcionalidade do script.
+ a| 
+Use `$name` e não `$a.`
+
+
+
+ a| 
+Agrupe os parâmetros de entrada colocando os parâmetros obrigatórios primeiro, seguidos pelos parâmetros opcionais.
+ a| 
+Nenhum
+
+
+
+ a| 
+Na função GetOptions, declare explicitamente o tipo de dados de cada variável para parâmetros de entrada.
+ a| 
+[listing]
+----
+GetOptions(
+	"Name=s"=>\$Name,
+	"Size=i"=>\$Size
+)
+----
+
+
+ a| 
+Não use "'Filer'" como um nome de variável; use "'Array'" em vez disso.
+ a| 
+Nenhum
+
+
+
+ a| 
+Perl não inclui a `_ValidateSet_` anotação para valores enumerados. Use declarações explícitas "if" para casos em que argumento obtém valores enumerados.
+ a| 
+[listing]
+----
+if
+(defined$SpaceGuarantee&&!($SpaceGuaranteeeq'none'||$SpaceGuaranteeeq'volume'||$SpaceGuaranteeeq'file'))
+{
+	die'Illegal SpaceGuarantee argument: \''.$SpaceGuarantee.'\'';
+}
+----
+
+
+ a| 
+Todos os comandos Perl WFA devem usar o pragma "strict" para desencorajar o uso de construções inseguras para variáveis, referências e sub-rotinas.
+ a| 
+[listing]
+----
+use strict;
+# the above is equivalent to
+use strictvars;
+use strictsubs;
+use strictrefs;
+----
+
+
+ a| 
+Todos os comandos Perl WFA devem usar os seguintes módulos Perl:
+
+* Getopt
++
+Isso é usado para especificar parâmetros de entrada.
+
+* WFAUtil
++
+Isso é usado para funções de utilitário que são fornecidas para Registro de comandos, relatório do progresso do comando, conexão a controladores de array e assim por diante.
+
+
+ a| 
+[listing]
+----
+use Getopt::Long;
+use NaServer;
+use WFAUtil;
+----
+|===

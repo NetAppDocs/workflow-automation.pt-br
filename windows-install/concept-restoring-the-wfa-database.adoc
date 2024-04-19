@@ -1,0 +1,33 @@
+---
+permalink: windows-install/concept-restoring-the-wfa-database.html 
+sidebar: sidebar 
+keywords: restore, oncommand, workflow, automation, database 
+summary: 'A restauração do banco de dados OnCommand Workflow Automation (WFA) inclui a restauração das configurações do sistema e informações de cache, incluindo o banco de dados playground.' 
+---
+= Restaurar a base de dados OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A restauração do banco de dados OnCommand Workflow Automation (WFA) inclui a restauração das configurações do sistema e informações de cache, incluindo o banco de dados playground.
+
+* Restaurar um banco de dados WFA apaga o banco de dados WFA atual.
+* Você pode restaurar um backup de banco de dados WFA apenas para um sistema que esteja executando a mesma versão ou uma versão posterior do WFA.
++
+Por exemplo, se você criou um backup em um sistema que está executando O WFA 4,2, o backup só pode ser restaurado para sistemas que estejam executando O WFA 4,2 ou posterior.
+
+* Após a conclusão da operação de restauração, o certificado SSL WFA é substituído pelo certificado SSL no arquivo de backup.
+
+
+[NOTE]
+====
+* Uma operação de restauração abrangente de bancos de dados e configurações DO WFA é necessária durante a recuperação de desastres e pode ser usada em ambientes autônomos e de alta disponibilidade.
+* Um backup abrangente não pode ser criado usando a IU da Web.
++
+Você pode usar apenas os comandos CLI ou APIS REST para fazer backup e restaurar o banco de dados WFA de forma abrangente durante a recuperação de desastres.
+
+
+
+====

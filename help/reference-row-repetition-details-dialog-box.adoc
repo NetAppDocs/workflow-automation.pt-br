@@ -1,0 +1,104 @@
+---
+permalink: help/reference-row-repetition-details-dialog-box.html 
+sidebar: sidebar 
+keywords: row, repetition, details, dialog box, enable, specify, parameters, row, repeated 
+summary: A caixa de diálogo Detalhes de repetição de linha permite especificar como os parâmetros na linha devem ser repetidos. 
+---
+= Caixa de diálogo Detalhes da repetição de linhas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Detalhes de repetição de linha permite especificar como os parâmetros na linha devem ser repetidos.
+
+
+
+== Repetições
+
+Permite-lhe selecionar o tipo de opção de repetição pretendido. A opção *Number of times* (número de vezes) é selecionada por padrão.
+
+* *Número de vezes*
++
+Permite especificar o seguinte:
+
++
+** O número de vezes que a linha específica deve ser executada
+** Variável de índice
+** Variáveis
+** *Número de vezes*
++
+Permite especificar um número para o número de vezes que a linha específica deve ser executada.
+
+** *Variável de índice*
++
+Permite especificar o nome da variável de índice para repetição de linhas.
+
+** *Variáveis*
++
+Permite que você inclua variáveis adicionais que precisam ser usadas durante a repetição de linhas.
+
++
+*** *Adicionar*
++
+Adiciona uma nova linha na tabela variáveis.
+
+*** *Remover*
++
+Remove a linha selecionada da tabela variáveis.
+
+
+
+
+
+* *Para cada recurso em um grupo*
++
+Permite especificar o seguinte:
+
++
+** Tipo recurso
+** Critérios de Pesquisa de recursos
+** Variável recurso
+** Variável de índice
+** Variável tamanho Grupo
+** Variáveis
+** *Tipo de recurso*
++
+Permite selecionar o tipo de recurso.
+
+** *Critérios de Pesquisa de recursos*
++
+Abre a caixa de diálogo seleção de recursos, que permite especificar os critérios de pesquisa de recursos do tipo de recurso selecionado. O loop é executado para cada recurso pesquisado com base nos critérios especificados.
+
+** *Variável recurso*
++
+Permite-lhe introduzir um nome para a variável de recurso.
+
+** *Variável de índice*
++
+Permite especificar o índice para repetição de linhas.
+
+** * Tamanho do grupo variável*
++
+Permite-lhe introduzir um nome para a variável de tamanho do grupo.
+
+** *Variáveis*
++
+Permite que você inclua variáveis adicionais que precisam ser usadas durante a repetição de linhas.
+
+
+
+* *Botões de comando*
++
+** *OK*
++
+Guarda as definições e fecha a caixa de diálogo.
+
+** *Cancelar*
++
+Não salva nenhuma alteração, se houver, e fecha a caixa de diálogo.
+
+
+
+

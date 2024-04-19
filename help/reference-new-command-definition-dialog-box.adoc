@@ -1,0 +1,194 @@
+---
+permalink: help/reference-new-command-definition-dialog-box.html 
+sidebar: sidebar 
+keywords: new, command, definition, dialog box, enable, define, create, workflow, predefined, meet, requirements 
+summary: A caixa de diálogo Nova Definição de comando permite definir um novo comando. Você pode criar novos comandos para seus fluxos de trabalho se os comandos predefinidos não atenderem aos seus requisitos. 
+---
+= Nova caixa de diálogo Definição de comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Nova Definição de comando permite definir um novo comando. Você pode criar novos comandos para seus fluxos de trabalho se os comandos predefinidos não atenderem aos seus requisitos.
+
+* Separador Propriedades
+* Guia Código
+* Separador parâmetros Definição
+* Separador Mapeamento de parâmetros
+* Separador reserva
+* Separador Verificação
+
+
+
+
+== Separador Propriedades
+
+Permite especificar as propriedades do comando, como nome, descrição e versão da entidade.
+
+* *Nome*
++
+Permite especificar um nome para o comando. Você deve especificar um nome para salvar o comando.
+
+* *Versão da entidade*
++
+Permite especificar o número da versão para o comando em `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Descrição*
++
+Permite-lhe introduzir uma descrição para o comando.
+
+* * Representação de cordas*
++
+Permite especificar uma representação de cadeia de carateres para o comando usando a sintaxe MVFLEX Expression Language (MVEL).
+
++
+Você deve especificar a representação da cadeia de carateres para salvar o comando. A representação da cadeia de carateres é usada para exibir os detalhes do comando no design do fluxo de trabalho durante o Planejamento e a execução. Você deve usar apenas os parâmetros de um comando na representação de string para esse comando.
+
+* *Tempo limite (s)*
++
+Permite especificar o valor de tempo limite (em segundos) para o comando. O valor padrão é de 600 segundos.
+
+* *Tipo de comando*
++
+Permite especificar o tipo de execução do comando.
+
++
+** * Execução padrão*
++
+Permite que o comando seja executado sem qualquer período de espera. A execução padrão é selecionada por padrão.
+
+** *Aguarde a condição*
++
+Permite especificar o tempo (em segundos) para o qual o comando tem que esperar antes da execução. O valor padrão é de 60 segundos.
+
+
+
+* *Versões mínimas de software*
++
+Especifica as versões mínimas do software necessárias para que o comando funcione. Por exemplo, o software pode ser agrupado em cluster Data ONTAP 8.2,0 e vCenter 6,0. As versões são exibidas como valores separados por vírgulas.
+
+
+
+
+
+== Guia Código
+
+Permite-lhe introduzir o código para o comando na linguagem de script selecionada. Você pode adicionar uma nova linguagem de script selecionando o idioma desejado na lista suspensa linguagem de script.
+
+* *Discover Parameters*
++
+Copia os parâmetros definidos no código PowerShell para a tabela Definição de parâmetros e a tabela Mapeamento de parâmetros.
+
+
+
+
+
+== Separador parâmetros Definição
+
+Exibe os parâmetros definidos no código que você inseriu na guia Código.
+
+* *Nome*
++
+Exibe o nome do parâmetro.
+
+* *Descrição*
++
+Apresenta a descrição do parâmetro.
+
+* *Obrigatório*
++
+Exibe uma caixa de seleção selecionada para os parâmetros obrigatórios.
+
+* *Tipo*
++
+Exibe o tipo do parâmetro, como string, enum, array ou senha.
+
+* *Valores*
++
+Exibe o valor definido para o parâmetro.
+
+* *Adicionar parâmetro*
++
+Permite adicionar um parâmetro ao comando se a linguagem de script selecionada for Perl.
+
+* *Remover parâmetro*
++
+Permite remover um parâmetro do comando se a linguagem de script selecionada for Perl.
+
+
+
+
+
+== Separador Mapeamento de parâmetros
+
+Permite mapear os parâmetros para objetos de dicionário e especificar o atributo e o nome do objeto.
+
+* *Nome*
++
+Exibe o nome do parâmetro.
+
+* *Tipo*
++
+Permite selecionar um objeto de dicionário para o parâmetro.
+
+* *Atributo*
++
+Permite especificar o atributo necessário. Você pode selecionar o atributo (se disponível) ou inserir o atributo.
+
+* *Nome do objeto*
++
+Permite especificar um nome para o objeto dicionário.
+
+
+
+
+
+== Separador reserva
+
+Permite que você reserve os recursos necessários pelo comando.
+
+* *Script de reserva*
++
+Permite que você insira uma consulta SQL para reservar os recursos necessários pelo comando. Isso ajuda a garantir que os recursos estejam disponíveis durante uma execução de fluxo de trabalho agendada.
+
+* *Representação de reservas*
++
+Permite especificar uma representação de cadeia de carateres para a reserva usando a sintaxe MVEL. A representação de cadeia de carateres é usada para exibir os detalhes da reserva na janela Reservas.
+
+
+
+
+
+== Separador Verificação
+
+Permite verificar uma reserva e remover a reserva após a execução do comando.
+
+* *Script de Verificação*
++
+Permite que você insira uma consulta SQL para verificar o uso dos recursos que foram reservados pelo script de reserva. O script de verificação também verifica se o cache WFA está atualizado e remove a reserva após uma aquisição de cache.
+
+* *Verificação de teste*
++
+Abre a caixa de diálogo Verificação, que permite testar os parâmetros do script de verificação.
+
+
+
+
+
+== Botões de comando
+
+* *Teste*
++
+Abre a caixa de diálogo Testing Command <CommandName> in <ScriptLanguage>, que permite testar o comando.
+
+* *Guardar*
++
+Salva o comando e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+

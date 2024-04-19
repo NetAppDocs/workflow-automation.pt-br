@@ -1,0 +1,40 @@
+---
+permalink: workflows/task-customize-predefined-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, automation, suitable, requirement 
+summary: 'Você pode personalizar um fluxo de trabalho predefinido do Workflow Automation (WFA) se não houver um fluxo de trabalho predefinido adequado para suas necessidades.' 
+---
+= Personalizar fluxos de trabalho predefinidos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode personalizar um fluxo de trabalho predefinido do Workflow Automation (WFA) se não houver um fluxo de trabalho predefinido adequado para suas necessidades.
+
+.O que você vai precisar
+Você deve ter identificado as modificações necessárias para o fluxo de trabalho predefinido.
+
+.Sobre esta tarefa
+Perguntas e solicitação de suporte para o seguinte devem ser dirigidas à comunidade WFA:
+
+* Qualquer conteúdo baixado da comunidade WFA
+* Conteúdo WFA personalizado que você criou
+* Conteúdo WFA que você modificou
+
+
+.Passos
+. Clique em *Workflow Design* > *fluxos de trabalho*.
+. Selecione o fluxo de trabalho predefinido que corresponde de perto ao seu requisito e, em seguida, clique image:../media/clone_wfa_icon.gif["Ícone de clone"] na barra de ferramentas.
+. No designer de fluxo de trabalho, faça as alterações necessárias nas guias apropriadas, como editar a descrição, adicionar ou excluir um comando, modificar os detalhes do comando e modificar a entrada do usuário.
+. Clique em *Preview*, insira as entradas de usuário necessárias para visualizar a execução do fluxo de trabalho e clique em *Preview* para visualizar os detalhes de Planejamento do fluxo de trabalho.
+. Clique em *OK* para fechar a janela de visualização.
+. Clique em *Salvar*.
+
+
+
+
+== Depois de terminar
+
+Você pode testar o fluxo de trabalho modificado em seu ambiente de teste e marcar o fluxo de trabalho como pronto para produção.

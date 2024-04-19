@@ -1,0 +1,36 @@
+---
+permalink: windows-install/concept-enabling-ciphers-and-adding-new-ciphers.html 
+sidebar: sidebar 
+keywords: enable ciphers, add new ciphers, ciphers 
+summary: O OnCommand Workflow Automation 5,1 suporta vários cifras fora da caixa. Além disso, você pode adicionar cifras adicionais, conforme necessário. 
+---
+= Ativar cifras e adicionar novas cifras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O OnCommand Workflow Automation 5,1 suporta vários cifras fora da caixa. Além disso, você pode adicionar cifras adicionais, conforme necessário.
+
+As seguintes cifras podem ser ativadas fora da caixa:
+
+[listing]
+----
+enabled-cipher-suites=
+"TLS_DHE_DSS_WITH_AES_128_GCM_SHA256,TLS_DHE_DSS_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256,
+TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384,
+TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384"
+----
+Cifras adicionais podem ser adicionadas a esta configuração no `standalone-full.xml` arquivo. Este ficheiro está localizado em: `<installdir>/jboss/standalone/configuration/standalone-full.xml`.
+
+O arquivo pode ser modificado para suportar cifras adicionais da seguinte forma:
+
+[listing]
+----
+<https-listener name="https" socket-binding="https" max-post-size="1073741824" security-realm="SSLRealm"
+enabled-cipher-suites="**< --- add additional ciphers here ---\>**
+enabled-protocols="TLSv1.1,TLSv1.2"/>
+----

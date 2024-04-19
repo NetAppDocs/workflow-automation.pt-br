@@ -1,0 +1,45 @@
+---
+permalink: rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html 
+sidebar: sidebar 
+keywords: migrate, oncommand, workflow, automation, installation 
+summary: 'Você pode migrar uma instalação do OnCommand Workflow Automation (WFA) para manter a chave de banco de dados exclusiva DO WFA instalada durante a instalação DO WFA.' 
+---
+= Migrar a instalação do OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode migrar uma instalação do OnCommand Workflow Automation (WFA) para manter a chave de banco de dados exclusiva DO WFA instalada durante a instalação DO WFA.
+
+* Você deve executar este procedimento somente quando quiser migrar uma instalação DO WFA que inclua a chave do banco de dados DO WFA para um servidor diferente.
+* Uma restauração de banco de dados WFA não migra a CHAVE WFA.
+* A migração de uma instalação DO WFA não migra os certificados SSL.
+* O caminho de instalação padrão DO WFA é usado neste procedimento.
++
+Se você alterou o local padrão durante a instalação, você deve usar o caminho de instalação alterado DO WFA.
+
+
+
+.Passos
+. Acesse O WFA através de um navegador da Web como administrador.
+. Faça backup do banco de dados DO WFA.
+. Abra um prompt de shell no servidor WFA e mude os diretórios para o seguinte local: WFA_install_location/wfa/bin/
+. Digite o seguinte no prompt do shell para obter a chave do banco de dados:
++
+`./wfa -key`
+
+. Observe a chave do banco de dados exibida.
+. Desinstale O WFA.
+. Instale O WFA no sistema necessário.
+. Abra um prompt de shell no servidor WFA e altere os diretórios para o seguinte local: WFA_install_location/wfa/bin/
+. No prompt do shell, instale a chave do banco de dados inserindo o seguinte comando:
++
+`./wfa -key=yourdatabasekey`
+
++
+Yourdatabasekey é a chave que você observou da instalação anterior DO WFA.
+
+. Restaure o banco de dados WFA a partir do backup que você criou.
+

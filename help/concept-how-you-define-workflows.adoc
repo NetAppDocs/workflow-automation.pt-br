@@ -1,0 +1,32 @@
+---
+permalink: help/concept-how-you-define-workflows.html 
+sidebar: sidebar 
+keywords: goal, workflow, steps, execute, arrange, complete, workflow 
+summary: Você deve dividir o objetivo de um fluxo de trabalho nas etapas que devem ser executadas pelo fluxo de trabalho. Em seguida, você pode organizar as etapas para concluir seu fluxo de trabalho. 
+---
+= Como você define fluxos de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve dividir o objetivo de um fluxo de trabalho nas etapas que devem ser executadas pelo fluxo de trabalho. Em seguida, você pode organizar as etapas para concluir seu fluxo de trabalho.
+
+Um fluxo de trabalho é um algoritmo que inclui uma série de etapas que são necessárias para concluir um processo de ponta a ponta. O escopo do processo pode variar, dependendo do objetivo do fluxo de trabalho. O objetivo de um fluxo de trabalho pode ser definido para lidar apenas com operações de armazenamento ou processos mais complexos, como lidar com redes, virtualização, sistemas DE TI e outros aplicativos como parte de um único processo. Os fluxos de trabalho OnCommand Workflow Automation (WFA) são projetados por arquitetos de armazenamento e são executados por operadores de armazenamento.
+
+Definir seu fluxo de trabalho inclui dividir o objetivo do fluxo de trabalho em uma série de etapas - por exemplo, criar um volume NFS inclui as seguintes etapas:
+
+. Criando um objeto de volume
+. Criar uma nova política de exportação e associar a política ao volume
+
+
+Você pode usar um comando WFA ou um fluxo de trabalho para cada etapa do seu fluxo de trabalho. O WFA inclui comandos e fluxos de trabalho predefinidos, que são baseados em casos de uso comuns de armazenamento. Se você não encontrar um comando ou fluxo de trabalho predefinido que possa ser usado para uma etapa específica, você pode fazer um dos seguintes procedimentos:
+
+* Escolha um comando ou fluxo de trabalho predefinido que corresponda de perto à etapa e, em seguida, clone e modifique o comando ou fluxo de trabalho predefinido de acordo com seus requisitos.
+* Crie um novo comando ou fluxo de trabalho.
+
+
+Em seguida, você pode organizar os comandos ou fluxos de trabalho em um novo fluxo de trabalho para criar o fluxo de trabalho que cumpre sua meta.
+
+No início da execução do fluxo de trabalho, O WFA planeja a execução e verifica se o fluxo de trabalho pode ser executado usando a entrada para o fluxo de trabalho e os comandos. Ao Planejar o fluxo de trabalho, toda a seleção de recursos e entrada de usuário são resolvidos para criar um plano de execução. Após o Planejamento ser concluído, O WFA executa o plano de execução, que consiste em um conjunto de comandos WFA com parâmetros aplicáveis.

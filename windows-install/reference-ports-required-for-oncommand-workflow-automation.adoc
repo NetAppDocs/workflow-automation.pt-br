@@ -1,0 +1,162 @@
+---
+permalink: windows-install/reference-ports-required-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: ports, required, workflow, automation 
+summary: 'Se você estiver usando um firewall, você deve estar ciente das portas necessárias para o Workflow Automation (WFA).' 
+---
+= Portas necessárias para o Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você estiver usando um firewall, você deve estar ciente das portas necessárias para o Workflow Automation (WFA).
+
+Os números de porta padrão estão listados nesta seção. Se você quiser usar um número de porta não padrão, você deve abrir essa porta para comunicação. Para obter mais detalhes, consulte a documentação no firewall.
+
+A tabela a seguir lista as portas padrão que devem ser abertas no servidor WFA:
+
+[cols="4*"]
+|===
+| Porta | Protocolo | Direção | Finalidade 
+
+
+ a| 
+80, 443
+ a| 
+HTTP, HTTPS
+ a| 
+Entrada
+ a| 
+Abrindo O WFA e fazendo login
+
+
+
+ a| 
+80, 443, 22
+ a| 
+HTTP, HTTPS, SSH
+ a| 
+Saída
+ a| 
+Execução de comandos (ZAPI, PowerCLI)
+
+
+
+ a| 
+445, 139, 389, 636
+ a| 
+Microsoft-DS, NetBIOS-ssn, AD LDAP, AD LDAPS
+ a| 
+Saída
+ a| 
+Autenticação LDAP do Microsoft ative Directory
+
+
+
+ a| 
+161
+ a| 
+SNMP
+ a| 
+Saída
+ a| 
+Envio de mensagens SNMP sobre o estado dos fluxos de trabalho
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+Entrada
+ a| 
+Armazenamento em cache apenas de leitura
+
+
+
+ a| 
+25
+ a| 
+SMTP
+ a| 
+Saída
+ a| 
+Notificação por e-mail
+
+
+
+ a| 
+80, 443, 25
+ a| 
+HTTP, HTTPS, SMTP
+ a| 
+Saída
+ a| 
+Enviando mensagens AutoSupport
+
+
+
+ a| 
+514
+ a| 
+Syslog
+ a| 
+Saída
+ a| 
+Enviando logs para um servidor syslog
+
+|===
+A tabela a seguir lista as portas padrão que devem ser abertas no servidor do Unified Manager:
+
+[cols="4*"]
+|===
+| Porta | Protocolo | Direção | Finalidade 
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+Entrada
+ a| 
+Armazenamento de dados em cache do Active IQ Unified Manager 6,0 e posterior
+
+|===
+A tabela a seguir lista a porta padrão que deve ser aberta no VMware vCenter:
+
+[cols="4*"]
+|===
+| Porta | Protocolo | Direção | Finalidade 
+
+
+ a| 
+443
+ a| 
+HTTPS
+ a| 
+Entrada
+ a| 
+Armazenamento de dados em cache do VMware vCenter
+
+|===
+A tabela a seguir lista a porta padrão que deve ser aberta na máquina host SNMP:
+
+[cols="4*"]
+|===
+| Porta | Protocolo | Direção | Finalidade 
+
+
+ a| 
+162
+ a| 
+SNMP
+ a| 
+Entrada
+ a| 
+Receber mensagens SNMP sobre o estado dos fluxos de trabalho
+
+|===

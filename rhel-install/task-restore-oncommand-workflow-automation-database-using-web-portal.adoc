@@ -1,0 +1,33 @@
+---
+permalink: rhel-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database 
+summary: 'Você pode restaurar o banco de dados do OnCommand Workflow Automation (WFA) que você fez backup anteriormente.' 
+---
+= Restaure o banco de dados WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode restaurar o banco de dados do OnCommand Workflow Automation (WFA) que você fez backup anteriormente.
+
+* Você deve ter criado um backup do banco de dados WFA.
+* Você precisa ter credenciais de administrador ou arquiteto.
+* Restaurar um banco de dados WFA apaga o banco de dados atual.
+* Você pode restaurar um backup de banco de dados WFA apenas para um sistema executando a mesma ou uma versão posterior do OnCommand Workflow Automation.
++
+Por exemplo, se você criou um backup em um sistema executando o OnCommand Workflow Automation 4,2, o backup só poderá ser restaurado para sistemas executando o OnCommand Workflow Automation 4,2 ou posterior.
+
+
+
+.Passos
+. Faça login na GUI da Web DO WFA como administrador.
+. Clique em *Configurações* e em *Manutenção*, clique em *Backup & Restore*.
+. Clique em *escolha arquivo*.
+. Na caixa de diálogo que se abre, selecione o ficheiro de cópia de segurança WFA e clique em *Open*.
+. Clique em *Restaurar*.
+
+
+Você pode revisar o conteúdo restaurado quanto à integridade na funcionalidade - por exemplo, o funcionamento de seus fluxos de trabalho personalizados.

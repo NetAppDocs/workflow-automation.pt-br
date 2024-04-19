@@ -1,0 +1,36 @@
+---
+permalink: help/reference-portal-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, displays, ready, production, edit, execute, authorization, access, clicking 
+summary: A janela fluxos de trabalho exibe os fluxos de trabalho marcados como prontos para produção. Você pode editar ou executar os fluxos de trabalho para os quais você tem autorização. Você pode acessar essa janela clicando na guia fluxos de trabalho. 
+---
+= Janela fluxos de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela fluxos de trabalho exibe os fluxos de trabalho marcados como prontos para produção. Você pode editar ou executar os fluxos de trabalho para os quais você tem autorização. Você pode acessar essa janela clicando na guia fluxos de trabalho.
+
+
+
+== Painel de categoria
+
+O painel de categorias permite pesquisar fluxos de trabalho por categorias. Um fluxo de trabalho que não está atribuído a nenhuma categoria está listado em ""Nenhuma categoria""". À direita do cabeçalho da categoria, o número total de fluxos de trabalho dentro dessa categoria é exibido. Esse número inclui os fluxos de trabalho marcados como prontos para produção. Por exemplo, "proteção de dados (7)" indica que sete fluxos de trabalho estão prontos para produção na categoria "proteção de dados".
+
+
+
+== Esquemas
+
+O menu esquemas permite-lhe selecionar os esquemas.
+
+Os esquemas apresentados baseiam-se na seleção feita pelo administrador na opção Mostrar conteúdo para esquemas em *Definições* > *Configuração* > *Definições de fluxo de trabalho*. Você pode selecionar os esquemas que deseja exibir selecionando ou desmarcando as caixas de seleção. Esta seleção é válida apenas para a sessão atual.
+
+
+
+== Painel de fluxo de trabalho
+
+Os fluxos de trabalho marcados como prontos para produção são exibidos como caixas cinza no painel fluxo de trabalho. As caixas de fluxo de trabalho incluem o nome do fluxo de trabalho e um ícone para indicar que o modo é suportado pelo fluxo de trabalho. Você pode executar um fluxo de trabalho clicando na caixa fluxo de trabalho.
+
+Se você é um administrador ou um arquiteto, você pode editar um fluxo de trabalho clicando no image:../media/portal_edit_object_wfa_icon.gif[""] ícone. O image:../media/info_icon_execute_wfa.gif[""] ícone fornece mais informações sobre o fluxo de trabalho.

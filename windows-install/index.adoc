@@ -1,0 +1,12 @@
+---
+permalink: windows-install/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Guia de Instalação e Configuração para Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

@@ -1,0 +1,50 @@
+---
+permalink: help/reference-new-template-dialog-box.html 
+sidebar: sidebar 
+keywords: new, template, dialog box, enable, create, new 
+summary: A caixa de diálogo novo modelo permite criar um novo modelo. 
+---
+= Caixa de diálogo novo modelo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo novo modelo permite criar um novo modelo.
+
+* *Nome*
++
+Permite-lhe introduzir um nome para o modelo.
+
+* *Tipo*
++
+Permite selecionar um objeto de dicionário na lista.
+
+* *Versão da entidade*
++
+Permite-lhe introduzir o número da versão do modelo no `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* *Descrição*
++
+Permite-lhe introduzir uma descrição para o modelo.
+
+* *Atributos*
++
+Exibe os atributos para o objeto do dicionário selecionado e permite que você insira um valor para cada atributo, como enum e função.
+
+
+
+
+
+== Botões de comando
+
+* *Guardar*
++
+Salva o modelo e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Não salva o modelo e fecha a caixa de diálogo.
+
+

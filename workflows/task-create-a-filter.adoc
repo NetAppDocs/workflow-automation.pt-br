@@ -1,0 +1,53 @@
+---
+permalink: workflows/task-create-a-filter.html 
+sidebar: sidebar 
+keywords: create, wfa, filter, search, resources, predefined, suitable, task 
+summary: Você pode criar um FILTRO WFA que pode procurar recursos se não houver um filtro WFA predefinido adequado para a tarefa. 
+---
+= Crie um filtro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um FILTRO WFA que pode procurar recursos se não houver um filtro WFA predefinido adequado para a tarefa.
+
+.O que você vai precisar
+Você deve saber as sintaxes SQL apropriadas para criar o filtro.
+
+.Passos
+. Clique em *Workflow Design* > *Filters*.
+. Clique image:../media/new_wfa_icon.gif["Novo ícone"]na barra de ferramentas.
+. Na guia *Propriedades* da caixa de diálogo *novo filtro*, insira ou selecione os detalhes necessários nos campos *Nome*, *tipo de Dicionário* e *Descrição*.
+. Na guia *consulta*, insira a consulta SQL apropriada para o filtro.
++
+Você deve inserir uma única consulta SQL e, opcionalmente, usar parâmetros de entrada. Você deve usar a seguinte sintaxe para usar um parâmetro de entrada: `+${ParameterName}+`.
+
++
+[listing]
+----
+SELECT
+	array.ip
+FROM
+	storage.array
+WHERE
+	array.name = '${ArrayName}'
+----
+. Clique em *Atualizar* para preencher a tabela *parâmetros de entrada* e a lista *atributos retornados*.
++
+Essas informações são obtidas a partir da consulta SQL que você inseriu. Por exemplo, se você usar o exemplo de consulta SQL da etapa anterior, ip é exibido em atributos retornados e ArrayName é exibido em parâmetros de entrada. Você pode editar as entradas nas colunas *Label* e *Description*.
+
+. *Opcional:* clique em *Teste* para testar o filtro.
++
+.. Na caixa de diálogo *Test Filter <FilterName>* (Teste de filtro), insira os parâmetros de teste necessários.
+.. Desmarque a caixa de seleção *usar dados de reserva no teste* se não quiser usar os dados de reserva para testar o filtro.
+.. Clique em *Teste*.
++
+O resultado do teste é exibido.
+
+.. Feche as caixas de diálogo.
+
+
+. Clique em *Salvar*.
+

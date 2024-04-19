@@ -1,0 +1,18 @@
+---
+permalink: windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, installation, setup, overview 
+summary: 'A instalação do OnCommand Workflow Automation (WFA) inclui a execução de tarefas como preparação para a instalação, o download do instalador DO WFA e a execução do instalador. Depois que a instalação estiver concluída, você pode configurar O WFA para atender às suas necessidades.' 
+---
+= Visão geral da instalação e configuração do OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A instalação do OnCommand Workflow Automation (WFA) inclui a execução de tarefas como preparação para a instalação, o download do instalador DO WFA e a execução do instalador. Depois que a instalação estiver concluída, você pode configurar O WFA para atender às suas necessidades.
+
+O fluxograma a seguir ilustra as tarefas de instalação e configuração:
+
+image::../media/wfa_isg_flowchart.gif[fluxograma wfa isg]

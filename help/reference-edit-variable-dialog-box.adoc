@@ -1,0 +1,119 @@
+---
+permalink: help/reference-edit-variable-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, variable, dialog box, enable, user, input, attributes, workflow 
+summary: 'A caixa de diálogo Editar variável: <UserInputName> permite editar os atributos de entrada do usuário de um fluxo de trabalho.' 
+---
+= Caixa de diálogo Editar variável
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Editar variável: <UserInputName> permite editar os atributos de entrada do usuário de um fluxo de trabalho.
+
+
+
+== Propriedades
+
+* *Nome da variável*
++
+Permite editar o nome da entrada do utilizador. Renomear a entrada do usuário atualiza todas as referências à entrada do usuário no fluxo de trabalho.
+
+* *Nome de exibição*
++
+Permite especificar ou editar o nome de exibição para a entrada do usuário. Você pode especificar um nome de exibição exclusivo se tiver criado atributos de entrada de usuário com um nome semelhante.
+
+* *Descrição*
++
+Permite especificar ou editar uma descrição para a entrada do utilizador. A descrição aparece como uma dica de ferramenta quando você executa ou visualiza o fluxo de trabalho.
+
+* *Tipo*
++
+Permite selecionar o tipo de entrada do utilizador. Os campos ou um link para uma caixa de diálogo são exibidos com base nas opções selecionadas. As opções disponíveis incluem o seguinte:
+
++
+** String: Permite que você insira uma expressão regular para valores válidos no campo RegEx - por exemplo, a*.
+** Number (número): Permite introduzir um intervalo numérico no campo Range (intervalo) - por exemplo, 1 a 15.
+** Enum: Permite que você insira uma lista fechada de valores no campo Enum values (valores Enum).
+** Consulta: Permite inserir uma consulta SQL simples para obter o resultado.
++
+Os usuários podem selecionar apenas os valores da primeira coluna do resultado.
+
+** Consulta (seleção múltipla): Permite inserir uma consulta SQL que obtém uma lista de valores.
++
+Os usuários podem selecionar um único valor ou vários valores durante a execução do fluxo de trabalho - por exemplo, você pode selecionar um único volume, vários volumes ou volumes com seus compartilhamentos e exportações.
+
++
+Você pode selecionar valores de qualquer coluna exibida no resultado. Selecionar uma linha seleciona os valores de todas as colunas da linha selecionada.
+
+** Boolean: Permite exibir uma caixa de seleção na caixa de diálogo entradas do usuário.
+** Tabela: Permite especificar os cabeçalhos de coluna da tabela que podem ser usados para inserir vários valores durante a execução do fluxo de trabalho - por exemplo, uma tabela que pode ser usada para especificar uma lista de nomes de nós e nomes de portas.
++
+Você também pode configurar o tipo de entrada de usuário de coluna e as propriedades associadas à entrada de usuário de coluna. É apresentada uma caixa de diálogo com base no tipo de entrada do utilizador selecionado. As opções disponíveis incluem o seguinte:
+
++
+*** String: Permite que você insira uma expressão regular para valores válidos no campo RegEx - por exemplo, a*.
+*** Number (número): Permite introduzir um intervalo numérico no campo Range (intervalo) - por exemplo, 1 a 15.
+*** Enum: Permite que você insira uma lista fechada de valores no campo Enum values (valores Enum).
+*** Consulta: Permite inserir uma consulta SQL simples para obter o resultado.
++
+Os usuários podem selecionar apenas os valores da primeira coluna do resultado. Uma consulta dentro da coluna da entrada do usuário da tabela não pode fazer referência a outras entradas do usuário dentro da consulta.
+
+*** Boolean: Permite que você selecione "'true'" ou "'false'" como o valor booleano na lista suspensa.
+
+
+** Senha: Permite criptografar uma senha fornecida como entrada pelo usuário.
++
+Quando encriptada, a palavra-passe é apresentada como uma sequência de carateres de asterisco na aplicação WFA e nos ficheiros de registo.
+
+** Dicionário: Permite adicionar os dados da tabela para a entrada do dicionário selecionado.
++
+O atributo de entrada do dicionário seleciona o atributo que deve ser retornado. Você pode selecionar um único valor ou vários valores durante a execução do fluxo de trabalho. Por exemplo, você pode selecionar um único volume, vários volumes ou volumes com seus compartilhamentos e exportações. Por padrão, valores únicos são selecionados. Você também pode selecionar regras para filtragem. Uma regra consiste em um atributo de entrada de dicionário, um operador e um valor. O atributo também pode incluir atributos de suas referências. Por exemplo, você pode especificar uma regra para agregados listando todos os agregados com nome começando com a cadeia "'aggr" e ter um tamanho disponível maior que 5 GB. A primeira regra no grupo é o atributo `name`, com o operador `starts-with`e o valor kaggr. A segunda regra para o mesmo grupo é o atributo `available_size_mb`, com o operador `>` e o valor 5000.
+
+
+
+* *Valores de bloqueio*
++
+Permite especificar se o usuário tem permissão para inserir um valor diferente dos valores retornados pela consulta. Selecionar a caixa de verificação não permite que o utilizador forneça um valor; apenas os valores retornados da consulta podem ser selecionados. Essa opção é usada com as opções de tipo Enum e Query.
+
+* *Valor padrão*
++
+Permite-lhe definir o valor predefinido da entrada do utilizador.
+
+* *Obrigatório*
++
+Permite especificar se a entrada de usuário é obrigatória para a execução do fluxo de trabalho.
+
+
+
+
+
+== Grupo
+
+* *Nome do grupo*
++
+Permite agrupar os atributos de entrada de usuário relacionados. Os atributos de entrada do usuário são exibidos em grupos que você definiu ao visualizar ou executar o fluxo de trabalho. Por exemplo, você pode agrupar os atributos de entrada do usuário relacionados aos Detalhes do volume.
+
+* *Expanda o grupo por padrão*
++
+Permite exibir todos os atributos de entrada de usuário especificados em um grupo como uma lista expandida. Se a caixa de seleção não estiver selecionada, o grupo de entrada de usuários aparecerá recolhido.
+
+
+
+
+
+== Dependência
+
+Permite ativar uma entrada de utilizador com base no valor introduzido para outra entrada de utilizador. Por exemplo, em um fluxo de trabalho que configura o protocolo nas, você pode especificar a entrada de usuário necessária para o protocolo como "NFS" para habilitar a entrada de usuário "read-write host lists" ou "CIFS" para habilitar a configuração ACL de CIFS".
+
+* *Escolha a entrada do usuário para depender*
++
+Permite selecionar a entrada de utilizador necessária para ativar a entrada de utilizador apresentada no campo Nome da variável.
+
+* *Valores aplicáveis (separados por vírgulas)*
++
+Permite especificar o valor da entrada condicional do usuário que permite a entrada do usuário exibida no campo Nome da variável.
+
+

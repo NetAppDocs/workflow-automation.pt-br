@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-templates.html 
+sidebar: sidebar 
+keywords: can, use, templates, workflows, reference, adhering, usage policies 
+summary: Você pode usar modelos WFA em seus fluxos de trabalho como referência ou para aderir a políticas de uso. 
+---
+= Como você usa modelos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar modelos WFA em seus fluxos de trabalho como referência ou para aderir a políticas de uso.
+
+Um modelo WFA atua como um blueprint de uma definição de objeto. Você pode definir um modelo incluindo as propriedades de um objeto e os valores para as propriedades do objeto. Em seguida, você pode usar o modelo para preencher as propriedades de uma definição de objeto em seus fluxos de trabalho.
+
+Quando você usa um modelo, não é possível editar os campos que incluem os valores obtidos a partir do modelo. Portanto, você pode usar modelos para configurar políticas de uso e criação de objetos. Se você remover a associação de um modelo com o fluxo de trabalho depois de aplicar o modelo, os valores preenchidos do modelo permanecerão, mas você poderá editar os campos.

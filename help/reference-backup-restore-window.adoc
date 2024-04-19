@@ -1,0 +1,50 @@
+---
+permalink: help/reference-backup-restore-window.html 
+sidebar: sidebar 
+keywords: backup, restore, window, enable, backup, oncommand, workflow, automation, database, contain, system, configuration, settings, cache, information, core, include, powershell, toolkits, perl toolkits, save, upgrade, reinstall 
+summary: 'A janela Backup e Restauração permite fazer backup do banco de dados do OnCommand Workflow Automation (WFA), que contém as configurações do sistema, informações de cache e pacotes principais que incluem kits de ferramentas do PowerShell e kits de ferramentas Perl. Você também pode restaurar o banco de dados salvo quando atualizar ou reinstalar O WFA.' 
+---
+= Janela de backup e restauração
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela Backup e Restauração permite fazer backup do banco de dados do OnCommand Workflow Automation (WFA), que contém as configurações do sistema, informações de cache e pacotes principais que incluem kits de ferramentas do PowerShell e kits de ferramentas Perl. Você também pode restaurar o banco de dados salvo quando atualizar ou reinstalar O WFA.
+
+
+
+== Secção de cópia de segurança
+
+Pode aceder a esta janela selecionando *Definições* e, em *Manutenção*, clique em *Backup & Restore*.
+
+* *Backup*
++
+Abre a caixa de diálogo Download de arquivo, que permite salvar o banco de dados atual como um arquivo compactado em um local especificado.
+
+
+
+
+
+== Secção de restauro
+
+* *Escolha Arquivo*
++
+Permite-lhe procurar o ficheiro da base de dados de cópia de segurança.
+
+* *Restaurar*
++
+Permite-lhe repor as definições de configuração e as informações de cache do ficheiro de base de dados de cópia de segurança para a configuração atual DO WFA, se aplicável.
+
++
+A versão mais recente dos kits de ferramentas e pacotes de núcleo está disponível após uma operação de restauração.
+
++
+
+NOTE: Se o backup incluir pacotes mais recentes do que os pacotes presentes no sistema, o após restaurar os pacotes mais recentes do backup estará disponível.
+
++
+Você deve parar todos os fluxos de trabalho que estão sendo executados antes de importar um pacote principal.
+
+

@@ -1,0 +1,27 @@
+---
+permalink: rhel-install/reference-pack-identification-during-upgrade.html 
+sidebar: sidebar 
+keywords: pack, identification, upgrade 
+summary: 'Durante o processo de atualização, o OnCommand Workflow Automation (WFA) identifica e classifica as entidades em um pacote. Se você tiver excluído qualquer entidade de um pacote antes da atualização, o pacote não será identificado durante a atualização.' 
+---
+= Identificação do pacote durante a atualização
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durante o processo de atualização, o OnCommand Workflow Automation (WFA) identifica e classifica as entidades em um pacote. Se você tiver excluído qualquer entidade de um pacote antes da atualização, o pacote não será identificado durante a atualização.
+
+Durante o processo de atualização, O WFA compara os pacotes no banco de dados com a lista de pacotes que foram lançados no repositório de automação do storage para identificar os pacotes que foram instalados antes da atualização. A identificação do pacote classifica, assim, os pacotes existentes no banco de dados.
+
+O WFA executa os seguintes processos para identificar e classificar pacotes:
+
+* Mantém uma lista de pacotes lançados no repositório de automação do storage para comparar e identificar os pacotes que foram instalados antes da atualização.
+* Classifica as entidades em um pacote como parte da sincronização do repositório de automação do storage, se o repositório de automação do storage estiver habilitado.
+* Classifica as entidades em pacotes usando a lista atualizada.
+
+
+A identificação de pacotes é aplicável apenas a pacotes com certificação NetApp que foram baixados do repositório de automação de storage.
+
+Se um pacote não for identificado durante a atualização, você pode reimportar o pacote para identificá-lo no WFA. Os arquivos wfa.log fornecem detalhes sobre as entidades que não foram identificadas como um pacote durante a atualização.

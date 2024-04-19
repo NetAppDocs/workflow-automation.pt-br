@@ -1,0 +1,131 @@
+---
+permalink: help/reference-packs-window.html 
+sidebar: sidebar 
+keywords: pack, window, display, oncommand, automation, pack, imported, available, server, contain, information, file, workflow, commands, filters, functions, finders, templates 
+summary: A janela Pacotes exibe os pacotes OnCommand Workflow Automation WFA que são importados e disponíveis no SERVIDOR WFA. Cada pacote contém o arquivo de informações do pacote e o conteúdo DO WFA, como fluxos de trabalho, comandos, filtros, funções, localizadores e modelos. 
+---
+= Janela de pacotes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A janela Pacotes exibe os pacotes OnCommand Workflow Automation WFA que são importados e disponíveis no SERVIDOR WFA. Cada pacote contém o arquivo de informações do pacote e o conteúdo DO WFA, como fluxos de trabalho, comandos, filtros, funções, localizadores e modelos.
+
+* Tabela de pacotes
+* Barra de ferramentas
+
+
+
+
+== Tabela de pacotes
+
+A tabela packs lista em formato tabular os pacotes WFA que estão disponíveis no servidor WFA. Você pode personalizar a exibição da tabela usando os recursos de filtragem e classificação disponíveis para cada coluna, bem como reorganizando a ordem da coluna.
+
+* image:../media/filter_icon_wfa.gif["Ícone de filtro"] ativa ou desativa a filtragem de toda a tabela. Um "x" vermelho aparece sobre o ícone se a filtragem estiver desativada.
+* Clicar duas vezes image:../media/filter_icon_wfa.gif["Ícone de filtro"]limpa e redefine as seleções de filtragem.
+* image:../media/wfa_filter_icon.gif["Ícone de filtro"] em cada cabeçalho de coluna permite filtrar com base no conteúdo das colunas. Clicar image:../media/wfa_filter_icon.gif["Ícone de filtro"] em uma coluna permite filtrar um item específico na lista suspensa ou em todos os itens disponíveis.
+* Clicar no cabeçalho da coluna alterna entre a ordem ascendente e descendente de ordenação. É possível identificar a ordem de classificação aplicada pelas setas de classificação (image:../media/wfa_sortarrow_up_icon.gif["Ícone de ordenação"] para ascendente e image:../media/wfa_sortarrow_down_icon.gif["Ícone de ordenação"]descendente).
+* Para reorganizar a localização das colunas, você pode arrastar e soltar colunas para colocá-las em qualquer ordem necessária. No entanto, você não pode ocultar ou excluir nenhuma dessas colunas.
+* Clicar na caixa de texto filtro *pesquisar* permite-lhe procurar conteúdo específico. Além disso, você pode pesquisar usando operadores suportados para o tipo de coluna aplicável, alfabético ou numérico.
+
+
+A tabela packs contém as seguintes colunas:
+
+* * Certificação *
++
+Indica se o pacote foi criado pelo usuário (image:../media/community_certification.gif[""] ), PS (image:../media/ps_certified_icon_wfa.gif[""] ), comunidade (image:../media/community_certification.gif[""] ), bloqueado pelo usuário (image:../media/lock_icon_wfa.gif[""] ) ou certificado pela NetApp (image:../media/netapp_certified.gif[""])
+
++
+Pode procurar pacotes selecionando as caixas de verificação da opção pretendida na lista de filtros.
+
+* *Nome*
++
+Exibe o nome do pacote.
+
++
+Você pode procurar um pacote inserindo seu nome na caixa de texto filtro *pesquisar*.
+
+* *Descrição*
++
+Apresenta a descrição do pacote.
+
++
+Você pode procurar um pacote inserindo sua descrição na caixa de texto filtro *pesquisar*.
+
+* *Versão da entidade*
++
+Exibe o número da versão do pacote no `major.minor.revision` formato - por exemplo, 1,0.0.
+
+* * Atualizado em *
++
+Exibe a data e a hora em que o pacote foi atualizado.
+
++
+Pode procurar pacotes selecionando a categoria de hora pretendida na lista pendente filtro.
+
+* *Atualizado por*
++
+Exibe o nome do usuário que atualizou o pacote.
+
++
+Você pode procurar um pacote inserindo o nome de usuário na caixa de texto filtro *pesquisar*.
+
+* *Detalhes*
++
+Exibe os detalhes do pacote no site da Storage Automation Store.
+
+
+
+
+
+== Barra de ferramentas
+
+A barra de ferramentas está localizada acima do cabeçalho da coluna. Pode utilizar os ícones na barra de ferramentas para executar várias acões. Estas ações também podem ser acedidas a partir do menu de clique com o botão direito do rato na janela.
+
+* image:../media/new_pack.png[""]* (Novo)*
++
+Abre a caixa de diálogo novo pacote, que permite criar um novo pacote.
+
+* image:../media/details_wfa_icon.gif["Ícone de detalhes"]* (Editar)*
++
+Abre a caixa de diálogo conteúdo do Pacote, que contém as seguintes guias para obter informações detalhadas sobre o conteúdo dos pacotes:
+
++
+** Fluxos de trabalho
+** Localizadores
+** Filtros
+** Comandos
+** Funções
+** Modelos
+** Dicionário
+** Esquemas
+** Consultas de cache
+** Tipos de origem de dados SQL
+** Tipos de origem de dados de script
+** Tipos de sistema remoto
+** Categorias
+
+
+* image:../media/delete_wfa_icon.gif["Eliminar ícone"]* (Apagar)*
++
+Abre a caixa de diálogo Excluir Pacote de confirmação, que permite excluir o pacote selecionado.
+
+* image:../media/unlock_wfa_icon.gif["Ícone de desbloqueio"]* (Desbloquear)*
++
+Abre a caixa de diálogo de confirmação Unlock Pack (desbloquear pacote), que permite desbloquear o pacote selecionado. Esta opção está ativada apenas para os pacotes bloqueados por si. No entanto, os administradores podem desbloquear pacotes bloqueados por outros usuários.
+
+* image:../media/export_wfa_icon.gif["Ícone de exportação"]* (Exportação)*
++
+Abre a caixa de diálogo Exportar, que permite exportar o pacote selecionado.
+
+* image:../media/import_from_server_folder.png[""]* (Importar da pasta do servidor)*
++
+Abre a caixa de diálogo Importar da pasta do servidor, que permite importar o pacote da localização da pasta selecionada no sistema do servidor.
+
+* image:../media/export_to_server_folder.png[""]* (Exportar para pasta de servidor)*
++
+Abre a caixa de diálogo Exportar para pasta de servidor, que permite exportar o pacote para a localização da pasta selecionada no sistema do servidor.
+
+

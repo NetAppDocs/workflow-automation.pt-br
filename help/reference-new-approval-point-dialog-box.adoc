@@ -1,0 +1,60 @@
+---
+permalink: help/reference-new-approval-point-dialog-box.html 
+sidebar: sidebar 
+keywords: new, approval, point, dialog box, enable, add, point, checkpoint, workflow, pause, execution, resume 
+summary: A caixa de diálogo novo ponto de aprovação permite adicionar um ponto de aprovação como um ponto de verificação em um fluxo de trabalho para pausar a execução do fluxo de trabalho e retomá-lo com base na sua aprovação. 
+---
+= Caixa de diálogo novo ponto de aprovação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo novo ponto de aprovação permite adicionar um ponto de aprovação como um ponto de verificação em um fluxo de trabalho para pausar a execução do fluxo de trabalho e retomá-lo com base na sua aprovação.
+
+* *Digite o comentário (opcional)*
++
+Permite que você forneça informações, como tempo de alteração, usuário e comentários, o que permite que você veja quando e por que a execução do fluxo de trabalho foi pausada ou retomada.
+
++
+Os comentários do ponto de aprovação podem incluir expressões MVFLEX Expression Language (MVEL).
+
+* *Digite a condição de execução (se houver)*
++
+Permite especificar condições para a execução de um comando:
+
++
+** Sempre
++
+Executa o comando incondicionalmente.
+
+** Se a variável a seguir foi encontrada
++
+Permite executar um comando somente quando a variável especificada é encontrada. Você pode especificar a variável na caixa.
+
+** Se a variável a seguir não foi encontrada
++
+Permite executar um comando somente quando a variável especificada não for encontrada. Você pode especificar a variável na caixa.
+
+** Se a seguinte expressão for VERDADEIRA
++
+Permite que você execute um comando somente quando a expressão MVEL especificada for "'true'". Você pode especificar a expressão na caixa.
+
+
+
+
+
+
+
+== Botões de comando
+
+* *OK*
++
+Permite adicionar o ponto de aprovação.
+
+* *Cancelar*
++
+Cancela as alterações, se houver, e fecha a caixa de diálogo.
+
+
