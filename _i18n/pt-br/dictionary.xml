@@ -4845,7 +4845,6 @@
   <block id="27229f9694d6bd63f4cb0106223a04bf" category="sidebar">Crie e gerencie fluxos de trabalho</block>
   <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="sidebar">Mais informações</block>
   <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">NetApp comunidade</block>
-  <block id="95026804993f8a9226db7022cae41c9f" category="sidebar">Documentos do OnCommand Workflow Automation 5,1</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de lançamento</block>
   <block id="9ca261be0541f3aee5c4d041ef411f7f" category="sidebar">Gerenciar e configurar</block>
   <block id="4c14da102137cfdc0846add51f76dd18" category="sidebar">Configurando a ajuda do OnCommand Workflow Automation</block>
@@ -4891,4 +4890,5 @@
   <block id="58a941ac8b9a1584bf1ba84718a3fd25" category="sidebar">Importar conteúdo do OnCommand Workflow Automation Windows</block>
   <block id="9ed898de1871da28a2ae5317dc3c252c" category="sidebar">Gerenciando módulos Perl e Perl Windows</block>
   <block id="2074288e509f3c7ce4cefe22472ec63f" category="sidebar">Solução de problemas de instalação e configuração Windows</block>
+  <block id="0d47320e619045e2de820e0c0e5fbcf0" category="sidebar">OnCommand Workflow Automation docs</block>
 </blocks>
